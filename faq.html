@@ -55,6 +55,14 @@ title: FAQ — kexify
         <summary class="text-sm font-medium dark:text-white text-gray-900">How are key shares stored?</summary>
         <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Browser: AES-GCM encrypted with WebAuthn passkey PRF or passphrase (PBKDF2). Server: AES-256-GCM with per-user HKDF-derived key. All in transit: TLS 1.3.</p>
       </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">How do MPC and the Policy Engine work together?</summary>
+        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Think of it like a safe that needs two keys. You hold one key, the server holds the other. Neither can open the safe alone. But the server also acts as a guard — before turning its key, it checks your rules: Is this amount within the spending limit? Is this address on the approved list? Is the account frozen? If any rule is violated, the server refuses to co-sign and the transaction simply can't happen.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">If the server enforces rules, can it also block me unfairly?</summary>
+        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">The server only enforces rules you set yourself. And if you ever disagree with the server, you have an exit: export both key shares and sign transactions completely on your own in Recovery Mode. The server can never hold your funds hostage.</p>
+      </details>
     </div>
 
     <!-- Usage -->

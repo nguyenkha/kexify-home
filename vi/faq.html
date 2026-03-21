@@ -57,6 +57,14 @@ permalink: /vi/faq/
         <summary class="text-sm font-medium dark:text-white text-gray-900">Phần khoá được lưu trữ như thế nào?</summary>
         <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Trình duyệt: mã hoá AES-GCM bằng WebAuthn passkey PRF hoặc mật khẩu (PBKDF2). Server: AES-256-GCM với khoá HKDF riêng cho mỗi người dùng. Truyền tải: TLS 1.3.</p>
       </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">MPC và chính sách bảo mật hoạt động cùng nhau như thế nào?</summary>
+        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Hãy tưởng tượng một chiếc két sắt cần hai chìa khoá. Bạn giữ một chìa, server giữ chìa còn lại. Không ai có thể mở két một mình. Nhưng server còn đóng vai trò bảo vệ — trước khi xoay chìa, nó kiểm tra quy tắc của bạn: Số tiền có trong giới hạn không? Địa chỉ có trong danh sách cho phép không? Tài khoản có bị đóng băng không? Nếu vi phạm bất kỳ quy tắc nào, server từ chối đồng ký và giao dịch không thể xảy ra.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Nếu server kiểm soát quy tắc, nó có thể chặn tôi không công bằng không?</summary>
+        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Server chỉ thực thi các quy tắc do chính bạn đặt ra. Và nếu bạn không đồng ý với server, bạn có lối thoát: xuất cả hai phần khoá và tự ký giao dịch hoàn toàn trong Chế độ khôi phục. Server không bao giờ có thể giữ tiền của bạn làm con tin.</p>
+      </details>
     </div>
 
     <!-- Sử dụng -->
