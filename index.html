@@ -62,10 +62,7 @@ title: kexify — keys simplified
       <!-- EVM Chains -->
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
         <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#627EEA"/><path d="M16.5 4v8.87l7.5 3.35L16.5 4z" fill="#fff" fill-opacity=".6"/><path d="M16.5 4L9 16.22l7.5-3.35V4z" fill="#fff"/><path d="M16.5 21.97v6.03L24 17.62l-7.5 4.35z" fill="#fff" fill-opacity=".6"/><path d="M16.5 28V21.97L9 17.62l7.5 10.38z" fill="#fff"/><path d="M16.5 20.57l7.5-4.35-7.5-3.35v7.7z" fill="#fff" fill-opacity=".2"/><path d="M9 16.22l7.5 4.35v-7.7L9 16.22z" fill="#fff" fill-opacity=".6"/></svg>
-        <div>
-          <span class="text-xs font-medium dark:text-gray-300 text-gray-700">EVM Chains</span>
-          <span class="block text-[10px] dark:text-gray-500 text-gray-400">Ethereum, Polygon, Arbitrum, Base, BSC...</span>
-        </div>
+        <span class="text-xs font-medium dark:text-gray-300 text-gray-700">EVM</span>
       </div>
       <!-- Bitcoin -->
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
@@ -112,26 +109,32 @@ title: kexify — keys simplified
     <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">Features</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+        <svg class="w-5 h-5 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">2-of-2 MPC</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Powered by Coinbase's <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> threshold cryptography. No seed phrases ever.</p>
       </div>
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+        <svg class="w-5 h-5 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">Self-Custodial</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Server never sees your full private key. Export your shares and go fully offline anytime.</p>
       </div>
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+        <svg class="w-5 h-5 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">Policy Engine</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Spending limits, address whitelists, and 24-hour cooling periods. Your rules, enforced.</p>
       </div>
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+        <svg class="w-5 h-5 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"/></svg>
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">Passkey Auth</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">WebAuthn biometric authentication. No passwords to remember or leak.</p>
       </div>
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+        <svg class="w-5 h-5 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">Recovery Mode</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Export both key shares. Sign offline if the server ever goes down. True self-custody.</p>
       </div>
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+        <svg class="w-5 h-5 text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">WalletConnect</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Connect to any dApp via WalletConnect v2. Sign transactions from your favorite protocols.</p>
       </div>
