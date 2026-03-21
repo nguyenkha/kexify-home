@@ -12,27 +12,27 @@ title: FAQ — kexify
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is kexify?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">A self-custodial MPC wallet where two independent key shares are created together — one in your browser, one on the server. No single private key ever exists. Neither party holds the full key.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">A self-custodial MPC wallet where two independent key shares are created together — one in your browser, one on the server. No single private key ever exists. Neither party holds the full key.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is MPC?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Multi-Party Computation — a cryptographic technique where multiple parties compute a function together without revealing their individual inputs. In kexify, two key shares sign a transaction without ever combining into a full private key.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Multi-Party Computation — a cryptographic technique where multiple parties compute a function together without revealing their individual inputs. In kexify, two key shares sign a transaction without ever combining into a full private key.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Is kexify open source?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Built on Coinbase's <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> library (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">our fork</a>). Frontend: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Built on Coinbase's <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> library (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">our fork</a>). Frontend: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Is kexify really free?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Yes — free forever, no subscription, no ads. kexify was built by its creator for personal use. There's no business model because it's not a business. It's a tool that needed to exist.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes — free forever, no subscription, no ads. kexify was built by its creator for personal use. There's no business model because it's not a business. It's a tool that needed to exist.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Why doesn't kexify have swaps, staking, or DeFi features?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">By design. A wallet should do one thing well — hold and sign. Swaps, lending, and bridges are already solved by dApps like 1inch, Aave, and MyEtherWallet. Connect to any of them via WalletConnect. Fewer features means fewer bugs and a smaller attack surface.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">By design. A wallet should do one thing well — hold and sign. Swaps, lending, and bridges are already solved by dApps like 1inch, Aave, and MyEtherWallet. Connect to any of them via WalletConnect. Fewer features means fewer bugs and a smaller attack surface.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is the design philosophy?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Three principles: keep it simple, stay focused on being a wallet, and optimize only for UX and security. Every feature decision is filtered through these. If it doesn't make the wallet easier to use or more secure, it doesn't ship.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Three principles: keep it simple, stay focused on being a wallet, and optimize only for UX and security. Every feature decision is filtered through these. If it doesn't make the wallet easier to use or more secure, it doesn't ship.</p>
       </details>
     </div>
 
@@ -41,27 +41,27 @@ title: FAQ — kexify
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Who holds my keys?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Nobody holds the full key. One share is in your browser (encrypted with passkey or passphrase), the other on the server (encrypted with AES-256-GCM). Both must cooperate to sign.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Nobody holds the full key. One share is in your browser (encrypted with passkey or passphrase), the other on the server (encrypted with AES-256-GCM). Both must cooperate to sign.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What if the server goes down?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Use Recovery Mode. Export your server key share beforehand, then sign locally in your browser with both shares. No server needed.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Use Recovery Mode. Export your server key share beforehand, then sign locally in your browser with both shares. No server needed.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Can the server steal my funds?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">No. The server only has one share — it cannot sign alone. The 2-of-2 MPC protocol prevents unilateral signing by design.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">No. The server only has one share — it cannot sign alone. The 2-of-2 MPC protocol prevents unilateral signing by design.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">How are key shares stored?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Browser: AES-GCM encrypted with WebAuthn passkey PRF or passphrase (PBKDF2). Server: AES-256-GCM with per-user HKDF-derived key. All in transit: TLS 1.3.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Browser: AES-GCM encrypted with WebAuthn passkey PRF or passphrase (PBKDF2). Server: AES-256-GCM with per-user HKDF-derived key. All in transit: TLS 1.3.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">How do MPC and the Policy Engine work together?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Think of it like a safe that needs two keys. You hold one key, the server holds the other. Neither can open the safe alone. But the server also acts as a guard — before turning its key, it checks your rules: Is this amount within the spending limit? Is this address on the approved list? Is the account frozen? If any rule is violated, the server refuses to co-sign and the transaction simply can't happen.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Think of it like a safe that needs two keys. You hold one key, the server holds the other. Neither can open the safe alone. But the server also acts as a guard — before turning its key, it checks your rules: Is this amount within the spending limit? Is this address on the approved list? Is the account frozen? If any rule is violated, the server refuses to co-sign and the transaction simply can't happen.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">If the server enforces rules, can it also block me unfairly?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">The server only enforces rules you set yourself. And if you ever disagree with the server, you have an exit: export both key shares and sign transactions completely on your own in Recovery Mode. The server can never hold your funds hostage.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">The server only enforces rules you set yourself. And if you ever disagree with the server, you have an exit: export both key shares and sign transactions completely on your own in Recovery Mode. The server can never hold your funds hostage.</p>
       </details>
     </div>
 
@@ -70,27 +70,27 @@ title: FAQ — kexify
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Which blockchains are supported?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Ethereum, Bitcoin, Solana, XRP, Stellar, Litecoin, Bitcoin Cash, and TRON — plus their testnets.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Ethereum, Bitcoin, Solana, XRP, Stellar, Litecoin, Bitcoin Cash, and TRON — plus their testnets.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">How do I sign transactions?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Initiate from the app or connect via WalletConnect. Both key shares participate in multiple MPC rounds (~6 seconds) to produce a valid signature.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Initiate from the app or connect via WalletConnect. Both key shares participate in multiple MPC rounds (~6 seconds) to produce a valid signature.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is the Policy Engine?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">A self-imposed security layer that lets you set rules the server enforces before co-signing. Even if someone gains access to your browser, policies limit what they can do.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">A self-imposed security layer that lets you set rules the server enforces before co-signing. Even if someone gains access to your browser, policies limit what they can do.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What types of policies can I set?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Spending limits</strong> — cap the USD value per transaction. <strong class="dark:text-gray-300 text-gray-700">Address whitelists</strong> — only allow transfers to pre-approved addresses. Both are enforced server-side before the server agrees to co-sign.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Spending limits</strong> — cap the USD value per transaction. <strong class="dark:text-gray-300 text-gray-700">Address whitelists</strong> — only allow transfers to pre-approved addresses. Both are enforced server-side before the server agrees to co-sign.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Why is there a 24-hour cooling period?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">To prevent an attacker from changing your policies and immediately exploiting them. When you create or modify a policy, it takes 24 hours to activate. If you didn't make the change, you have time to freeze your account.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">To prevent an attacker from changing your policies and immediately exploiting them. When you create or modify a policy, it takes 24 hours to activate. If you didn't make the change, you have time to freeze your account.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Can I freeze my account?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Freeze via email link. All signing is blocked for a mandatory 24 hours. This gives you time to secure your account if you suspect unauthorized access.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Freeze via email link. All signing is blocked for a mandatory 24 hours. This gives you time to secure your account if you suspect unauthorized access.</p>
       </details>
     </div>
 
@@ -99,11 +99,11 @@ title: FAQ — kexify
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What cryptography is used?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) for EVM/Bitcoin chains, EdDSA (Ed25519) for Solana/Stellar. Powered by Coinbase's cb-mpc WASM library running directly in your browser.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) for EVM/Bitcoin chains, EdDSA (Ed25519) for Solana/Stellar. Powered by Coinbase's cb-mpc WASM library running directly in your browser.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is cb-mpc?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed"><a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase's threshold cryptography library</a>. We use a <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">fork</a> compiled to WebAssembly for in-browser execution.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase's threshold cryptography library</a>. We use a <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">fork</a> compiled to WebAssembly for in-browser execution.</p>
       </details>
     </div>
 
