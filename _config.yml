@@ -1,0 +1,23 @@
+title: kexify
+description: "keys simplified — self-custodial MPC wallet"
+url: ""
+baseurl: ""
+permalink: pretty
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - plans
+  - docs
+  - .claude
+  - .opencode
+  - CLAUDE.md
+  - AGENTS.md
+  - release-manifest.json
+  - .repomixignore

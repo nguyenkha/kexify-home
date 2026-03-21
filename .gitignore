@@ -1,0 +1,35 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# OS
+.DS_Store
+
+# Docs & tooling (not part of the site)
+docs/*
+!docs/homepage-design-spec.md
+plans/
+.claude/
+.opencode/
+.gemini/
+.serena/
+CLAUDE.md
+AGENTS.md
+release-manifest.json
+.repomixignore
+repomix-output.xml
+
+# Env
+.env*
+!.env.example
+
+# Misc
+worktrees/
+external/
+__pycache__
+screenshots/
+logs.txt
+prompt.md
+ck.md

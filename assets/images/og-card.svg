@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#030712"/>
+  <!-- K lettermark -->
+  <rect x="520" y="140" width="24" height="180" rx="12" fill="#3b82f6"/>
+  <path d="M544 230l80-80h32L560 246z" fill="#3b82f6"/>
+  <path d="M544 230l80 80h32L560 214z" fill="#3b82f6"/>
+  <circle cx="532" cy="140" r="24" stroke="#3b82f6" stroke-width="14" fill="#030712"/>
+  <!-- Text -->
+  <text x="600" y="410" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="60" font-weight="700" letter-spacing="-1.5">kexify</text>
+  <text x="600" y="450" text-anchor="middle" fill="#4b5563" font-family="system-ui,sans-serif" font-size="22">keys simplified</text>
+  <text x="600" y="510" text-anchor="middle" fill="#6b7280" font-family="system-ui,sans-serif" font-size="18">Self-custodial MPC wallet</text>
+</svg>
