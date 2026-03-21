@@ -69,12 +69,20 @@ title: FAQ — kexify
         <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Initiate from the app or connect via WalletConnect. Both key shares participate in multiple MPC rounds (~6 seconds) to produce a valid signature.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">What are policies?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Spending limits and address whitelists with a mandatory 24-hour cooling period before activation. Protects against unauthorized spending even if someone accesses your browser.</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">What is the Policy Engine?</summary>
+        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">A self-imposed security layer that lets you set rules the server enforces before co-signing. Even if someone gains access to your browser, policies limit what they can do.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">What types of policies can I set?</summary>
+        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Spending limits</strong> — cap the USD value per transaction. <strong class="dark:text-gray-300 text-gray-700">Address whitelists</strong> — only allow transfers to pre-approved addresses. Both are enforced server-side before the server agrees to co-sign.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Why is there a 24-hour cooling period?</summary>
+        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">To prevent an attacker from changing your policies and immediately exploiting them. When you create or modify a policy, it takes 24 hours to activate. If you didn't make the change, you have time to freeze your account.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Can I freeze my account?</summary>
-        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Freeze via email link. Mandatory 24-hour freeze period during which all signing is blocked. Unfreeze after the cooling period.</p>
+        <p class="mt-2 text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Freeze via email link. All signing is blocked for a mandatory 24 hours. This gives you time to secure your account if you suspect unauthorized access.</p>
       </details>
     </div>
 
