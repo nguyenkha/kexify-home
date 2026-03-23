@@ -117,22 +117,38 @@
       0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
       50% { box-shadow: 0 0 12px 4px rgba(59,130,246,0.3); }
     }
-    @keyframes sig-build {
-      0% { width: 0; opacity: 0; }
-      20% { opacity: 1; }
-      100% { width: 100%; opacity: 1; }
+    /* 9s total cycle: 3 rounds of message exchange (1.5s each = 4.5s), then sig builds in 3 steps, then verified */
+    @keyframes sig-steps {
+      0% { width: 0; }
+      /* Round 1 complete ~17% */
+      16% { width: 0; }
+      17% { width: 33%; }
+      /* Round 2 complete ~33% */
+      33% { width: 33%; }
+      34% { width: 66%; }
+      /* Round 3 complete ~50% */
+      50% { width: 66%; }
+      51% { width: 100%; }
+      /* Hold complete */
+      75% { width: 100%; }
+      /* Reset */
+      85% { width: 100%; opacity: 1; }
+      95% { opacity: 0; }
+      100% { width: 0; opacity: 0; }
     }
-    @keyframes sig-loop {
-      0%,10% { width: 0; opacity: 0; }
-      15% { opacity: 1; }
-      60% { width: 100%; opacity: 1; }
-      80% { width: 100%; opacity: 1; }
-      95%,100% { width: 100%; opacity: 0; }
+    @keyframes verified-appear {
+      0%, 52% { opacity: 0; transform: scale(0.5); }
+      55% { opacity: 1; transform: scale(1.15); }
+      60% { transform: scale(1); }
+      75% { opacity: 1; }
+      85% { opacity: 1; }
+      95%, 100% { opacity: 0; }
     }
-    .mpc-msg-r { position: absolute; top: 50%; transform: translateY(-50%); animation: msgRight 3s ease-in-out infinite; }
-    .mpc-msg-l { position: absolute; top: 50%; transform: translateY(-50%); animation: msgLeft 3s ease-in-out 1.5s infinite; }
-    .mpc-glow { animation: pulse-glow 3s ease-in-out infinite; }
-    .sig-progress { animation: sig-loop 6s ease-in-out infinite; overflow: hidden; white-space: nowrap; }
+    .mpc-msg-r { position: absolute; top: 50%; transform: translateY(-50%); animation: msgRight 1.5s ease-in-out infinite; }
+    .mpc-msg-l { position: absolute; top: 50%; transform: translateY(-50%); animation: msgLeft 1.5s ease-in-out 0.75s infinite; }
+    .mpc-glow { animation: pulse-glow 1.5s ease-in-out infinite; }
+    .sig-progress { animation: sig-steps 9s ease-out infinite; }
+    .sig-verified { animation: verified-appear 9s ease-out infinite; opacity: 0; }
 
     /* Back to top */
     #back-to-top {

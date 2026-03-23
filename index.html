@@ -98,14 +98,23 @@ title: kexify — keys simplified
 
       <!-- Signature building -->
       <div class="mt-5 pt-4 border-t border-border-secondary">
-        <div class="flex items-center justify-center gap-2 mb-2">
-          <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="flex items-center justify-center gap-2 mb-3">
           <span class="text-[10px] dark:text-gray-400 text-gray-500 font-medium">Signature</span>
+          <svg class="w-4 h-4 text-green-400 sig-verified" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <div class="h-1.5 rounded-full bg-surface-tertiary overflow-hidden">
-          <div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-green-400 sig-progress"></div>
+        <!-- Progress bar with 3 step markers -->
+        <div class="relative">
+          <div class="h-2 rounded-full bg-surface-tertiary overflow-hidden">
+            <div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-green-400 sig-progress"></div>
+          </div>
+          <!-- Step markers -->
+          <div class="flex justify-between mt-1.5 px-0.5">
+            <span class="text-[9px] dark:text-gray-600 text-gray-300">Round 1</span>
+            <span class="text-[9px] dark:text-gray-600 text-gray-300">Round 2</span>
+            <span class="text-[9px] dark:text-gray-600 text-gray-300">Round 3</span>
+          </div>
         </div>
-        <p class="text-[10px] dark:text-gray-500 text-gray-400 text-center mt-2">Built progressively through multiple rounds — the full key <span class="text-blue-400">never exists</span></p>
+        <p class="text-[10px] dark:text-gray-500 text-gray-400 text-center mt-3">The full key <span class="text-blue-400">never exists</span> — not in the browser, not on the server, not in transit</p>
       </div>
     </div>
   </div>
