@@ -117,60 +117,33 @@
       0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
       50% { box-shadow: 0 0 12px 4px rgba(59,130,246,0.3); }
     }
-    /* 15s total: 3 rounds (1.5s each = 4.5s) + hold 5s + fade 1s + pause 4.5s */
-    @keyframes msgRight {
-      0% { left: 0; opacity: 0; }
-      3% { opacity: 1; }
-      13% { left: calc(100% - 10px); opacity: 1; }
-      15% { opacity: 0; }
-      /* Stop after round 3 (~30%) */
-      30%, 100% { opacity: 0; left: calc(100% - 10px); }
-    }
-    @keyframes msgLeft {
-      0% { right: 0; opacity: 0; }
-      3% { opacity: 1; }
-      13% { right: calc(100% - 10px); opacity: 1; }
-      15% { opacity: 0; }
-      30%, 100% { opacity: 0; right: calc(100% - 10px); }
-    }
-    @keyframes sig-steps {
-      /* Round 1 done at 10% */
-      0%, 9% { width: 0; }
-      10% { width: 33%; }
-      /* Round 2 done at 20% */
-      19% { width: 33%; }
-      20% { width: 66%; }
-      /* Round 3 done at 30% */
-      29% { width: 66%; }
-      30% { width: 100%; }
-      /* Hold complete for 5s (~63%) */
-      63% { width: 100%; opacity: 1; }
-      /* Fade out */
-      70% { opacity: 0; }
-      /* Stay hidden until reset */
-      100% { width: 0; opacity: 0; }
-    }
-    @keyframes verified-appear {
-      0%, 29% { opacity: 0; transform: scale(0.5); }
-      32% { opacity: 1; transform: scale(1.15); }
-      35% { transform: scale(1); }
-      63% { opacity: 1; }
-      70%, 100% { opacity: 0; }
-    }
+    /* 12s total: 3 rounds (2s each = 6s) + hold 4s + fade 2s
+       Single envelope alternates: R1 blue→, R2 green←, R3 blue→ */
     @keyframes pulse-glow {
       0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
       50% { box-shadow: 0 0 12px 4px rgba(59,130,246,0.3); }
     }
-    .mpc-msg-r { position: absolute; top: 50%; transform: translateY(-50%); animation: msgRight 15s ease-in-out infinite; }
-    .mpc-msg-l { position: absolute; top: 50%; transform: translateY(-50%); animation: msgLeft 15s ease-in-out 0.75s infinite; }
-    /* Second and third round messages */
-    .mpc-msg-r2 { position: absolute; top: 50%; transform: translateY(-50%); animation: msgRight 15s ease-in-out 1.5s infinite; }
-    .mpc-msg-l2 { position: absolute; top: 50%; transform: translateY(-50%); animation: msgLeft 15s ease-in-out 2.25s infinite; }
-    .mpc-msg-r3 { position: absolute; top: 50%; transform: translateY(-50%); animation: msgRight 15s ease-in-out 3s infinite; }
-    .mpc-msg-l3 { position: absolute; top: 50%; transform: translateY(-50%); animation: msgLeft 15s ease-in-out 3.75s infinite; }
-    .mpc-glow { animation: pulse-glow 1.5s ease-in-out infinite; }
-    .sig-progress { animation: sig-steps 15s ease-out infinite; }
-    .sig-verified { animation: verified-appear 15s ease-out infinite; opacity: 0; }
+    @keyframes sig-steps {
+      0%, 16% { width: 0; }
+      17% { width: 33%; }
+      33% { width: 33%; }
+      34% { width: 66%; }
+      50% { width: 66%; }
+      51% { width: 100%; }
+      83% { width: 100%; opacity: 1; }
+      92% { opacity: 0; }
+      100% { width: 0; opacity: 0; }
+    }
+    @keyframes verified-appear {
+      0%, 50% { opacity: 0; transform: scale(0.5); }
+      53% { opacity: 1; transform: scale(1.15); }
+      56% { transform: scale(1); }
+      83% { opacity: 1; }
+      92%, 100% { opacity: 0; }
+    }
+    .mpc-glow { animation: pulse-glow 2s ease-in-out infinite; }
+    .sig-progress { animation: sig-steps 12s ease-out infinite; }
+    .sig-verified { animation: verified-appear 12s ease-out infinite; opacity: 0; }
 
     /* Back to top */
     #back-to-top {

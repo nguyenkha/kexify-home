@@ -77,14 +77,11 @@ permalink: /vi/
         </div>
 
         <div class="flex-1 mx-3 flex flex-col items-center gap-1">
-          <div class="w-full relative h-10">
+          <div class="w-full relative h-10" id="mpc-channel-vi">
             <div class="absolute top-1/2 left-0 right-0 border-t border-dashed border-border-primary -translate-y-1/2"></div>
-            <div class="mpc-msg-r"><svg class="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></div>
-            <div class="mpc-msg-l"><svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></div>
-            <div class="mpc-msg-r2"><svg class="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></div>
-            <div class="mpc-msg-l2"><svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></div>
-            <div class="mpc-msg-r3"><svg class="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></div>
-            <div class="mpc-msg-l3"><svg class="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></div>
+            <div id="mpc-envelope-vi" class="absolute top-1/2 -translate-y-1/2 transition-none" style="left:0;opacity:0;">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </div>
           </div>
           <p class="text-[9px] dark:text-gray-600 text-gray-300 text-center">tin nhắn mã hoá, không phải khoá</p>
         </div>
@@ -100,24 +97,53 @@ permalink: /vi/
       </div>
 
       <div class="mt-5 pt-4 border-t border-border-secondary">
-        <div class="flex items-center justify-center gap-2 mb-3">
+        <div class="flex items-center gap-2 mb-2">
           <span class="text-[10px] dark:text-gray-400 text-gray-500 font-medium">Chữ ký</span>
-          <svg class="w-4 h-4 text-green-400 sig-verified" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <svg id="sig-check-vi" class="w-4 h-4 text-green-400" style="opacity:0;transform:scale(0.5);transition:all 0.3s ease" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <div class="relative">
-          <div class="h-2 rounded-full bg-surface-tertiary overflow-hidden">
-            <div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-green-400 sig-progress"></div>
-          </div>
-          <div class="flex justify-between mt-1.5 px-0.5">
-            <span class="text-[9px] dark:text-gray-600 text-gray-300">Vòng 1</span>
-            <span class="text-[9px] dark:text-gray-600 text-gray-300">Vòng 2</span>
-            <span class="text-[9px] dark:text-gray-600 text-gray-300">Vòng 3</span>
-          </div>
+        <div class="bg-surface-tertiary rounded px-3 py-2 h-7 overflow-hidden">
+          <code id="sig-hex-vi" class="text-[11px] font-mono text-blue-400 break-all"></code>
         </div>
         <p class="text-[10px] dark:text-gray-500 text-gray-400 text-center mt-3">Khoá đầy đủ <span class="text-blue-400">không bao giờ tồn tại</span> — không trong trình duyệt, không trên server, không trên đường truyền</p>
       </div>
     </div>
   </div>
+  <script>
+    (function() {
+      var env = document.getElementById('mpc-envelope-vi');
+      var ch = document.getElementById('mpc-channel-vi');
+      var sigHex = document.getElementById('sig-hex-vi');
+      var sigCheck = document.getElementById('sig-check-vi');
+      if (!env || !ch || !sigHex || !sigCheck) return;
+      var hex = '0123456789abcdef';
+      var rounds = [
+        { dir: 'right', color: '#3b82f6' },
+        { dir: 'left',  color: '#4ade80' },
+        { dir: 'right', color: '#3b82f6' }
+      ];
+      var fullSig = '';
+      function randHex(n) { var s=''; for(var i=0;i<n;i++) s+=hex[Math.floor(Math.random()*16)]; return s; }
+      function typeHex(chunk, cb) {
+        var i=0;
+        var iv=setInterval(function(){ if(i>=chunk.length){clearInterval(iv);if(cb)cb();return;} fullSig+=chunk[i]; sigHex.textContent='0x'+fullSig; i++; },40);
+      }
+      function animateRound(round) {
+        if(round>=3){ sigCheck.style.opacity='1'; sigCheck.style.transform='scale(1)';
+          setTimeout(function(){ sigCheck.style.opacity='0'; sigCheck.style.transform='scale(0.5)'; sigHex.textContent=''; fullSig=''; setTimeout(function(){animateRound(0);},1000); },4000); return; }
+        var r=rounds[round], w=ch.offsetWidth-14;
+        env.style.transition='none'; env.style.color=r.color;
+        env.style.left=r.dir==='right'?'0px':w+'px'; env.style.opacity='1';
+        requestAnimationFrame(function(){requestAnimationFrame(function(){
+          env.style.transition='left 1.5s ease-in-out';
+          env.style.left=r.dir==='right'?w+'px':'0px';
+        });});
+        setTimeout(function(){ env.style.opacity='0';
+          typeHex(randHex(22),function(){ setTimeout(function(){animateRound(round+1);},300); });
+        },1600);
+      }
+      animateRound(0);
+    })();
+  </script>
 </section>
 
 <!-- Blockchain hỗ trợ -->
