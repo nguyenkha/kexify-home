@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="{{ page.lang | default: 'en' }}" class="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,7 @@
   <meta property="og:image" content="{{ '/assets/images/og-card.svg' | absolute_url }}">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/icon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://assets-cdn.trustwallet.com" crossorigin>
   {% seo %}
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLW58KQT27"></script>
