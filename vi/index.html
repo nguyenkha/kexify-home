@@ -8,7 +8,7 @@ permalink: /vi/
 <!-- Hero -->
 <section class="px-4 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
   <div class="max-w-5xl mx-auto text-center fade-in">
-    <div class="mx-auto mb-6 w-20 h-20 md:w-24 md:h-24">
+    <div class="mx-auto mb-6 w-20 h-20 md:w-24 md:h-24 parallax-logo" id="hero-logo-vi">
       <svg viewBox="0 0 512 512" fill="none" class="w-full h-full">
         <rect width="512" height="512" rx="96" class="dark:fill-[#030712] fill-[#f3f4f6]"/>
         <rect x="152" y="120" width="36" height="272" rx="18" fill="#3b82f6"/>
@@ -17,9 +17,14 @@ permalink: /vi/
         <circle cx="170" cy="120" r="36" stroke="#3b82f6" stroke-width="20" class="dark:fill-[#030712] fill-[#f3f4f6]"/>
       </svg>
     </div>
-    <p class="text-base md:text-lg dark:text-gray-300 text-gray-600 max-w-2xl mx-auto leading-relaxed">
-      Ví crypto thuần tuý, đơn giản và an toàn. Gửi, nhận và kết nối với mọi dApp qua WalletConnect. Miễn phí — một dự án cá nhân, chia sẻ cho mọi người.
-    </p>
+    <p id="hero-text-vi" class="text-base md:text-lg dark:text-gray-300 text-gray-600 max-w-2xl mx-auto leading-relaxed typing-cursor" style="min-height:3.5rem"></p>
+    <div class="mt-4 flex items-center justify-center gap-4 text-xs dark:text-gray-500 text-gray-400">
+      <span><span class="counter-vi text-blue-400 font-medium" data-target="10">0</span>+ chains</span>
+      <span class="dark:text-gray-600 text-gray-300">·</span>
+      <span>2-of-2 MPC</span>
+      <span class="dark:text-gray-600 text-gray-300">·</span>
+      <span><span class="counter-vi text-blue-400 font-medium" data-target="0">0</span> seed phrases</span>
+    </div>
     <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
       <a href="http://app.kexify.co/" class="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors text-center">
         Mở ứng dụng
@@ -68,10 +73,11 @@ permalink: /vi/
     <div class="bg-surface-secondary border border-border-primary rounded-lg p-6">
       <div class="flex items-center justify-between">
         <!-- Browser -->
-        <div class="text-center w-28">
-          <div class="w-14 h-14 mx-auto rounded-xl bg-surface-tertiary border border-border-primary flex items-center justify-center mpc-glow">
+        <div class="text-center w-28 group relative">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-surface-tertiary border border-border-primary flex items-center justify-center mpc-glow cursor-help">
             <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
           </div>
+          <div class="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[9px] px-2 py-1 rounded whitespace-nowrap z-10">Mã hoá trong trình duyệt (AES-GCM)</div>
           <p class="text-[10px] dark:text-gray-400 text-gray-500 mt-2 font-medium">Browser</p>
           <p class="text-[10px] dark:text-gray-500 text-gray-400">Key Share A</p>
         </div>
@@ -87,10 +93,11 @@ permalink: /vi/
         </div>
 
         <!-- Server -->
-        <div class="text-center w-28">
-          <div class="w-14 h-14 mx-auto rounded-xl bg-surface-tertiary border border-border-primary flex items-center justify-center mpc-glow" style="animation-delay: 1.5s;">
+        <div class="text-center w-28 group relative">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-surface-tertiary border border-border-primary flex items-center justify-center mpc-glow cursor-help" style="animation-delay: 1.5s;">
             <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
           </div>
+          <div class="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[9px] px-2 py-1 rounded whitespace-nowrap z-10">Mã hoá trên server (AES-256-GCM + HKDF)</div>
           <p class="text-[10px] dark:text-gray-400 text-gray-500 mt-2 font-medium">Server</p>
           <p class="text-[10px] dark:text-gray-500 text-gray-400">Key Share B</p>
         </div>
@@ -248,15 +255,15 @@ permalink: /vi/
   <div class="max-w-5xl mx-auto fade-in fade-in-delay-3">
     <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-6">Tại sao kexify</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5 compare-card">
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">so với MetaMask</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Một khoá duy nhất trong trình duyệt. Bị hack = mất hết. kexify dùng hai phần khoá độc lập — không có điểm lỗi đơn lẻ.</p>
       </div>
-      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5 compare-card">
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">so với Fireblocks</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">MPC doanh nghiệp, giá doanh nghiệp. kexify mang cùng công nghệ mật mã ngưỡng đến cá nhân — miễn phí, không quảng cáo.</p>
       </div>
-      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5 compare-card">
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">so với ví lưu ký</h3>
         <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Không phải khoá của bạn, không phải crypto của bạn. kexify tự quản lý — xuất cả hai phần khoá và hoạt động ngoại tuyến.</p>
       </div>
@@ -279,3 +286,36 @@ permalink: /vi/
     </a>
   </div>
 </section>
+
+<script>
+(function() {
+  var heroText = document.getElementById('hero-text-vi');
+  if (heroText) {
+    var text = 'V\u00ed crypto thu\u1ea7n tu\u00fd, \u0111\u01a1n gi\u1ea3n v\u00e0 an to\u00e0n. G\u1eedi, nh\u1eadn v\u00e0 k\u1ebft n\u1ed1i v\u1edbi m\u1ecdi dApp qua WalletConnect. Mi\u1ec5n ph\u00ed \u2014 m\u1ed9t d\u1ef1 \u00e1n c\u00e1 nh\u00e2n, chia s\u1ebb cho m\u1ecdi ng\u01b0\u1eddi.';
+    var i = 0;
+    function typeChar() {
+      if (i >= text.length) { heroText.classList.remove('typing-cursor'); return; }
+      heroText.textContent += text[i]; i++;
+      setTimeout(typeChar, 25);
+    }
+    setTimeout(typeChar, 500);
+  }
+  document.querySelectorAll('.counter-vi').forEach(function(el) {
+    var target = parseInt(el.dataset.target);
+    if (target === 0) return;
+    var current = 0, step = Math.max(1, Math.floor(target / 20));
+    var iv = setInterval(function() {
+      current += step;
+      if (current >= target) { current = target; clearInterval(iv); }
+      el.textContent = current;
+    }, 50);
+  });
+  var logo = document.getElementById('hero-logo-vi');
+  if (logo) {
+    window.addEventListener('scroll', function() {
+      var y = window.scrollY;
+      if (y < 600) logo.style.transform = 'translateY(' + (y * 0.3) + 'px)';
+    }, { passive: true });
+  }
+})();
+</script>
