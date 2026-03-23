@@ -98,6 +98,29 @@
     details[open] summary::before { content: '−'; }
     details summary { display: flex; align-items: center; }
 
+    /* MPC signing animation */
+    @keyframes msgRight {
+      0% { left: 0; opacity: 0; }
+      10% { opacity: 1; }
+      45% { left: calc(100% - 8px); opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; left: calc(100% - 8px); }
+    }
+    @keyframes msgLeft {
+      0% { right: 0; opacity: 0; }
+      10% { opacity: 1; }
+      45% { right: calc(100% - 8px); opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; right: calc(100% - 8px); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
+      50% { box-shadow: 0 0 12px 4px rgba(59,130,246,0.3); }
+    }
+    .mpc-msg-r { position: absolute; top: 50%; transform: translateY(-50%); animation: msgRight 3s ease-in-out infinite; }
+    .mpc-msg-l { position: absolute; top: 50%; transform: translateY(-50%); animation: msgLeft 3s ease-in-out 1.5s infinite; }
+    .mpc-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
     /* Back to top */
     #back-to-top {
       opacity: 0;
