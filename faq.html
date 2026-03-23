@@ -68,6 +68,10 @@ title: FAQ — kexify
         <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Browser: AES-GCM encrypted with WebAuthn passkey PRF or passphrase (PBKDF2). Server: AES-256-GCM with per-user HKDF-derived key. All in transit: TLS 1.3.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">What is GoPlus fraud check?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Before signing, kexify automatically checks the recipient address and token contract against GoPlus Security's database for known scams, phishing addresses, and malicious contracts. If a risk is detected, you'll see a warning before confirming. Enabled by default — no setup needed.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">How is kexify different from other MPC wallets like ZenGo?</summary>
         <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Both use MPC, but kexify is open source and fully self-custodial — you can export both key shares and sign offline anytime. ZenGo controls the recovery share and requires their servers. kexify also adds a Policy Engine (spending limits, address whitelists) that ZenGo doesn't have. And kexify is free — no swap fees, no premium tiers.</p>
       </details>
@@ -86,7 +90,7 @@ title: FAQ — kexify
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Which blockchains are supported?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM chains (Ethereum, Base, Avalanche, Polygon, Arbitrum, BSC...), Bitcoin, Solana, XRP, TRON, TON, Algorand, Stellar, Litecoin, and Bitcoin Cash — plus their testnets and tokens.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM chains (Ethereum, Base, Avalanche, Polygon, Arbitrum, BSC...), Bitcoin, Solana, XRP, TRON, TON, Algorand, Cardano, Stellar, Litecoin, and Bitcoin Cash — plus their testnets and tokens.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">How do I sign transactions?</summary>

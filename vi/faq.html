@@ -70,6 +70,10 @@ permalink: /vi/faq/
         <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Trình duyệt: mã hoá AES-GCM bằng WebAuthn passkey PRF hoặc mật khẩu (PBKDF2). Server: AES-256-GCM với khoá HKDF riêng cho mỗi người dùng. Truyền tải: TLS 1.3.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">GoPlus fraud check là gì?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Trước khi ký, kexify tự động kiểm tra địa chỉ nhận và hợp đồng token qua cơ sở dữ liệu GoPlus Security để phát hiện lừa đảo, địa chỉ phishing và hợp đồng độc hại. Nếu phát hiện rủi ro, bạn sẽ thấy cảnh báo trước khi xác nhận. Bật mặc định — không cần cài đặt gì.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexify khác gì với các ví MPC khác như ZenGo?</summary>
         <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Cả hai đều dùng MPC, nhưng kexify là mã nguồn mở và tự quản lý hoàn toàn — bạn có thể xuất cả hai phần khoá và ký ngoại tuyến bất cứ lúc nào. ZenGo kiểm soát phần khoá khôi phục và cần server của họ. kexify còn có Policy Engine (giới hạn chi tiêu, danh sách địa chỉ) mà ZenGo không có. Và kexify miễn phí — không phí swap, không gói premium.</p>
       </details>
@@ -88,7 +92,7 @@ permalink: /vi/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Hỗ trợ những blockchain nào?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Chuỗi EVM (Ethereum, Base, Avalanche, Polygon, Arbitrum, BSC...), Bitcoin, Solana, XRP, TRON, TON, Algorand, Stellar, Litecoin và Bitcoin Cash — cùng các testnet và token.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Chuỗi EVM (Ethereum, Base, Avalanche, Polygon, Arbitrum, BSC...), Bitcoin, Solana, XRP, TRON, TON, Algorand, Cardano, Stellar, Litecoin và Bitcoin Cash — cùng các testnet và token.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Chính sách bảo mật (Policy Engine) là gì?</summary>
