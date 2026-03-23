@@ -102,24 +102,37 @@
     @keyframes msgRight {
       0% { left: 0; opacity: 0; }
       10% { opacity: 1; }
-      45% { left: calc(100% - 8px); opacity: 1; }
+      45% { left: calc(100% - 10px); opacity: 1; }
       50% { opacity: 0; }
-      100% { opacity: 0; left: calc(100% - 8px); }
+      100% { opacity: 0; left: calc(100% - 10px); }
     }
     @keyframes msgLeft {
       0% { right: 0; opacity: 0; }
       10% { opacity: 1; }
-      45% { right: calc(100% - 8px); opacity: 1; }
+      45% { right: calc(100% - 10px); opacity: 1; }
       50% { opacity: 0; }
-      100% { opacity: 0; right: calc(100% - 8px); }
+      100% { opacity: 0; right: calc(100% - 10px); }
     }
     @keyframes pulse-glow {
       0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
       50% { box-shadow: 0 0 12px 4px rgba(59,130,246,0.3); }
     }
+    @keyframes sig-build {
+      0% { width: 0; opacity: 0; }
+      20% { opacity: 1; }
+      100% { width: 100%; opacity: 1; }
+    }
+    @keyframes sig-loop {
+      0%,10% { width: 0; opacity: 0; }
+      15% { opacity: 1; }
+      60% { width: 100%; opacity: 1; }
+      80% { width: 100%; opacity: 1; }
+      95%,100% { width: 100%; opacity: 0; }
+    }
     .mpc-msg-r { position: absolute; top: 50%; transform: translateY(-50%); animation: msgRight 3s ease-in-out infinite; }
     .mpc-msg-l { position: absolute; top: 50%; transform: translateY(-50%); animation: msgLeft 3s ease-in-out 1.5s infinite; }
     .mpc-glow { animation: pulse-glow 3s ease-in-out infinite; }
+    .sig-progress { animation: sig-loop 6s ease-in-out infinite; overflow: hidden; white-space: nowrap; }
 
     /* Back to top */
     #back-to-top {
