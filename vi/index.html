@@ -34,7 +34,7 @@ permalink: /vi/
 <!-- Cách hoạt động -->
 <section class="px-4 md:px-8 py-8">
   <div class="max-w-5xl mx-auto fade-in fade-in-delay-1">
-    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">How it works</h2>
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">Cách hoạt động</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
         <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
@@ -64,7 +64,7 @@ permalink: /vi/
 <!-- MPC Signing Flow -->
 <section class="px-4 md:px-8 py-8">
   <div class="max-w-3xl mx-auto fade-in fade-in-delay-1">
-    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-6">MPC Signing</h2>
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-6">Ký MPC</h2>
     <div class="bg-surface-secondary border border-border-primary rounded-lg p-6">
       <div class="flex items-center justify-between">
         <!-- Browser -->
@@ -102,7 +102,7 @@ permalink: /vi/
           <svg id="sig-check-vi" class="w-4 h-4 text-green-400" style="opacity:0;transform:scale(0.5);transition:all 0.3s ease" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
         <div class="bg-surface-tertiary rounded-lg px-3 py-2.5 min-h-[32px] overflow-hidden">
-          <code id="sig-hex-vi" class="text-[11px] font-mono text-blue-400 break-all"></code>
+          <code id="sig-hex-vi" class="text-sm font-mono text-blue-400"></code>
         </div>
         <p class="text-[10px] dark:text-gray-500 text-gray-400 text-center mt-3">Khoá đầy đủ <span class="text-blue-400">không bao giờ tồn tại</span> — không trong trình duyệt, không trên server, không trên đường truyền</p>
       </div>
@@ -123,6 +123,7 @@ permalink: /vi/
       ];
       var fullSig = '';
       function randHex(n) { var s=''; for(var i=0;i<n;i++) s+=hex[Math.floor(Math.random()*16)]; return s; }
+      var sigBox=sigHex.parentElement, boxW=sigBox.offsetWidth-24, totalChars=Math.floor(boxW/8.4)-2, charsPerRound=Math.floor(totalChars/3);
       function typeHex(chunk, cb) {
         var i=0;
         var iv=setInterval(function(){ if(i>=chunk.length){clearInterval(iv);if(cb)cb();return;} fullSig+=chunk[i]; sigHex.textContent='0x'+fullSig; i++; },40);
@@ -138,7 +139,7 @@ permalink: /vi/
           env.style.left=r.dir==='right'?w+'px':'0px';
         });});
         setTimeout(function(){ env.style.opacity='0';
-          typeHex(randHex(22),function(){ setTimeout(function(){animateRound(round+1);},300); });
+          typeHex(randHex(charsPerRound),function(){ setTimeout(function(){animateRound(round+1);},300); });
         },1600);
       }
       animateRound(0);
@@ -149,7 +150,7 @@ permalink: /vi/
 <!-- Blockchain hỗ trợ -->
 <section class="px-4 md:px-8 py-8">
   <div class="max-w-5xl mx-auto fade-in fade-in-delay-2">
-    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">Supported Chains</h2>
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">Blockchain hỗ trợ</h2>
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
       <!-- EVM -->
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
@@ -183,7 +184,7 @@ permalink: /vi/
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
         <svg class="w-8 h-8 flex-shrink-0 dark:text-gray-400 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
         <div>
-          <span class="text-xs font-medium dark:text-gray-300 text-gray-700">More</span>
+          <span class="text-xs font-medium dark:text-gray-300 text-gray-700">Khác</span>
           <span class="block text-[10px] dark:text-gray-500 text-gray-400">TRON, Algorand, Cardano, Stellar, LTC, BCH</span>
         </div>
       </div>
@@ -194,7 +195,7 @@ permalink: /vi/
 <!-- Tính năng -->
 <section class="px-4 md:px-8 py-8">
   <div class="max-w-5xl mx-auto fade-in fade-in-delay-3">
-    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">Features</h2>
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">Tính năng</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
         <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
@@ -245,7 +246,7 @@ permalink: /vi/
 <!-- Tại sao kexify -->
 <section class="px-4 md:px-8 py-8">
   <div class="max-w-5xl mx-auto fade-in fade-in-delay-3">
-    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-6">Why kexify</h2>
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-6">Tại sao kexify</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
       <div class="bg-surface-secondary border border-border-primary rounded-lg p-5">
         <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">so với MetaMask</h3>
@@ -266,7 +267,7 @@ permalink: /vi/
 <!-- Mã nguồn mở + CTA -->
 <section class="px-4 md:px-8 py-8 pb-12">
   <div class="max-w-5xl mx-auto text-center fade-in fade-in-delay-3">
-    <h2 class="text-lg font-semibold dark:text-white text-gray-900 mb-3">Open Source</h2>
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 mb-3">Mã nguồn mở</h2>
     <p class="text-sm dark:text-gray-400 text-gray-500 max-w-xl mx-auto leading-relaxed">
       Xây dựng trên <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a>
       (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">fork</a>).
@@ -274,7 +275,7 @@ permalink: /vi/
     </p>
     <p class="mt-2 text-xs dark:text-gray-500 text-gray-400">Xây dựng trên thư viện mật mã cb-mpc đã được kiểm toán của Coinbase</p>
     <a href="http://app.kexify.co/" class="inline-flex mt-6 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
-      Try kexify
+      Dùng thử kexify
     </a>
   </div>
 </section>

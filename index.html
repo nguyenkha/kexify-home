@@ -104,7 +104,7 @@ title: kexify — keys simplified
           <svg id="sig-check" class="w-4 h-4 text-green-400" style="opacity:0;transform:scale(0.5);transition:all 0.3s ease" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
         <div class="bg-surface-tertiary rounded-lg px-3 py-2.5 min-h-[32px] overflow-hidden">
-          <code id="sig-hex" class="text-[11px] font-mono text-blue-400 break-all"></code>
+          <code id="sig-hex" class="text-sm font-mono text-blue-400"></code>
         </div>
         <p class="text-[10px] dark:text-gray-500 text-gray-400 text-center mt-3">The full key <span class="text-blue-400">never exists</span> — not in the browser, not on the server, not in transit</p>
       </div>
@@ -131,6 +131,13 @@ title: kexify — keys simplified
         for (var i = 0; i < n; i++) s += hex[Math.floor(Math.random() * 16)];
         return s;
       }
+
+      // Calculate chars per round to fill the box
+      var sigBox = sigHex.parentElement;
+      var boxW = sigBox.offsetWidth - 24; // padding
+      var charW = 8.4; // approx width of mono char at text-sm
+      var totalChars = Math.floor(boxW / charW) - 2; // minus "0x"
+      var charsPerRound = Math.floor(totalChars / 3);
 
       function typeHex(chunk, cb) {
         var i = 0;
@@ -175,7 +182,7 @@ title: kexify — keys simplified
         // When envelope arrives, hide it and grow sig
         setTimeout(function() {
           env.style.opacity = '0';
-          var chunk = randHex(22);
+          var chunk = randHex(charsPerRound);
           typeHex(chunk, function() {
             setTimeout(function() { animateRound(round + 1); }, 300);
           });
