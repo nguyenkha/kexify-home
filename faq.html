@@ -137,6 +137,14 @@ title: FAQ — kexify
         <summary class="text-sm font-medium dark:text-white text-gray-900">Why are RPC connections sometimes slow or unstable?</summary>
         <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify uses free public RPC endpoints by default. These can be rate-limited, congested, or occasionally down. For better reliability and speed, go to Settings and replace the default RPC with your own endpoint (from Alchemy, Infura, QuickNode, etc.) — most offer generous free tiers with an API key.</p>
       </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Are there limits on emails and signing requests?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Magic link emails, API requests, and signing operations are all rate-limited to prevent abuse of the free infrastructure. If you hit a limit, wait a short while and try again. These limits are generous enough for normal use — they only kick in under unusual activity patterns.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Why does kexify use Cloudflare Turnstile?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile is a privacy-friendly CAPTCHA alternative that runs invisibly in the background. It protects the free infrastructure from bots and automated abuse — without annoying puzzles or tracking. You should rarely notice it.</p>
+      </details>
     </div>
 
     <!-- Technical -->
