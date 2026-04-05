@@ -116,6 +116,23 @@ permalink: /vi/faq/
       </details>
     </div>
 
+    <!-- Giới hạn -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Giới hạn</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Tại sao giới hạn 3 tài khoản?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify chạy hoàn toàn trên hạ tầng miễn phí. Mỗi tài khoản lưu trữ key share mã hoá trên server, nên giới hạn 3 tài khoản mỗi người dùng giúp duy trì chi phí lưu trữ và tính toán mà không cần thu phí.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Tại sao giới hạn 10 chữ ký mỗi giao dịch (UTXO)?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Mỗi chữ ký MPC cần nhiều vòng tính toán giữa trình duyệt và server. Trên chuỗi UTXO (Bitcoin, Litecoin...), mỗi input cần một chữ ký riêng. Giới hạn 10 giúp thời gian ký hợp lý và tránh quá tải tài nguyên server miễn phí. Với hầu hết giao dịch, 10 input là quá đủ.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Tại sao kết nối RPC đôi khi chậm hoặc không ổn định?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify mặc định dùng RPC công cộng miễn phí. Các endpoint này có thể bị giới hạn tốc độ, nghẽn, hoặc thỉnh thoảng ngừng hoạt động. Để ổn định và nhanh hơn, vào Cài đặt và thay RPC mặc định bằng endpoint riêng (từ Alchemy, Infura, QuickNode...) — hầu hết đều có gói miễn phí với API key.</p>
+      </details>
+    </div>
+
     <!-- Kỹ thuật -->
     <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Kỹ thuật</h2>
     <div class="space-y-2">

@@ -122,6 +122,23 @@ title: FAQ — kexify
       </details>
     </div>
 
+    <!-- Limitations -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Limitations</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Why is there a limit of 3 accounts?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify runs entirely on free infrastructure. Each account stores encrypted key shares on the server, so a cap of 3 accounts per user keeps storage and compute costs sustainable without charging anyone.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Why is there a limit of 10 signatures per transaction (UTXO)?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Each MPC signature requires multiple rounds of computation between your browser and the server. On UTXO chains (Bitcoin, Litecoin, etc.), every input needs a separate signature. Capping at 10 keeps signing time reasonable and prevents free-tier server resources from being overwhelmed. For most transactions, 10 inputs is more than enough.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Why are RPC connections sometimes slow or unstable?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify uses free public RPC endpoints by default. These can be rate-limited, congested, or occasionally down. For better reliability and speed, go to Settings and replace the default RPC with your own endpoint (from Alchemy, Infura, QuickNode, etc.) — most offer generous free tiers with an API key.</p>
+      </details>
+    </div>
+
     <!-- Technical -->
     <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Technical</h2>
     <div class="space-y-2">
