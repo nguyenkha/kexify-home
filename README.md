@@ -12,7 +12,7 @@ Built with Jekyll + Tailwind CSS, deployed on GitHub Pages.
 
 ## Links
 
-- App: http://app.kexify.co/
+- App: https://my.kexify.app/ (legacy: https://app.kexify.co/)
 - Frontend repo: https://github.com/nguyenkha/kexify-web
 - MPC library: https://github.com/coinbase/cb-mpc ([fork](https://github.com/nguyenkha/cb-mpc))
 
