@@ -4,10 +4,10 @@ en:
   og_locale: en_US
   home:
     title: "kexify — self-custodial MPC crypto wallet, no seed phrase"
-    description: "A free, self-custodial crypto wallet. Your key is split between your device and the server with 2-of-2 MPC, so there is no seed phrase and no single point of failure."
+    description: "A self-custodial crypto wallet with no seed phrase. 2-of-2 MPC splits your key between your device and the server, which enforces your daily limit and blocks risky signatures. Free plan."
   faq:
     title: "FAQ — kexify MPC wallet"
-    description: "Answers about kexify: who holds your keys, how 2-of-2 MPC signing works, what if the server goes down, spending policies, the 24-hour cooling period and supported chains."
+    description: "Answers about kexify: who holds your keys, how 2-of-2 MPC signing works, what if the server goes down, daily limits, the 24-hour wait, free and premium, testnets and the CLI."
   about:
     title: "About kexify — who builds it and why"
     description: "kexify is a free personal project by Kha Do: a simple, safe MPC wallet built on Coinbase cb-mpc. Read why it exists, how it is built, and where the code lives."

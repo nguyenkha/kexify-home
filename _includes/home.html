@@ -1,0 +1,279 @@
+{% comment %}
+  Home page body. Copy comes from _data/home/<lang>.yml (page.lang, default en), so every language
+  shares one layout. Sections: hero, safe by default, how it works + MPC animation, leave anytime,
+  for developers, chains, free and premium, why kexify, closing CTA.
+{% endcomment %}
+{% assign hl = page.lang | default: "en" %}
+{% assign t = site.data.home[hl] %}
+{% assign card = "bg-surface-secondary border border-border-primary rounded-lg p-4" %}
+{% assign h2 = "text-lg font-semibold dark:text-white text-gray-900 text-center" %}
+{% assign h3 = "text-sm font-medium dark:text-white text-gray-900" %}
+{% assign body = "text-xs dark:text-gray-400 text-gray-500 leading-relaxed" %}
+
+<!-- Hero -->
+<section class="px-4 md:px-8 pt-16 pb-10 md:pt-24 md:pb-14">
+  <div class="max-w-5xl mx-auto text-center fade-in">
+    <div class="mx-auto mb-6 w-20 h-20 md:w-24 md:h-24">
+      <svg viewBox="0 0 512 512" fill="none" class="w-full h-full" aria-hidden="true">
+        <rect width="512" height="512" rx="96" class="dark:fill-[#030712] fill-[#f3f4f6]"/>
+        <rect x="152" y="120" width="36" height="272" rx="18" fill="#3b82f6"/>
+        <path d="M188 256l120-120h48L212 280z" fill="#3b82f6"/>
+        <path d="M188 256l120 120h48L212 232z" fill="#3b82f6"/>
+        <circle cx="170" cy="120" r="36" stroke="#3b82f6" stroke-width="20" class="dark:fill-[#030712] fill-[#f3f4f6]"/>
+      </svg>
+    </div>
+    <h1 class="text-2xl md:text-4xl font-bold tracking-tight dark:text-white text-gray-900">{{ t.hero.tagline }}</h1>
+    <p class="mt-4 text-base md:text-lg dark:text-gray-300 text-gray-600 max-w-2xl mx-auto leading-relaxed">{{ t.hero.sub }}</p>
+    <div class="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs dark:text-gray-500 text-gray-400">
+      {% for s in t.hero.stats %}{% unless forloop.first %}<span class="dark:text-gray-600 text-gray-300">·</span>{% endunless %}<span>{{ s }}</span>{% endfor %}
+    </div>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="https://my.kexify.app/" class="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors text-center">{{ t.hero.cta_app }}</a>
+      <a href="#developers" class="w-full sm:w-auto px-6 py-3 bg-surface-tertiary hover:bg-border-primary dark:text-gray-300 text-gray-600 text-sm font-medium rounded-lg transition-colors text-center">{{ t.hero.cta_dev }}</a>
+    </div>
+    <p class="mt-3 text-xs dark:text-gray-500 text-gray-500">{{ t.hero.ios_note }}</p>
+
+    <div class="mt-8 max-w-xl mx-auto text-left rounded-lg border border-blue-500/20 bg-blue-500/10 px-4 py-3 text-xs leading-relaxed">
+      <p class="text-blue-400 font-medium">{{ t.hero.move_title }}</p>
+      <p class="mt-1 dark:text-gray-400 text-gray-600">{{ t.hero.move_body }}</p>
+      <p class="mt-1 text-gray-500">{{ t.hero.move_warning }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Safe by default (everyday users) -->
+<section id="safety" class="px-4 md:px-8 py-8">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-1">
+    <h2 class="{{ h2 }} mb-2">{{ t.safety.title }}</h2>
+    <p class="text-sm dark:text-gray-400 text-gray-500 text-center max-w-2xl mx-auto mb-8 leading-relaxed">{{ t.safety.intro }}</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% for it in t.safety.items %}
+      <div class="{{ card }} flex gap-3">
+        <svg class="w-7 h-7 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+          {% case it.icon %}
+          {% when "key" %}<path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
+          {% when "limit" %}<path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          {% when "clock" %}<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          {% when "shield" %}<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          {% when "alert" %}<path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          {% else %}<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+          {% endcase %}
+        </svg>
+        <div>
+          <h3 class="{{ h3 }}">{{ it.title }}</h3>
+          <p class="mt-1 {{ body }}">{{ it.body }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-1">
+    <h2 class="{{ h2 }} mb-8">{{ t.how.title }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {% for st in t.how.steps %}
+      <div class="{{ card }}">
+        <h3 class="{{ h3 }}"><span class="text-blue-400 mr-1">{{ forloop.index }}.</span> {{ st.title }}</h3>
+        <p class="mt-1 {{ body }}">{{ st.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="max-w-3xl mx-auto mt-8">
+      <h3 class="{{ h3 }} text-center mb-4">{{ t.how.mpc_title }}</h3>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-6">
+        <div class="flex items-center justify-between">
+          <div class="text-center w-28 group relative">
+            <div class="w-14 h-14 mx-auto rounded-xl bg-surface-tertiary border border-border-primary flex items-center justify-center mpc-glow cursor-help">
+              <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <div class="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[9px] px-2 py-1 rounded whitespace-nowrap z-10">{{ t.how.tip_a }}</div>
+            <p class="text-[10px] dark:text-gray-400 text-gray-500 mt-2 font-medium">{{ t.how.browser }}</p>
+            <p class="text-[10px] dark:text-gray-500 text-gray-400">{{ t.how.share_a }}</p>
+          </div>
+          <div class="flex-1 mx-3 flex flex-col items-center gap-1">
+            <div class="w-full relative h-10" id="mpc-channel">
+              <div class="absolute top-1/2 left-0 right-0 border-t border-dashed border-border-primary -translate-y-1/2"></div>
+              <div id="mpc-envelope" class="absolute top-1/2 -translate-y-1/2 transition-none" style="left:0;opacity:0;">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+              </div>
+            </div>
+            <p class="text-[9px] dark:text-gray-600 text-gray-400 text-center">{{ t.how.channel }}</p>
+          </div>
+          <div class="text-center w-28 group relative">
+            <div class="w-14 h-14 mx-auto rounded-xl bg-surface-tertiary border border-border-primary flex items-center justify-center mpc-glow cursor-help" style="animation-delay: 1.5s;">
+              <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <div class="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[9px] px-2 py-1 rounded whitespace-nowrap z-10">{{ t.how.tip_b }}</div>
+            <p class="text-[10px] dark:text-gray-400 text-gray-500 mt-2 font-medium">{{ t.how.server }}</p>
+            <p class="text-[10px] dark:text-gray-500 text-gray-400">{{ t.how.share_b }}</p>
+          </div>
+        </div>
+        <div class="mt-5 pt-4 border-t border-border-secondary">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-[10px] dark:text-gray-400 text-gray-500 font-medium">{{ t.how.signature }}</span>
+            <svg id="sig-check" class="w-4 h-4 text-green-400" style="opacity:0;transform:scale(0.5);transition:all 0.3s ease" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="bg-surface-tertiary rounded-lg px-3 py-2.5 overflow-hidden whitespace-nowrap">
+            <code id="sig-hex" class="text-[10px] sm:text-sm font-mono text-blue-400"></code>
+          </div>
+          <p class="text-[10px] dark:text-gray-500 text-gray-500 text-center mt-3">{{ t.how.never }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Leave anytime -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-3xl mx-auto fade-in fade-in-delay-2">
+    <div class="{{ card }} p-5 md:p-6 border-blue-500/30">
+      <h2 class="text-base font-semibold dark:text-white text-gray-900">{{ t.exit.title }}</h2>
+      <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">{{ t.exit.body }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- For developers -->
+<section id="developers" class="px-4 md:px-8 py-8 scroll-mt-4">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-2">
+    <h2 class="{{ h2 }} mb-2">{{ t.dev.title }}</h2>
+    <p class="text-sm dark:text-gray-400 text-gray-500 text-center max-w-2xl mx-auto mb-8 leading-relaxed">{{ t.dev.intro }}</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% for it in t.dev.items %}
+      <div class="{{ card }}">
+        <h3 class="{{ h3 }} font-mono">{{ it.title }}</h3>
+        <p class="mt-1 {{ body }}">{{ it.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Supported chains -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-2">
+    <h2 class="{{ h2 }} mb-8">{{ t.chains.title }}</h2>
+    {% assign tw = "https://assets-cdn.trustwallet.com/blockchains/" %}
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <div class="{{ card }} flex items-center gap-3">
+        <img class="w-8 h-8 flex-shrink-0 rounded-full" src="{{ tw }}ethereum/info/logo.png" alt="Ethereum" loading="lazy" width="32" height="32">
+        <div><span class="text-xs font-medium dark:text-gray-300 text-gray-700">EVM</span><span class="block text-[10px] dark:text-gray-500 text-gray-500">{{ t.chains.evm_sub }}</span></div>
+      </div>
+      {% assign named = "bitcoin:Bitcoin,ripple:XRP,solana:Solana,ton:TON" | split: "," %}
+      {% for n in named %}{% assign kv = n | split: ":" %}
+      <div class="{{ card }} flex items-center gap-3">
+        <img class="w-8 h-8 flex-shrink-0 rounded-full" src="{{ tw }}{{ kv[0] }}/info/logo.png" alt="{{ kv[1] }}" loading="lazy" width="32" height="32">
+        <span class="text-xs font-medium dark:text-gray-300 text-gray-700">{{ kv[1] }}</span>
+      </div>
+      {% endfor %}
+      <div class="{{ card }} flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 dark:text-gray-400 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+        <div><span class="text-xs font-medium dark:text-gray-300 text-gray-700">{{ t.chains.more }}</span><span class="block text-[10px] dark:text-gray-500 text-gray-500">{{ t.chains.more_sub }}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Free and Premium -->
+<section id="pricing" class="px-4 md:px-8 py-8">
+  <div class="max-w-4xl mx-auto fade-in fade-in-delay-3">
+    <h2 class="{{ h2 }} mb-8">{{ t.plans.title }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="{{ card }} p-5 border-blue-500/40">
+        <h3 class="text-base font-semibold dark:text-white text-gray-900">{{ t.plans.free_title }}</h3>
+        <p class="text-sm text-blue-400 font-medium">{{ t.plans.free_price }}</p>
+        <ul class="mt-4 space-y-2">
+          {% for li in t.plans.free_items %}<li class="flex gap-2 {{ body }}"><span class="text-green-400" aria-hidden="true">✓</span><span>{{ li }}</span></li>{% endfor %}
+        </ul>
+      </div>
+      <div class="{{ card }} p-5">
+        <h3 class="text-base font-semibold dark:text-white text-gray-900">{{ t.plans.premium_title }}</h3>
+        <p class="text-sm dark:text-gray-400 text-gray-500 font-medium">{{ t.plans.premium_price }}</p>
+        <ul class="mt-4 space-y-2">
+          {% for li in t.plans.premium_items %}<li class="flex gap-2 items-baseline {{ body }}"><span class="dark:text-gray-600 text-gray-400" aria-hidden="true">○</span><span>{{ li }} <span class="ml-1 px-1.5 py-0.5 rounded bg-surface-tertiary text-[10px] text-gray-500">{{ t.plans.planned }}</span></span></li>{% endfor %}
+        </ul>
+        <p class="mt-4 text-[11px] text-gray-500 leading-relaxed">{{ t.plans.premium_note }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why kexify -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-3">
+    <h2 class="{{ h2 }} mb-6">{{ t.why.title }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+      {% for it in t.why.items %}
+      <div class="{{ card }} p-5 compare-card">
+        <h3 class="{{ h3 }} mb-1">{{ it.title }}</h3>
+        <p class="{{ body }}">{{ it.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Closing CTA -->
+<section class="px-4 md:px-8 py-8 pb-12">
+  <div class="max-w-5xl mx-auto text-center fade-in fade-in-delay-3">
+    <h2 class="{{ h2 }} mb-3">{{ t.cta.title }}</h2>
+    <p class="text-sm dark:text-gray-400 text-gray-500 max-w-xl mx-auto leading-relaxed">{{ t.cta.body }}</p>
+    <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="https://my.kexify.app/" class="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors text-center">{{ t.cta.app }}</a>
+      <a href="https://github.com/nguyenkha/kexify-web" class="w-full sm:w-auto px-6 py-3 bg-surface-tertiary hover:bg-border-primary dark:text-gray-300 text-gray-600 text-sm font-medium rounded-lg transition-colors text-center">{{ t.cta.github }}</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// MPC signing animation: an envelope crosses the channel three times and the signature grows.
+(function() {
+  var env = document.getElementById('mpc-envelope');
+  var ch = document.getElementById('mpc-channel');
+  var sigHex = document.getElementById('sig-hex');
+  var sigCheck = document.getElementById('sig-check');
+  if (!env || !ch || !sigHex || !sigCheck) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var hex = '0123456789abcdef';
+  var rounds = [{ dir: 'right', color: '#3b82f6' }, { dir: 'left', color: '#4ade80' }, { dir: 'right', color: '#3b82f6' }];
+  var fullSig = '';
+  function randHex(n) { var s = ''; for (var i = 0; i < n; i++) s += hex[Math.floor(Math.random() * 16)]; return s; }
+  var boxW = sigHex.parentElement.offsetWidth - 24;
+  var charsPerRound = Math.floor((Math.floor(boxW / 8.4) - 2) / 3);
+  function typeHex(chunk, cb) {
+    var i = 0;
+    var iv = setInterval(function() {
+      if (i >= chunk.length) { clearInterval(iv); if (cb) cb(); return; }
+      fullSig += chunk[i]; sigHex.textContent = '0x' + fullSig; i++;
+    }, 40);
+  }
+  function animateRound(round) {
+    if (round >= 3) {
+      sigCheck.style.opacity = '1'; sigCheck.style.transform = 'scale(1)';
+      setTimeout(function() {
+        sigCheck.style.opacity = '0'; sigCheck.style.transform = 'scale(0.5)';
+        sigHex.textContent = ''; fullSig = '';
+        setTimeout(function() { animateRound(0); }, 1000);
+      }, 4000);
+      return;
+    }
+    var r = rounds[round];
+    var w = ch.offsetWidth - 14;
+    env.style.transition = 'none'; env.style.color = r.color;
+    env.style.left = r.dir === 'right' ? '0px' : w + 'px'; env.style.opacity = '1';
+    requestAnimationFrame(function() { requestAnimationFrame(function() {
+      env.style.transition = 'left 1.5s ease-in-out';
+      env.style.left = r.dir === 'right' ? w + 'px' : '0px';
+    }); });
+    setTimeout(function() {
+      env.style.opacity = '0';
+      typeHex(randHex(charsPerRound), function() { setTimeout(function() { animateRound(round + 1); }, 300); });
+    }, 1600);
+  }
+  animateRound(0);
+})();
+</script>
