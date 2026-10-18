@@ -76,8 +76,9 @@ dev:
 chains:
   title: "Chain yang didukung"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "Lainnya"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Gratis dan Premium"
@@ -90,6 +91,7 @@ plans:
     - "Pindahkan dompet Anda ke perangkat baru kapan saja (satu perangkat penandatangan per dompet)"
     - "WalletConnect, Mode Ahli, dan jaringan uji"
     - "Sinkronisasi buku alamat terenkripsi"
+    - "Aplikasi iPhone (segera hadir)"
   premium_title: "Premium"
   premium_price: "Segera hadir"
   premium_items:

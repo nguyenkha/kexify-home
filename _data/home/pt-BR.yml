@@ -76,8 +76,9 @@ dev:
 chains:
   title: "Redes compatíveis"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "Mais"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Grátis e Premium"
@@ -90,6 +91,7 @@ plans:
     - "Mude sua carteira para um novo dispositivo quando quiser (um dispositivo de assinatura por carteira)"
     - "WalletConnect, modo especialista e redes de teste"
     - "Sincronização criptografada da agenda de endereços"
+    - "App para iPhone (em breve)"
   premium_title: "Premium"
   premium_price: "Em breve"
   premium_items:

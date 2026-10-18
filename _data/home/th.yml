@@ -76,8 +76,9 @@ dev:
 chains:
   title: "เชนที่รองรับ"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "เพิ่มเติม"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "ฟรีและพรีเมียม"
@@ -90,6 +91,7 @@ plans:
     - "ย้ายวอลเล็ตไปอุปกรณ์เครื่องใหม่ได้ทุกเมื่อ (หนึ่งวอลเล็ตมีอุปกรณ์ลงนามเครื่องเดียว)"
     - "WalletConnect โหมดผู้เชี่ยวชาญ และเทสต์เน็ต"
     - "ซิงก์สมุดที่อยู่แบบเข้ารหัส"
+    - "แอป iPhone (เร็วๆ นี้)"
   premium_title: "พรีเมียม"
   premium_price: "เร็ว ๆ นี้"
   premium_items:

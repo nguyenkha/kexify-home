@@ -73,8 +73,9 @@ dev:
 chains:
   title: "Поддерживаемые сети"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "Ещё"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Бесплатно и Premium"
@@ -87,6 +88,7 @@ plans:
     - "Переносите кошелёк на новое устройство в любое время (одно устройство подписи на кошелёк)"
     - "WalletConnect, режим эксперта и тестовые сети"
     - "Синхронизация зашифрованной адресной книги"
+    - "Приложение для iPhone (скоро)"
   premium_title: "Premium"
   premium_price: "Скоро"
   premium_items:

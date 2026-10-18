@@ -161,11 +161,12 @@
         <img class="w-8 h-8 flex-shrink-0 rounded-full" src="{{ tw }}ethereum/info/logo.png" alt="Ethereum" loading="lazy" width="32" height="32">
         <div><span class="text-xs font-medium dark:text-gray-300 text-gray-700">EVM</span><span class="block text-[10px] dark:text-gray-500 text-gray-500">{{ t.chains.evm_sub }}</span></div>
       </div>
-      {% assign named = "bitcoin:Bitcoin,ripple:XRP,solana:Solana,ton:TON" | split: "," %}
+      {% assign named = "bitcoin:Bitcoin,ripple:XRP,solana:Solana,tron:TRON" | split: "," %}
       {% for n in named %}{% assign kv = n | split: ":" %}
       <div class="{{ card }} flex items-center gap-3">
         <img class="w-8 h-8 flex-shrink-0 rounded-full" src="{{ tw }}{{ kv[0] }}/info/logo.png" alt="{{ kv[1] }}" loading="lazy" width="32" height="32">
-        <span class="text-xs font-medium dark:text-gray-300 text-gray-700">{{ kv[1] }}</span>
+        {% if kv[0] == "bitcoin" %}<div><span class="text-xs font-medium dark:text-gray-300 text-gray-700">{{ kv[1] }}</span><span class="block text-[10px] dark:text-gray-500 text-gray-500">{{ t.chains.btc_sub }}</span></div>
+        {% else %}<span class="text-xs font-medium dark:text-gray-300 text-gray-700">{{ kv[1] }}</span>{% endif %}
       </div>
       {% endfor %}
       <div class="{{ card }} flex items-center gap-3">

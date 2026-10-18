@@ -75,8 +75,9 @@ dev:
 chains:
   title: "対応チェーン"
   evm_sub: "Ethereum、Base、Arbitrum、Polygon..."
+  btc_sub: "Bitcoin Cash、Litecoin、Dogecoin"
   more: "その他"
-  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH、DOGE"
+  more_sub: "TON、Algorand、Cardano、Stellar"
 
 plans:
   title: "無料とPremium"
@@ -89,6 +90,7 @@ plans:
     - "ウォレットはいつでも新しいデバイスに移せます（1ウォレットにつき署名デバイスは1台）"
     - "WalletConnect、エキスパートモード、テストネット"
     - "暗号化されたアドレス帳の同期"
+    - "iPhoneアプリ（近日公開）"
   premium_title: "Premium"
   premium_price: "近日公開"
   premium_items:

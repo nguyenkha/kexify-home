@@ -76,8 +76,9 @@ dev:
 chains:
   title: "Các chain được hỗ trợ"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "Khác"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Miễn phí và Premium"
@@ -90,6 +91,7 @@ plans:
     - "Chuyển ví sang thiết bị mới bất cứ lúc nào (mỗi ví có một thiết bị ký)"
     - "WalletConnect, Expert mode và mạng thử nghiệm"
     - "Đồng bộ sổ địa chỉ mã hoá"
+    - "Ứng dụng iPhone (sắp ra mắt)"
   premium_title: "Premium"
   premium_price: "Sắp ra mắt"
   premium_items:

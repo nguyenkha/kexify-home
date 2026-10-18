@@ -76,8 +76,9 @@ dev:
 chains:
   title: "支持的区块链"
   evm_sub: "Ethereum、Base、Arbitrum、Polygon..."
+  btc_sub: "Bitcoin Cash、Litecoin、Dogecoin"
   more: "更多"
-  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH、DOGE"
+  more_sub: "TON、Algorand、Cardano、Stellar"
 
 plans:
   title: "免费版和 Premium"
@@ -90,6 +91,7 @@ plans:
     - "随时可以把钱包迁移到新设备（每个钱包只有一台签名设备）"
     - "WalletConnect、专家模式和测试网"
     - "加密的地址簿同步"
+    - "iPhone 应用（即将推出）"
   premium_title: "Premium"
   premium_price: "即将推出"
   premium_items:

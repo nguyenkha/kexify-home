@@ -76,8 +76,9 @@ dev:
 chains:
   title: "Supported chains"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "More"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Free and Premium"
@@ -90,6 +91,7 @@ plans:
     - "Move your wallet to a new device any time (one signing device per wallet)"
     - "WalletConnect, Expert mode and testnets"
     - "Encrypted address book sync"
+    - "iPhone app (coming soon)"
   premium_title: "Premium"
   premium_price: "Coming soon"
   premium_items:
