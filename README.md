@@ -11,7 +11,7 @@ Built with Jekyll + Tailwind CSS, deployed on GitHub Pages.
 - **About** — Creator info, open source links, tech stack
 
 Each page exists in 11 languages: English at the root, the others in one folder per language
-(`vi`, `zh-Hans`, `es`, `pt-BR`, `id`, `th`, `ko`, `ja`, `hi`, `ru`). Language names and nav labels
+(`vi`, `zh` (zh-Hans), `es`, `pt-BR`, `id`, `th`, `ko`, `ja`, `hi`, `ru`). Language names and nav labels
 live in `_data/languages.yml`; the switcher and hreflang links are built from it.
 
 ## Links
