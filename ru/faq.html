@@ -30,7 +30,7 @@ permalink: /ru/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexify правда бесплатный?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Бесплатный тариф бесплатен навсегда, без рекламы, и включает всю базовую защиту: дневной лимит, доверенные адреса, блокировку безлимитных разрешений, проверку рискованных адресов, заморозку, резервную копию и режим восстановления. Тариф Premium планируется для функций, которые стоят денег в поддержке: iPhone как устройство подтверждения, офлайн-подпись по QR и мгновенные оповещения. Premium скоро появится, цена пока не назначена. Базовая защита никогда не станет платной.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Бесплатный тариф бесплатен навсегда, без рекламы, и включает всю базовую защиту: дневной лимит, доверенные адреса, блокировку безлимитных разрешений, проверку рискованных адресов, заморозку, резервную копию и режим восстановления. Тариф Premium планируется для функций, которые требуют затрат на работу: iPhone как устройство подтверждения, офлайн-подпись по QR и мгновенные оповещения. Premium скоро появится, цена пока не назначена. Базовая защита никогда не станет платной.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Почему в kexify нет обмена, стейкинга и DeFi?</summary>
@@ -79,7 +79,7 @@ permalink: /ru/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Чем kexify отличается от других MPC-кошельков, например ZenGo?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Оба используют MPC. В kexify можно экспортировать обе части ключа и подписывать без нашего сервера, соподписант применяет правила, которые вы задали сами (дневной лимит, доверенные адреса, ожидание при превышении лимита), а веб-приложение открыто.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Оба используют MPC. В kexify можно экспортировать обе части ключа и подписывать без нашего сервера, соподписант применяет правила, которые вы задали сами (дневной лимит, доверенные адреса, ожидание при превышении лимита), а код веб-приложения открыт.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Как MPC и политика безопасности работают вместе?</summary>
@@ -116,7 +116,7 @@ permalink: /ru/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Можно ли заморозить аккаунт?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да, одним нажатием на ссылку заморозки в письмах безопасности kexify. Заморозка действует сразу и блокирует любую подпись. Чтобы разморозить, нужен ваш passkey (или подтверждение от вашего кошелька) и затем ожидание в 24 часа, поэтому тот, кто украл ваш вход, не сможет быстро это отменить.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да, одним нажатием на ссылку заморозки в письмах kexify о безопасности. Заморозка действует сразу и блокирует любую подпись. Чтобы разморозить, нужен ваш passkey (или подтверждение от вашего кошелька) и затем ожидание в 24 часа, поэтому тот, кто получил доступ к вашему аккаунту, не сможет быстро это отменить.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Что такое режим эксперта?</summary>
@@ -162,7 +162,7 @@ permalink: /ru/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Какие методы WalletConnect поддерживаются?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">WalletConnect v2. EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Каждый запрос проходит ту же проверку и те же проверки на сервере, что и обычная отправка.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">WalletConnect v2. EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Каждый запрос проходит тот же экран подтверждения и те же серверные проверки, что и обычная отправка.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Есть ли инструмент командной строки?</summary>
