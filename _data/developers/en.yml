@@ -65,9 +65,17 @@ quick:
         console.log(ok); // true
       after: "It verifies like any other wallet's signature because it is a standard secp256k1 signature over the EIP-191 message hash."
 
+api:
+  title: "Developer API (coming soon)"
+  intro: "Not available yet. What is planned:"
+  items:
+    - "Read-only API for your own wallets: free."
+    - "Signing SDK for one automation wallet: Premium."
+    - "Webhooks: Premium."
+
 roadmap:
   title: "Planned"
   items:
     - "iPhone app, then iPhone as an approval device and offline QR signing"
-    - "Balance-change preview before you sign (free), and a deeper simulation with a risk scan (Premium)"
+    - "Balance-change preview before you sign"
     - "Test networks as a plain setting, without Expert mode"

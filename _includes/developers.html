@@ -17,6 +17,7 @@
       <a href="#support" class="text-blue-400 hover:underline">{{ d.support.title }}</a> ·
       <a href="#quick" class="text-blue-400 hover:underline">{{ d.quick.title }}</a> ·
       <a href="#mpc" class="text-blue-400 hover:underline">{{ d.mpc.title }}</a> ·
+      <a href="#api" class="text-blue-400 hover:underline">{{ d.api.title }}</a> ·
       <a href="#planned" class="text-blue-400 hover:underline">{{ d.roadmap.title }}</a>
     </nav>
 
@@ -50,6 +51,12 @@
     <h2 id="mpc" class="{{ h2 }}">{{ d.mpc.title }}</h2>
     <ul class="list-disc pl-5 space-y-2 {{ txt }}">
       {% for m in d.mpc.items %}<li>{{ m }}</li>{% endfor %}
+    </ul>
+
+    <h2 id="api" class="{{ h2 }}">{{ d.api.title }}</h2>
+    <p class="{{ txt }}">{{ d.api.intro }}</p>
+    <ul class="mt-2 list-disc pl-5 space-y-1 {{ txt }}">
+      {% for m in d.api.items %}<li>{{ m }}</li>{% endfor %}
     </ul>
 
     <h2 id="planned" class="{{ h2 }}">{{ d.roadmap.title }}</h2>
