@@ -1,0 +1,35 @@
+# Short developer guides at /developers/<guide>/. One file per language (same keys); _includes/guide.html renders it.
+back: "डेवलपर्स"
+
+remix:
+  title: "kexify के साथ Remix से डिप्लॉय करें"
+  intro: "Remix, WalletConnect के ज़रिए kexify से जुड़ता है, इसलिए ब्राउज़र एक्सटेंशन के बिना कॉन्ट्रैक्ट डिप्लॉय और कॉल किए जा सकते हैं।"
+  steps:
+    - '<a href="https://remix.ethereum.org">Remix</a> खोलें, अपना कॉन्ट्रैक्ट लिखें या खोलें और उसे कंपाइल करें।'
+    - "Deploy &amp; run transactions में Environment को WalletConnect पर सेट करें और pairing URI कॉपी करें (या QR कोड दिखाएँ)।"
+    - "kexify में WalletConnect खोलें, URI पेस्ट करें या कोड स्कैन करें, और अपने EVM अकाउंट को मंज़ूरी दें।"
+    - "Remix में नेटवर्क चुनें (Sepolia से शुरू करें), फिर Deploy पर क्लिक करें या कोई फ़ंक्शन कॉल करें।"
+    - "kexify एक समीक्षा खोलता है। अपने passkey या पासफ़्रेज़ से पुष्टि करें; आपका डिवाइस और सर्वर मिलकर साइन करते हैं और Remix में रसीद दिखती है।"
+  note: "टेस्ट नेटवर्क आपके वॉलेट में तब दिखते हैं जब सेटिंग में एक्सपर्ट मोड और टेस्ट नेटवर्क चालू हों। आप जो भी वैल्यू भेजते हैं उस पर आपकी दैनिक सीमा लागू होती है।"
+
+foundry:
+  title: "kexify के साथ Foundry और Hardhat"
+  intro: "Foundry और Hardhat में WalletConnect signer नहीं है, इसलिए लोकल में बनाएँ और टेस्ट करें, फिर अपने प्रोजेक्ट फ़ोल्डर के साथ Remix से डिप्लॉय करें।"
+  steps:
+    - "हमेशा की तरह बनाएँ और टेस्ट करें: <code>forge build</code> और <code>forge test</code> (या <code>npx hardhat compile</code> और <code>npx hardhat test</code>)।"
+    - "प्रोजेक्ट फ़ोल्डर को Remix के साथ शेयर करें: <code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "Remix में localhost वर्कस्पेस चुनें (Connect to localhost) और अपना कॉन्ट्रैक्ट खोलें।"
+    - 'उसे Remix में कंपाइल करें, फिर <a href="../remix/">Remix गाइड</a> की तरह WalletConnect environment से डिप्लॉय करें।'
+    - "सिर्फ़ पढ़ने वाली कॉल के लिए <code>cast</code> या Hardhat स्क्रिप्ट इस्तेमाल करें; ट्रांज़ैक्शन Remix से भेजें ताकि kexify उन्हें साइन करे।"
+  note: "kexify, Foundry या Hardhat के signer के रूप में काम नहीं करता (जैसे <code>--account</code> या प्राइवेट की से), और यह आपको रॉ प्राइवेट की कभी नहीं देता, जब तक आप दोनों की फ़ाइलों से उसे खुद दोबारा न बनाएँ।"
+
+safe:
+  title: "kexify को Safe के ओनर के रूप में इस्तेमाल करें"
+  intro: "Safe, WalletConnect के ज़रिए kexify से जुड़ता है। Safe बनाना और ट्रांज़ैक्शन Execute करना आज काम करता है; ऑफ़-चेन अप्रूवल साइन करना अभी नहीं।"
+  steps:
+    - '<a href="https://app.safe.global">app.safe.global</a> खोलें, WalletConnect चुनें और kexify से पेयर करें (पहले Sepolia आज़माएँ)।'
+    - "अपने kexify पते को ओनर बनाकर एक Safe बनाएँ। यह एक सामान्य ट्रांज़ैक्शन है जिसे आप kexify में देखकर पुष्टि करते हैं।"
+    - "Safe में एक ट्रांज़ैक्शन बनाएँ, जैसे Safe से टोकन ट्रांसफ़र।"
+    - "Execute चुनें। जब आपका अप्रूवल आख़िरी ज़रूरी हो, तो Safe उसे एक सामान्य ट्रांज़ैक्शन के रूप में भेजता है जिसे kexify साइन करता है।"
+    - "kexify में पुष्टि करें और Safe ट्रांज़ैक्शन के executed दिखने का इंतज़ार करें।"
+  note: "kexify अपने डिफ़ॉल्ट नियमों में आज ऑफ़-चेन Safe सिग्नेचर (Sign बटन, EIP-712 SafeTx) को मना करता है, इसलिए ऐसा Safe जिसमें आपके बाद दूसरे ओनर को Execute करना हो, अभी समर्थित नहीं है। 1-of-1 Safe, या आख़िरी ओनर के रूप में Execute करना, काम करता है।"

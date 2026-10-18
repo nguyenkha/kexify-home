@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "요금제 보기"
 
+guides:
+  title: "짧은 가이드"
+  items:
+    - slug: remix
+      title: "kexify로 Remix에서 배포하기"
+    - slug: foundry
+      title: "kexify로 Foundry와 Hardhat 사용하기"
+    - slug: safe
+      title: "kexify를 Safe 소유자로 쓰기"
+
 quick:
   title: "빠른 시작: CLI로 키 복원하기"
   note: "Node.js와 두 키 파일이 필요합니다. 어떤 서버에도 데이터를 보내지 않습니다."

@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "ดูแพ็กเกจ"
 
+guides:
+  title: "คู่มือสั้น ๆ"
+  items:
+    - slug: remix
+      title: "Deploy จาก Remix ด้วย kexify"
+    - slug: foundry
+      title: "Foundry และ Hardhat กับ kexify"
+    - slug: safe
+      title: "ใช้ kexify เป็นเจ้าของ Safe"
+
 quick:
   title: "เริ่มต้นเร็ว: สร้างคีย์ขึ้นใหม่ด้วย CLI"
   note: "ต้องมี Node.js และไฟล์คีย์ทั้งสองไฟล์ ไม่มีข้อมูลใดถูกส่งไปยังเซิร์ฟเวอร์"

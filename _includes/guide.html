@@ -1,0 +1,28 @@
+{% comment %}
+  Short developer guide. Copy comes from _data/guides/<lang>.yml under page.guide (remix, foundry, safe).
+  Each guide: title, intro, numbered steps (inline HTML allowed), optional note.
+{% endcomment %}
+{% assign gl = page.lang | default: "en" %}
+{% assign G = site.data.guides[gl] %}
+{% assign g = G[page.guide] %}
+{% assign prefix = site.data.languages | where: "code", gl | map: "prefix" | first %}
+{% assign body = "text-sm dark:text-gray-400 text-gray-500 leading-relaxed" %}
+
+<section class="px-4 md:px-8 py-12 md:py-16">
+  <div class="max-w-3xl mx-auto fade-in dev-doc">
+    <a href="{{ prefix | append: '/developers/' | relative_url }}" class="text-xs text-blue-400 hover:text-blue-300">← {{ G.back }}</a>
+    <h1 class="mt-3 text-2xl font-bold tracking-tight dark:text-white text-gray-900">{{ g.title }}</h1>
+    <p class="mt-3 {{ body }}">{{ g.intro }}</p>
+
+    <ol class="mt-8 space-y-3">
+      {% for st in g.steps %}
+      <li class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex gap-3">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold flex items-center justify-center">{{ forloop.index }}</span>
+        <p class="{{ body }}">{{ st }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+
+    {% if g.note %}<p class="mt-6 text-xs dark:text-gray-500 text-gray-500 leading-relaxed">{{ g.note }}</p>{% endif %}
+  </div>
+</section>

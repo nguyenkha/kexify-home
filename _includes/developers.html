@@ -35,6 +35,13 @@
       {% endfor %}
     </div>
 
+    <h2 class="mt-10 text-sm font-medium dark:text-white text-gray-900">{{ d.guides.title }}</h2>
+    <ul class="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
+      {% for gd in d.guides.items %}
+      <li><a href="{{ prefix | append: '/developers/' | append: gd.slug | append: '/' | relative_url }}" class="block h-full {{ card }} text-sm text-blue-400 hover:text-blue-300">{{ gd.title }} →</a></li>
+      {% endfor %}
+    </ul>
+
     <h2 class="mt-10 text-sm font-medium dark:text-white text-gray-900">{{ d.quick.title }}</h2>
     <p class="mt-1 {{ body }}">{{ d.quick.note }}</p>
     <pre class="mt-3 bg-surface-secondary border border-border-primary rounded-lg p-3 overflow-x-auto text-xs font-mono dark:text-gray-200 text-gray-800"><code>git clone https://github.com/nguyenkha/kexify-web

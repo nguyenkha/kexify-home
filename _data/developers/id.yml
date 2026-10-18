@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "Lihat paket"
 
+guides:
+  title: "Panduan singkat"
+  items:
+    - slug: remix
+      title: "Deploy dari Remix dengan kexify"
+    - slug: foundry
+      title: "Foundry dan Hardhat dengan kexify"
+    - slug: safe
+      title: "Pakai kexify sebagai pemilik Safe"
+
 quick:
   title: "Mulai cepat: bangun ulang kunci dengan CLI"
   note: "Perlu Node.js dan kedua file kunci. Tidak ada yang dikirim ke server mana pun."

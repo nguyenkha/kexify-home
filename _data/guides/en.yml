@@ -1,0 +1,36 @@
+# Short developer guides at /developers/<guide>/. One file per language (same keys); _includes/guide.html renders it.
+# About 5 steps each, no long prose. Only flows checked against the kexify code; limits are said plainly.
+back: "Developers"
+
+remix:
+  title: "Deploy from Remix with kexify"
+  intro: "Remix connects to kexify over WalletConnect, so you can deploy and call contracts without a browser extension."
+  steps:
+    - 'Open <a href="https://remix.ethereum.org">Remix</a>, write or open your contract and compile it.'
+    - "In Deploy &amp; run transactions, set Environment to WalletConnect and copy the pairing URI (or show the QR code)."
+    - "In kexify, open WalletConnect, paste the URI or scan the code, and approve your EVM account."
+    - "Pick the network in Remix (start with Sepolia), then click Deploy or call a function."
+    - "kexify opens a review. Confirm with your passkey or passphrase; your device and the server sign together and Remix shows the receipt."
+  note: "Test networks show in your wallet once Expert mode and test networks are on in Settings. Your daily limit applies to any value you send."
+
+foundry:
+  title: "Foundry and Hardhat with kexify"
+  intro: "Foundry and Hardhat have no WalletConnect signer, so build and test locally, then deploy through Remix with your project folder."
+  steps:
+    - "Build and test as usual: <code>forge build</code> and <code>forge test</code> (or <code>npx hardhat compile</code> and <code>npx hardhat test</code>)."
+    - "Share the project folder with Remix: <code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "In Remix, choose the localhost workspace (Connect to localhost) and open your contract."
+    - 'Compile it in Remix, then deploy with the WalletConnect environment, as in the <a href="../remix/">Remix guide</a>.'
+    - "Use <code>cast</code> or Hardhat scripts for read-only calls; send transactions from Remix so kexify signs them."
+  note: "kexify does not work as a Foundry or Hardhat signer (for example <code>--account</code> or a private key), and it never gives you a raw private key unless you rebuild it yourself from both key files."
+
+safe:
+  title: "Use kexify as a Safe owner"
+  intro: "Safe connects to kexify over WalletConnect. Creating a Safe and executing transactions works today; signing off-chain approvals does not yet."
+  steps:
+    - 'Open <a href="https://app.safe.global">app.safe.global</a>, choose WalletConnect and pair with kexify (try Sepolia first).'
+    - "Create a Safe with your kexify address as an owner. This is a normal transaction you review and confirm in kexify."
+    - "Create a transaction in Safe, for example a token transfer from the Safe."
+    - "Choose Execute. When your approval is the last one needed, Safe sends it as a normal transaction that kexify signs."
+    - "Confirm in kexify and wait for the Safe transaction to show as executed."
+  note: "kexify refuses off-chain Safe signatures (the Sign button, EIP-712 SafeTx) under its default rules today, so a Safe where other owners must execute after you is not supported yet. A 1-of-1 Safe, or being the last owner to execute, works."

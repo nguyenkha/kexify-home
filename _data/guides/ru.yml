@@ -1,0 +1,35 @@
+# Short developer guides at /developers/<guide>/. One file per language (same keys); _includes/guide.html renders it.
+back: "Разработчикам"
+
+remix:
+  title: "Деплой из Remix с kexify"
+  intro: "Remix подключается к kexify через WalletConnect, поэтому деплоить и вызывать контракты можно без расширения для браузера."
+  steps:
+    - 'Откройте <a href="https://remix.ethereum.org">Remix</a>, напишите или откройте контракт и скомпилируйте его.'
+    - "В разделе Deploy &amp; run transactions выберите Environment: WalletConnect и скопируйте URI для подключения (или покажите QR-код)."
+    - "В kexify откройте WalletConnect, вставьте URI или отсканируйте код и подтвердите свой аккаунт EVM."
+    - "Выберите сеть в Remix (начните с Sepolia), затем нажмите Deploy или вызовите функцию."
+    - "kexify покажет экран проверки. Подтвердите с помощью passkey или парольной фразы; ваше устройство и сервер подписывают вместе, и Remix покажет квитанцию."
+  note: "Тестовые сети появятся в кошельке, когда в Настройках включены режим эксперта и тестовые сети. К любой отправляемой сумме применяется ваш дневной лимит."
+
+foundry:
+  title: "Foundry и Hardhat с kexify"
+  intro: "У Foundry и Hardhat нет подписанта WalletConnect, поэтому собирайте и тестируйте локально, а затем деплойте через Remix, подключив папку проекта."
+  steps:
+    - "Собирайте и тестируйте как обычно: <code>forge build</code> и <code>forge test</code> (или <code>npx hardhat compile</code> и <code>npx hardhat test</code>)."
+    - "Откройте папку проекта в Remix: <code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "В Remix выберите рабочую область localhost (Connect to localhost) и откройте контракт."
+    - 'Скомпилируйте его в Remix, затем задеплойте через окружение WalletConnect, как в <a href="../remix/">руководстве по Remix</a>.'
+    - "Для вызовов только на чтение используйте <code>cast</code> или скрипты Hardhat; транзакции отправляйте из Remix, чтобы их подписал kexify."
+  note: "kexify не работает как подписант для Foundry или Hardhat (например, через <code>--account</code> или приватный ключ) и никогда не выдаёт сырой приватный ключ, если вы сами не восстановите его из обоих файлов ключа."
+
+safe:
+  title: "kexify как владелец Safe"
+  intro: "Safe подключается к kexify через WalletConnect. Создание Safe и выполнение транзакций работает уже сегодня; подпись внецепочечных подтверждений пока нет."
+  steps:
+    - 'Откройте <a href="https://app.safe.global">app.safe.global</a>, выберите WalletConnect и подключитесь к kexify (сначала попробуйте Sepolia).'
+    - "Создайте Safe, указав свой адрес kexify как владельца. Это обычная транзакция: вы проверяете и подтверждаете её в kexify."
+    - "Создайте транзакцию в Safe, например перевод токенов из Safe."
+    - "Нажмите Execute. Если ваше подтверждение последнее из нужных, Safe отправит её как обычную транзакцию, которую подпишет kexify."
+    - "Подтвердите в kexify и дождитесь, пока транзакция Safe отобразится как выполненная."
+  note: "По правилам по умолчанию kexify сегодня отклоняет внецепочечные подписи Safe (кнопка Sign, EIP-712 SafeTx), поэтому Safe, где после вас транзакцию должны выполнить другие владельцы, пока не поддерживается. Safe 1-of-1 или роль последнего владельца, который выполняет транзакцию, работают."
