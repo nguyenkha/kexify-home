@@ -64,9 +64,17 @@ quick:
         console.log(ok); // true
       after: "Se verifica como la firma de cualquier otra billetera porque es una firma secp256k1 estándar sobre el hash del mensaje EIP-191."
 
+api:
+  title: "API para desarrolladores (próximamente)"
+  intro: "Todavía no disponible. Esto es lo que está previsto:"
+  items:
+    - "API de solo lectura para tus propias billeteras: gratis."
+    - "SDK de firma para una billetera de automatización: Premium."
+    - "Webhooks: Premium."
+
 roadmap:
   title: "Planificado"
   items:
     - "App para iPhone, y después el iPhone como dispositivo de aprobación y la firma offline por QR"
-    - "Vista previa del cambio de saldo antes de firmar (gratis) y una simulación más profunda con análisis de riesgo (Premium)"
+    - "Vista previa del cambio de saldo antes de firmar"
     - "Las redes de prueba como un ajuste normal, sin modo experto"

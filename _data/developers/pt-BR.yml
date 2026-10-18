@@ -64,9 +64,17 @@ quick:
         console.log(ok); // true
       after: "Ela é verificada como a assinatura de qualquer outra carteira, porque é uma assinatura secp256k1 padrão sobre o hash da mensagem EIP-191."
 
+api:
+  title: "API para desenvolvedores (em breve)"
+  intro: "Ainda não disponível. O que está previsto:"
+  items:
+    - "API somente leitura para as suas próprias carteiras: grátis."
+    - "SDK de assinatura para uma carteira de automação: Premium."
+    - "Webhooks: Premium."
+
 roadmap:
   title: "Planejado"
   items:
     - "App para iPhone e, depois, o iPhone como dispositivo de aprovação e assinatura offline por QR"
-    - "Prévia da mudança de saldo antes de assinar (grátis) e uma simulação mais profunda com análise de risco (Premium)"
+    - "Prévia da mudança de saldo antes de assinar"
     - "Redes de teste como uma configuração comum, sem modo especialista"

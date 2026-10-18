@@ -64,9 +64,17 @@ quick:
         console.log(ok); // true
       after: "它的验证方式与其他钱包的签名完全一样，因为这是对 EIP-191 消息哈希生成的标准 secp256k1 签名。"
 
+api:
+  title: "开发者 API（即将推出）"
+  intro: "暂未提供。计划如下："
+  items:
+    - "自己钱包的只读 API：免费。"
+    - "单个自动化钱包的签名 SDK：Premium。"
+    - "Webhook：Premium。"
+
 roadmap:
   title: "计划中"
   items:
     - "iPhone 应用，之后是把 iPhone 用作审批设备以及离线二维码签名"
-    - "签名前的余额变动预览（免费），以及带风险扫描的更深入模拟（Premium）"
+    - "签名前的余额变动预览"
     - "测试网成为普通设置，不再需要专家模式"

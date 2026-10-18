@@ -64,9 +64,17 @@ quick:
         console.log(ok); // true
       after: "EIP-191 메시지 해시에 대한 표준 secp256k1 서명이므로, 다른 지갑의 서명과 똑같이 검증됩니다."
 
+api:
+  title: "개발자 API (곧 출시)"
+  intro: "아직 사용할 수 없습니다. 계획 중인 기능:"
+  items:
+    - "내 지갑용 읽기 전용 API: 무료"
+    - "자동화 지갑 하나를 위한 서명 SDK: Premium"
+    - "웹훅: Premium"
+
 roadmap:
   title: "예정"
   items:
     - "iPhone 앱, 이후 iPhone을 승인 기기로 사용하는 기능과 오프라인 QR 서명"
-    - "서명 전 잔액 변동 미리보기(무료)와 위험 스캔이 포함된 더 정밀한 시뮬레이션(Premium)"
+    - "서명 전 잔액 변동 미리보기"
     - "테스트 네트워크를 전문가 모드 없이 일반 설정으로 제공"

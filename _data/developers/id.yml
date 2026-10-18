@@ -64,9 +64,17 @@ quick:
         console.log(ok); // true
       after: "Tanda tangan ini terverifikasi seperti tanda tangan dompet lain karena merupakan tanda tangan secp256k1 standar atas hash pesan EIP-191."
 
+api:
+  title: "API Developer (segera hadir)"
+  intro: "Belum tersedia. Yang direncanakan:"
+  items:
+    - "API hanya-baca untuk dompet Anda sendiri: gratis."
+    - "SDK penandatanganan untuk satu dompet otomatisasi: Premium."
+    - "Webhook: Premium."
+
 roadmap:
   title: "Direncanakan"
   items:
     - "Aplikasi iPhone, lalu iPhone sebagai perangkat persetujuan dan penandatanganan QR offline"
-    - "Pratinjau perubahan saldo sebelum Anda menandatangani (gratis), dan simulasi yang lebih dalam dengan pemindaian risiko (Premium)"
+    - "Pratinjau perubahan saldo sebelum Anda menandatangani"
     - "Jaringan uji sebagai pengaturan biasa, tanpa Mode Ahli"

@@ -64,9 +64,17 @@ quick:
         console.log(ok); // true
       after: "Chữ ký này được xác minh giống như chữ ký của mọi ví khác, vì đó là chữ ký secp256k1 chuẩn trên hash thông điệp EIP-191."
 
+api:
+  title: "API cho nhà phát triển (sắp ra mắt)"
+  intro: "Chưa có. Những gì đang dự kiến:"
+  items:
+    - "API chỉ đọc cho ví của chính bạn: miễn phí."
+    - "SDK ký cho một ví tự động hoá: Premium."
+    - "Webhook: Premium."
+
 roadmap:
   title: "Dự kiến"
   items:
     - "Ứng dụng iPhone, sau đó là iPhone làm thiết bị phê duyệt và ký offline qua QR"
-    - "Xem trước thay đổi số dư trước khi ký (miễn phí), và mô phỏng sâu hơn kèm quét rủi ro (Premium)"
+    - "Xem trước thay đổi số dư trước khi ký"
     - "Mạng thử nghiệm thành một cài đặt thông thường, không cần Chế độ chuyên gia"
