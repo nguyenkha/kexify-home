@@ -71,7 +71,7 @@ dev:
     - title: "开源"
       body: '网页版和命令行工具采用 MIT 协议，MPC 来自 <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>。'
     - title: "开发者 API"
-      body: "即将推出：只读 API、签名 SDK 和 webhook。"
+      body: "即将推出：只读 API、在 iPhone 上批准的 API 提案和 webhook。"
 
 chains:
   title: "支持的区块链"
@@ -87,15 +87,17 @@ plans:
   free_items:
     - "每日限额、信任地址和安全检查"
     - "恢复包、恢复模式和命令行"
+    - "随时可以把钱包迁移到新设备（每个钱包只有一台签名设备）"
     - "WalletConnect、专家模式和测试网"
     - "加密的地址簿同步"
   premium_title: "Premium"
   premium_price: "即将推出"
   premium_items:
-    - "把 iPhone 用作批准设备，气隙签名"
+    - "把 iPhone 用作批准设备"
+    - "冷金库：在离线 iPhone 上签名的第二个钱包"
     - "即时提醒和自动提高手续费"
     - "比特币隐私地址，更多子账户"
-    - "面向开发者的签名 SDK 和 webhook"
+    - "面向开发者：在 iPhone 上批准的 API 提案和 webhook"
 
 cta:
   title: "先用小额试一试"

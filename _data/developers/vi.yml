@@ -28,7 +28,7 @@ items:
     link: cbmpc
   - icon: api
     title: "API cho nhà phát triển (sắp ra mắt)"
-    body: "Chưa có. Dự kiến: API chỉ đọc miễn phí cho ví của bạn, cùng SDK ký và webhook trong gói Premium."
+    body: "Chưa có. Dự kiến: API chỉ đọc miễn phí cho ví của bạn. Trong gói Premium: đề xuất qua API mà bạn phê duyệt trên iPhone, và webhook. Ký tự động sẽ có sau, dành cho các nhóm."
     link: pricing
     more: "Xem các gói"
 

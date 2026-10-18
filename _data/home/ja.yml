@@ -70,7 +70,7 @@ dev:
     - title: "オープンソース"
       body: 'MITのWebアプリとCLI、MPCは<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>を使用。'
     - title: "開発者API"
-      body: "近日公開：読み取り専用API、署名SDK、Webhook。"
+      body: "近日公開：読み取り専用API、iPhoneで承認するAPIプロポーザル、Webhook。"
 
 chains:
   title: "対応チェーン"
@@ -86,15 +86,17 @@ plans:
   free_items:
     - "1日の上限、信頼するアドレス、安全チェック"
     - "リカバリーキット、リカバリーモード、CLI"
+    - "ウォレットはいつでも新しいデバイスに移せます（1ウォレットにつき署名デバイスは1台）"
     - "WalletConnect、エキスパートモード、テストネット"
     - "暗号化されたアドレス帳の同期"
   premium_title: "Premium"
   premium_price: "近日公開"
   premium_items:
-    - "iPhoneを承認用デバイスに、エアギャップ署名"
+    - "iPhoneを承認用デバイスに"
+    - "コールドボールト：オフラインのiPhoneで署名する2つ目のウォレット"
     - "即時アラートと手数料の自動引き上げ"
     - "Bitcoinのプライバシー用アドレス、より多くのサブアカウント"
-    - "開発者向けの署名SDKとWebhook"
+    - "開発者向け：iPhoneで承認するAPIプロポーザルとWebhook"
 
 cta:
   title: "まずは少額から試してください"

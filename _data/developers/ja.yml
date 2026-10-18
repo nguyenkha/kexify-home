@@ -28,7 +28,7 @@ items:
     link: cbmpc
   - icon: api
     title: "開発者 API（近日公開）"
-    body: "まだ利用できません。自分のウォレット向けの無料の読み取り専用 API と、Premium での署名 SDK と Webhook を予定しています。"
+    body: "まだ利用できません。自分のウォレット向けの無料の読み取り専用 API を予定しています。Premium では、iPhone で承認する API プロポーザルと Webhook を予定しています。自動署名はチーム向けに後日提供予定です。"
     link: pricing
     more: "プランを見る"
 

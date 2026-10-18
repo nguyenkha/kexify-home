@@ -28,7 +28,7 @@ items:
     link: cbmpc
   - icon: api
     title: "Developer API (coming soon)"
-    body: "Not available yet. Planned: a free read-only API for your own wallets, and a signing SDK and webhooks on Premium."
+    body: "Not available yet. Planned: a free read-only API for your own wallets. Premium: API proposals you approve on your iPhone, and webhooks. Automated signing comes later, for teams."
     link: pricing
     more: "See plans"
 

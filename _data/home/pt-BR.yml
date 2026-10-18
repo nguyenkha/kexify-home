@@ -71,7 +71,7 @@ dev:
     - title: "Código aberto"
       body: 'App web e CLI com licença MIT, MPC do <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>.'
     - title: "API para desenvolvedores"
-      body: "Em breve: API somente leitura, SDK de assinatura e webhooks."
+      body: "Em breve: API somente leitura, propostas via API que você aprova no iPhone e webhooks."
 
 chains:
   title: "Redes compatíveis"
@@ -87,15 +87,17 @@ plans:
   free_items:
     - "Limite diário, endereços confiáveis e verificações de segurança"
     - "Kit de recuperação, modo de recuperação e CLI"
+    - "Mude sua carteira para um novo dispositivo quando quiser (um dispositivo de assinatura por carteira)"
     - "WalletConnect, modo especialista e redes de teste"
     - "Sincronização criptografada da agenda de endereços"
   premium_title: "Premium"
   premium_price: "Em breve"
   premium_items:
-    - "iPhone como dispositivo de aprovação, assinatura air-gapped"
+    - "iPhone como dispositivo de aprovação"
+    - "Um cofre frio: uma segunda carteira que assina em um iPhone offline"
     - "Alertas instantâneos e aumento automático de taxa"
     - "Endereços de privacidade para Bitcoin, mais subcontas"
-    - "SDK de assinatura e webhooks para desenvolvedores"
+    - "Para desenvolvedores: propostas via API que você aprova no iPhone, e webhooks"
 
 cta:
   title: "Experimente primeiro com um valor pequeno"
