@@ -12,7 +12,7 @@ support:
     - name: "Tinjauan yang mudah dibaca"
       body: "Calldata untuk transfer, <code>approve</code>, Permit2, permit EIP-2612, <code>setApprovalForAll</code>, dan ERC-721/1155 didekode. Tipe EIP-712 yang dikenal (Permit, Permit2, DAI permit, EIP-3009) ditampilkan per field; yang tidak dikenal ditandai sebagai tidak terbaca."
     - name: "Pemeriksaan server"
-      body: "Setiap permintaan, baik dari aplikasi maupun WalletConnect, di-parse oleh co-signer. Approval fungible tanpa batas (2^128 atau lebih, atau nilai maksimum) ditolak; tetapkan batas di tinjauan. Alamat yang ditandai (GoPlus) ditolak. Batas harian dan daftar tepercaya Anda tetap berlaku."
+      body: "Setiap permintaan, baik dari aplikasi maupun WalletConnect, di-parse oleh co-signer. Approval token fungible tanpa batas (2^128 atau lebih, atau nilai maksimum) ditolak; tetapkan batas di tinjauan. Alamat yang ditandai (GoPlus) ditolak. Batas harian dan daftar tepercaya Anda tetap berlaku."
     - name: "Jaringan uji"
       body: "Ethereum Sepolia, Base Sepolia, Solana devnet dan testnet, TRON Nile dan Shasta, testnet Bitcoin dan Litecoin, testnet XRP, Stellar, TON, dan Algorand, Cardano PreProd. Aktifkan di Pengaturan (saat ini lewat Mode Ahli)."
     - name: "Mode Ahli"
@@ -33,7 +33,7 @@ mpc:
   items:
     - "Dua pihak: perangkat Anda dan server MPC kexify. ECDSA 2 pihak pada secp256k1 (EVM, keluarga Bitcoin, TRON, XRP) dan EdDSA 2 pihak pada Ed25519 (Solana, Stellar, TON, Algorand, Cardano)."
     - "Kunci dibuat lewat distributed key generation. Private key lengkap tidak pernah ada, kecuali Anda sendiri membangunnya ulang dari kedua file kunci."
-    - "Tanda tangannya adalah tanda tangan ECDSA atau Ed25519 biasa. Library standar mana pun dapat memverifikasinya; tidak ada yang di on-chain menunjukkan bahwa MPC digunakan."
+    - "Tanda tangannya adalah tanda tangan ECDSA atau Ed25519 biasa. Library standar mana pun dapat memverifikasinya; tidak ada apa pun on-chain yang menunjukkan bahwa MPC digunakan."
     - "Protokolnya berversi: setiap klien menyebutkan protokol MPC-nya (<code>mpc=2p:1</code>) di header <code>X-Kexify-Client</code>, dan server menolak klien yang tidak lagi dapat dilayani dengan HTTP 426."
     - "Di browser, cb-mpc berjalan sebagai WebAssembly. Share Anda dienkripsi dengan passkey (WebAuthn PRF) atau passphrase; share server dienkripsi dengan kunci per pengguna."
 

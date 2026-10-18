@@ -8,7 +8,7 @@ support:
   title: "สิ่งที่ใช้งานได้ตอนนี้"
   rows:
     - name: "WalletConnect v2"
-      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code> Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code> TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code> จับคู่ได้โดยวาง URI หรือสแกน QR code"
+      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code> · Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code> · TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code> จับคู่ได้โดยวาง URI หรือสแกน QR code"
     - name: "หน้าตรวจสอบที่อ่านง่าย"
       body: "ถอดรหัส calldata ของการโอน, <code>approve</code>, Permit2, EIP-2612 permit, <code>setApprovalForAll</code> และ ERC-721/1155 ให้อ่านได้ ชนิด EIP-712 ที่รู้จัก (Permit, Permit2, DAI permit, EIP-3009) จะแสดงทีละฟิลด์ ส่วนชนิดที่ไม่รู้จักจะถูกระบุว่าอ่านไม่ได้"
     - name: "การตรวจสอบฝั่งเซิร์ฟเวอร์"
@@ -21,7 +21,7 @@ support:
       body: "เปลี่ยน RPC และ URL ของ explorer ของเชนใดก็ได้ในรายการ (มีการตรวจสถานะให้) หรือแก้ไขค่าเครือข่ายทั้งหมดเป็น JSON แล้วส่งออกได้ ยังไม่รองรับการเพิ่มเครือข่ายใหม่ทั้งหมด"
     - name: "โทเคนที่กำหนดเอง"
       body: "เพิ่มโทเคนด้วยที่อยู่ contract บนเชน EVM, Solana, Stellar, TRON, Algorand และ TON (จัดการการแสดงผล, เพิ่มโทเคนกำหนดเอง)"
-    - name: "ออกจากระบบได้โดยไม่พึ่งเซิร์ฟเวอร์"
+    - name: "ย้ายออกได้โดยไม่พึ่งเซิร์ฟเวอร์"
       body: "โหมดกู้คืนจะโหลดไฟล์กุญแจของคุณและไฟล์กุญแจของเซิร์ฟเวอร์ แล้วรันทั้งสองฝ่ายของ MPC ในเบราว์เซอร์ โดยไม่เรียกเซิร์ฟเวอร์ kexify เลย ไฟล์ของเซิร์ฟเวอร์ต้องขอในโหมดผู้เชี่ยวชาญ และจะปลดล็อกหลังช่วงรอเพื่อความปลอดภัย"
     - name: "CLI"
       body: "<code>frontend/cli.ts</code> ในรีโพโอเพนซอร์ส เป็นโปรแกรม Bun คำสั่ง <code>recover</code> สร้างคีย์ส่วนตัวขึ้นใหม่ (hex หรือ WIF สำหรับ Bitcoin) จากไฟล์กุญแจสองไฟล์และพิมพ์ที่อยู่ออกมา คำสั่ง <code>connect</code> ตอบคำขอ WalletConnect ด้วยการลงนามสองฝ่ายในเครื่อง"
@@ -35,7 +35,7 @@ mpc:
     - "กุญแจสร้างจากการสร้างกุญแจแบบกระจาย (distributed key generation) คีย์ส่วนตัวฉบับเต็มจะไม่มีอยู่จริง นอกจากคุณจะสร้างขึ้นใหม่เองจากไฟล์กุญแจทั้งสองไฟล์"
     - "ลายเซ็นเป็น ECDSA หรือ Ed25519 ธรรมดา ไลบรารีมาตรฐานทุกตัวตรวจสอบได้ และบนเชนไม่มีอะไรบอกว่าใช้ MPC"
     - "โปรโตคอลมีเวอร์ชัน: ไคลเอนต์ทุกตัวระบุโปรโตคอล MPC ของตน (<code>mpc=2p:1</code>) ในเฮดเดอร์ <code>X-Kexify-Client</code> และเซิร์ฟเวอร์จะปฏิเสธไคลเอนต์ที่ไม่สามารถให้บริการได้อีกต่อไปด้วย HTTP 426"
-    - "ในเบราว์เซอร์ cb-mpc ทำงานเป็น WebAssembly ส่วนของคุณถูกเข้ารหัสด้วย passkey (WebAuthn PRF) หรือ passphrase ส่วนของเซิร์ฟเวอร์ถูกเข้ารหัสด้วยกุญแจเฉพาะผู้ใช้แต่ละคน"
+    - "ในเบราว์เซอร์ cb-mpc ทำงานเป็น WebAssembly · ส่วนแบ่งคีย์ของคุณถูกเข้ารหัสด้วย passkey (WebAuthn PRF) หรือ passphrase ส่วนของเซิร์ฟเวอร์ถูกเข้ารหัสด้วยกุญแจเฉพาะผู้ใช้แต่ละคน"
 
 quick:
   title: "เริ่มต้นอย่างรวดเร็ว"

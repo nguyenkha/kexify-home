@@ -21,7 +21,7 @@ support:
       body: "可以替换任意已列出链的 RPC 和区块浏览器 URL（含健康检查），也可以把整个网络配置当作 JSON 编辑并导出。暂不支持添加全新的网络。"
     - name: "自定义代币"
       body: "在 EVM 链、Solana、Stellar、TRON、Algorand 和 TON 上按合约地址添加代币（管理显示，添加自定义代币）。"
-    - name: "不依赖服务器也能离开"
+    - name: "无需服务器即可退出"
       body: "恢复模式会加载你的密钥文件和服务器的密钥文件，并在浏览器中运行 MPC 的双方，全程不调用 kexify 服务器。服务器的文件需要在专家模式中申请，经过安全等待期后解锁。"
     - name: "CLI"
       body: "开源仓库中的 <code>frontend/cli.ts</code>，一个 Bun 程序。<code>recover</code> 用两个密钥文件重建私钥（十六进制，Bitcoin 为 WIF）并输出地址。<code>connect</code> 通过本地双方签名来响应 WalletConnect 请求。"

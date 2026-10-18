@@ -87,7 +87,7 @@ plans:
   free_price: "$0, mãi mãi"
   free_items:
     - "Ví với chính sách đơn giản: giới hạn hằng ngày, địa chỉ tin cậy, chờ khi vượt giới hạn"
-    - "Kiểm tra an toàn: chặn quyền chi tiêu không giới hạn và kiểm tra địa chỉ rủi ro"
+    - "Kiểm tra an toàn: chặn phê duyệt token không giới hạn và kiểm tra địa chỉ rủi ro"
     - "Tăng phí thủ công ở nơi hỗ trợ (Bitcoin, Litecoin)"
     - "Bộ khôi phục, chế độ khôi phục và CLI"
     - "Đồng bộ sổ địa chỉ mã hoá đầu cuối"

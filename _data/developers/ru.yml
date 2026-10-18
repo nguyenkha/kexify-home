@@ -26,7 +26,7 @@ support:
     - name: "CLI"
       body: "<code>frontend/cli.ts</code> в открытом репозитории, программа на Bun. <code>recover</code> восстанавливает приватный ключ (hex или WIF для Bitcoin) из двух файлов ключей и выводит адреса. <code>connect</code> отвечает на запросы WalletConnect локальной подписью двух сторон."
     - name: "Открытый код"
-      body: 'Веб-приложение и CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT). MPC-библиотека: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>, форк <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT). Сервер API, MPC-сервер и приложение для iPhone пока не открыты.'
+      body: 'Веб-приложение и CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT). MPC-библиотека: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>, форк <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT). Сервер API, MPC-сервер и приложение для iPhone пока не имеют открытого исходного кода.'
 
 mpc:
   title: "Заметки о MPC"
