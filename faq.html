@@ -164,7 +164,11 @@ title: FAQ — kexify
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Is there a command-line tool?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes, a Bun CLI in the <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> repo. It takes your two key files. <code>recover</code> rebuilds the private key (hex, or WIF for Bitcoin) and prints your addresses. <code>connect</code> signs WalletConnect requests locally with both key shares, with no kexify server.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes, a Bun CLI in the <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> repo. It takes your two key files and never calls the kexify server. <code>recover</code> prints your addresses on every chain and exports your keys: hex, or WIF for Bitcoin, Litecoin and Dogecoin. The Ed25519 export (Solana, Stellar, TON, Algorand, Cardano) is a raw key, not a seed, so other wallets show a different address for it: move those funds with recovery mode in the web app. <code>connect</code> signs WalletConnect requests from EVM and Solana dApps locally. The CLI cannot send on its own.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">What does the kexify server see?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Balances and history are read from public networks first, from your device. Only when a public source fails does the app ask the kexify server, which answers only for your own wallet addresses and reads them from its providers, so those providers see the address but not your device. Your address book syncs end-to-end encrypted with a key that comes from your own key share: the server stores ciphertext only. Transaction simulation runs from your device against public nodes, on EVM chains and Solana; it is an estimate and never blocks a send. Recovery mode uses none of these and works with the server gone.</p>
       </details>
     </div>
     <!-- Technical -->
@@ -172,7 +176,7 @@ title: FAQ — kexify
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What cryptography is used?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) for EVM/Bitcoin chains, EdDSA (Ed25519) for Solana/Stellar. Powered by Coinbase's cb-mpc WASM library running directly in your browser.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) for EVM chains, Bitcoin, Litecoin, Bitcoin Cash, Dogecoin, XRP and TRON; EdDSA (Ed25519) for Solana, Stellar, TON, Algorand and Cardano. Powered by Coinbase's cb-mpc WASM library running directly in your browser.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is cb-mpc?</summary>

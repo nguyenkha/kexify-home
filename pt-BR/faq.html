@@ -166,7 +166,11 @@ permalink: /pt-BR/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Existe uma ferramenta de linha de comando?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim, uma CLI em Bun no repositório <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Ela recebe os seus dois arquivos de chave. <code>recover</code> reconstrói a chave privada (hex, ou WIF para Bitcoin) e mostra os seus endereços. <code>connect</code> assina requisições do WalletConnect localmente com as duas partes da chave, sem o servidor do kexify.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim, uma CLI em Bun no repositório <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Ela recebe os seus dois arquivos de chave e nunca chama o servidor do kexify. <code>recover</code> mostra os seus endereços em todas as redes e exporta as suas chaves: hex, ou WIF para Bitcoin, Litecoin e Dogecoin. A exportação Ed25519 (Solana, Stellar, TON, Algorand, Cardano) é uma chave bruta, não uma seed, então outras carteiras mostram um endereço diferente: mova esses fundos com o modo de recuperação do app web. <code>connect</code> assina localmente requisições do WalletConnect de dApps EVM e Solana. A CLI não consegue enviar sozinha.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">O que o servidor do kexify enxerga?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Saldos e histórico são lidos primeiro de redes públicas, a partir do seu dispositivo. Só quando uma fonte pública falha o app consulta o servidor do kexify, que responde apenas pelos endereços das suas próprias carteiras e os lê dos seus provedores, então esses provedores veem o endereço, mas não o seu dispositivo. Sua agenda de endereços sincroniza com criptografia de ponta a ponta, usando uma chave que vem da sua própria parte da chave: o servidor guarda só texto cifrado. A simulação de transações roda a partir do seu dispositivo contra nós públicos, em redes EVM e na Solana; é uma estimativa e nunca bloqueia um envio. O modo de recuperação não usa nada disso e funciona mesmo sem o servidor.</p>
       </details>
     </div>
     <!-- Technical -->
@@ -174,7 +178,7 @@ permalink: /pt-BR/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Que criptografia é usada?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) para redes EVM e Bitcoin, EdDSA (Ed25519) para Solana e Stellar. Tudo com a biblioteca cb-mpc WASM da Coinbase, rodando direto no seu navegador.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) para redes EVM, Bitcoin, Litecoin, Bitcoin Cash, Dogecoin, XRP e TRON; EdDSA (Ed25519) para Solana, Stellar, TON, Algorand e Cardano. Tudo com a biblioteca cb-mpc WASM da Coinbase, rodando direto no seu navegador.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">O que é o cb-mpc?</summary>

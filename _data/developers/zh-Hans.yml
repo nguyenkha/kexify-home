@@ -20,7 +20,7 @@ items:
     link: faq
   - icon: terminal
     title: "无需服务器的恢复，以及命令行工具"
-    body: "有了你的密钥文件和服务器的密钥文件，恢复模式可以在浏览器中签名，完全不需要 kexify 服务器。开源命令行工具可以重建私钥，或在本地响应 WalletConnect 请求。"
+    body: "有了你的密钥文件和服务器的密钥文件，恢复模式可以在浏览器中为每条受支持的链签名并发送，完全不需要 kexify 服务器。开源命令行工具会打印你的地址、导出你的密钥（Bitcoin、Litecoin 和 Dogecoin 为 WIF），并在本地响应 WalletConnect 请求。"
     link: cli
   - icon: code
     title: "开源 MPC（cb-mpc）"
@@ -34,4 +34,4 @@ items:
 
 quick:
   title: "快速上手：用命令行重建密钥"
-  note: "需要 Node.js 和两个密钥文件。不会向任何服务器发送数据。"
+  note: "需要 Bun 和两个密钥文件。不会向任何服务器发送数据。"

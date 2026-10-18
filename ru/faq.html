@@ -166,7 +166,11 @@ permalink: /ru/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Есть ли инструмент командной строки?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да, CLI на Bun в репозитории <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Он принимает два файла ключа. <code>recover</code> собирает приватный ключ (hex или WIF для Bitcoin) и показывает ваши адреса. <code>connect</code> подписывает запросы WalletConnect локально обеими частями ключа, без сервера kexify.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да, CLI на Bun в репозитории <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Он принимает два файла ключа и никогда не обращается к серверу kexify. <code>recover</code> показывает ваши адреса во всех сетях и экспортирует ключи: hex или WIF для Bitcoin, Litecoin и Dogecoin. Экспорт Ed25519 (Solana, Stellar, TON, Algorand, Cardano) это сырой ключ, а не seed, поэтому другие кошельки покажут для него другой адрес: переводите такие средства через режим восстановления в веб-приложении. <code>connect</code> локально подписывает запросы WalletConnect от dApp на EVM и Solana. Сам CLI отправлять не умеет.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что видит сервер kexify?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Балансы и историю сначала читают с вашего устройства из публичных сетей. Только если публичный источник не отвечает, приложение спрашивает сервер kexify, который отвечает лишь по адресам ваших кошельков и читает их у своих провайдеров, так что провайдеры видят адрес, но не ваше устройство. Адресная книга синхронизируется со сквозным шифрованием, ключ берётся из вашей части ключа: сервер хранит только шифртекст. Симуляция транзакций идёт с вашего устройства через публичные ноды, в сетях EVM и Solana; это оценка, и она никогда не блокирует отправку. Режим восстановления ничего из этого не использует и работает, даже если сервера больше нет.</p>
       </details>
     </div>
     <!-- Technical -->
@@ -174,7 +178,7 @@ permalink: /ru/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Какая криптография используется?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) для EVM и Bitcoin, EdDSA (Ed25519) для Solana и Stellar. Работает на библиотеке Coinbase cb-mpc в виде WASM прямо в вашем браузере.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) для сетей EVM, Bitcoin, Litecoin, Bitcoin Cash, Dogecoin, XRP и TRON; EdDSA (Ed25519) для Solana, Stellar, TON, Algorand и Cardano. Работает на библиотеке Coinbase cb-mpc в виде WASM прямо в вашем браузере.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Что такое cb-mpc?</summary>

@@ -20,7 +20,7 @@ items:
     link: faq
   - icon: terminal
     title: "サーバーなしの復旧と CLI"
-    body: "自分の鍵ファイルとサーバーの鍵ファイルがあれば、復旧モードが kexify のサーバーなしでブラウザー内で署名します。オープンソースの CLI で秘密鍵を復元したり、WalletConnect のリクエストにローカルで応答したりできます。"
+    body: "自分の鍵ファイルとサーバーの鍵ファイルがあれば、復旧モードが kexify のサーバーなしで、対応するすべてのチェーンでブラウザー内から署名・送信します。オープンソースの CLI はアドレスを表示し、鍵をエクスポートし（Bitcoin、Litecoin、Dogecoin は WIF）、WalletConnect のリクエストにローカルで応答します。"
     link: cli
   - icon: code
     title: "オープンソースの MPC（cb-mpc）"
@@ -34,4 +34,4 @@ items:
 
 quick:
   title: "クイックスタート：CLI で鍵を復元"
-  note: "Node.js と 2 つの鍵ファイルが必要です。どのサーバーにもデータは送信されません。"
+  note: "Bun と 2 つの鍵ファイルが必要です。どのサーバーにもデータは送信されません。"

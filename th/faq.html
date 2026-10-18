@@ -166,7 +166,11 @@ permalink: /th/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">มีเครื่องมือบรรทัดคำสั่งไหม</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">มี เป็น Bun CLI อยู่ในรีโพ <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> ใช้ไฟล์คีย์สองไฟล์ของคุณ · <code>recover</code> สร้างไพรเวทคีย์ขึ้นใหม่ (hex หรือ WIF สำหรับ Bitcoin) และแสดงที่อยู่ของคุณ · <code>connect</code> ลงนามคำขอ WalletConnect ในเครื่องด้วยส่วนคีย์ทั้งสองส่วน โดยไม่ใช้เซิร์ฟเวอร์ kexify</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">มี เป็น Bun CLI อยู่ในรีโพ <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> ใช้ไฟล์คีย์สองไฟล์ของคุณ และไม่เรียกเซิร์ฟเวอร์ kexify เลย · <code>recover</code> แสดงที่อยู่ของคุณบนทุกเชนและส่งออกคีย์ของคุณ (hex หรือ WIF สำหรับ Bitcoin, Litecoin และ Dogecoin) · การส่งออก Ed25519 (Solana, Stellar, TON, Algorand, Cardano) เป็นคีย์ดิบ ไม่ใช่ seed กระเป๋าอื่นจึงแสดงที่อยู่ต่างออกไป ให้ย้ายเงินเหล่านั้นด้วยโหมดกู้คืนในเว็บแอป · <code>connect</code> ลงนามคำขอ WalletConnect จาก dApp ของ EVM และ Solana ในเครื่อง · CLI ส่งเงินเองไม่ได้</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">เซิร์ฟเวอร์ kexify เห็นอะไรบ้าง</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ยอดคงเหลือและประวัติจะอ่านจากเครือข่ายสาธารณะก่อน จากอุปกรณ์ของคุณ เฉพาะเมื่อแหล่งสาธารณะล้มเหลว แอปจึงจะถามเซิร์ฟเวอร์ kexify ซึ่งตอบเฉพาะที่อยู่กระเป๋าของคุณเองและอ่านจากผู้ให้บริการของเซิร์ฟเวอร์ ผู้ให้บริการเหล่านั้นจึงเห็นที่อยู่แต่ไม่เห็นอุปกรณ์ของคุณ สมุดที่อยู่ของคุณซิงก์แบบเข้ารหัสต้นทางถึงปลายทางด้วยคีย์ที่มาจากส่วนคีย์ของคุณเอง เซิร์ฟเวอร์เก็บเฉพาะข้อมูลที่เข้ารหัสแล้ว การจำลองธุรกรรมทำงานจากอุปกรณ์ของคุณกับโหนดสาธารณะ บนเชน EVM และ Solana เป็นเพียงค่าประมาณและไม่เคยบล็อกการส่ง โหมดกู้คืนไม่ใช้สิ่งใดเหล่านี้เลย และใช้งานได้แม้เซิร์ฟเวอร์หายไปแล้ว</p>
       </details>
     </div>
 
@@ -175,7 +179,7 @@ permalink: /th/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">ใช้การเข้ารหัสแบบไหน</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) สำหรับเชน EVM/Bitcoin และ EdDSA (Ed25519) สำหรับ Solana/Stellar ขับเคลื่อนด้วยไลบรารี cb-mpc WASM ของ Coinbase ที่ทำงานในเบราว์เซอร์ของคุณโดยตรง</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) สำหรับเชน EVM, Bitcoin, Litecoin, Bitcoin Cash, Dogecoin, XRP และ TRON และ EdDSA (Ed25519) สำหรับ Solana, Stellar, TON, Algorand และ Cardano ขับเคลื่อนด้วยไลบรารี cb-mpc WASM ของ Coinbase ที่ทำงานในเบราว์เซอร์ของคุณโดยตรง</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">cb-mpc คืออะไร</summary>

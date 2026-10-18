@@ -158,7 +158,11 @@ permalink: /vi/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Có công cụ dòng lệnh không?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Có, một CLI viết bằng Bun trong repo <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Nó nhận hai file khoá của bạn. <code>recover</code> dựng lại khoá riêng (hex, hoặc WIF cho Bitcoin) và in ra các địa chỉ của bạn. <code>connect</code> ký các yêu cầu WalletConnect ngay trên máy bằng cả hai phần khoá, không cần server kexify.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Có, một CLI viết bằng Bun trong repo <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Nó nhận hai file khoá của bạn và không bao giờ gọi server kexify. <code>recover</code> in ra địa chỉ của bạn trên mọi chuỗi và xuất khoá của bạn: hex, hoặc WIF cho Bitcoin, Litecoin và Dogecoin. Bản xuất Ed25519 (Solana, Stellar, TON, Algorand, Cardano) là khoá thô, không phải seed, nên ví khác sẽ hiện địa chỉ khác: hãy chuyển số tiền đó bằng chế độ khôi phục trong ứng dụng web. <code>connect</code> ký ngay trên máy các yêu cầu WalletConnect từ dApp EVM và Solana. CLI không tự gửi tiền được.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Server kexify nhìn thấy gì?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Số dư và lịch sử được đọc từ các mạng công khai trước, ngay từ thiết bị của bạn. Chỉ khi nguồn công khai lỗi, ứng dụng mới hỏi server kexify; server chỉ trả lời cho đúng các địa chỉ ví của bạn và đọc chúng từ các nhà cung cấp của nó, nên các nhà cung cấp đó thấy địa chỉ nhưng không thấy thiết bị của bạn. Sổ địa chỉ được đồng bộ mã hoá đầu cuối bằng một khoá lấy từ phần khoá của bạn: server chỉ lưu bản mã. Việc mô phỏng giao dịch chạy từ thiết bị của bạn trên các node công khai, với chuỗi EVM và Solana; đó chỉ là ước tính và không bao giờ chặn việc gửi. Chế độ khôi phục không dùng thứ nào trong số này và vẫn chạy khi server đã biến mất.</p>
       </details>
     </div>
 
@@ -167,7 +171,7 @@ permalink: /vi/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Sử dụng mật mã gì?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) cho chuỗi EVM/Bitcoin, EdDSA (Ed25519) cho Solana/Stellar. Chạy bằng thư viện cb-mpc WASM của Coinbase trực tiếp trong trình duyệt.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) cho các chuỗi EVM, Bitcoin, Litecoin, Bitcoin Cash, Dogecoin, XRP và TRON; EdDSA (Ed25519) cho Solana, Stellar, TON, Algorand và Cardano. Chạy bằng thư viện cb-mpc WASM của Coinbase trực tiếp trong trình duyệt.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3">
         <summary class="text-sm font-medium dark:text-white text-gray-900">cb-mpc là gì?</summary>

@@ -166,7 +166,11 @@ permalink: /hi/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">क्या कमांड-लाइन टूल है?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हाँ, <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> रिपो में एक Bun CLI। यह आपकी दो कुंजी फ़ाइलें लेता है। <code>recover</code> प्राइवेट की दोबारा बनाता है (hex, या Bitcoin के लिए WIF) और आपके पते दिखाता है। <code>connect</code> दोनों कुंजी शेयर से WalletConnect रिक्वेस्ट लोकल में साइन करता है, kexify सर्वर के बिना।</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हाँ, <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> रिपो में एक Bun CLI। यह आपकी दो कुंजी फ़ाइलें लेता है और kexify सर्वर को कभी कॉल नहीं करता। <code>recover</code> हर चेन पर आपके पते दिखाता है और आपकी कुंजियाँ एक्सपोर्ट करता है: hex, या Bitcoin, Litecoin और Dogecoin के लिए WIF। Ed25519 एक्सपोर्ट (Solana, Stellar, TON, Algorand, Cardano) कच्ची कुंजी है, सीड नहीं, इसलिए दूसरे वॉलेट में उसका पता अलग दिखता है: उन फ़ंड को वेब ऐप के रिकवरी मोड से भेजें। <code>connect</code> EVM और Solana dApp के WalletConnect रिक्वेस्ट लोकल में साइन करता है। CLI अपने आप सेंड नहीं कर सकता।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify सर्वर को क्या दिखता है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">बैलेंस और हिस्ट्री पहले आपके डिवाइस से सार्वजनिक नेटवर्क से पढ़ी जाती है। केवल जब कोई सार्वजनिक स्रोत विफल होता है, तब ऐप kexify सर्वर से पूछता है, जो सिर्फ़ आपके अपने वॉलेट पतों का जवाब देता है और उन्हें अपने प्रोवाइडर से पढ़ता है, इसलिए वे प्रोवाइडर पता देखते हैं पर आपका डिवाइस नहीं। आपकी एड्रेस बुक एंड-टू-एंड एन्क्रिप्टेड रूप में सिंक होती है, उस कुंजी से जो आपके अपने की-शेयर से बनती है: सर्वर केवल सिफरटेक्स्ट रखता है। ट्रांज़ैक्शन सिमुलेशन आपके डिवाइस से सार्वजनिक नोड पर चलता है, EVM चेन और Solana पर; यह अनुमान है और भेजने को कभी नहीं रोकता। रिकवरी मोड इनमें से कुछ भी इस्तेमाल नहीं करता और सर्वर के बिना भी काम करता है।</p>
       </details>
     </div>
 
@@ -175,7 +179,7 @@ permalink: /hi/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">कौन-सी क्रिप्टोग्राफ़ी इस्तेमाल होती है?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM/Bitcoin चेन के लिए ECDSA (secp256k1), Solana/Stellar के लिए EdDSA (Ed25519)। यह Coinbase की cb-mpc WASM लाइब्रेरी से चलता है, जो सीधे आपके ब्राउज़र में चलती है।</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM चेन, Bitcoin, Litecoin, Bitcoin Cash, Dogecoin, XRP और TRON के लिए ECDSA (secp256k1); Solana, Stellar, TON, Algorand और Cardano के लिए EdDSA (Ed25519)। यह Coinbase की cb-mpc WASM लाइब्रेरी से चलता है, जो सीधे आपके ब्राउज़र में चलती है।</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">cb-mpc क्या है?</summary>
