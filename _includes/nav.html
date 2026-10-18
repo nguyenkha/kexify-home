@@ -1,6 +1,13 @@
 {% assign lang = page.lang | default: "en" %}
-{% assign prefix = "" %}
-{% if lang == "vi" %}{% assign prefix = "/vi" %}{% endif %}
+{% assign L = site.data.languages | where: "code", lang | first %}
+{% assign prefix = L.prefix %}
+{% comment %} Page path without the language folder: "/", "/faq/", "/about/" {% endcomment %}
+{% assign page_slug = page.url | remove: 'index.html' %}
+{% if prefix != "" %}{% assign page_slug = page_slug | remove_first: prefix %}{% endif %}
+{% if page_slug == "" %}{% assign page_slug = "/" %}{% endif %}
+{% assign home_path = prefix | append: '/' %}
+{% assign faq_path = prefix | append: '/faq/' %}
+{% assign about_path = prefix | append: '/about/' %}
 
 <nav class="border-b border-border-primary">
   <div class="max-w-5xl mx-auto px-4 md:px-8">
@@ -14,27 +21,27 @@
 
       <!-- Desktop nav -->
       <div class="hidden md:flex items-center gap-6">
-        {% assign current = page.url | remove: '/index.html' | remove: '.html' %}
-        {% assign home_path = prefix | append: '/' %}
-        {% assign faq_path = prefix | append: '/faq' %}
-        {% assign about_path = prefix | append: '/about' %}
 
-        <a href="{{ home_path | relative_url }}" class="text-sm transition-colors {% if current == home_path or current == prefix %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
-          {% if lang == "vi" %}Trang chủ{% else %}Home{% endif %}
+        <a href="{{ home_path | relative_url }}" class="text-sm transition-colors {% if page_slug == '/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
+          {{ L.home }}
         </a>
-        <a href="{{ faq_path | relative_url }}" class="text-sm transition-colors {% if current == faq_path %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">FAQ</a>
-        <a href="{{ about_path | relative_url }}" class="text-sm transition-colors {% if current == about_path %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
-          {% if lang == "vi" %}Giới thiệu{% else %}About{% endif %}
+        <a href="{{ faq_path | relative_url }}" class="text-sm transition-colors {% if page_slug == '/faq/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">{{ L.faq }}</a>
+        <a href="{{ about_path | relative_url }}" class="text-sm transition-colors {% if page_slug == '/about/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
+          {{ L.about }}
         </a>
 
-        <!-- Language switcher -->
-        {% assign page_slug = page.url | remove: '/vi' | remove: '/index.html' | remove: '.html' %}
-        {% if page_slug == "" or page_slug == "/" %}{% assign page_slug = "/" %}{% endif %}
-        {% if lang == "vi" %}
-          <a href="{{ page_slug | relative_url }}" class="text-xs text-gray-400 hover:text-white transition-colors">EN</a>
-        {% else %}
-          <a href="{{ '/vi' | append: page_slug | relative_url }}" class="text-xs text-gray-400 hover:text-white transition-colors">VI</a>
-        {% endif %}
+        <!-- Language switcher (works without JS) -->
+        <details id="lang-menu" class="relative">
+          <summary class="text-xs text-gray-400 hover:text-white transition-colors" aria-label="{{ L.language }}">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18M12 3a9 9 0 110 18 9 9 0 010-18z"/></svg>
+            {{ L.name }}
+          </summary>
+          <div class="absolute right-0 mt-2 w-48 py-1 bg-surface-secondary border border-border-primary rounded-lg shadow-lg z-20">
+            {% for l in site.data.languages %}
+            <a href="{{ l.prefix | append: page_slug | relative_url }}" hreflang="{{ l.code }}" lang="{{ l.code }}" class="block px-3 py-1.5 text-xs {% if l.code == lang %}text-blue-400 font-medium{% else %}text-gray-400 hover:text-white{% endif %}">{{ l.name }}</a>
+            {% endfor %}
+          </div>
+        </details>
 
         <!-- Theme toggle -->
         <button id="theme-toggle" class="p-2 text-gray-400 hover:text-white transition-colors" aria-label="Toggle theme">
@@ -47,7 +54,7 @@
         </button>
 
         <a href="https://my.kexify.app/" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-lg transition-colors">
-          {% if lang == "vi" %}Mở ứng dụng{% else %}Open App{% endif %}
+          {{ L.open_app }}
         </a>
       </div>
 
@@ -71,20 +78,23 @@
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-      <a href="{{ home_path | relative_url }}" class="block text-sm py-2 {% if current == home_path or current == prefix %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
-        {% if lang == "vi" %}Trang chủ{% else %}Home{% endif %}
+      <a href="{{ home_path | relative_url }}" class="block text-sm py-2 {% if page_slug == '/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
+        {{ L.home }}
       </a>
-      <a href="{{ faq_path | relative_url }}" class="block text-sm py-2 {% if current == faq_path %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">FAQ</a>
-      <a href="{{ about_path | relative_url }}" class="block text-sm py-2 {% if current == about_path %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
-        {% if lang == "vi" %}Giới thiệu{% else %}About{% endif %}
+      <a href="{{ faq_path | relative_url }}" class="block text-sm py-2 {% if page_slug == '/faq/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">{{ L.faq }}</a>
+      <a href="{{ about_path | relative_url }}" class="block text-sm py-2 {% if page_slug == '/about/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
+        {{ L.about }}
       </a>
-      {% if lang == "vi" %}
-        <a href="{{ page_slug | relative_url }}" class="block text-xs text-gray-400 hover:text-white py-2">EN</a>
-      {% else %}
-        <a href="{{ '/vi' | append: page_slug | relative_url }}" class="block text-xs text-gray-400 hover:text-white py-2">VI</a>
-      {% endif %}
+      <div class="pt-2 border-t border-border-primary">
+        <p class="text-[10px] uppercase tracking-wide text-gray-500 py-1">{{ L.language }}</p>
+        <div class="grid grid-cols-2 gap-x-4">
+          {% for l in site.data.languages %}
+          <a href="{{ l.prefix | append: page_slug | relative_url }}" hreflang="{{ l.code }}" lang="{{ l.code }}" class="block text-xs py-1.5 {% if l.code == lang %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">{{ l.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
       <a href="https://my.kexify.app/" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-lg transition-colors mt-2">
-        {% if lang == "vi" %}Mở ứng dụng{% else %}Open App{% endif %}
+        {{ L.open_app }}
       </a>
     </div>
   </div>
@@ -100,5 +110,9 @@
     }
     document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
     document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme);
+    document.addEventListener('click', function(e) {
+      var m = document.getElementById('lang-menu');
+      if (m && m.open && !m.contains(e.target)) m.open = false;
+    });
   </script>
 </nav>

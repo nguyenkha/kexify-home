@@ -1,0 +1,166 @@
+---
+layout: default
+title: "Частые вопросы — kexify"
+lang: ru
+permalink: /ru/faq/
+---
+
+<section class="px-4 md:px-8 py-12 md:py-16">
+  <div class="max-w-3xl mx-auto fade-in">
+    <h1 class="text-2xl font-bold tracking-tight dark:text-white text-gray-900 mb-8">Частые вопросы</h1>
+
+    <!-- General -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-8 mb-4">Общие</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что значит «kexify»?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Keys simplified, то есть «ключи без сложностей». Вот и всё.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что такое kexify?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">MPC-кошелёк с самостоятельным хранением: две независимые части ключа создаются вместе, одна в вашем браузере, другая на сервере. Единого закрытого ключа не существует. Полного ключа нет ни у одной из сторон.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что такое MPC?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Multi-Party Computation, то есть многосторонние вычисления: криптографический метод, при котором несколько сторон вместе вычисляют функцию, не раскрывая друг другу свои данные. В kexify две части ключа подписывают транзакцию и при этом никогда не собираются в полный закрытый ключ.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify с открытым исходным кодом?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да. Основан на библиотеке Coinbase <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">наш форк</a>). Фронтенд: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify правда бесплатный?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да, бесплатно навсегда, без подписки и без рекламы. Автор сделал kexify для себя. Бизнес-модели нет, потому что это не бизнес. Это инструмент, который должен был существовать.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Почему в kexify нет обмена, стейкинга и DeFi?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Так задумано. Кошелёк должен хорошо делать одно: хранить и подписывать. Обмен, кредитование и мосты уже есть в dApp вроде 1inch, Aave и MyEtherWallet. Подключайтесь к любому из них через WalletConnect. Меньше функций, меньше ошибок и меньше поверхность атаки.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Какая у проекта философия?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Три принципа: просто, только кошелёк, и забота лишь об удобстве и безопасности. Каждая функция проходит через них. Если она не делает кошелёк удобнее или безопаснее, её не будет.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Есть ли гарантии?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Нет. kexify это личный проект, он предоставляется «как есть», без гарантий. За свои ключи и средства отвечаете вы сами. Зато код открыт, и всё можно проверить самостоятельно.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Для кого kexify?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Для всех, кому нужна защита MPC без лишней сложности. Его сделал инженер для инженеров, но пользоваться им сможет каждый.</p>
+      </details>
+    </div>
+
+    <!-- Security -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Безопасность</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Кто хранит мои ключи?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Полный ключ не хранит никто. Одна часть в вашем браузере (зашифрована ключом входа или парольной фразой), другая на сервере (зашифрована AES-256-GCM). Для подписи нужны обе.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что, если сервер недоступен?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Используйте режим восстановления. Заранее экспортируйте часть ключа сервера, а затем подписывайте локально в браузере обеими частями. Фронтенд открыт, а ещё есть CLI-инструмент, который собирает обе части в полный ключ. Сервер не нужен.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Может ли сервер украсть мои средства?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Нет. У сервера только одна часть, и сам он подписать не может. Протокол 2-of-2 MPC по замыслу не позволяет подписывать в одиночку. Фронтенд открыт: код можно проверить и даже развернуть у себя.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Как хранятся части ключа?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Браузер: AES-GCM, ключ из PRF ключа входа WebAuthn или из парольной фразы (PBKDF2). Сервер: AES-256-GCM с отдельным ключом для каждого пользователя, полученным через HKDF. При передаче всё идёт по TLS 1.3.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что такое проверка GoPlus?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Перед подписью kexify автоматически сверяет адрес получателя и контракт токена с базой GoPlus Security: известные мошеннические и фишинговые адреса, вредоносные контракты. Если найден риск, вы увидите предупреждение до подтверждения. Включено по умолчанию, настройка не нужна.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Чем kexify отличается от других MPC-кошельков, например ZenGo?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Оба используют MPC, но kexify с открытым кодом и полностью с самостоятельным хранением: можно экспортировать обе части ключа и подписывать офлайн в любой момент. У ZenGo часть для восстановления под их контролем, и нужны их серверы. Ещё в kexify есть политика безопасности (лимиты расходов, белые списки адресов), а у ZenGo её нет. И kexify бесплатный: без комиссий за обмен и платных тарифов.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Как MPC и политика безопасности работают вместе?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Представьте сейф, который открывается двумя ключами. Один у вас, другой у сервера. Ни один из них в одиночку сейф не откроет. Но сервер ещё и охранник: прежде чем повернуть свой ключ, он проверяет ваши правила. Сумма в пределах лимита? Адрес в списке разрешённых? Аккаунт не заморожен? Если хоть одно правило нарушено, сервер отказывается подписывать вместе с вами, и транзакция просто не состоится.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Если сервер следит за правилами, может ли он несправедливо меня заблокировать?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Сервер применяет только те правила, которые задали вы сами. А если вы с сервером не согласны, есть выход: экспортируйте обе части ключа и подписывайте транзакции полностью самостоятельно в режиме восстановления. Сервер не сможет удерживать ваши средства в заложниках.</p>
+      </details>
+    </div>
+
+    <!-- Usage -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Использование</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Какие блокчейны поддерживаются?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Сети EVM (Ethereum, Base, Avalanche, Polygon, Arbitrum, BSC...), Bitcoin, Solana, XRP, TRON, TON, Algorand, Cardano, Stellar, Litecoin и Bitcoin Cash, а также их тестовые сети и токены.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Как подписывать транзакции?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Начните в приложении или подключитесь через WalletConnect. Обе части ключа проходят несколько раундов MPC (около 6 секунд), и получается корректная подпись.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что такое политика безопасности?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Дополнительный уровень защиты, который вы задаёте сами: сервер применяет ваши правила, прежде чем подписывать вместе с вами. Даже если кто-то получит доступ к вашему браузеру, политика ограничит его возможности.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Какие правила можно задать?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Лимиты расходов</strong>: потолок суммы одной транзакции в долларах США. <strong class="dark:text-gray-300 text-gray-700">Белые списки адресов</strong>: переводы разрешены только на заранее одобренные адреса. Сервер проверяет оба правила, прежде чем согласится подписывать.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Зачем нужна 24-часовая задержка?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Чтобы злоумышленник не мог изменить вашу политику и сразу этим воспользоваться. Новое или изменённое правило вступает в силу через 24 часа. Если изменение сделали не вы, у вас есть время заморозить аккаунт.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Можно ли заморозить аккаунт?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да. Заморозка делается по ссылке из письма. Все операции подписи обязательно блокируются на 24 часа. Так у вас будет время защитить аккаунт, если вы подозреваете чужой доступ.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что такое режим эксперта?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Набор расширенных настроек для опытных пользователей: выбор UTXO, Replace-By-Fee (RBF), свой nonce, режим «только подпись» (подписать без отправки в сеть), отдельная отправка в сеть, подпись сырых сообщений, свои RPC-адреса для каждой сети и полная резервная копия частей ключа. По умолчанию скрыт: включите в настройках, когда понадобится тонкий контроль.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Можно ли пользоваться kexify без почты?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да. Анонимный вход позволяет создать кошелёк без почты и личных данных. Части ключа хранятся локально в браузере и защищены парольной фразой. Этот режим рассчитан на технически подкованных пользователей, которые понимают, как устроено хранение ключей: если вы потеряете парольную фразу и части ключа, восстановить аккаунт будет нельзя.</p>
+      </details>
+    </div>
+
+    <!-- Limitations -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Ограничения</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Почему можно создать только 3 аккаунта?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify работает целиком на бесплатной инфраструктуре. Каждый аккаунт хранит на сервере зашифрованные части ключа, поэтому предел в 3 аккаунта на пользователя позволяет держать расходы на хранение и вычисления в разумных рамках, ни с кого не беря денег.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Почему в одной транзакции (UTXO) не больше 10 подписей?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Для каждой подписи MPC нужно несколько раундов вычислений между браузером и сервером. В сетях на UTXO (Bitcoin, Litecoin и др.) каждый вход подписывается отдельно. Предел в 10 держит время подписи разумным и не перегружает бесплатные серверные ресурсы. Для большинства транзакций 10 входов более чем достаточно.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Почему RPC иногда работает медленно или нестабильно?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">По умолчанию kexify использует бесплатные публичные RPC. У них бывают ограничения по частоте запросов, перегрузка, а иногда и сбои. Для надёжности и скорости откройте настройки и замените RPC по умолчанию своим (от Alchemy, Infura, QuickNode и т. д.): у большинства есть щедрый бесплатный тариф с API-ключом.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Есть ли ограничения на письма и запросы на подпись?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Да. Письма со ссылкой для входа, запросы к API и операции подписи ограничены по частоте, чтобы бесплатной инфраструктурой не злоупотребляли. Если упёрлись в лимит, немного подождите и повторите. Для обычного использования лимитов хватает с запасом, они срабатывают только при необычной активности.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Зачем kexify использует Cloudflare Turnstile?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile это дружелюбная к приватности альтернатива CAPTCHA, которая работает незаметно в фоне. Она защищает бесплатную инфраструктуру от ботов и автоматических злоупотреблений, без раздражающих головоломок и слежки. Вы почти не будете её замечать.</p>
+      </details>
+    </div>
+
+    <!-- Technical -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Технические вопросы</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Какая криптография используется?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) для EVM и Bitcoin, EdDSA (Ed25519) для Solana и Stellar. Работает на библиотеке Coinbase cb-mpc в виде WASM прямо в вашем браузере.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Что такое cb-mpc?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Библиотека пороговой криптографии Coinbase</a>. Мы используем <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">форк</a>, скомпилированный в WebAssembly для работы в браузере.</p>
+      </details>
+    </div>
+
+  </div>
+</section>

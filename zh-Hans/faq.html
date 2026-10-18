@@ -1,0 +1,166 @@
+---
+layout: default
+title: 常见问题 — kexify
+lang: zh-Hans
+permalink: /zh-Hans/faq/
+---
+
+<section class="px-4 md:px-8 py-12 md:py-16">
+  <div class="max-w-3xl mx-auto fade-in">
+    <h1 class="text-2xl font-bold tracking-tight dark:text-white text-gray-900 mb-8">常见问题</h1>
+
+    <!-- General -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-8 mb-4">常规</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">“kexify”是什么意思？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">keys simplified，让密钥更简单。仅此而已。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 是什么？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">一款自主托管的 MPC 钱包：两份相互独立的密钥分片同时生成，一份在你的浏览器中，一份在服务器上。完整的私钥从不存在，任何一方都不持有完整密钥。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">什么是 MPC？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">多方安全计算（Multi-Party Computation）是一种密码学技术，多方共同完成计算，却无需透露各自的输入。在 kexify 中，两份密钥分片共同为交易签名，却从不合并成完整的私钥。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 开源吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">开源。基于 Coinbase 的 <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> 库构建（<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">我们的分支</a>）。前端：<a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 真的免费吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">是的，永久免费，无订阅，无广告。kexify 是作者为自己使用而做的。它没有商业模式，因为它不是一门生意，只是一个本该存在的工具。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么 kexify 没有兑换、质押或 DeFi 功能？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">这是有意为之。钱包应该把一件事做好：保管和签名。兑换、借贷和跨链桥已经有 1inch、Aave、MyEtherWallet 等 dApp 做得很好，通过 WalletConnect 连接即可。功能越少，漏洞越少，攻击面也越小。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">设计理念是什么？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">三条原则：保持简单，专注做钱包，只为体验和安全做优化。每个功能决策都要经过这三条筛选。如果不能让钱包更好用或更安全，就不会上线。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">有任何保修或担保吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">没有。kexify 是个人项目，按现状提供，不附带任何担保。你需自行负责自己的密钥和资金。不过代码是开源的，一切都可以自己验证。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 适合谁？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">适合所有想要 MPC 安全性、又不想面对复杂操作的人。由工程师为工程师打造，但设计得人人都能上手。</p>
+      </details>
+    </div>
+
+    <!-- Security -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">安全</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">谁持有我的密钥？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">没有人持有完整密钥。一份分片在你的浏览器中（用通行密钥或口令加密），另一份在服务器上（用 AES-256-GCM 加密）。签名必须两份分片协作完成。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">如果服务器宕机怎么办？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">使用恢复模式。事先导出服务器密钥分片，之后即可在浏览器本地用两份分片签名。前端是开源的，另有命令行工具可将两份分片合成完整密钥。无需服务器。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">服务器能盗走我的资金吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">不能。服务器只有一份分片，无法单独签名。2-of-2 MPC 协议从设计上就杜绝了单方签名。前端是开源的，你可以审计代码，甚至自行部署。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">密钥分片如何存储？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">浏览器：使用 WebAuthn 通行密钥 PRF 或口令（PBKDF2）进行 AES-GCM 加密。服务器：使用按用户由 HKDF 派生的密钥进行 AES-256-GCM 加密。所有传输均使用 TLS 1.3。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">什么是 GoPlus 欺诈检查？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">签名前，kexify 会自动将收款地址和代币合约与 GoPlus Security 的数据库比对，排查已知骗局、钓鱼地址和恶意合约。一旦发现风险，确认前会先向你提示警告。默认开启，无需设置。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 与 ZenGo 等其他 MPC 钱包有何不同？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">两者都使用 MPC，但 kexify 开源且完全自主托管：你可以随时导出两份密钥分片并离线签名。ZenGo 掌控恢复分片，并且依赖他们的服务器。kexify 还有 ZenGo 所没有的策略引擎（支出限额、地址白名单）。而且 kexify 免费，没有兑换手续费，也没有付费档位。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">MPC 和策略引擎如何配合？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">把它想象成需要两把钥匙的保险箱：你拿一把，服务器拿另一把，谁也无法单独开箱。服务器同时还是守卫，转动钥匙之前会先核对你设定的规则：金额是否在支出限额内？地址是否在批准名单上？账户是否被冻结？只要违反任何一条，服务器就拒绝共同签名，交易根本无法发生。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">服务器执行规则，会不会无理拦截我？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">服务器只执行你自己设定的规则。如果你不认同服务器的判断，你还有退路：导出两份密钥分片，在恢复模式下完全自行签名。服务器永远无法扣押你的资金。</p>
+      </details>
+    </div>
+
+    <!-- Usage -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">使用</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">支持哪些区块链？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM 链（Ethereum、Base、Avalanche、Polygon、Arbitrum、BSC 等）、Bitcoin、Solana、XRP、TRON、TON、Algorand、Cardano、Stellar、Litecoin 和 Bitcoin Cash，以及它们的测试网和代币。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">如何签署交易？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">在应用内发起，或通过 WalletConnect 连接。两份密钥分片经过多轮 MPC 交互（约 6 秒），生成有效签名。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">什么是策略引擎？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">这是一层由你自己设定的安全防护：你制定规则，服务器在共同签名前执行。即使有人获得了你浏览器的访问权限，策略也会限制他能做的事。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">可以设置哪些类型的策略？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">支出限额</strong>：限制每笔交易的美元价值。<strong class="dark:text-gray-300 text-gray-700">地址白名单</strong>：只允许向预先批准的地址转账。两者都由服务器端在同意共同签名之前执行。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么有 24 小时冷却期？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">为了防止攻击者修改你的策略后立刻加以利用。创建或修改策略后，需要 24 小时才会生效。如果这不是你做的修改，你有时间冻结账户。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">可以冻结我的账户吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">可以。通过邮件链接冻结。冻结后所有签名都会被强制拦截 24 小时。如果你怀疑账户被未经授权访问，这能为你争取保护账户的时间。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">什么是专家模式？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">面向高级用户的一组进阶控制：UTXO 选择、手续费替换（RBF）、自定义 nonce、仅签名模式（只签名不广播）、单独广播、原始消息签名、按链自定义 RPC 端点，以及完整的密钥分片备份。默认隐藏，需要精细控制时在设置中打开即可。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">不提供邮箱也能使用 kexify 吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">可以。匿名登录让你无需邮箱或任何个人信息即可创建钱包。你的密钥分片保存在浏览器本地，并用口令保护。此模式面向了解区块链密钥管理的技术用户：如果你丢失了口令和密钥分片，账户将无法找回。</p>
+      </details>
+    </div>
+
+    <!-- Limitations -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">限制</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么最多只能有 3 个账户？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify 完全运行在免费的基础设施上。每个账户都会在服务器上存储加密的密钥分片，所以每位用户最多 3 个账户，才能在不向任何人收费的前提下维持存储和计算成本。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么每笔交易（UTXO）最多 10 个签名？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">每个 MPC 签名都需要你的浏览器与服务器之间进行多轮计算。在 UTXO 链（Bitcoin、Litecoin 等）上，每个输入都需要单独签名。上限设为 10，能让签名时间保持合理，也避免免费档的服务器资源被压垮。对大多数交易来说，10 个输入绰绰有余。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么 RPC 连接有时很慢或不稳定？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify 默认使用免费的公共 RPC 端点，它们可能被限速、拥堵，偶尔还会宕机。想要更稳定更快，可以到设置里把默认 RPC 换成你自己的端点（来自 Alchemy、Infura、QuickNode 等），大多数都提供带 API 密钥的慷慨免费额度。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">邮件和签名请求有次数限制吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">有。魔法链接邮件、API 请求和签名操作都有频率限制，以防免费基础设施被滥用。如果触发限制，稍等片刻再试即可。这些限制对正常使用来说足够宽松，只有在出现异常活动时才会生效。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么 kexify 使用 Cloudflare Turnstile？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile 是一种注重隐私的验证码替代方案，在后台无感运行。它保护免费基础设施免受机器人和自动化滥用，没有烦人的验证题，也不追踪你。你几乎不会注意到它。</p>
+      </details>
+    </div>
+
+    <!-- Technical -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">技术</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">使用了什么密码学？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM/Bitcoin 链使用 ECDSA (secp256k1)，Solana/Stellar 使用 EdDSA (Ed25519)。由 Coinbase 的 cb-mpc WASM 库驱动，直接在你的浏览器中运行。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">什么是 cb-mpc？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase 的门限密码学库</a>。我们使用编译为 WebAssembly 的<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">分支</a>，以便在浏览器中运行。</p>
+      </details>
+    </div>
+
+  </div>
+</section>

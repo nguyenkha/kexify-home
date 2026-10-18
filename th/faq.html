@@ -1,0 +1,166 @@
+---
+layout: default
+title: "คำถามที่พบบ่อย — kexify"
+lang: th
+permalink: /th/faq/
+---
+
+<section class="px-4 md:px-8 py-12 md:py-16">
+  <div class="max-w-3xl mx-auto fade-in">
+    <h1 class="text-2xl font-bold tracking-tight dark:text-white text-gray-900 mb-8">คำถามที่พบบ่อย</h1>
+
+    <!-- General -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-8 mb-4">ทั่วไป</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">"kexify" แปลว่าอะไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Keys simplified แค่นั้นเอง</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify คืออะไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">กระเป๋า MPC ที่คุณดูแลเอง โดยสร้างส่วนคีย์อิสระสองส่วนพร้อมกัน ส่วนหนึ่งอยู่ในเบราว์เซอร์ของคุณ อีกส่วนอยู่บนเซิร์ฟเวอร์ จะไม่มีไพรเวทคีย์ฉบับเต็มเกิดขึ้นเลย และไม่มีฝ่ายใดถือคีย์ฉบับเต็ม</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">MPC คืออะไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Multi-Party Computation เป็นเทคนิคการเข้ารหัสที่หลายฝ่ายร่วมกันคำนวณโดยไม่เปิดเผยข้อมูลของแต่ละฝ่าย ใน kexify ส่วนคีย์สองส่วนร่วมกันลงนามธุรกรรมโดยไม่เคยรวมกันเป็นไพรเวทคีย์ฉบับเต็ม</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify เป็นโอเพนซอร์สไหม</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ใช่ สร้างบนไลบรารี <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> ของ Coinbase (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">ฟอร์กของเรา</a>) ฝั่งหน้าบ้าน: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify ฟรีจริงไหม</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">จริง ฟรีตลอดไป ไม่มีค่าสมาชิก ไม่มีโฆษณา ผู้สร้างทำ kexify ขึ้นมาใช้เอง จึงไม่มีโมเดลธุรกิจ เพราะนี่ไม่ใช่ธุรกิจ แต่เป็นเครื่องมือที่ควรจะมีอยู่</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ทำไม kexify ไม่มีการแลกเปลี่ยน สเตกกิ้ง หรือฟีเจอร์ DeFi</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ตั้งใจให้เป็นแบบนี้ กระเป๋าควรทำสิ่งเดียวให้ดี คือเก็บและลงนาม การแลกเปลี่ยน การให้ยืม และการข้ามเชน มี dApp อย่าง 1inch, Aave และ MyEtherWallet ทำไว้ดีอยู่แล้ว เชื่อมต่อได้ทุกตัวผ่าน WalletConnect ฟีเจอร์น้อยลงหมายถึงบั๊กน้อยลงและพื้นที่ที่ถูกโจมตีได้เล็กลง</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">แนวคิดการออกแบบคืออะไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">สามหลักการ คือทำให้เรียบง่าย โฟกัสที่การเป็นกระเป๋า และปรับปรุงเฉพาะประสบการณ์ใช้งานกับความปลอดภัย ทุกฟีเจอร์ต้องผ่านเกณฑ์เหล่านี้ ถ้าไม่ได้ทำให้กระเป๋าใช้ง่ายขึ้นหรือปลอดภัยขึ้น ก็ไม่ปล่อย</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">มีการรับประกันไหม</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ไม่มี kexify เป็นโปรเจกต์ส่วนตัวที่ให้ใช้ตามสภาพ โดยไม่มีการรับประกัน คุณรับผิดชอบคีย์และเงินของคุณเอง แต่โค้ดเป็นโอเพนซอร์ส คุณตรวจสอบทุกอย่างได้เอง</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify เหมาะกับใคร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ทุกคนที่อยากได้ความปลอดภัยแบบ MPC โดยไม่ต้องยุ่งยาก สร้างโดยวิศวกรเพื่อวิศวกร แต่ออกแบบให้ใครก็ใช้ได้</p>
+      </details>
+    </div>
+
+    <!-- Security -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">ความปลอดภัย</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ใครเก็บคีย์ของฉัน</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ไม่มีใครถือคีย์ฉบับเต็ม ส่วนหนึ่งอยู่ในเบราว์เซอร์ของคุณ (เข้ารหัสด้วยพาสคีย์หรือวลีรหัสผ่าน) อีกส่วนอยู่บนเซิร์ฟเวอร์ (เข้ารหัสด้วย AES-256-GCM) ต้องให้ทั้งสองส่วนร่วมมือกันจึงจะลงนามได้</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ถ้าเซิร์ฟเวอร์ล่มล่ะ</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ใช้โหมดกู้คืน ส่งออกส่วนคีย์ของเซิร์ฟเวอร์ไว้ล่วงหน้า แล้วลงนามในเบราว์เซอร์ของคุณเองด้วยทั้งสองส่วน ฝั่งหน้าบ้านเป็นโอเพนซอร์ส และยังมีเครื่องมือ CLI สำหรับรวมทั้งสองส่วนเป็นคีย์ฉบับเต็ม ไม่ต้องพึ่งเซิร์ฟเวอร์</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">เซิร์ฟเวอร์ขโมยเงินของฉันได้ไหม</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ไม่ได้ เซิร์ฟเวอร์มีเพียงหนึ่งส่วน จึงลงนามเองฝ่ายเดียวไม่ได้ โปรโตคอล MPC แบบ 2-of-2 ถูกออกแบบมาไม่ให้ฝ่ายใดลงนามฝ่ายเดียว ฝั่งหน้าบ้านเป็นโอเพนซอร์ส คุณตรวจสอบโค้ดได้ และโฮสต์เองก็ได้</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ส่วนคีย์ถูกเก็บอย่างไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">เบราว์เซอร์: เข้ารหัส AES-GCM ด้วยพาสคีย์ WebAuthn PRF หรือวลีรหัสผ่าน (PBKDF2) เซิร์ฟเวอร์: AES-256-GCM ด้วยคีย์ที่สร้างจาก HKDF แยกตามผู้ใช้ ระหว่างส่งข้อมูลทั้งหมด: TLS 1.3</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">การตรวจสอบการหลอกลวงด้วย GoPlus คืออะไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ก่อนลงนาม kexify จะตรวจที่อยู่ผู้รับและสัญญาโทเคนกับฐานข้อมูลของ GoPlus Security โดยอัตโนมัติ เพื่อหาการหลอกลวง ที่อยู่ฟิชชิง และสัญญาอันตรายที่รู้จักแล้ว หากพบความเสี่ยง คุณจะเห็นคำเตือนก่อนยืนยัน เปิดใช้งานเป็นค่าเริ่มต้น ไม่ต้องตั้งค่า</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify ต่างจากกระเป๋า MPC อื่นอย่าง ZenGo อย่างไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ทั้งสองใช้ MPC แต่ kexify เป็นโอเพนซอร์สและคุณดูแลเองเต็มรูปแบบ ส่งออกส่วนคีย์ทั้งสองส่วนแล้วลงนามแบบออฟไลน์ได้ทุกเมื่อ ส่วน ZenGo เป็นผู้ควบคุมส่วนคีย์สำหรับกู้คืน และต้องใช้เซิร์ฟเวอร์ของเขา kexify ยังมีระบบนโยบาย (วงเงินใช้จ่าย รายการที่อยู่ที่อนุมัติ) ที่ ZenGo ไม่มี และ kexify ฟรี ไม่มีค่าธรรมเนียมแลกเปลี่ยน ไม่มีแพ็กเกจพรีเมียม</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">MPC กับระบบนโยบายทำงานร่วมกันอย่างไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ลองนึกถึงตู้เซฟที่ต้องใช้กุญแจสองดอก คุณถือดอกหนึ่ง เซิร์ฟเวอร์ถืออีกดอก ไม่มีใครเปิดตู้เซฟได้เพียงลำพัง แต่เซิร์ฟเวอร์ยังทำหน้าที่เป็นยามด้วย ก่อนหมุนกุญแจของตัวเอง จะตรวจกฎของคุณก่อน จำนวนนี้อยู่ในวงเงินใช้จ่ายไหม ที่อยู่นี้อยู่ในรายการที่อนุมัติไหม บัญชีถูกระงับอยู่หรือเปล่า หากฝ่าฝืนกฎข้อใดข้อหนึ่ง เซิร์ฟเวอร์จะไม่ร่วมลงนาม และธุรกรรมนั้นก็เกิดขึ้นไม่ได้</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ถ้าเซิร์ฟเวอร์บังคับใช้กฎ จะบล็อกฉันอย่างไม่เป็นธรรมได้ไหม</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">เซิร์ฟเวอร์บังคับใช้เฉพาะกฎที่คุณตั้งเอง และหากคุณไม่เห็นด้วยกับเซิร์ฟเวอร์ คุณยังมีทางออก คือส่งออกส่วนคีย์ทั้งสองส่วนแล้วลงนามธุรกรรมด้วยตัวเองทั้งหมดในโหมดกู้คืน เซิร์ฟเวอร์จะไม่มีทางยึดเงินของคุณเป็นตัวประกันได้</p>
+      </details>
+    </div>
+
+    <!-- Usage -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">การใช้งาน</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">รองรับบล็อกเชนอะไรบ้าง</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">เชน EVM (Ethereum, Base, Avalanche, Polygon, Arbitrum, BSC...), Bitcoin, Solana, XRP, TRON, TON, Algorand, Cardano, Stellar, Litecoin และ Bitcoin Cash รวมถึงเทสต์เน็ตและโทเคนของแต่ละเชน</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ลงนามธุรกรรมอย่างไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">เริ่มจากในแอป หรือเชื่อมต่อผ่าน WalletConnect ส่วนคีย์ทั้งสองส่วนจะร่วมกันทำ MPC หลายรอบ (ประมาณ 6 วินาที) เพื่อสร้างลายเซ็นที่ถูกต้อง</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ระบบนโยบายคืออะไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ชั้นความปลอดภัยที่คุณตั้งให้ตัวเอง ให้คุณกำหนดกฎที่เซิร์ฟเวอร์ต้องบังคับใช้ก่อนร่วมลงนาม แม้มีคนเข้าถึงเบราว์เซอร์ของคุณได้ นโยบายก็ยังจำกัดสิ่งที่เขาทำได้</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ตั้งนโยบายแบบไหนได้บ้าง</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">วงเงินใช้จ่าย</strong> จำกัดมูลค่าเป็น USD ต่อธุรกรรม <strong class="dark:text-gray-300 text-gray-700">รายการที่อยู่ที่อนุมัติ</strong> อนุญาตให้โอนไปเฉพาะที่อยู่ที่อนุมัติไว้ล่วงหน้า ทั้งสองอย่างบังคับใช้ฝั่งเซิร์ฟเวอร์ก่อนที่เซิร์ฟเวอร์จะตกลงร่วมลงนาม</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ทำไมต้องมีระยะเวลารอ 24 ชั่วโมง</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">เพื่อไม่ให้ผู้โจมตีเปลี่ยนนโยบายของคุณแล้วฉวยโอกาสใช้ทันที เมื่อคุณสร้างหรือแก้ไขนโยบาย นโยบายนั้นจะมีผลหลัง 24 ชั่วโมง หากคุณไม่ได้เป็นคนเปลี่ยน คุณยังมีเวลาระงับบัญชี</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ระงับบัญชีของฉันได้ไหม</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ได้ ระงับผ่านลิงก์ในอีเมล การลงนามทั้งหมดจะถูกบล็อกเป็นเวลา 24 ชั่วโมงตามข้อบังคับ เพื่อให้คุณมีเวลาป้องกันบัญชีหากสงสัยว่ามีการเข้าถึงโดยไม่ได้รับอนุญาต</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">โหมดผู้เชี่ยวชาญคืออะไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ชุดตัวควบคุมขั้นสูงสำหรับผู้ใช้ระดับสูง ได้แก่ เลือก UTXO, Replace-By-Fee (RBF), nonce กำหนดเอง, โหมดลงนามอย่างเดียว (ลงนามโดยไม่บรอดแคสต์), บรอดแคสต์แยกต่างหาก, ลงนามข้อความดิบ, RPC กำหนดเองต่อเชน และสำรองส่วนคีย์ทั้งหมด ซ่อนไว้เป็นค่าเริ่มต้น เปิดได้ในการตั้งค่าเมื่อต้องการควบคุมละเอียด</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ใช้ kexify โดยไม่ให้อีเมลได้ไหม</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ได้ การเข้าสู่ระบบแบบไม่ระบุตัวตนให้คุณสร้างกระเป๋าได้โดยไม่ต้องใช้อีเมลหรือข้อมูลส่วนตัว ส่วนคีย์ของคุณเก็บไว้ในเบราว์เซอร์ ปกป้องด้วยวลีรหัสผ่าน โหมดนี้ออกแบบสำหรับผู้ใช้สายเทคนิคที่เข้าใจการจัดการคีย์บล็อกเชน หากคุณทำวลีรหัสผ่านและส่วนคีย์หายทั้งหมด จะกู้คืนบัญชีไม่ได้</p>
+      </details>
+    </div>
+
+    <!-- Limitations -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">ข้อจำกัด</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ทำไมจำกัดไว้ 3 บัญชี</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify ทำงานบนโครงสร้างพื้นฐานฟรีทั้งหมด แต่ละบัญชีเก็บส่วนคีย์ที่เข้ารหัสไว้บนเซิร์ฟเวอร์ การจำกัดที่ 3 บัญชีต่อผู้ใช้จึงช่วยให้ต้นทุนพื้นที่เก็บและการประมวลผลอยู่ในระดับที่ไปต่อได้ โดยไม่ต้องเก็บเงินใคร</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ทำไมจำกัดลายเซ็น 10 รายการต่อธุรกรรม (UTXO)</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ลายเซ็น MPC แต่ละรายการต้องคำนวณหลายรอบระหว่างเบราว์เซอร์ของคุณกับเซิร์ฟเวอร์ ในเชนแบบ UTXO (Bitcoin, Litecoin ฯลฯ) อินพุตทุกตัวต้องมีลายเซ็นแยกกัน การจำกัดที่ 10 ช่วยให้เวลาลงนามไม่นานเกินไป และไม่ให้ทรัพยากรเซิร์ฟเวอร์ระดับฟรีรับภาระหนักเกิน ธุรกรรมส่วนใหญ่ใช้อินพุต 10 ตัวก็เกินพอ</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ทำไมการเชื่อมต่อ RPC บางครั้งช้าหรือไม่เสถียร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify ใช้ RPC สาธารณะแบบฟรีเป็นค่าเริ่มต้น ซึ่งอาจถูกจำกัดอัตรา คับคั่ง หรือล่มเป็นบางครั้ง หากต้องการความเสถียรและความเร็วที่ดีขึ้น ให้ไปที่การตั้งค่าแล้วเปลี่ยน RPC เริ่มต้นเป็นของคุณเอง (จาก Alchemy, Infura, QuickNode ฯลฯ) ส่วนใหญ่มีแพ็กเกจฟรีที่ใช้ได้เยอะผ่าน API key</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">มีการจำกัดอีเมลและคำขอลงนามไหม</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">มี อีเมลลิงก์เข้าสู่ระบบ คำขอ API และการลงนามถูกจำกัดอัตราทั้งหมด เพื่อป้องกันการใช้โครงสร้างพื้นฐานฟรีในทางที่ผิด หากถึงขีดจำกัด ให้รอสักครู่แล้วลองใหม่ ขีดจำกัดเหล่านี้กว้างพอสำหรับการใช้งานปกติ และจะทำงานเฉพาะเมื่อมีรูปแบบการใช้งานที่ผิดปกติ</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ทำไม kexify ใช้ Cloudflare Turnstile</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile เป็นทางเลือกแทน CAPTCHA ที่เป็นมิตรกับความเป็นส่วนตัว ทำงานเงียบ ๆ อยู่เบื้องหลัง ช่วยปกป้องโครงสร้างพื้นฐานฟรีจากบอตและการใช้งานอัตโนมัติในทางที่ผิด โดยไม่มีปริศนากวนใจและไม่ติดตามคุณ คุณแทบจะไม่รู้สึกถึงมันเลย</p>
+      </details>
+    </div>
+
+    <!-- Technical -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">เทคนิค</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ใช้การเข้ารหัสแบบไหน</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) สำหรับเชน EVM/Bitcoin และ EdDSA (Ed25519) สำหรับ Solana/Stellar ขับเคลื่อนด้วยไลบรารี cb-mpc WASM ของ Coinbase ที่ทำงานในเบราว์เซอร์ของคุณโดยตรง</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">cb-mpc คืออะไร</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">ไลบรารีการเข้ารหัสแบบ threshold ของ Coinbase</a> เราใช้<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">ฟอร์ก</a>ที่คอมไพล์เป็น WebAssembly เพื่อรันในเบราว์เซอร์</p>
+      </details>
+    </div>
+
+  </div>
+</section>

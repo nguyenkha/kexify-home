@@ -1,0 +1,166 @@
+---
+layout: default
+title: "अक्सर पूछे जाने वाले सवाल — kexify"
+lang: hi
+permalink: /hi/faq/
+---
+
+<section class="px-4 md:px-8 py-12 md:py-16">
+  <div class="max-w-3xl mx-auto fade-in">
+    <h1 class="text-2xl font-bold tracking-tight dark:text-white text-gray-900 mb-8">अक्सर पूछे जाने वाले सवाल</h1>
+
+    <!-- General -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-8 mb-4">सामान्य</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">"kexify" का मतलब क्या है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Keys simplified। बस इतना ही।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify क्या है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">एक सेल्फ़-कस्टोडियल MPC वॉलेट, जिसमें दो स्वतंत्र कुंजी शेयर एक साथ बनती हैं — एक आपके ब्राउज़र में, एक सर्वर पर। कोई एक पूरी प्राइवेट की कभी नहीं बनती। पूरी कुंजी किसी के पास नहीं होती।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">MPC क्या है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Multi-Party Computation — एक क्रिप्टोग्राफ़िक तकनीक, जिसमें कई पक्ष अपना-अपना इनपुट बताए बिना मिलकर कोई गणना करते हैं। kexify में दो कुंजी शेयर लेन-देन साइन करती हैं, और वे कभी जुड़कर पूरी प्राइवेट की नहीं बनतीं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">क्या kexify ओपन सोर्स है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हाँ। यह Coinbase की <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> लाइब्रेरी पर बना है (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">हमारा फ़ोर्क</a>)। फ़्रंटएंड: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">क्या kexify सच में मुफ़्त है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हाँ — हमेशा मुफ़्त, कोई सब्सक्रिप्शन नहीं, कोई विज्ञापन नहीं। kexify को उसके बनाने वाले ने अपने निजी इस्तेमाल के लिए बनाया था। इसका कोई बिज़नेस मॉडल नहीं है, क्योंकि यह कोई बिज़नेस नहीं है। यह एक ऐसा टूल है जिसका होना ज़रूरी था।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify में स्वैप, स्टेकिंग या DeFi फ़ीचर क्यों नहीं हैं?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">यह जान-बूझकर है। वॉलेट को एक ही काम अच्छे से करना चाहिए — सँभालना और साइन करना। स्वैप, लेंडिंग और ब्रिज का हल 1inch, Aave और MyEtherWallet जैसे dApp पहले से देते हैं। WalletConnect से इनमें से किसी से भी जुड़ें। कम फ़ीचर यानी कम बग और हमले की गुंजाइश भी कम।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">डिज़ाइन का सिद्धांत क्या है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">तीन सिद्धांत: चीज़ें सरल रखें, सिर्फ़ वॉलेट बने रहें, और केवल UX और सुरक्षा पर ध्यान दें। हर फ़ीचर का फ़ैसला इन्हीं से होता है। जो वॉलेट को आसान या ज़्यादा सुरक्षित नहीं बनाता, वह रिलीज़ नहीं होता।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">क्या कोई वारंटी या गारंटी है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">नहीं। kexify एक निजी प्रोजेक्ट है जो जैसा है वैसा ही दिया जाता है, बिना किसी वारंटी के। अपनी कुंजियों और फ़ंड की ज़िम्मेदारी आपकी है। हालाँकि कोड ओपन सोर्स है — आप सब कुछ खुद जाँच सकते हैं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify किसके लिए है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हर उस व्यक्ति के लिए जो बिना झंझट के MPC की सुरक्षा चाहता है। इसे एक इंजीनियर ने इंजीनियरों के लिए बनाया है — पर डिज़ाइन ऐसा है कि कोई भी इस्तेमाल कर सके।</p>
+      </details>
+    </div>
+
+    <!-- Security -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">सुरक्षा</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">मेरी कुंजियाँ किसके पास रहती हैं?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">पूरी कुंजी किसी के पास नहीं होती। एक शेयर आपके ब्राउज़र में है (पासकी या पासफ़्रेज़ से एन्क्रिप्टेड), दूसरी सर्वर पर (AES-256-GCM से एन्क्रिप्टेड)। साइन करने के लिए दोनों को मिलकर काम करना होता है।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">अगर सर्वर बंद हो जाए तो?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">रिकवरी मोड इस्तेमाल करें। पहले से अपनी सर्वर कुंजी शेयर एक्सपोर्ट करके रखें, फिर दोनों शेयर से अपने ब्राउज़र में ही साइन करें। फ़्रंटएंड ओपन सोर्स है, और दोनों शेयर को जोड़कर पूरी कुंजी बनाने वाला एक CLI टूल भी है। सर्वर की ज़रूरत नहीं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">क्या सर्वर मेरा फ़ंड चुरा सकता है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">नहीं। सर्वर के पास सिर्फ़ एक शेयर है — वह अकेले साइन नहीं कर सकता। 2-of-2 MPC प्रोटोकॉल बनावट से ही किसी एक पक्ष को अकेले साइन करने नहीं देता। फ़्रंटएंड ओपन सोर्स है — आप कोड ऑडिट कर सकते हैं और खुद होस्ट भी कर सकते हैं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">कुंजी शेयर कैसे सहेजी जाती हैं?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ब्राउज़र: WebAuthn पासकी PRF या पासफ़्रेज़ (PBKDF2) से AES-GCM एन्क्रिप्टेड। सर्वर: हर यूज़र की HKDF से निकाली गई कुंजी के साथ AES-256-GCM। रास्ते में सब कुछ: TLS 1.3।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">GoPlus फ़्रॉड जाँच क्या है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">साइन करने से पहले kexify पाने वाले का पता और टोकन कॉन्ट्रैक्ट को GoPlus Security के डेटाबेस में जाँचता है, ताकि जाने-पहचाने स्कैम, फ़िशिंग पते और नुकसान पहुँचाने वाले कॉन्ट्रैक्ट पकड़े जा सकें। ख़तरा मिला तो पुष्टि करने से पहले आपको चेतावनी दिखेगी। यह डिफ़ॉल्ट रूप से चालू है — कुछ सेट करने की ज़रूरत नहीं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ZenGo जैसे दूसरे MPC वॉलेट से kexify कैसे अलग है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">दोनों MPC इस्तेमाल करते हैं, पर kexify ओपन सोर्स और पूरी तरह सेल्फ़-कस्टोडियल है — आप दोनों कुंजी शेयर एक्सपोर्ट करके जब चाहें ऑफ़लाइन साइन कर सकते हैं। ZenGo रिकवरी शेयर अपने पास रखता है और उसे उनके सर्वर चाहिए। kexify में पॉलिसी इंजन (खर्च सीमा, पता व्हाइटलिस्ट) भी है, जो ZenGo में नहीं है। और kexify मुफ़्त है — कोई स्वैप फ़ीस नहीं, कोई प्रीमियम टियर नहीं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">MPC और पॉलिसी इंजन साथ कैसे काम करते हैं?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">इसे दो चाबियों वाली तिजोरी समझिए। एक चाबी आपके पास है, दूसरी सर्वर के पास। कोई भी अकेले तिजोरी नहीं खोल सकता। साथ ही सर्वर पहरेदार का भी काम करता है — अपनी चाबी घुमाने से पहले वह आपके नियम जाँचता है: क्या रकम खर्च सीमा के अंदर है? क्या यह पता मंज़ूर की गई सूची में है? क्या अकाउंट फ़्रीज़ तो नहीं है? कोई भी नियम टूटा तो सर्वर साथ में साइन करने से मना कर देता है और लेन-देन हो ही नहीं पाता।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">अगर सर्वर नियम लागू करता है, तो क्या वह मुझे गलत तरीके से रोक भी सकता है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">सर्वर सिर्फ़ वही नियम लागू करता है जो आपने खुद सेट किए हैं। और अगर कभी सर्वर से सहमति न बने, तो आपके पास निकलने का रास्ता है: दोनों कुंजी शेयर एक्सपोर्ट करें और रिकवरी मोड में लेन-देन पूरी तरह खुद साइन करें। सर्वर आपके फ़ंड को कभी बंधक नहीं बना सकता।</p>
+      </details>
+    </div>
+
+    <!-- Usage -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">इस्तेमाल</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">कौन-कौन से ब्लॉकचेन सपोर्टेड हैं?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM चेन (Ethereum, Base, Avalanche, Polygon, Arbitrum, BSC...), Bitcoin, Solana, XRP, TRON, TON, Algorand, Cardano, Stellar, Litecoin और Bitcoin Cash — साथ में उनके टेस्टनेट और टोकन।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">लेन-देन कैसे साइन करूँ?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ऐप से शुरू करें या WalletConnect से जुड़ें। वैध सिग्नेचर बनाने के लिए दोनों कुंजी शेयर कई MPC राउंड (~6 सेकंड) में हिस्सा लेती हैं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">पॉलिसी इंजन क्या है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">सुरक्षा की एक परत, जो आप खुद लगाते हैं: आप नियम तय करते हैं और सर्वर साथ में साइन करने से पहले उन्हें लागू करता है। अगर किसी को आपके ब्राउज़र तक पहुँच मिल भी जाए, तो पॉलिसी तय करती हैं कि वह क्या कर सकता है।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">मैं किस तरह की पॉलिसी सेट कर सकता हूँ?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">खर्च सीमा</strong> — हर लेन-देन की USD वैल्यू की हद तय करें। <strong class="dark:text-gray-300 text-gray-700">पता व्हाइटलिस्ट</strong> — सिर्फ़ पहले से मंज़ूर पतों पर ट्रांसफ़र की अनुमति दें। दोनों सर्वर की तरफ़ से लागू होती हैं, सर्वर के साथ में साइन करने के लिए राज़ी होने से पहले।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">24 घंटे की प्रतीक्षा अवधि क्यों है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ताकि कोई हमलावर आपकी पॉलिसी बदलकर उसी वक़्त उनका फ़ायदा न उठा सके। जब आप कोई पॉलिसी बनाते या बदलते हैं, तो वह 24 घंटे बाद लागू होती है। अगर बदलाव आपने नहीं किया, तो आपके पास अपना अकाउंट फ़्रीज़ करने का समय रहता है।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">क्या मैं अपना अकाउंट फ़्रीज़ कर सकता हूँ?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हाँ। ईमेल लिंक से फ़्रीज़ करें। पूरे 24 घंटे तक सारी साइनिंग रुकी रहती है। अगर आपको बिना अनुमति पहुँच का शक है, तो इससे अकाउंट सुरक्षित करने का समय मिलता है।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">एक्सपर्ट मोड क्या है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">अनुभवी यूज़र के लिए उन्नत कंट्रोल: UTXO चयन, Replace-By-Fee (RBF), कस्टम nonce, सिर्फ़-साइन मोड (बिना ब्रॉडकास्ट किए साइन), अलग से ब्रॉडकास्ट, रॉ मैसेज साइनिंग, हर चेन के लिए कस्टम RPC एंडपॉइंट, और कुंजी शेयर का पूरा बैकअप। डिफ़ॉल्ट रूप से छिपा रहता है — बारीक कंट्रोल चाहिए तो सेटिंग में चालू करें।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">क्या मैं बिना ईमेल दिए kexify इस्तेमाल कर सकता हूँ?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हाँ। गुमनाम लॉगिन से आप बिना किसी ईमेल या निजी जानकारी के वॉलेट बना सकते हैं। आपकी कुंजी शेयर ब्राउज़र में ही सहेजी जाती हैं और पासफ़्रेज़ से सुरक्षित रहती हैं। यह मोड उन तकनीकी यूज़र के लिए है जो ब्लॉकचेन की कुंजी सँभालना समझते हैं — अगर आपका पासफ़्रेज़ और कुंजी शेयर खो जाएँ, तो अकाउंट रिकवरी नहीं है।</p>
+      </details>
+    </div>
+
+    <!-- Limitations -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">सीमाएँ</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">3 अकाउंट की सीमा क्यों है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify पूरी तरह मुफ़्त इन्फ़्रास्ट्रक्चर पर चलता है। हर अकाउंट की एन्क्रिप्टेड कुंजी शेयर सर्वर पर रहती हैं, इसलिए हर यूज़र के लिए 3 अकाउंट की सीमा स्टोरेज और कंप्यूट का खर्च टिकाऊ रखती है, और किसी से पैसे नहीं लेने पड़ते।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">हर लेन-देन (UTXO) में 10 सिग्नेचर की सीमा क्यों है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हर MPC सिग्नेचर के लिए आपके ब्राउज़र और सर्वर के बीच कई राउंड की गणना होती है। UTXO चेन (Bitcoin, Litecoin आदि) पर हर इनपुट को अलग सिग्नेचर चाहिए। 10 की सीमा साइनिंग का समय ठीक रखती है और मुफ़्त टियर के सर्वर संसाधनों पर ज़्यादा बोझ पड़ने से बचाती है। ज़्यादातर लेन-देन के लिए 10 इनपुट काफ़ी से ज़्यादा हैं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">RPC कनेक्शन कभी-कभी धीमे या अस्थिर क्यों होते हैं?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify डिफ़ॉल्ट रूप से मुफ़्त पब्लिक RPC एंडपॉइंट इस्तेमाल करता है। इन पर रेट लिमिट लग सकती है, भीड़ हो सकती है, या ये कभी-कभी बंद भी हो सकते हैं। बेहतर भरोसे और रफ़्तार के लिए सेटिंग में जाकर डिफ़ॉल्ट RPC की जगह अपना एंडपॉइंट (Alchemy, Infura, QuickNode आदि से) लगाएँ — ज़्यादातर API की के साथ अच्छा मुफ़्त टियर देते हैं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">क्या ईमेल और साइनिंग रिक्वेस्ट पर सीमाएँ हैं?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">हाँ। मुफ़्त इन्फ़्रास्ट्रक्चर के दुरुपयोग को रोकने के लिए मैजिक लिंक ईमेल, API रिक्वेस्ट और साइनिंग सब पर रेट लिमिट है। सीमा आ जाए तो थोड़ी देर रुककर फिर कोशिश करें। सामान्य इस्तेमाल के लिए ये सीमाएँ काफ़ी खुली हैं — ये सिर्फ़ असामान्य गतिविधि पर लगती हैं।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify Cloudflare Turnstile क्यों इस्तेमाल करता है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile CAPTCHA का प्राइवेसी-फ़्रेंडली विकल्प है, जो बैकग्राउंड में चुपचाप चलता है। यह मुफ़्त इन्फ़्रास्ट्रक्चर को बॉट और ऑटोमेटेड दुरुपयोग से बचाता है — बिना परेशान करने वाली पहेलियों या ट्रैकिंग के। आपको यह शायद ही कभी दिखेगा।</p>
+      </details>
+    </div>
+
+    <!-- Technical -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">तकनीकी</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">कौन-सी क्रिप्टोग्राफ़ी इस्तेमाल होती है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM/Bitcoin चेन के लिए ECDSA (secp256k1), Solana/Stellar के लिए EdDSA (Ed25519)। यह Coinbase की cb-mpc WASM लाइब्रेरी से चलता है, जो सीधे आपके ब्राउज़र में चलती है।</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">cb-mpc क्या है?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase की थ्रेशोल्ड क्रिप्टोग्राफ़ी लाइब्रेरी</a>। हम इसका एक <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">फ़ोर्क</a> इस्तेमाल करते हैं, जिसे ब्राउज़र में चलाने के लिए WebAssembly में कंपाइल किया गया है।</p>
+      </details>
+    </div>
+
+  </div>
+</section>
