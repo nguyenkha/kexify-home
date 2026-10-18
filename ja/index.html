@@ -1,0 +1,388 @@
+---
+layout: default
+title: "kexify — keys simplified"
+lang: ja
+permalink: /ja/
+---
+
+<!-- Hero -->
+<section class="px-4 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
+  <div class="max-w-5xl mx-auto text-center fade-in">
+    <!-- K lettermark icon with parallax -->
+    <div class="mx-auto mb-6 w-20 h-20 md:w-24 md:h-24 parallax-logo" id="hero-logo">
+      <svg viewBox="0 0 512 512" fill="none" class="w-full h-full">
+        <rect width="512" height="512" rx="96" class="dark:fill-[#030712] fill-[#f3f4f6]"/>
+        <rect x="152" y="120" width="36" height="272" rx="18" fill="#3b82f6"/>
+        <path d="M188 256l120-120h48L212 280z" fill="#3b82f6"/>
+        <path d="M188 256l120 120h48L212 232z" fill="#3b82f6"/>
+        <circle cx="170" cy="120" r="36" stroke="#3b82f6" stroke-width="20" class="dark:fill-[#030712] fill-[#f3f4f6]"/>
+      </svg>
+    </div>
+    <!-- Typing hero text -->
+    <p id="hero-text" class="text-base md:text-lg dark:text-gray-300 text-gray-600 max-w-2xl mx-auto leading-relaxed typing-cursor" style="min-height:3.5rem"></p>
+    <noscript><p class="text-base md:text-lg dark:text-gray-300 text-gray-600 max-w-2xl mx-auto leading-relaxed">ウォレット、ただそれだけ。送金も受け取りも、WalletConnect経由であらゆるdAppへの接続も。ずっと無料。みんなで使える個人プロジェクトです。</p></noscript>
+    <!-- Counter stats -->
+    <div class="mt-4 flex items-center justify-center gap-4 text-xs dark:text-gray-500 text-gray-400">
+      <span><span class="counter text-blue-400 font-medium" data-target="10">0</span>+ チェーン</span>
+      <span class="dark:text-gray-600 text-gray-300">·</span>
+      <span>2-of-2 MPC</span>
+      <span class="dark:text-gray-600 text-gray-300">·</span>
+      <span><span class="counter text-blue-400 font-medium" data-target="0">0</span> シードフレーズ</span>
+    </div>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="https://my.kexify.app/" class="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors text-center">
+        アプリを開く
+      </a>
+      <a href="https://github.com/nguyenkha/kexify-web" class="w-full sm:w-auto px-6 py-3 bg-surface-tertiary hover:bg-border-primary dark:text-gray-300 text-gray-600 text-sm font-medium rounded-lg transition-colors text-center">
+        GitHubで見る
+      </a>
+    </div>
+
+    <!-- Domain move notice -->
+    <div class="mt-8 max-w-xl mx-auto text-left rounded-lg border border-blue-500/20 bg-blue-500/10 px-4 py-3 text-xs leading-relaxed">
+      <p class="text-blue-400 font-medium">kexifyはkexify.coからkexify.appに移転しました</p>
+      <p class="mt-1 dark:text-gray-400 text-gray-600">新しいウォレットは<a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>で作成します。すでに<a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>のウォレットをお持ちの場合は、そのまま引き続きご利用いただけますが、自動では移行できません。パスキーは作成したドメインに紐づいているためです。移行するには、my.kexify.appで新しいウォレットを作成し、資金を送金してください。詳細はapp.kexify.coにログインしてご確認ください。</p>
+      <p class="mt-1 dark:text-gray-500 text-gray-500">kexifyがメール、チャット、サポートであなたのキーファイルやパスフレーズを求めることは決してありません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-1">
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">しくみ</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">作成</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">2つの独立したキーシェアを一緒に作成します。単一の秘密鍵は存在しません。</p>
+        </div>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">保管</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">1つはブラウザ、もう1つはサーバーに。どちらも暗号化されています。</p>
+        </div>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">署名</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">両方のシェアが協力して署名します。単一障害点はありません。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MPC Signing Flow -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-3xl mx-auto fade-in fade-in-delay-1">
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-6">MPC署名</h2>
+    <div class="bg-surface-secondary border border-border-primary rounded-lg p-6">
+      <!-- Two parties -->
+      <div class="flex items-center justify-between">
+        <!-- Browser -->
+        <div class="text-center w-28 group relative">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-surface-tertiary border border-border-primary flex items-center justify-center mpc-glow cursor-help">
+            <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <div class="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[9px] px-2 py-1 rounded whitespace-nowrap z-10">ブラウザ内で暗号化（AES-GCM）</div>
+          <p class="text-[10px] dark:text-gray-400 text-gray-500 mt-2 font-medium">ブラウザ</p>
+          <p class="text-[10px] dark:text-gray-500 text-gray-400">キーシェアA</p>
+        </div>
+
+        <!-- Message channel -->
+        <div class="flex-1 mx-3 flex flex-col items-center gap-1">
+          <div class="w-full relative h-10" id="mpc-channel">
+            <div class="absolute top-1/2 left-0 right-0 border-t border-dashed border-border-primary -translate-y-1/2"></div>
+            <div id="mpc-envelope" class="absolute top-1/2 -translate-y-1/2 transition-none" style="left:0;opacity:0;">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </div>
+          </div>
+          <p class="text-[9px] dark:text-gray-600 text-gray-300 text-center">送るのは暗号化されたメッセージ。鍵ではありません</p>
+        </div>
+
+        <!-- Server -->
+        <div class="text-center w-28 group relative">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-surface-tertiary border border-border-primary flex items-center justify-center mpc-glow cursor-help" style="animation-delay: 1.5s;">
+            <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <div class="hidden group-hover:block absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[9px] px-2 py-1 rounded whitespace-nowrap z-10">サーバー内で暗号化（AES-256-GCM + HKDF）</div>
+          <p class="text-[10px] dark:text-gray-400 text-gray-500 mt-2 font-medium">サーバー</p>
+          <p class="text-[10px] dark:text-gray-500 text-gray-400">キーシェアB</p>
+        </div>
+      </div>
+
+      <!-- Signature hex -->
+      <div class="mt-5 pt-4 border-t border-border-secondary">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-[10px] dark:text-gray-400 text-gray-500 font-medium">署名</span>
+          <svg id="sig-check" class="w-4 h-4 text-green-400" style="opacity:0;transform:scale(0.5);transition:all 0.3s ease" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="bg-surface-tertiary rounded-lg px-3 py-2.5 overflow-hidden whitespace-nowrap">
+          <code id="sig-hex" class="text-[10px] sm:text-sm font-mono text-blue-400"></code>
+        </div>
+        <p class="text-[10px] dark:text-gray-500 text-gray-400 text-center mt-3">完全な鍵は<span class="text-blue-400">存在しません</span>。ブラウザにも、サーバーにも、通信経路上にも。</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var env = document.getElementById('mpc-envelope');
+      var ch = document.getElementById('mpc-channel');
+      var sigHex = document.getElementById('sig-hex');
+      var sigCheck = document.getElementById('sig-check');
+      if (!env || !ch || !sigHex || !sigCheck) return;
+
+      var hex = '0123456789abcdef';
+      var rounds = [
+        { dir: 'right', color: '#3b82f6' },
+        { dir: 'left',  color: '#4ade80' },
+        { dir: 'right', color: '#3b82f6' }
+      ];
+      var fullSig = '';
+
+      function randHex(n) {
+        var s = '';
+        for (var i = 0; i < n; i++) s += hex[Math.floor(Math.random() * 16)];
+        return s;
+      }
+
+      // Calculate chars per round to fill the box
+      var sigBox = sigHex.parentElement;
+      var boxW = sigBox.offsetWidth - 24; // padding
+      var charW = 8.4; // approx width of mono char at text-sm
+      var totalChars = Math.floor(boxW / charW) - 2; // minus "0x"
+      var charsPerRound = Math.floor(totalChars / 3);
+
+      function typeHex(chunk, cb) {
+        var i = 0;
+        var iv = setInterval(function() {
+          if (i >= chunk.length) { clearInterval(iv); if (cb) cb(); return; }
+          fullSig += chunk[i];
+          sigHex.textContent = '0x' + fullSig;
+          i++;
+        }, 40);
+      }
+
+      function animateRound(round) {
+        if (round >= 3) {
+          // Show verified
+          sigCheck.style.opacity = '1';
+          sigCheck.style.transform = 'scale(1)';
+          // Hold 4s then reset
+          setTimeout(function() {
+            sigCheck.style.opacity = '0';
+            sigCheck.style.transform = 'scale(0.5)';
+            sigHex.textContent = '';
+            fullSig = '';
+            setTimeout(function() { animateRound(0); }, 1000);
+          }, 4000);
+          return;
+        }
+
+        var r = rounds[round];
+        var w = ch.offsetWidth - 14;
+        env.style.transition = 'none';
+        env.style.color = r.color;
+        env.style.left = r.dir === 'right' ? '0px' : w + 'px';
+        env.style.opacity = '1';
+
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            env.style.transition = 'left 1.5s ease-in-out';
+            env.style.left = r.dir === 'right' ? w + 'px' : '0px';
+          });
+        });
+
+        // When envelope arrives, hide it and grow sig
+        setTimeout(function() {
+          env.style.opacity = '0';
+          var chunk = randHex(charsPerRound);
+          typeHex(chunk, function() {
+            setTimeout(function() { animateRound(round + 1); }, 300);
+          });
+        }, 1600);
+      }
+
+      animateRound(0);
+    })();
+  </script>
+</section>
+
+<!-- Supported Chains -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-2">
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">対応チェーン</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <!-- EVM -->
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
+        <img class="w-8 h-8 flex-shrink-0 rounded-full" src="https://assets-cdn.trustwallet.com/blockchains/ethereum/info/logo.png" alt="Ethereum" loading="lazy">
+        <div>
+          <span class="text-xs font-medium dark:text-gray-300 text-gray-700">EVM</span>
+          <span class="block text-[10px] dark:text-gray-500 text-gray-400">Ethereum、Base、Avalanche など</span>
+        </div>
+      </div>
+      <!-- Bitcoin -->
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
+        <img class="w-8 h-8 flex-shrink-0 rounded-full" src="https://assets-cdn.trustwallet.com/blockchains/bitcoin/info/logo.png" alt="Bitcoin" loading="lazy">
+        <span class="text-xs font-medium dark:text-gray-300 text-gray-700">Bitcoin</span>
+      </div>
+      <!-- XRP -->
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
+        <img class="w-8 h-8 flex-shrink-0 rounded-full" src="https://assets-cdn.trustwallet.com/blockchains/ripple/info/logo.png" alt="XRP" loading="lazy">
+        <span class="text-xs font-medium dark:text-gray-300 text-gray-700">XRP</span>
+      </div>
+      <!-- Solana -->
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
+        <img class="w-8 h-8 flex-shrink-0 rounded-full" src="https://assets-cdn.trustwallet.com/blockchains/solana/info/logo.png" alt="Solana" loading="lazy">
+        <span class="text-xs font-medium dark:text-gray-300 text-gray-700">Solana</span>
+      </div>
+      <!-- TON -->
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
+        <img class="w-8 h-8 flex-shrink-0 rounded-full" src="https://assets-cdn.trustwallet.com/blockchains/ton/info/logo.png" alt="TON" loading="lazy">
+        <span class="text-xs font-medium dark:text-gray-300 text-gray-700">TON</span>
+      </div>
+      <!-- More -->
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3 hover:scale-105 transition-transform">
+        <svg class="w-8 h-8 flex-shrink-0 dark:text-gray-400 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+        <div>
+          <span class="text-xs font-medium dark:text-gray-300 text-gray-700">その他</span>
+          <span class="block text-[10px] dark:text-gray-500 text-gray-400">TRON、Algorand、Cardano、Stellar、LTC、BCH</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-3">
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-8">機能</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">2-of-2 MPC</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">Coinbaseの<a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>によるしきい値暗号。シードフレーズはありません。</p>
+        </div>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">セルフカストディ</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">サーバーが完全な鍵を目にすることはありません。いつでもエクスポートできます。</p>
+        </div>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">ポリシーエンジン</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">支出上限、ホワイトリスト、24時間のクーリング期間。GoPlusによる詐欺チェック。</p>
+        </div>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">パスキー認証</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">生体認証または匿名ログイン。パスワードは不要です。</p>
+        </div>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">リカバリーモード</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">両方のシェアをエクスポート。いつでもオフラインで署名できます。</p>
+        </div>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-4 flex items-center gap-3">
+        <svg class="w-8 h-8 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <div>
+          <h3 class="text-sm font-medium dark:text-white text-gray-900">エキスパートモード</h3>
+          <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">UTXO選択、RBF、ノンス、署名のみ、カスタムRPC、生メッセージ。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why kexify -->
+<section class="px-4 md:px-8 py-8">
+  <div class="max-w-5xl mx-auto fade-in fade-in-delay-3">
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 text-center mb-6">kexifyが選ばれる理由</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5 compare-card">
+        <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">MetaMaskとの違い</h3>
+        <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">ブラウザに鍵が1つだけ。侵害されれば、すべてを失います。kexifyは2つの独立したキーシェアを使うので、単一障害点がありません。</p>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5 compare-card">
+        <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">Fireblocksとの違い</h3>
+        <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">法人向けのMPCで、料金も法人向け。kexifyは同じしきい値暗号を個人にも届けます。無料で、サブスクも広告もありません。</p>
+      </div>
+      <div class="bg-surface-secondary border border-border-primary rounded-lg p-5 compare-card">
+        <h3 class="text-sm font-medium dark:text-white text-gray-900 mb-1">カストディ型ウォレットとの違い</h3>
+        <p class="text-xs dark:text-gray-400 text-gray-500 leading-relaxed">鍵を持たなければ、あなたの暗号資産ではありません。kexifyはセルフカストディ。両方のシェアをエクスポートして、いつでも完全オフラインで使えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Open Source + CTA -->
+<section class="px-4 md:px-8 py-8 pb-12">
+  <div class="max-w-5xl mx-auto text-center fade-in fade-in-delay-3">
+    <h2 class="text-lg font-semibold dark:text-white text-gray-900 mb-3">オープンソース</h2>
+    <p class="text-sm dark:text-gray-400 text-gray-500 max-w-xl mx-auto leading-relaxed">
+      <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a>
+      (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">フォーク版</a>)をベースに構築。
+      フロントエンドのソースは<a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a>で公開しています。
+    </p>
+    <p class="mt-2 text-xs dark:text-gray-500 text-gray-400">監査済みのCoinbase cb-mpc暗号をベースにしています</p>
+    <a href="https://my.kexify.app/" class="inline-flex mt-6 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
+      kexifyを試す
+    </a>
+  </div>
+</section>
+
+<!-- Global animations: typing, counter, parallax -->
+<script>
+(function() {
+  // 1. Typing effect for hero
+  var heroText = document.getElementById('hero-text');
+  if (heroText) {
+    var text = 'ウォレット、ただそれだけ。送金も受け取りも、WalletConnect経由であらゆるdAppへの接続も。ずっと無料。みんなで使える個人プロジェクトです。';
+    var i = 0;
+    function typeChar() {
+      if (i >= text.length) { heroText.classList.remove('typing-cursor'); return; }
+      heroText.textContent += text[i];
+      i++;
+      setTimeout(typeChar, 25);
+    }
+    setTimeout(typeChar, 500);
+  }
+
+  // 2. Counter animation
+  document.querySelectorAll('.counter').forEach(function(el) {
+    var target = parseInt(el.dataset.target);
+    if (target === 0) return;
+    var current = 0;
+    var step = Math.max(1, Math.floor(target / 20));
+    var iv = setInterval(function() {
+      current += step;
+      if (current >= target) { current = target; clearInterval(iv); }
+      el.textContent = current;
+    }, 50);
+  });
+
+  // 3. Parallax K logo on scroll
+  var logo = document.getElementById('hero-logo');
+  if (logo) {
+    window.addEventListener('scroll', function() {
+      var y = window.scrollY;
+      if (y < 600) logo.style.transform = 'translateY(' + (y * 0.3) + 'px)';
+    }, { passive: true });
+  }
+})();
+</script>

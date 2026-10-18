@@ -1,0 +1,166 @@
+---
+layout: default
+title: "Pertanyaan Umum — kexify"
+lang: id
+permalink: /id/faq/
+---
+
+<section class="px-4 md:px-8 py-12 md:py-16">
+  <div class="max-w-3xl mx-auto fade-in">
+    <h1 class="text-2xl font-bold tracking-tight dark:text-white text-gray-900 mb-8">Pertanyaan yang Sering Diajukan</h1>
+
+    <!-- General -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-8 mb-4">Umum</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa arti "kexify"?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Keys simplified. Itu saja.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa itu kexify?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Dompet MPC berkustodi mandiri tempat dua bagian kunci independen dibuat bersamaan — satu di browser Anda, satu di server. Tidak pernah ada satu private key utuh. Tidak ada pihak yang memegang kunci utuh.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa itu MPC?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Multi-Party Computation — teknik kriptografi saat beberapa pihak menghitung sebuah fungsi bersama tanpa membuka masukan masing-masing. Di kexify, dua bagian kunci menandatangani transaksi tanpa pernah digabung menjadi private key utuh.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apakah kexify open source?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Ya. Dibangun di atas pustaka <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> milik Coinbase (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">fork kami</a>). Frontend: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apakah kexify benar-benar gratis?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Ya — gratis selamanya, tanpa langganan, tanpa iklan. kexify dibuat oleh pembuatnya untuk dipakai sendiri. Tidak ada model bisnis karena ini bukan bisnis. Ini alat yang memang perlu ada.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Kenapa kexify tidak punya fitur swap, staking, atau DeFi?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Memang disengaja. Dompet sebaiknya mengerjakan satu hal dengan baik — menyimpan dan menandatangani. Swap, pinjaman, dan bridge sudah ditangani dApp seperti 1inch, Aave, dan MyEtherWallet. Sambungkan ke salah satunya lewat WalletConnect. Fitur lebih sedikit berarti bug lebih sedikit dan permukaan serangan lebih kecil.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa filosofi desainnya?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Tiga prinsip: tetap sederhana, fokus sebagai dompet, dan hanya mengoptimalkan UX dan keamanan. Setiap keputusan fitur disaring lewat ketiganya. Kalau tidak membuat dompet lebih mudah dipakai atau lebih aman, fitur itu tidak dirilis.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apakah ada garansi?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Tidak. kexify adalah proyek pribadi yang disediakan apa adanya, tanpa garansi. Anda bertanggung jawab atas kunci dan dana Anda sendiri. Meski begitu, kodenya open source — Anda bisa memeriksa semuanya sendiri.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Untuk siapa kexify?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Siapa pun yang ingin keamanan MPC tanpa kerumitan. Dibuat oleh seorang engineer, untuk para engineer — tetapi dirancang agar siapa pun bisa memakainya.</p>
+      </details>
+    </div>
+
+    <!-- Security -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Keamanan</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Siapa yang memegang kunci saya?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Tidak ada yang memegang kunci utuh. Satu bagian ada di browser Anda (dienkripsi dengan passkey atau frasa sandi), bagian lainnya di server (dienkripsi dengan AES-256-GCM). Keduanya harus bekerja sama untuk menandatangani.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Bagaimana kalau server mati?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Pakai Mode Pemulihan. Ekspor bagian kunci server Anda lebih dulu, lalu tandatangani secara lokal di browser dengan kedua bagian kunci. Frontend-nya open source, dan ada juga alat CLI untuk menggabungkan kedua bagian menjadi kunci utuh. Tidak perlu server.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Bisakah server mencuri dana saya?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Tidak. Server hanya punya satu bagian — server tidak bisa menandatangani sendirian. Protokol MPC 2-of-2 mencegah penandatanganan sepihak secara desain. Frontend-nya open source — Anda bisa mengaudit kodenya bahkan menjalankannya sendiri.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Bagaimana bagian kunci disimpan?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Browser: dienkripsi AES-GCM dengan PRF passkey WebAuthn atau frasa sandi (PBKDF2). Server: AES-256-GCM dengan kunci turunan HKDF per pengguna. Semua dalam pengiriman: TLS 1.3.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa itu pemeriksaan penipuan GoPlus?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sebelum menandatangani, kexify otomatis memeriksa alamat penerima dan kontrak token terhadap basis data GoPlus Security untuk penipuan, alamat phishing, dan kontrak berbahaya yang sudah diketahui. Jika ada risiko, Anda akan melihat peringatan sebelum mengonfirmasi. Aktif secara default — tanpa pengaturan.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa bedanya kexify dengan dompet MPC lain seperti ZenGo?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Keduanya memakai MPC, tetapi kexify open source dan berkustodi mandiri sepenuhnya — Anda bisa mengekspor kedua bagian kunci dan menandatangani secara offline kapan saja. ZenGo mengendalikan bagian pemulihan dan membutuhkan server mereka. kexify juga punya Mesin Kebijakan (batas pembelanjaan, daftar alamat yang diizinkan) yang tidak dimiliki ZenGo. Dan kexify gratis — tanpa biaya swap, tanpa paket premium.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Bagaimana MPC dan Mesin Kebijakan bekerja bersama?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Bayangkan brankas yang butuh dua kunci. Anda memegang satu kunci, server memegang yang lain. Tidak ada yang bisa membuka brankas sendirian. Tetapi server juga bertugas sebagai penjaga — sebelum memutar kuncinya, server memeriksa aturan Anda: Apakah jumlah ini masih dalam batas pembelanjaan? Apakah alamat ini ada di daftar yang disetujui? Apakah akun sedang dibekukan? Jika ada aturan yang dilanggar, server menolak ikut menandatangani dan transaksi itu tidak bisa terjadi.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Kalau server menegakkan aturan, apakah server juga bisa memblokir saya secara tidak adil?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Server hanya menegakkan aturan yang Anda atur sendiri. Dan jika Anda tidak setuju dengan server, ada jalan keluar: ekspor kedua bagian kunci dan tandatangani transaksi sepenuhnya sendiri di Mode Pemulihan. Server tidak akan pernah bisa menyandera dana Anda.</p>
+      </details>
+    </div>
+
+    <!-- Usage -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Penggunaan</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Blockchain apa saja yang didukung?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Chain EVM (Ethereum, Base, Avalanche, Polygon, Arbitrum, BSC...), Bitcoin, Solana, XRP, TRON, TON, Algorand, Cardano, Stellar, Litecoin, dan Bitcoin Cash — beserta testnet dan token-nya.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Bagaimana cara menandatangani transaksi?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Mulai dari aplikasi atau sambungkan lewat WalletConnect. Kedua bagian kunci ikut dalam beberapa putaran MPC (~6 detik) untuk menghasilkan tanda tangan yang valid.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa itu Mesin Kebijakan?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Lapisan keamanan yang Anda atur sendiri, berisi aturan yang ditegakkan server sebelum ikut menandatangani. Bahkan jika seseorang mendapat akses ke browser Anda, kebijakan membatasi apa yang bisa mereka lakukan.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Jenis kebijakan apa yang bisa saya atur?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Batas pembelanjaan</strong> — batasi nilai USD per transaksi. <strong class="dark:text-gray-300 text-gray-700">Daftar alamat yang diizinkan</strong> — hanya izinkan transfer ke alamat yang sudah disetujui. Keduanya ditegakkan di sisi server sebelum server setuju ikut menandatangani.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Kenapa ada masa tunggu 24 jam?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Untuk mencegah penyerang mengubah kebijakan Anda lalu langsung memanfaatkannya. Saat Anda membuat atau mengubah kebijakan, butuh 24 jam sampai kebijakan itu aktif. Jika bukan Anda yang mengubahnya, Anda punya waktu untuk membekukan akun.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Bisakah saya membekukan akun?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Bisa. Bekukan lewat tautan email. Semua penandatanganan diblokir selama 24 jam wajib. Ini memberi Anda waktu mengamankan akun jika Anda curiga ada akses tidak sah.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa itu Mode Ahli?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Kumpulan kontrol lanjutan untuk pengguna mahir: pemilihan UTXO, Replace-By-Fee (RBF), nonce kustom, mode hanya tandatangani (tanda tangan tanpa menyiarkan), penyiaran terpisah, penandatanganan pesan mentah, endpoint RPC kustom per chain, dan pencadangan bagian kunci lengkap. Disembunyikan secara default — aktifkan di pengaturan saat Anda butuh kontrol yang lebih rinci.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Bisakah saya memakai kexify tanpa memberikan email?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Bisa. Login anonim memungkinkan Anda membuat dompet tanpa email atau data pribadi apa pun. Bagian kunci Anda disimpan secara lokal di browser, diamankan dengan frasa sandi. Mode ini dirancang untuk pengguna teknis yang paham pengelolaan kunci blockchain — tidak ada pemulihan akun jika Anda kehilangan frasa sandi dan bagian kunci.</p>
+      </details>
+    </div>
+
+    <!-- Limitations -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Batasan</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Kenapa dibatasi 3 akun?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify berjalan sepenuhnya di infrastruktur gratis. Setiap akun menyimpan bagian kunci terenkripsi di server, jadi batas 3 akun per pengguna menjaga biaya penyimpanan dan komputasi tetap terjangkau tanpa menagih siapa pun.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Kenapa dibatasi 10 tanda tangan per transaksi (UTXO)?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Setiap tanda tangan MPC butuh beberapa putaran komputasi antara browser Anda dan server. Di chain UTXO (Bitcoin, Litecoin, dll.), setiap input butuh tanda tangan terpisah. Batas 10 menjaga waktu penandatanganan tetap wajar dan mencegah sumber daya server gratis kewalahan. Untuk kebanyakan transaksi, 10 input sudah lebih dari cukup.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Kenapa koneksi RPC kadang lambat atau tidak stabil?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify memakai endpoint RPC publik gratis secara default. Endpoint ini bisa dibatasi lajunya, padat, atau sesekali mati. Untuk keandalan dan kecepatan lebih baik, buka Pengaturan dan ganti RPC default dengan endpoint milik Anda (dari Alchemy, Infura, QuickNode, dll.) — kebanyakan punya paket gratis yang cukup besar dengan API key.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apakah ada batas untuk email dan permintaan penandatanganan?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Ya. Email magic link, permintaan API, dan operasi penandatanganan semuanya dibatasi lajunya untuk mencegah penyalahgunaan infrastruktur gratis. Jika terkena batas, tunggu sebentar lalu coba lagi. Batas ini cukup longgar untuk pemakaian normal — hanya berlaku saat ada pola aktivitas yang tidak biasa.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Kenapa kexify memakai Cloudflare Turnstile?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile adalah alternatif CAPTCHA yang ramah privasi dan berjalan tak terlihat di latar belakang. Ia melindungi infrastruktur gratis dari bot dan penyalahgunaan otomatis — tanpa teka-teki yang mengganggu atau pelacakan. Anda jarang akan menyadarinya.</p>
+      </details>
+    </div>
+
+    <!-- Technical -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Teknis</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Kriptografi apa yang dipakai?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) untuk chain EVM/Bitcoin, EdDSA (Ed25519) untuk Solana/Stellar. Ditenagai pustaka WASM cb-mpc milik Coinbase yang berjalan langsung di browser Anda.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa itu cb-mpc?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Pustaka kriptografi threshold milik Coinbase</a>. Kami memakai <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">fork</a> yang dikompilasi ke WebAssembly agar berjalan di dalam browser.</p>
+      </details>
+    </div>
+
+  </div>
+</section>

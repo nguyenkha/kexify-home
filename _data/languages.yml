@@ -1,0 +1,90 @@
+# UI languages of the homepage. `prefix` is the URL folder ("" for English).
+# Order matches the wallet app's language picker.
+- code: en
+  name: English
+  prefix: ""
+  home: Home
+  faq: FAQ
+  about: About
+  open_app: Open App
+  language: Language
+- code: vi
+  name: Tiếng Việt
+  prefix: /vi
+  home: Trang chủ
+  faq: FAQ
+  about: Giới thiệu
+  open_app: Mở ứng dụng
+  language: Ngôn ngữ
+- code: zh-Hans
+  name: 简体中文
+  prefix: /zh-Hans
+  home: 首页
+  faq: 常见问题
+  about: 关于
+  open_app: 打开应用
+  language: 语言
+- code: es
+  name: Español
+  prefix: /es
+  home: Inicio
+  faq: FAQ
+  about: Acerca de
+  open_app: Abrir app
+  language: Idioma
+- code: pt-BR
+  name: Português (Brasil)
+  prefix: /pt-BR
+  home: Início
+  faq: FAQ
+  about: Sobre
+  open_app: Abrir app
+  language: Idioma
+- code: id
+  name: Bahasa Indonesia
+  prefix: /id
+  home: Beranda
+  faq: FAQ
+  about: Tentang
+  open_app: Buka aplikasi
+  language: Bahasa
+- code: th
+  name: ไทย
+  prefix: /th
+  home: หน้าแรก
+  faq: คำถามที่พบบ่อย
+  about: เกี่ยวกับ
+  open_app: เปิดแอป
+  language: ภาษา
+- code: ko
+  name: 한국어
+  prefix: /ko
+  home: 홈
+  faq: FAQ
+  about: 소개
+  open_app: 앱 열기
+  language: 언어
+- code: ja
+  name: 日本語
+  prefix: /ja
+  home: ホーム
+  faq: FAQ
+  about: 概要
+  open_app: アプリを開く
+  language: 言語
+- code: hi
+  name: हिन्दी
+  prefix: /hi
+  home: होम
+  faq: सवाल-जवाब
+  about: परिचय
+  open_app: ऐप खोलें
+  language: भाषा
+- code: ru
+  name: Русский
+  prefix: /ru
+  home: Главная
+  faq: Вопросы
+  about: О проекте
+  open_app: Открыть приложение
+  language: Язык

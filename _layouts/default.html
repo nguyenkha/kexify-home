@@ -14,6 +14,14 @@
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/icon.svg' | relative_url }}">
   <link rel="preconnect" href="https://assets-cdn.trustwallet.com" crossorigin>
   {% seo %}
+  {% comment %} hreflang alternates: same page in every UI language {% endcomment %}
+  {% assign alt_slug = page.url | remove: 'index.html' %}
+  {% if page.lang and page.lang != "en" %}{% assign alt_prefix = site.data.languages | where: "code", page.lang | map: "prefix" | first %}{% assign alt_slug = alt_slug | remove_first: alt_prefix %}{% endif %}
+  {% if alt_slug == "" %}{% assign alt_slug = "/" %}{% endif %}
+  {% for l in site.data.languages %}
+  <link rel="alternate" hreflang="{{ l.code }}" href="{{ l.prefix | append: alt_slug | absolute_url }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ alt_slug | absolute_url }}">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLW58KQT27"></script>
   <script>
@@ -98,6 +106,7 @@
     }
     details[open] summary::before { content: '−'; }
     details summary { display: flex; align-items: center; }
+    #lang-menu summary::before { content: none; }
 
     /* MPC signing animation */
     @keyframes msgRight {
