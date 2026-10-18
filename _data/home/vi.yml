@@ -103,7 +103,7 @@ plans:
     - "Ký offline bằng mã QR"
     - "Cảnh báo tức thì khi nhận tiền"
     - "Tự động tăng phí cho giao dịch bị kẹt"
-    - "Địa chỉ nhận và địa chỉ thối mới cho Bitcoin và Litecoin (riêng tư)"
+    - "Địa chỉ nhận và địa chỉ tiền thừa (change) mới cho Bitcoin và Litecoin (riêng tư)"
     - "Thêm tài khoản con"
     - "Hỗ trợ ưu tiên"
     - "Cho nhà phát triển: SDK ký cho một ví tự động hoá, và webhook"
