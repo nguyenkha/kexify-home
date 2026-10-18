@@ -79,7 +79,7 @@ chains:
   title: "Các chain được hỗ trợ"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "Khác"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "Miễn phí và Premium"

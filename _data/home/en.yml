@@ -81,7 +81,7 @@ chains:
   title: "Supported chains"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "More"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "Free and Premium"

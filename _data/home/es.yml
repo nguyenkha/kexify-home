@@ -79,7 +79,7 @@ chains:
   title: "Cadenas compatibles"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "Más"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "Gratis y Premium"

@@ -79,7 +79,7 @@ chains:
   title: "सपोर्टेड चेन"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "अन्य"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "फ़्री और प्रीमियम"

@@ -79,7 +79,7 @@ chains:
   title: "Redes compatíveis"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "Mais"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "Grátis e Premium"

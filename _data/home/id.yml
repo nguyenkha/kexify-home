@@ -79,7 +79,7 @@ chains:
   title: "Chain yang didukung"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "Lainnya"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "Gratis dan Premium"

@@ -79,7 +79,7 @@ chains:
   title: "対応チェーン"
   evm_sub: "Ethereum、Base、Arbitrum、Polygon..."
   more: "その他"
-  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH"
+  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH、DOGE"
 
 plans:
   title: "無料とPremium"
