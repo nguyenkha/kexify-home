@@ -237,7 +237,6 @@
   var sigHex = document.getElementById('sig-hex');
   var sigCheck = document.getElementById('sig-check');
   if (!env || !ch || !sigHex || !sigCheck) return;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var hex = '0123456789abcdef';
   var rounds = [{ dir: 'right', color: '#3b82f6' }, { dir: 'left', color: '#4ade80' }, { dir: 'right', color: '#3b82f6' }];
   var fullSig = '';
@@ -273,6 +272,12 @@
       env.style.opacity = '0';
       typeHex(randHex(charsPerRound), function() { setTimeout(function() { animateRound(round + 1); }, 300); });
     }, 1600);
+  }
+  // Reduced motion: show a finished signature instead of the animation.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    sigHex.textContent = '0x' + randHex(charsPerRound * 3);
+    sigCheck.style.opacity = '1'; sigCheck.style.transform = 'scale(1)';
+    return;
   }
   animateRound(0);
 })();

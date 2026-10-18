@@ -6,7 +6,7 @@ Built with Jekyll + Tailwind CSS, deployed on GitHub Pages.
 
 ## Pages
 
-- **Home** — Hero, how it works, supported chains, features, comparison
+- **Home** — hero, safe by default (everyday users), how it works, leave anytime, for developers, chains, free and premium, why kexify. Copy lives in `_data/home/<lang>.yml`; `_includes/home.html` renders it for every language
 - **FAQ** — Collapsible Q&A covering security, usage, and technical details
 - **About** — Creator info, open source links, tech stack
 

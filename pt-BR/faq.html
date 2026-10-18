@@ -26,11 +26,11 @@ permalink: /pt-BR/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">O kexify é de código aberto?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim. Construído sobre a biblioteca <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> da Coinbase (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">nosso fork</a>). Frontend: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim. Construído sobre a biblioteca <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> da Coinbase (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">nosso fork</a>). O app web é de código aberto, com licença MIT: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. O servidor e o app para iPhone ainda não são de código aberto.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">O kexify é grátis mesmo?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim: grátis para sempre, sem assinatura e sem anúncios. O kexify foi feito pelo criador para uso pessoal. Não há modelo de negócio porque não é um negócio. É uma ferramenta que precisava existir.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">O plano grátis é grátis para sempre, sem anúncios, e inclui toda a segurança básica: o limite diário, os endereços confiáveis, o bloqueio de aprovações ilimitadas, a verificação de endereços de risco, o congelamento, o backup e o modo de recuperação. Um plano Premium está previsto para recursos que custam dinheiro para manter, como o iPhone como dispositivo de aprovação, uma simulação avançada com análise de risco e os alertas instantâneos. O preço ainda não foi definido. A segurança básica nunca vai passar para um plano pago.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Por que o kexify não tem trocas, staking nem recursos de DeFi?</summary>
@@ -42,11 +42,15 @@ permalink: /pt-BR/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Existe alguma garantia?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Não. O kexify é um projeto pessoal oferecido como está, sem garantia. Você é responsável pelas suas chaves e pelos seus fundos. Por outro lado, o código é aberto: você mesmo pode verificar tudo.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Não. O kexify é um projeto pessoal oferecido como está, sem garantia. Você é responsável pelas suas chaves e pelos seus fundos. Por outro lado, o código do app web é aberto, então você pode conferir como ele funciona.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Para quem é o kexify?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Para quem quer a segurança do MPC sem a complexidade. Feito por um engenheiro, para engenheiros, mas pensado para que qualquer pessoa consiga usar.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Para dois grupos. Pessoas que estão começando em cripto e querem uma carteira que evite os erros mais comuns: sem frase-semente, com limite diário e com um servidor que se recusa a assinar operações de risco. E desenvolvedores que querem WalletConnect, redes de teste, o próprio RPC e uma saída que não dependa do nosso servidor.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Existe um app para iPhone?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Está em testes e ainda não está na App Store. O app web em my.kexify.app funciona hoje em qualquer navegador moderno, incluindo o Safari no iPhone.</p>
       </details>
     </div>
 
@@ -59,7 +63,7 @@ permalink: /pt-BR/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">E se o servidor cair?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Use o modo de recuperação. Exporte antes a parte da chave do servidor e depois assine localmente no navegador com as duas partes. O frontend é de código aberto e também há uma ferramenta de linha de comando para combinar as duas partes em uma chave completa. Sem precisar do servidor.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Use o modo de recuperação. Exporte antes a parte da chave do servidor (no modo especialista) e depois assine localmente no navegador com as duas partes. O frontend é de código aberto e também há uma ferramenta de linha de comando para combinar as duas partes em uma chave completa. Sem precisar do servidor.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">O servidor pode roubar meus fundos?</summary>
@@ -71,11 +75,11 @@ permalink: /pt-BR/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">O que é a verificação de fraude da GoPlus?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Antes de assinar, o kexify confere automaticamente o endereço do destinatário e o contrato do token na base da GoPlus Security, em busca de golpes conhecidos, endereços de phishing e contratos maliciosos. Se houver risco, você vê um aviso antes de confirmar. Vem ativada por padrão, sem configurar nada.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Antes de co-assinar, o servidor confere o destinatário (ou o beneficiário de uma aprovação de token) na base da GoPlus Security de endereços de golpe, phishing e sancionados. Se o endereço estiver sinalizado, o servidor se recusa a assinar. Vem ativada em todas as carteiras, sem configurar nada. Se a GoPlus não responder a tempo, o envio não é bloqueado, então encare como uma rede extra, não como garantia.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Qual a diferença entre o kexify e outras carteiras MPC, como a ZenGo?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Ambas usam MPC, mas o kexify é de código aberto e totalmente de autocustódia: você pode exportar as duas partes da chave e assinar offline quando quiser. A ZenGo controla a parte de recuperação e depende dos servidores dela. O kexify também traz um mecanismo de políticas (limites de gastos, listas de endereços permitidos) que a ZenGo não tem. E o kexify é grátis, sem taxas de troca e sem planos premium.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Ambas usam MPC. Com o kexify você pode exportar as duas partes da chave e assinar sem o nosso servidor, o co-assinante aplica as regras que você mesmo define (limite diário, endereços confiáveis, uma espera acima do limite) e o app web é de código aberto.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Como o MPC e o mecanismo de políticas funcionam juntos?</summary>
@@ -96,7 +100,7 @@ permalink: /pt-BR/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Como assino transações?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Inicie pelo app ou conecte via WalletConnect. As duas partes da chave participam de várias rodadas MPC (cerca de 6 segundos) para gerar uma assinatura válida.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Inicie pelo app ou conecte via WalletConnect. As duas partes da chave participam de algumas rodadas MPC, geralmente alguns segundos, para gerar uma assinatura válida.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">O que é o mecanismo de políticas?</summary>
@@ -104,19 +108,19 @@ permalink: /pt-BR/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Que tipos de política posso definir?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Limites de gastos</strong>: definem um teto em USD por transação. <strong class="dark:text-gray-300 text-gray-700">Listas de endereços permitidos</strong>: só liberam transferências para endereços previamente aprovados. As duas são aplicadas no servidor antes de ele aceitar co-assinar.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Limite diário</strong>: um valor em USD a cada 24 horas corridas. <strong class="dark:text-gray-300 text-gray-700">Enviar para</strong>: qualquer endereço, ou só endereços confiáveis. <strong class="dark:text-gray-300 text-gray-700">Acima do limite</strong>: bloquear o envio, ou deixar passar depois de uma espera de 1 ou 24 horas. O servidor aplica tudo isso antes de co-assinar. Além das suas regras, aprovações de token ilimitadas e endereços sinalizados são sempre recusados. O modo especialista também tem um editor completo de regras personalizadas.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Por que existe um período de espera de 24 horas?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Para impedir que um invasor mude suas políticas e tire proveito delas na hora. Quando você cria ou altera uma política, ela leva 24 horas para valer. Se a mudança não foi feita por você, dá tempo de congelar a conta.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Para impedir que um invasor afrouxe suas regras e tire proveito delas na hora. Uma mudança que deixa as regras mais frouxas, como subir o limite, espera 24 horas. Uma mudança que as deixa mais rígidas vale na hora. Se a mudança não foi feita por você, dá tempo de congelar a conta.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Posso congelar minha conta?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim. O congelamento é feito por um link enviado por e-mail. Toda assinatura fica bloqueada por 24 horas obrigatórias. Isso dá tempo de proteger a conta se você suspeitar de acesso não autorizado.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim, com um clique no link de congelar dos e-mails de segurança do kexify. Vale na hora e bloqueia toda assinatura. Para descongelar é preciso a sua passkey (ou uma prova da sua carteira) e depois uma espera de 24 horas, então quem roubou o seu acesso não consegue desfazer rápido.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">O que é o modo especialista?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Um conjunto de controles avançados para usuários experientes: seleção de UTXO, Replace-By-Fee (RBF), nonce personalizado, modo só assinar (assina sem transmitir), transmissão separada, assinatura de mensagens brutas, endpoints RPC personalizados por rede e backup completo da parte da chave. Fica oculto por padrão; ative nos ajustes quando precisar de controle detalhado.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Um conjunto grátis de controles avançados: redes de teste, seleção de UTXO, aceleração com Replace-By-Fee para Bitcoin e Litecoin, nonce e taxas personalizados, modo só assinar com transmissão separada, assinatura de mensagens brutas, RPC e explorador personalizados por rede, um editor de configuração em JSON, regras personalizadas e backup completo das partes da chave. Fica desativado por padrão; ative nos Ajustes.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Posso usar o kexify sem informar e-mail?</summary>
@@ -128,27 +132,43 @@ permalink: /pt-BR/faq/
     <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Limitações</h2>
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">Por que o limite é de 3 contas?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">O kexify roda inteiramente em infraestrutura gratuita. Cada conta guarda partes da chave criptografadas no servidor, então o limite de 3 contas por usuário mantém os custos de armazenamento e processamento sustentáveis sem cobrar de ninguém.</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Por que posso criar só uma carteira?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Cada carteira guarda uma parte da chave criptografada no servidor e usa tempo do servidor para assinar, então o plano grátis inclui uma carteira por conta. As carteiras criadas antes desse limite continuam funcionando. Mais carteiras separadas estão previstas para o Premium.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">Por que o limite é de 10 assinaturas por transação (UTXO)?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Cada assinatura MPC exige várias rodadas de cálculo entre o navegador e o servidor. Em redes UTXO (Bitcoin, Litecoin etc.), cada entrada precisa de uma assinatura separada. O limite de 10 mantém o tempo de assinatura razoável e evita sobrecarregar os recursos do servidor gratuito. Para a maioria das transações, 10 entradas são mais que suficientes.</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Por que o limite é de 50 entradas por transação (UTXO)?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Cada assinatura MPC exige várias rodadas de cálculo entre o navegador e o servidor. Em redes UTXO (Bitcoin, Litecoin etc.), cada entrada precisa de uma assinatura separada. O limite de 50 mantém o tempo de assinatura razoável e protege o servidor. Para a maioria das transações, 50 entradas são mais que suficientes.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Por que as conexões RPC às vezes ficam lentas ou instáveis?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">O kexify usa endpoints RPC públicos e gratuitos por padrão. Eles podem ter limite de requisições, ficar congestionados ou cair de vez em quando. Para mais estabilidade e velocidade, vá em Ajustes e troque o RPC padrão pelo seu próprio endpoint (Alchemy, Infura, QuickNode etc.). A maioria oferece planos gratuitos generosos com uma chave de API.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">O kexify usa endpoints RPC públicos e gratuitos por padrão na maioria das redes. Eles podem ter limite de requisições, ficar congestionados ou cair de vez em quando. Para mais estabilidade e velocidade, ative o modo especialista, vá em Ajustes e troque o RPC padrão pelo seu próprio endpoint (Alchemy, Infura, QuickNode etc.). A maioria oferece planos gratuitos generosos com uma chave de API.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Há limites para e-mails e pedidos de assinatura?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim. E-mails com link mágico, requisições de API e operações de assinatura têm limite de frequência para evitar abuso da infraestrutura gratuita. Se você atingir um limite, espere um pouco e tente de novo. Os limites são folgados para o uso normal e só entram em ação com padrões de atividade incomuns.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim. E-mails com link mágico, requisições de API e operações de assinatura têm limite de frequência para evitar abuso. Se você atingir um limite, espere um pouco e tente de novo. Os limites são folgados para o uso normal e só entram em ação com padrões de atividade incomuns.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Por que o kexify usa o Cloudflare Turnstile?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">O Turnstile é uma alternativa de CAPTCHA que respeita a privacidade e roda de forma invisível em segundo plano. Ele protege a infraestrutura gratuita contra bots e abuso automatizado, sem quebra-cabeças chatos nem rastreamento. Você dificilmente vai notar.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">O Turnstile é uma alternativa de CAPTCHA que respeita a privacidade e roda de forma invisível em segundo plano. Ele protege o serviço contra bots e abuso automatizado, sem quebra-cabeças chatos nem rastreamento. Você dificilmente vai notar.</p>
       </details>
     </div>
 
+    <!-- Developers -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Desenvolvedores</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Posso usar redes de teste?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim. Ative o modo especialista e depois as redes de teste nos Ajustes. Disponíveis: Ethereum Sepolia, Base Sepolia, Solana devnet e testnet, TRON Nile e Shasta, testnet de Bitcoin e Litecoin, testnets de XRP, Stellar, TON e Algorand, e Cardano PreProd.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Quais métodos do WalletConnect são compatíveis?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">WalletConnect v2. EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Toda requisição passa pela mesma revisão e pelas mesmas verificações do servidor que um envio normal.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Existe uma ferramenta de linha de comando?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Sim, uma CLI em Bun no repositório <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Ela recebe os seus dois arquivos de chave. <code>recover</code> reconstrói a chave privada (hex, ou WIF para Bitcoin) e mostra os seus endereços. <code>connect</code> assina requisições do WalletConnect localmente com as duas partes da chave, sem o servidor do kexify.</p>
+      </details>
+    </div>
     <!-- Technical -->
     <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Técnico</h2>
     <div class="space-y-2">

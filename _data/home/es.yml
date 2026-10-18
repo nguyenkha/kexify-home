@@ -1,0 +1,121 @@
+# Home page copy (es). Same keys as en.yml; _includes/home.html renders it.
+hero:
+  tagline: "Una billetera cripto con red de seguridad."
+  sub: "Sin frase semilla. Tu clave se divide entre tu dispositivo y el servidor de kexify, y el servidor comprueba tus propias reglas antes de cofirmar."
+  stats: ["Más de 20 redes", "MPC 2-of-2", "0 frases semilla"]
+  cta_app: "Abrir la app web"
+  cta_dev: "Para desarrolladores"
+  ios_note: "Uso gratuito. App para iPhone en pruebas; la app web funciona hoy."
+  move_title: "kexify se ha mudado de kexify.co a kexify.app"
+  move_body: 'Las billeteras nuevas se crean en <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. ¿Ya tienes una billetera en <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>? Sigue funcionando allí, pero no se puede mover de forma automática: las llaves de acceso (passkeys) están ligadas al dominio donde se crearon. Para mudarte, crea una billetera nueva en my.kexify.app y envía tus fondos. Inicia sesión en app.kexify.co para ver los detalles.'
+  move_warning: "kexify nunca te pedirá tu archivo de clave ni tu frase de contraseña por correo, chat o soporte."
+
+safety:
+  title: "Seguro por defecto"
+  intro: "Pensado para quien empieza en cripto. Los errores típicos de principiante se bloquean o se frenan, y el servidor aplica tus reglas, así que un portátil robado o un enlace malicioso no pueden saltárselas."
+  items:
+    - icon: key
+      title: "Sin frase semilla que perder"
+      body: "Dos fragmentos de clave: uno en tu dispositivo y otro en el servidor. Ninguno puede firmar solo. Un kit de respaldo con verificación de la frase de contraseña protege tu fragmento."
+    - icon: limit
+      title: "Un límite diario que controlas tú"
+      body: "Fija un límite diario en USD y permite enviar solo a direcciones de confianza. Por encima del límite, el envío se bloquea o espera 1 o 24 horas."
+    - icon: clock
+      title: "Los cambios de reglas esperan 24 horas"
+      body: "Las reglas más estrictas se aplican al instante. Las más flexibles esperan 24 horas, así que quien consiga entrar no puede desactivarlas sin más. Congela tu billetera con un clic."
+    - icon: shield
+      title: "Aprobaciones ilimitadas bloqueadas"
+      body: "Las dApps suelen pedir permiso para gastar todo un token para siempre. kexify se niega a cofirmar eso; tú fijas un tope."
+    - icon: alert
+      title: "Comprobación de direcciones de riesgo"
+      body: "Antes de firmar, el destinatario se compara con la lista de direcciones de estafa y phishing de GoPlus Security. Un destinatario nuevo también genera una advertencia."
+    - icon: eye
+      title: "Ves lo que firmas"
+      body: "Las transferencias, aprobaciones de tokens, permits y datos tipados se muestran en lenguaje claro, con la dirección completa y el monto, antes de que confirmes."
+
+how:
+  title: "Cómo funciona"
+  steps:
+    - title: "Crear"
+      body: "Se crean juntos dos fragmentos de clave independientes. Nunca existe una única clave privada."
+    - title: "Guardar"
+      body: "Un fragmento queda en tu dispositivo y otro en el servidor. Ambos están cifrados."
+    - title: "Firmar"
+      body: "Tu dispositivo y el servidor firman juntos. El servidor comprueba primero tus reglas y no puede firmar solo."
+  mpc_title: "Firma MPC"
+  browser: "Tu dispositivo"
+  server: "Servidor"
+  share_a: "Fragmento de clave A"
+  share_b: "Fragmento de clave B"
+  tip_a: "Cifrado en tu dispositivo (AES-GCM)"
+  tip_b: "Cifrado en el servidor (AES-256-GCM + HKDF)"
+  channel: "mensajes cifrados, no claves"
+  signature: "Firma"
+  never: 'La clave completa <span class="text-blue-400">nunca existe</span>: ni en tu dispositivo, ni en el servidor, ni en tránsito.'
+
+exit:
+  title: "Sal cuando quieras, sin necesitar el servidor"
+  body: "Guarda tu propio archivo de clave y, en el modo experto, solicita también el archivo de clave del servidor (se desbloquea tras una espera de seguridad). Con ambos archivos, el modo de recuperación firma en tu navegador sin ningún servidor de kexify. La CLI de código abierto puede hacer lo mismo, o convertir los dos archivos en una clave privada normal."
+
+dev:
+  title: "Para desarrolladores"
+  intro: "El modo experto es gratuito y viene desactivado. Actívalo en Ajustes cuando quieras los controles avanzados."
+  items:
+    - title: "WalletConnect v2"
+      body: "Ethereum y L2 EVM (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana y TRON."
+    - title: "Redes de prueba"
+      body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile y Shasta, testnet de Bitcoin, Cardano PreProd y más, con un solo interruptor en el modo experto."
+    - title: "Modo experto"
+      body: "Nonce y comisiones personalizados, selección de UTXO, aceleración con RBF para BTC y LTC, firma de mensajes sin procesar, solo firmar con transmisión por separado."
+    - title: "Tu propio RPC"
+      body: "Cambia el RPC y el explorador de cualquier cadena por tu endpoint de Alchemy, Infura o QuickNode, con una comprobación de estado en vivo. Edita toda la configuración como JSON."
+    - title: "CLI y recuperación"
+      body: "Una CLI de Bun reconstruye las claves a partir de los dos archivos de clave (<code>recover</code>) o firma solicitudes de WalletConnect en local (<code>connect</code>)."
+    - title: "Código abierto"
+      body: 'La app web es MIT en <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a>. MPC funciona sobre <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a> a través de <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">nuestro fork</a>.'
+
+chains:
+  title: "Cadenas compatibles"
+  evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  more: "Más"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+
+plans:
+  title: "Gratis y Premium"
+  free_title: "Gratis"
+  free_price: "$0, para siempre"
+  free_items:
+    - "Todo lo anterior"
+    - "Límite diario, direcciones de confianza, espera por encima del límite"
+    - "Bloqueo de aprobaciones ilimitadas y comprobación de direcciones de riesgo"
+    - "Congelamiento, kit de respaldo, modo de recuperación, CLI"
+    - "WalletConnect y modo experto"
+    - "App para iPhone (próximamente)"
+    - "Vista previa de cambios de saldo antes de firmar (próximamente)"
+  premium_title: "Premium"
+  premium_price: "Precio próximamente"
+  premium_note: "Previsto, todavía no construido. La seguridad básica nunca pasará a ser de pago."
+  premium_items:
+    - "iPhone como dispositivo de aprobación"
+    - "Firma por QR sin conexión"
+    - "Reglas personalizadas y una espera para montos grandes"
+    - "Simulación avanzada con análisis de riesgo"
+    - "Alertas instantáneas y aumento automático de comisión"
+    - "Más billeteras separadas"
+  planned: "previsto"
+
+why:
+  title: "Por qué kexify"
+  items:
+    - title: "frente a las billeteras con frase semilla"
+      body: "Un solo secreto en un solo dispositivo. Si se filtra, se pierde todo. Con kexify, un fragmento filtrado del dispositivo no basta para mover fondos."
+    - title: "frente a las apps custodiales"
+      body: "Si no son tus claves, no son tus criptomonedas. Con kexify puedes llevarte los dos archivos de clave y firmar sin nosotros."
+    - title: "frente a otras billeteras MPC"
+      body: "Tus reglas las aplica el cofirmante, y tu salida no depende de nuestro servidor."
+
+cta:
+  title: "Pruébalo primero con una cantidad pequeña"
+  body: "kexify es un proyecto personal de un solo ingeniero, que se ofrece tal cual. Empieza con poco, lee las preguntas frecuentes y crece desde ahí."
+  app: "Abrir la app web"
+  github: "Ver en GitHub"

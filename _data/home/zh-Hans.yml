@@ -1,0 +1,121 @@
+# 简体中文首页文案。键与 en.yml 相同；由 _includes/home.html 渲染。
+hero:
+  tagline: "有安全网的加密钱包。"
+  sub: "没有助记词。你的密钥被拆分在你的设备和 kexify 服务器之间，服务器在共同签名前会先检查你自己设定的规则。"
+  stats: ["20+ 个网络", "2-of-2 MPC", "0 个助记词"]
+  cta_app: "打开网页版"
+  cta_dev: "面向开发者"
+  ios_note: "免费使用。iPhone 应用正在测试中；网页版现在就能用。"
+  move_title: "kexify 已从 kexify.co 迁移到 kexify.app"
+  move_body: '新钱包请在 <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a> 创建。已经在 <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> 有钱包？它在那里仍可继续使用，但无法自动迁移：通行密钥绑定在创建它的域名上。要迁移，请在 my.kexify.app 创建新钱包，再把资金转过去。详情请登录 app.kexify.co 查看。'
+  move_warning: "kexify 绝不会通过邮件、聊天或客服向你索要密钥文件或口令。"
+
+safety:
+  title: "默认就安全"
+  intro: "为刚接触加密货币的人而设计。新手常犯的错误会被拦下或放慢，而且规则由服务器执行，所以被盗的电脑或一个恶意链接也绕不过去。"
+  items:
+    - icon: key
+      title: "没有助记词可丢"
+      body: "两份密钥分片，一份在你的设备上，一份在服务器上。任何一方都无法单独签名。带口令校验的备份包让你的分片更安全。"
+    - icon: limit
+      title: "由你掌控的每日限额"
+      body: "设置每日美元限额，并可只允许向信任的地址转账。超过限额时，转账会被拦截，或需等待 1 小时或 24 小时。"
+    - icon: clock
+      title: "规则变更需等待 24 小时"
+      body: "更严格的规则立即生效。更宽松的规则要等 24 小时，所以闯入者无法直接把规则关掉。一键即可冻结钱包。"
+    - icon: shield
+      title: "拦截无限授权"
+      body: "dApp 常会要求永久花费某个代币的全部额度。kexify 会拒绝共同签名，改由你设定一个上限。"
+    - icon: alert
+      title: "风险地址检查"
+      body: "签名前，会将收款地址与 GoPlus Security 的诈骗和钓鱼地址名单比对。首次出现的收款地址也会提示警告。"
+    - icon: eye
+      title: "看清你签的是什么"
+      body: "转账、代币授权、permit 和类型化数据会在你确认之前，用通俗的话展示，并附上完整地址和金额。"
+
+how:
+  title: "工作原理"
+  steps:
+    - title: "创建"
+      body: "两份相互独立的密钥分片同时生成。完整的私钥从不存在。"
+    - title: "存储"
+      body: "一份在你的设备上，一份在服务器上。两份都经过加密。"
+    - title: "签名"
+      body: "你的设备和服务器共同签名。服务器会先检查你的规则，且无法单独签名。"
+  mpc_title: "MPC 签名"
+  browser: "你的设备"
+  server: "服务器"
+  share_a: "密钥分片 A"
+  share_b: "密钥分片 B"
+  tip_a: "在你的设备上加密（AES-GCM）"
+  tip_b: "在服务器上加密（AES-256-GCM + HKDF）"
+  channel: "传输的是加密消息，不是密钥"
+  signature: "签名"
+  never: '完整的密钥<span class="text-blue-400">从不存在</span>：不在你的设备上，不在服务器上，也不在传输途中。'
+
+exit:
+  title: "随时离开，无需服务器"
+  body: "保管好你自己的密钥文件，并在专家模式下再申请服务器的密钥文件（经过一段安全等待后才会解锁）。有了这两个文件，恢复模式可在浏览器中直接签名，完全不需要 kexify 服务器。开源命令行工具也能做到，还能把两个文件还原成普通私钥。"
+
+dev:
+  title: "面向开发者"
+  intro: "专家模式免费，默认关闭。需要更多控制时，在设置中打开。"
+  items:
+    - title: "WalletConnect v2"
+      body: "Ethereum 和 EVM L2（<code>eth_sendTransaction</code>、<code>personal_sign</code>、<code>eth_signTypedData_v4</code>）、Solana 和 TRON。"
+    - title: "测试网"
+      body: "Sepolia、Base Sepolia、Solana devnet、TRON Nile 和 Shasta、Bitcoin testnet、Cardano PreProd 等，在专家模式中一键开关。"
+    - title: "专家模式"
+      body: "覆盖 nonce 和手续费、UTXO 选择、BTC 和 LTC 的 RBF 加速、原始消息签名、仅签名并单独广播。"
+    - title: "自备 RPC"
+      body: "可将任意链的 RPC 和区块浏览器换成你自己的 Alchemy、Infura 或 QuickNode 端点，并带实时健康检查。整个配置可作为 JSON 编辑。"
+    - title: "命令行与恢复"
+      body: "基于 Bun 的命令行工具可用两个密钥文件重建密钥（<code>recover</code>），或在本地签署 WalletConnect 请求（<code>connect</code>）。"
+    - title: "开源"
+      body: '网页版以 MIT 协议发布在 <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a>。MPC 基于 <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a>，使用<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">我们的分支</a>。'
+
+chains:
+  title: "支持的区块链"
+  evm_sub: "Ethereum、Base、Arbitrum、Polygon..."
+  more: "更多"
+  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH"
+
+plans:
+  title: "免费版和 Premium"
+  free_title: "免费"
+  free_price: "$0，永久"
+  free_items:
+    - "以上全部功能"
+    - "每日限额、信任地址、超限等待"
+    - "无限授权拦截和风险地址检查"
+    - "冻结、备份包、恢复模式、命令行"
+    - "WalletConnect 和专家模式"
+    - "iPhone 应用（即将推出）"
+    - "签名前预览余额变化（即将推出）"
+  premium_title: "Premium"
+  premium_price: "价格待定"
+  premium_note: "仅为计划，尚未开发。基础安全功能永远不会放到付费墙后面。"
+  premium_items:
+    - "把 iPhone 用作批准设备"
+    - "离线二维码签名"
+    - "自定义规则和大额等待"
+    - "带风险扫描的深度交易模拟"
+    - "即时提醒和自动加价"
+    - "更多独立钱包"
+  planned: "计划中"
+
+why:
+  title: "为什么选择 kexify"
+  items:
+    - title: "对比助记词钱包"
+      body: "一个秘密放在一台设备上，一旦泄露，一切都没了。用 kexify，单单泄露设备上的分片，无法转走资金。"
+    - title: "对比托管类应用"
+      body: "不是你的密钥，就不是你的币。用 kexify，你可以拿走两个密钥文件，不依赖我们也能签名。"
+    - title: "对比其他 MPC 钱包"
+      body: "你的规则由共同签名方执行，而且你的退出路径不依赖我们的服务器。"
+
+cta:
+  title: "先用小额试一试"
+  body: "kexify 是一位工程师的个人项目，按现状提供。先从小额开始，读读常见问题，再逐步增加。"
+  app: "打开网页版"
+  github: "在 GitHub 上查看"

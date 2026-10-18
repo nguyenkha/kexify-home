@@ -15,10 +15,10 @@ vi:
   og_locale: vi_VN
   home:
     title: "kexify — ví crypto tự quản lý bằng MPC, không cần cụm từ khôi phục"
-    description: "Ví crypto miễn phí, tự quản lý. Khoá được chia giữa thiết bị của bạn và máy chủ bằng MPC 2-of-2, nên không có cụm từ khôi phục và không có điểm lỗi duy nhất."
+    description: "Ví crypto tự quản lý, không seed phrase. 2-of-2 MPC chia khoá giữa thiết bị và máy chủ, máy chủ thực thi giới hạn hằng ngày và chặn chữ ký rủi ro. Có gói miễn phí."
   faq:
     title: "Câu hỏi thường gặp — ví MPC kexify"
-    description: "Giải đáp về kexify: ai giữ khoá của bạn, ký MPC 2-of-2 hoạt động thế nào, máy chủ ngừng thì sao, chính sách chi tiêu, thời gian chờ 24 giờ và các blockchain hỗ trợ."
+    description: "Giải đáp về kexify: ai giữ khoá, ký 2-of-2 MPC hoạt động ra sao, máy chủ ngừng thì sao, giới hạn hằng ngày, thời gian chờ 24 giờ, gói miễn phí và premium, testnet và CLI."
   about:
     title: "Giới thiệu kexify — ai làm và vì sao"
     description: "kexify là dự án cá nhân miễn phí của Kha Do: ví MPC đơn giản, an toàn, xây trên Coinbase cb-mpc. Đọc lý do ra đời, cách xây dựng và nơi đặt mã nguồn."
@@ -26,10 +26,10 @@ zh-Hans:
   og_locale: zh_CN
   home:
     title: "kexify — 自托管 MPC 加密钱包，无需助记词"
-    description: "免费的自托管加密钱包。密钥通过 2-of-2 MPC 分布在你的设备和服务器之间，没有助记词，也没有单点故障。"
+    description: "无助记词的自主托管加密钱包。2-of-2 MPC 将密钥拆分在设备与服务器之间，服务器执行每日限额并拦截风险签名。有免费版。"
   faq:
     title: "常见问题 — kexify MPC 钱包"
-    description: "关于 kexify 的解答：谁持有你的密钥、2-of-2 MPC 签名如何运作、服务器宕机怎么办、支出策略、24 小时冷却期以及支持的区块链。"
+    description: "关于 kexify 的解答：谁持有密钥、2-of-2 MPC 签名原理、服务器宕机怎么办、每日限额、24 小时等待、免费与 Premium、测试网和命令行。"
   about:
     title: "关于 kexify — 谁在做，为什么做"
     description: "kexify 是 Kha Do 的免费个人项目：一个基于 Coinbase cb-mpc、简单安全的 MPC 钱包。了解它的由来、构建方式和源代码所在。"
@@ -37,10 +37,10 @@ es:
   og_locale: es_ES
   home:
     title: "kexify — billetera cripto MPC de autocustodia, sin frase semilla"
-    description: "Una billetera cripto gratuita y de autocustodia. Tu clave se reparte entre tu dispositivo y el servidor con MPC 2-of-2: sin frase semilla y sin punto único de fallo."
+    description: "Billetera cripto sin frase semilla. El MPC 2-of-2 divide tu clave entre tu dispositivo y el servidor, que aplica tu límite diario y bloquea firmas de riesgo. Plan gratis."
   faq:
     title: "Preguntas frecuentes — billetera MPC kexify"
-    description: "Respuestas sobre kexify: quién guarda tus claves, cómo funciona la firma MPC 2-of-2, qué pasa si el servidor cae, políticas de gasto, la espera de 24 horas y cadenas."
+    description: "Respuestas sobre kexify: quién tiene tus claves, cómo firma el MPC 2-of-2, si el servidor se cae, límites diarios, espera de 24 horas, gratis y premium, testnets y CLI."
   about:
     title: "Acerca de kexify — quién lo hace y por qué"
     description: "kexify es un proyecto personal y gratuito de Kha Do: una billetera MPC simple y segura basada en Coinbase cb-mpc. Por qué existe, cómo se hizo y dónde está el código."
@@ -48,10 +48,10 @@ pt-BR:
   og_locale: pt_BR
   home:
     title: "kexify — carteira cripto MPC de autocustódia, sem frase-semente"
-    description: "Uma carteira cripto gratuita e de autocustódia. Sua chave fica dividida entre seu aparelho e o servidor com MPC 2-of-2: sem frase-semente e sem ponto único de falha."
+    description: "Carteira cripto sem frase-semente. O MPC 2-of-2 divide sua chave entre o dispositivo e o servidor, que aplica seu limite diário e bloqueia assinaturas de risco. Plano grátis."
   faq:
     title: "Perguntas frequentes — carteira MPC kexify"
-    description: "Respostas sobre o kexify: quem guarda suas chaves, como funciona a assinatura MPC 2-of-2, e se o servidor cair, políticas de gasto, a espera de 24 horas e as redes."
+    description: "Respostas sobre o kexify: quem guarda suas chaves, como o MPC 2-of-2 assina, se o servidor cair, limites diários, espera de 24 horas, grátis e premium, testnets e CLI."
   about:
     title: "Sobre o kexify — quem faz e por quê"
     description: "O kexify é um projeto pessoal e gratuito de Kha Do: uma carteira MPC simples e segura feita com Coinbase cb-mpc. Saiba por que existe, como foi feito e onde está o código."
@@ -59,10 +59,10 @@ id:
   og_locale: id_ID
   home:
     title: "kexify — dompet kripto MPC kustodi mandiri, tanpa frasa pemulihan"
-    description: "Dompet kripto gratis dengan kustodi mandiri. Kunci Anda dibagi antara perangkat dan server dengan MPC 2-of-2, jadi tanpa frasa pemulihan dan tanpa titik kegagalan tunggal."
+    description: "Dompet kripto tanpa frasa seed. MPC 2-of-2 membagi kunci antara perangkat dan server, yang menegakkan batas harian dan memblokir tanda tangan berisiko. Paket gratis."
   faq:
     title: "Tanya jawab — dompet MPC kexify"
-    description: "Jawaban seputar kexify: siapa yang memegang kunci Anda, cara kerja tanda tangan MPC 2-of-2, jika server mati, kebijakan pengeluaran, masa tunggu 24 jam, dan jaringan."
+    description: "Jawaban soal kexify: siapa pegang kunci Anda, cara tanda tangan MPC 2-of-2, jika server mati, batas harian, tunggu 24 jam, gratis dan premium, testnet, CLI."
   about:
     title: "Tentang kexify — siapa pembuatnya dan mengapa"
     description: "kexify adalah proyek pribadi gratis dari Kha Do: dompet MPC yang sederhana dan aman berbasis Coinbase cb-mpc. Baca alasan, cara pembuatan, dan lokasi kode sumbernya."
@@ -70,10 +70,10 @@ th:
   og_locale: th_TH
   home:
     title: "kexify — กระเป๋าคริปโต MPC ที่คุณดูแลเอง ไม่ต้องใช้ซีดเฟรส"
-    description: "กระเป๋าคริปโตฟรีที่คุณดูแลเอง คีย์ถูกแบ่งระหว่างอุปกรณ์ของคุณกับเซิร์ฟเวอร์ด้วย MPC 2-of-2 จึงไม่มีซีดเฟรส และไม่มีจุดล้มเหลวจุดเดียว"
+    description: "กระเป๋าคริปโตที่ไม่มีซีดแฟรส 2-of-2 MPC แบ่งคีย์ของคุณระหว่างอุปกรณ์กับเซิร์ฟเวอร์ ซึ่งบังคับใช้วงเงินรายวันของคุณและบล็อกการลงนามที่เสี่ยง มีแผนฟรี"
   faq:
     title: "คำถามที่พบบ่อย — กระเป๋า MPC kexify"
-    description: "คำตอบเกี่ยวกับ kexify: ใครถือคีย์ของคุณ การลงนาม MPC 2-of-2 ทำงานอย่างไร ถ้าเซิร์ฟเวอร์ล่มจะเป็นอย่างไร นโยบายการใช้จ่าย ระยะเวลารอ 24 ชั่วโมง และเชนที่รองรับ"
+    description: "คำตอบเกี่ยวกับ kexify: ใครถือคีย์ของคุณ การลงนามด้วย 2-of-2 MPC ทำงานอย่างไร ถ้าเซิร์ฟเวอร์ล่มทำอย่างไร วงเงินรายวัน การรอ 24 ชั่วโมง ฟรีและพรีเมียม เทสต์เน็ต และ CLI"
   about:
     title: "เกี่ยวกับ kexify — ใครทำ และทำไม"
     description: "kexify เป็นโปรเจกต์ส่วนตัวที่ใช้ฟรีของ Kha Do: กระเป๋า MPC ที่เรียบง่ายและปลอดภัย สร้างบน Coinbase cb-mpc อ่านที่มา วิธีสร้าง และที่อยู่ของซอร์สโค้ด"
@@ -81,10 +81,10 @@ ko:
   og_locale: ko_KR
   home:
     title: "kexify — 시드 문구 없는 셀프 커스터디 MPC 암호화폐 지갑"
-    description: "무료 셀프 커스터디 암호화폐 지갑입니다. 키는 2-of-2 MPC로 내 기기와 서버에 나뉘어 있어 시드 문구가 없고 단일 장애 지점도 없습니다."
+    description: "시드 문구 없는 자기 보관형 지갑. 2-of-2 MPC가 키를 기기와 서버에 나누고, 서버가 일일 한도를 지키며 위험한 서명을 막습니다. 무료 플랜 제공."
   faq:
     title: "자주 묻는 질문 — kexify MPC 지갑"
-    description: "kexify에 대한 답변: 키는 누가 보관하는지, 2-of-2 MPC 서명 방식, 서버가 멈추면 어떻게 되는지, 지출 정책, 24시간 대기 시간, 지원 체인."
+    description: "kexify 자주 묻는 질문: 키는 누가 갖는지, 2-of-2 MPC 서명 방식, 서버 중단 시, 일일 한도, 24시간 대기, 무료와 프리미엄, 테스트넷, CLI."
   about:
     title: "kexify 소개 — 누가, 왜 만드는가"
     description: "kexify는 Kha Do의 무료 개인 프로젝트로, Coinbase cb-mpc 기반의 간단하고 안전한 MPC 지갑입니다. 만든 이유와 방식, 소스 코드 위치를 확인하세요."
@@ -92,10 +92,10 @@ ja:
   og_locale: ja_JP
   home:
     title: "kexify — シードフレーズ不要のセルフカストディ MPC 暗号資産ウォレット"
-    description: "無料のセルフカストディ型暗号資産ウォレット。鍵は 2-of-2 MPC で端末とサーバーに分けて持つため、シードフレーズがなく、単一障害点もありません。"
+    description: "シードフレーズのないセルフカストディ型ウォレット。2-of-2 MPCで鍵を端末とサーバーに分け、サーバーが1日の上限を守り危険な署名を防ぎます。無料プランあり。"
   faq:
     title: "よくある質問 — kexify MPC ウォレット"
-    description: "kexify についての回答：鍵は誰が持つのか、2-of-2 MPC 署名のしくみ、サーバー停止時の扱い、支出ポリシー、24 時間のクーリング期間、対応チェーン。"
+    description: "kexifyのQ&A。鍵は誰が持つか、2-of-2 MPCの署名のしくみ、サーバー停止時、1日の上限、24時間の待機、無料とPremium、テストネット、CLI。"
   about:
     title: "kexify について — 誰が、なぜ作っているか"
     description: "kexify は Kha Do による無料の個人プロジェクトです。Coinbase cb-mpc をベースにした、シンプルで安全な MPC ウォレット。生まれた理由、作り方、ソースコードの場所を紹介します。"
@@ -103,10 +103,10 @@ hi:
   og_locale: hi_IN
   home:
     title: "kexify — बिना सीड फ़्रेज़ वाला सेल्फ़-कस्टोडियल MPC क्रिप्टो वॉलेट"
-    description: "मुफ़्त सेल्फ़-कस्टोडियल क्रिप्टो वॉलेट। आपकी कुंजी 2-of-2 MPC से आपके डिवाइस और सर्वर में बँटी रहती है, इसलिए न कोई सीड फ़्रेज़ है, न कोई एक कमज़ोर कड़ी।"
+    description: "बिना सीड फ़्रेज़ वाला सेल्फ़-कस्टोडियल क्रिप्टो वॉलेट। 2-of-2 MPC आपकी कुंजी आपके डिवाइस और सर्वर के बीच बाँटता है, और सर्वर आपकी रोज़ की सीमा लागू करता है और जोखिम भरे साइन रोकता है। फ़्री प्लान उपलब्ध।"
   faq:
     title: "सवाल-जवाब — kexify MPC वॉलेट"
-    description: "kexify के बारे में जवाब: आपकी कुंजियाँ किसके पास हैं, 2-of-2 MPC साइनिंग कैसे काम करती है, सर्वर बंद हो तो क्या होगा, खर्च की नीतियाँ, 24 घंटे की प्रतीक्षा अवधि और सपोर्टेड चेन।"
+    description: "kexify के बारे में जवाब: आपकी कुंजी किसके पास है, 2-of-2 MPC साइनिंग कैसे काम करती है, सर्वर बंद हो जाए तो क्या, रोज़ की सीमा, 24 घंटे का इंतज़ार, फ़्री और प्रीमियम, टेस्टनेट और CLI।"
   about:
     title: "kexify का परिचय — कौन बनाता है और क्यों"
     description: "kexify, Kha Do का मुफ़्त निजी प्रोजेक्ट है: Coinbase cb-mpc पर बना एक सरल और सुरक्षित MPC वॉलेट। जानें यह क्यों बना, कैसे बना और इसका सोर्स कोड कहाँ है।"
@@ -114,10 +114,10 @@ ru:
   og_locale: ru_RU
   home:
     title: "kexify — некастодиальный MPC-криптокошелёк без сид-фразы"
-    description: "Бесплатный некастодиальный криптокошелёк. Ключ разделён между вашим устройством и сервером с помощью MPC 2-of-2: нет сид-фразы и нет единой точки отказа."
+    description: "Криптокошелёк без seed-фразы. MPC 2-of-2 делит ключ между устройством и сервером, который следит за дневным лимитом и блокирует рискованные подписи. Есть бесплатный тариф."
   faq:
     title: "Вопросы и ответы — MPC-кошелёк kexify"
-    description: "Ответы о kexify: у кого хранятся ключи, как работает подпись MPC 2-of-2, что если сервер недоступен, политики расходов, 24-часовая задержка и поддерживаемые сети."
+    description: "Ответы о kexify: у кого ваши ключи, как подписывает MPC 2-of-2, что если сервер недоступен, дневные лимиты, ожидание 24 часа, бесплатно и premium, тестовые сети, CLI."
   about:
     title: "О kexify — кто делает и зачем"
     description: "kexify — бесплатный личный проект Kha Do: простой и безопасный MPC-кошелёк на базе Coinbase cb-mpc. Почему он появился, как устроен и где лежит исходный код."

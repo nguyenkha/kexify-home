@@ -26,11 +26,11 @@ permalink: /zh/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 开源吗？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">开源。基于 Coinbase 的 <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> 库构建（<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">我们的分支</a>）。前端：<a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">开源。基于 Coinbase 的 <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> 库构建（<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">我们的分支</a>）。网页版以 MIT 协议开源：<a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>。服务器和 iPhone 应用目前尚未开源。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 真的免费吗？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">是的，永久免费，无订阅，无广告。kexify 是作者为自己使用而做的。它没有商业模式，因为它不是一门生意，只是一个本该存在的工具。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">免费版永久免费，没有广告，并包含全部基础安全功能：每日限额、信任地址、无限授权拦截、风险地址检查、冻结、备份和恢复模式。我们计划推出 Premium，用于那些有运行成本的功能，例如把 iPhone 用作批准设备、带风险扫描的深度交易模拟和即时提醒，价格尚未确定。基础安全功能永远不会放到付费墙后面。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">为什么 kexify 没有兑换、质押或 DeFi 功能？</summary>
@@ -42,11 +42,15 @@ permalink: /zh/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">有任何保修或担保吗？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">没有。kexify 是个人项目，按现状提供，不附带任何担保。你需自行负责自己的密钥和资金。不过代码是开源的，一切都可以自己验证。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">没有。kexify 是个人项目，按现状提供，不附带任何担保。你需自行负责自己的密钥和资金。不过网页版的代码是开源的，你可以自己检查它是如何工作的。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 适合谁？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">适合所有想要 MPC 安全性、又不想面对复杂操作的人。由工程师为工程师打造，但设计得人人都能上手。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">两类人。一类是刚接触加密货币的人，想要一个能拦住常见错误的钱包：没有助记词，有每日限额，服务器会拒绝有风险的签名。另一类是开发者，想要 WalletConnect、测试网、自己的 RPC，以及不依赖我们服务器的退出方式。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">有 iPhone 应用吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">正在测试中，还没有上架 App Store。网页版 my.kexify.app 现在就能用，支持所有现代浏览器，包括 iPhone 上的 Safari。</p>
       </details>
     </div>
 
@@ -59,7 +63,7 @@ permalink: /zh/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">如果服务器宕机怎么办？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">使用恢复模式。事先导出服务器密钥分片，之后即可在浏览器本地用两份分片签名。前端是开源的，另有命令行工具可将两份分片合成完整密钥。无需服务器。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">使用恢复模式。事先导出服务器密钥分片（在专家模式中），之后即可在浏览器本地用两份分片签名。前端是开源的，另有命令行工具可将两份分片合成完整密钥。无需服务器。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">服务器能盗走我的资金吗？</summary>
@@ -71,11 +75,11 @@ permalink: /zh/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">什么是 GoPlus 欺诈检查？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">签名前，kexify 会自动将收款地址和代币合约与 GoPlus Security 的数据库比对，排查已知骗局、钓鱼地址和恶意合约。一旦发现风险，确认前会先向你提示警告。默认开启，无需设置。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">共同签名前，服务器会将收款方（或代币授权的被授权方）与 GoPlus Security 的诈骗、钓鱼和受制裁地址数据库比对。如果地址被标记，服务器会拒绝签名。每个钱包默认开启，无需设置。如果 GoPlus 没有及时响应，转账不会被拦截，所以请把它当作额外的一层防护，而不是保证。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 与 ZenGo 等其他 MPC 钱包有何不同？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">两者都使用 MPC，但 kexify 开源且完全自主托管：你可以随时导出两份密钥分片并离线签名。ZenGo 掌控恢复分片，并且依赖他们的服务器。kexify 还有 ZenGo 所没有的策略引擎（支出限额、地址白名单）。而且 kexify 免费，没有兑换手续费，也没有付费档位。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">两者都使用 MPC。用 kexify，你可以导出两份密钥分片，不依赖我们的服务器也能签名；共同签名方会执行你自己设定的规则（每日限额、信任地址、超限等待）；网页版是开源的。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">MPC 和策略引擎如何配合？</summary>
@@ -96,7 +100,7 @@ permalink: /zh/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">如何签署交易？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">在应用内发起，或通过 WalletConnect 连接。两份密钥分片经过多轮 MPC 交互（约 6 秒），生成有效签名。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">在应用内发起，或通过 WalletConnect 连接。两份密钥分片经过几轮 MPC 交互，通常只需几秒，即可生成有效签名。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">什么是策略引擎？</summary>
@@ -104,19 +108,19 @@ permalink: /zh/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">可以设置哪些类型的策略？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">支出限额</strong>：限制每笔交易的美元价值。<strong class="dark:text-gray-300 text-gray-700">地址白名单</strong>：只允许向预先批准的地址转账。两者都由服务器端在同意共同签名之前执行。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">每日限额</strong>：每滚动 24 小时的美元金额。<strong class="dark:text-gray-300 text-gray-700">转账对象</strong>：不限，或仅限信任的地址。<strong class="dark:text-gray-300 text-gray-700">超过限额时</strong>：拦截转账，或等待 1 小时或 24 小时后放行。以上全部由服务器在共同签名前执行。除了你的规则，无限代币授权和被标记的地址始终会被拒绝。专家模式还提供完整的自定义规则编辑器。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">为什么有 24 小时冷却期？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">为了防止攻击者修改你的策略后立刻加以利用。创建或修改策略后，需要 24 小时才会生效。如果这不是你做的修改，你有时间冻结账户。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">为了防止攻击者放宽你的规则后立刻加以利用。让规则变宽松的修改，比如提高限额，要等 24 小时。让规则更严格的修改会立即生效。如果这不是你做的修改，你有时间冻结账户。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">可以冻结我的账户吗？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">可以。通过邮件链接冻结。冻结后所有签名都会被强制拦截 24 小时。如果你怀疑账户被未经授权访问，这能为你争取保护账户的时间。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">可以，点一下 kexify 安全邮件中的冻结链接即可。冻结立即生效，并拦截所有签名。解冻需要你的通行密钥（或来自钱包的证明），之后还要再等 24 小时，所以偷走你登录凭据的人无法很快解冻。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">什么是专家模式？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">面向高级用户的一组进阶控制：UTXO 选择、手续费替换（RBF）、自定义 nonce、仅签名模式（只签名不广播）、单独广播、原始消息签名、按链自定义 RPC 端点，以及完整的密钥分片备份。默认隐藏，需要精细控制时在设置中打开即可。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">一组免费的进阶控制：测试网、UTXO 选择、Bitcoin 和 Litecoin 的手续费替换（RBF）加速、自定义 nonce 和手续费、仅签名模式并单独广播、原始消息签名、按链自定义 RPC 和区块浏览器、JSON 配置编辑器、自定义策略规则，以及完整的密钥分片备份。默认关闭，在设置中打开。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">不提供邮箱也能使用 kexify 吗？</summary>
@@ -128,24 +132,41 @@ permalink: /zh/faq/
     <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">限制</h2>
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么最多只能有 3 个账户？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify 完全运行在免费的基础设施上。每个账户都会在服务器上存储加密的密钥分片，所以每位用户最多 3 个账户，才能在不向任何人收费的前提下维持存储和计算成本。</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么我只能创建一个钱包？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">每个钱包都会在服务器上保存一份加密的密钥分片，并占用服务器时间来签名，所以免费版每个账户一个钱包。在此限制之前创建的钱包仍可继续使用。更多独立钱包计划放在 Premium 中。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么每笔交易（UTXO）最多 10 个签名？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">每个 MPC 签名都需要你的浏览器与服务器之间进行多轮计算。在 UTXO 链（Bitcoin、Litecoin 等）上，每个输入都需要单独签名。上限设为 10，能让签名时间保持合理，也避免免费档的服务器资源被压垮。对大多数交易来说，10 个输入绰绰有余。</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">为什么每笔交易（UTXO）最多 50 个输入？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">每个 MPC 签名都需要你的浏览器与服务器之间进行多轮计算。在 UTXO 链（Bitcoin、Litecoin 等）上，每个输入都需要单独签名。上限设为 50，能让签名时间保持合理，也能保护服务器。对大多数交易来说，50 个输入绰绰有余。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">为什么 RPC 连接有时很慢或不稳定？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify 默认使用免费的公共 RPC 端点，它们可能被限速、拥堵，偶尔还会宕机。想要更稳定更快，可以到设置里把默认 RPC 换成你自己的端点（来自 Alchemy、Infura、QuickNode 等），大多数都提供带 API 密钥的慷慨免费额度。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify 对大多数链默认使用免费的公共 RPC 端点，它们可能被限速、拥堵，偶尔还会宕机。想要更稳定更快，请打开专家模式，到设置里把默认 RPC 换成你自己的端点（来自 Alchemy、Infura、QuickNode 等），大多数都提供带 API 密钥的慷慨免费额度。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">邮件和签名请求有次数限制吗？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">有。魔法链接邮件、API 请求和签名操作都有频率限制，以防免费基础设施被滥用。如果触发限制，稍等片刻再试即可。这些限制对正常使用来说足够宽松，只有在出现异常活动时才会生效。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">有。魔法链接邮件、API 请求和签名操作都有频率限制，以防被滥用。如果触发限制，稍等片刻再试即可。这些限制对正常使用来说足够宽松，只有在出现异常活动时才会生效。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">为什么 kexify 使用 Cloudflare Turnstile？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile 是一种注重隐私的验证码替代方案，在后台无感运行。它保护免费基础设施免受机器人和自动化滥用，没有烦人的验证题，也不追踪你。你几乎不会注意到它。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile 是一种注重隐私的验证码替代方案，在后台无感运行。它保护服务免受机器人和自动化滥用，没有烦人的验证题，也不追踪你。你几乎不会注意到它。</p>
+      </details>
+    </div>
+
+    <!-- Developers -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">开发者</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">可以使用测试网吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">可以。打开专家模式，再在设置中打开测试网。目前支持：Ethereum Sepolia、Base Sepolia、Solana devnet 和 testnet、TRON Nile 和 Shasta、Bitcoin 和 Litecoin testnet、XRP、Stellar、TON 和 Algorand 的测试网，以及 Cardano PreProd。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">支持哪些 WalletConnect 方法？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">WalletConnect v2。EVM：<code>eth_sendTransaction</code>、<code>personal_sign</code>、<code>eth_sign</code>、<code>eth_signTypedData_v4</code>。Solana：<code>solana_signTransaction</code>、<code>solana_signAndSendTransaction</code>、<code>solana_signMessage</code>。TRON：<code>tron_signTransaction</code>、<code>tron_signMessage</code>。每个请求都和普通转账一样，要经过相同的审核和服务器检查。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">有命令行工具吗？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">有，是 <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> 仓库里的 Bun 命令行工具。它读取你的两个密钥文件。<code>recover</code> 会重建私钥（十六进制，Bitcoin 为 WIF）并打印你的地址。<code>connect</code> 用两份密钥分片在本地签署 WalletConnect 请求，不需要 kexify 服务器。</p>
       </details>
     </div>
 

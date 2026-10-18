@@ -26,11 +26,11 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexifyはオープンソースですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。Coinbaseの<a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>ライブラリ（<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">フォーク版</a>）をベースにしています。フロントエンド: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。Coinbaseの<a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>ライブラリ（<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">フォーク版</a>）をベースにしています。Webアプリは、MITライセンスのオープンソースです: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>。サーバーとiPhoneアプリは、まだオープンソースではありません。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexifyは本当に無料ですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。ずっと無料で、サブスクも広告もありません。kexifyは作者が自分のために作ったものです。ビジネスではないので、収益モデルもありません。あるべき道具として作りました。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">無料プランはずっと無料で、広告もなく、基本的な安全機能をすべて含みます。1日の上限、信頼するアドレス、無制限の承認のブロック、危険なアドレスのチェック、凍結、バックアップ、リカバリーモードです。運用にコストがかかる機能向けに、Premiumプランを計画しています。たとえば、iPhoneを承認用デバイスにする機能、リスクスキャン付きの詳細なシミュレーション、即時アラートです。価格はまだ決まっていません。基本的な安全機能が有料になることはありません。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexifyにスワップ、ステーキング、DeFi機能がないのはなぜですか？</summary>
@@ -42,11 +42,15 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">保証はありますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">いいえ。kexifyは個人プロジェクトで、現状のまま提供しており、保証はありません。鍵と資金はご自身の責任で管理してください。ただしコードはオープンソースなので、すべてご自身で確かめられます。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">いいえ。kexifyは個人プロジェクトで、現状のまま提供しており、保証はありません。鍵と資金はご自身の責任で管理してください。ただしWebアプリのコードはオープンソースなので、仕組みをご自身で確かめられます。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexifyは誰のためのものですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">複雑さなしでMPCのセキュリティを使いたい人のためのものです。エンジニアが、エンジニアのために作りましたが、誰でも使えるように設計しています。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">2種類の人のためのものです。1つは、暗号資産が初めてで、よくある失敗を防いでくれるウォレットがほしい人です。シードフレーズがなく、1日の上限があり、サーバーが危険な署名を拒否します。もう1つは、WalletConnect、テストネット、独自のRPC、そして私たちのサーバーに頼らない出口がほしい開発者です。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">iPhoneアプリはありますか？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">テスト中で、まだApp Storeにはありません。my.kexify.appのWebアプリは、iPhoneのSafariを含む最近のブラウザで、今日から使えます。</p>
       </details>
     </div>
 
@@ -59,7 +63,7 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">サーバーが停止したらどうなりますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">リカバリーモードを使います。事前にサーバーのキーシェアをエクスポートしておけば、両方のシェアを使ってブラウザ内でローカルに署名できます。フロントエンドはオープンソースで、両方のシェアを合わせて完全な鍵にするCLIツールもあります。サーバーは不要です。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">リカバリーモードを使います。事前にサーバーのキーシェアをエクスポートしておけば（エキスパートモードで）、両方のシェアを使ってブラウザ内でローカルに署名できます。フロントエンドはオープンソースで、両方のシェアを合わせて完全な鍵にするCLIツールもあります。サーバーは不要です。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">サーバーに資金を盗まれることはありますか？</summary>
@@ -71,11 +75,11 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">GoPlusの詐欺チェックとは何ですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">署名の前に、kexifyは送金先アドレスとトークンコントラクトを、GoPlus Securityのデータベースで自動的にチェックします。既知の詐欺、フィッシングアドレス、悪意のあるコントラクトが対象です。リスクが見つかった場合は、確認の前に警告が表示されます。デフォルトで有効なので、設定は不要です。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">共同署名の前に、サーバーが送金先（トークン承認の場合は承認先）を、GoPlus Securityの詐欺、フィッシング、制裁対象アドレスのデータベースと照合します。アドレスにフラグが立っていれば、サーバーは署名を拒否します。すべてのウォレットで設定なしにオンになっています。GoPlusが時間内に応答しない場合、送金はブロックされません。そのため、保証ではなく追加の安全策と考えてください。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">ZenGoなどの他のMPCウォレットとの違いは何ですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">どちらもMPCを使いますが、kexifyはオープンソースで完全なセルフカストディです。両方のキーシェアをエクスポートして、いつでもオフラインで署名できます。ZenGoはリカバリー用のシェアを自社で管理し、同社のサーバーを必要とします。kexifyには、ZenGoにはないポリシーエンジン（支出上限、アドレスのホワイトリスト）もあります。しかも無料で、スワップ手数料も有料プランもありません。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">どちらもMPCを使います。kexifyでは、両方のキーシェアをエクスポートして、私たちのサーバーなしで署名できます。共同署名者は、あなた自身が設定したルール（1日の上限、信頼するアドレス、上限を超えたときの待機）を適用します。そして、Webアプリはオープンソースです。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">MPCとポリシーエンジンはどう連携しますか？</summary>
@@ -96,7 +100,7 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">トランザクションはどう署名しますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">アプリから開始するか、WalletConnectで接続します。両方のキーシェアが複数回のMPCラウンド（約6秒）に参加し、有効な署名を作ります。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">アプリから開始するか、WalletConnectで接続します。両方のキーシェアが数回のMPCラウンドに参加し、通常は数秒で有効な署名を作ります。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">ポリシーエンジンとは何ですか？</summary>
@@ -104,19 +108,19 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">どんなポリシーを設定できますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">支出上限</strong>: 1回のトランザクションあたりのUSD額に上限を設けます。<strong class="dark:text-gray-300 text-gray-700">アドレスのホワイトリスト</strong>: 事前に承認したアドレスへの送金だけを許可します。どちらも、サーバーが共同署名に同意する前にサーバー側で適用されます。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">1日の上限</strong>: 直近24時間あたりのUSD額。<strong class="dark:text-gray-300 text-gray-700">送金先</strong>: どこでも、または信頼するアドレスだけ。<strong class="dark:text-gray-300 text-gray-700">上限を超えたとき</strong>: 送金をブロックするか、1時間または24時間待ってから通します。すべて、サーバーが共同署名する前に適用されます。あなたのルールに加えて、無制限のトークン承認とフラグが立ったアドレスは、常に拒否されます。エキスパートモードには、カスタムルールのエディターもあります。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">24時間のクーリング期間があるのはなぜですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">攻撃者がポリシーを書き換え、すぐに悪用するのを防ぐためです。ポリシーを作成または変更すると、有効になるまで24時間かかります。身に覚えのない変更だった場合は、その間にアカウントを凍結できます。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">攻撃者がルールを緩め、すぐに悪用するのを防ぐためです。上限を上げるなど、ルールを緩める変更は24時間待ちます。ルールを厳しくする変更はすぐに反映されます。身に覚えのない変更だった場合は、その間にアカウントを凍結できます。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">アカウントを凍結できますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。メールのリンクから凍結できます。凍結すると、署名はすべて24時間ブロックされます。不正アクセスが疑われるときに、アカウントを守る時間を確保できます。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。kexifyのセキュリティメールにある凍結リンクをワンクリックするだけです。すぐに有効になり、すべての署名をブロックします。凍結を解除するにはパスキー（またはウォレットからの証明）が必要で、そのうえで24時間待つので、ログイン情報を盗んだ人がすぐに解除することはできません。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">エキスパートモードとは何ですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">上級ユーザー向けの詳細設定です。UTXO選択、Replace-By-Fee（RBF）、カスタムノンス、署名のみのモード（ブロードキャストせずに署名）、別途のブロードキャスト、生メッセージへの署名、チェーンごとのカスタムRPCエンドポイント、キーシェアの完全バックアップなどがあります。デフォルトでは非表示です。細かく制御したいときに、設定でオンにしてください。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">無料の詳細設定です。テストネット、UTXO選択、BitcoinとLitecoinのReplace-By-Fee加速、カスタムノンスと手数料、署名のみのモードと別途のブロードキャスト、生メッセージへの署名、チェーンごとのカスタムRPCとエクスプローラー、JSON設定エディター、カスタムポリシールール、キーシェアの完全バックアップがあります。デフォルトではオフです。設定でオンにしてください。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">メールアドレスなしでkexifyを使えますか？</summary>
@@ -128,24 +132,41 @@ permalink: /ja/faq/
     <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">制限事項</h2>
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">アカウント数が3つまでなのはなぜですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexifyはすべて無料のインフラで動いています。アカウントごとに暗号化されたキーシェアをサーバーに保存するため、ユーザーあたり3アカウントまでに制限することで、誰にも課金せずにストレージと計算のコストを持続可能に保っています。</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">ウォレットを1つしか作れないのはなぜですか？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ウォレットごとに暗号化されたキーシェアをサーバーに保存し、署名にサーバーの処理時間も使うため、無料プランでは1アカウントにつきウォレット1つです。この制限の前に作成したウォレットは、そのまま使えます。別々のウォレットを増やす機能は、Premiumで計画しています。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">1回のトランザクション（UTXO）で署名が10個までなのはなぜですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">MPC署名は、ブラウザとサーバーの間で複数回の計算ラウンドが必要です。UTXOチェーン（Bitcoin、Litecoinなど）では、入力ごとに別々の署名が必要になります。10個までに制限することで、署名にかかる時間を現実的な範囲に抑え、無料枠のサーバーリソースが逼迫するのを防いでいます。ほとんどのトランザクションでは、入力10個で十分です。</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">1回のトランザクション（UTXO）で入力が50個までなのはなぜですか？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">MPC署名は、ブラウザとサーバーの間で複数回の計算ラウンドが必要です。UTXOチェーン（Bitcoin、Litecoinなど）では、入力ごとに別々の署名が必要になります。50個までに制限することで、署名にかかる時間を現実的な範囲に抑え、サーバーを守っています。ほとんどのトランザクションでは、入力50個で十分です。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">RPC接続が遅かったり不安定だったりするのはなぜですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexifyはデフォルトで無料の公開RPCエンドポイントを使います。これらはレート制限がかかったり、混雑したり、ときどき停止したりします。信頼性と速度を上げたい場合は、設定でデフォルトのRPCを自分のエンドポイント（Alchemy、Infura、QuickNodeなど）に置き換えてください。多くはAPIキーで使える十分な無料枠があります。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexifyはほとんどのチェーンで、デフォルトで無料の公開RPCエンドポイントを使います。これらはレート制限がかかったり、混雑したり、ときどき停止したりします。信頼性と速度を上げたい場合は、エキスパートモードをオンにして、設定でデフォルトのRPCを自分のエンドポイント（Alchemy、Infura、QuickNodeなど）に置き換えてください。多くはAPIキーで使える十分な無料枠があります。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">メールや署名リクエストに制限はありますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。ログインリンクのメール、APIリクエスト、署名操作には、無料インフラの悪用を防ぐためのレート制限があります。制限に達したら、少し待ってからもう一度お試しください。通常の利用には十分な余裕があり、普段と違う使われ方をしたときだけ制限がかかります。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。ログインリンクのメール、APIリクエスト、署名操作には、悪用を防ぐためのレート制限があります。制限に達したら、少し待ってからもう一度お試しください。通常の利用には十分な余裕があり、普段と違う使われ方をしたときだけ制限がかかります。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexifyがCloudflare Turnstileを使うのはなぜですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstileは、バックグラウンドで目に見えない形で動く、プライバシーに配慮したCAPTCHAの代替です。面倒なパズルやトラッキングなしで、無料インフラをボットや自動化された悪用から守ります。ほとんど気づくことはないはずです。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstileは、バックグラウンドで目に見えない形で動く、プライバシーに配慮したCAPTCHAの代替です。面倒なパズルやトラッキングなしで、サービスをボットや自動化された悪用から守ります。ほとんど気づくことはないはずです。</p>
+      </details>
+    </div>
+
+    <!-- Developers -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">開発者向け</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">テストネットは使えますか？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。エキスパートモードをオンにして、設定でテストネットをオンにしてください。使えるのは、Ethereum Sepolia、Base Sepolia、Solana devnetとtestnet、TRON NileとShasta、BitcoinとLitecoinのtestnet、XRP、Stellar、TON、Algorandのテストネット、Cardano PreProdです。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">どのWalletConnectメソッドに対応していますか？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">WalletConnect v2です。EVM: <code>eth_sendTransaction</code>、<code>personal_sign</code>、<code>eth_sign</code>、<code>eth_signTypedData_v4</code>。Solana: <code>solana_signTransaction</code>、<code>solana_signAndSendTransaction</code>、<code>solana_signMessage</code>。TRON: <code>tron_signTransaction</code>、<code>tron_signMessage</code>。どのリクエストも、通常の送金と同じ確認とサーバーのチェックを通ります。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">コマンドラインツールはありますか？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。<a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>リポジトリにあるBun製のCLIです。2つの鍵ファイルを読み込みます。<code>recover</code>は秘密鍵（16進数、Bitcoinの場合はWIF）を復元し、アドレスを表示します。<code>connect</code>は両方のキーシェアでWalletConnectのリクエストをローカルで署名し、kexifyのサーバーは使いません。</p>
       </details>
     </div>
 
