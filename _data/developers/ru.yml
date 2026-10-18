@@ -1,0 +1,72 @@
+# Текст страницы для разработчиков (ru). Ключи те же, что в en.yml.
+title: "kexify для разработчиков"
+intro: "Что веб-приложение my.kexify.app поддерживает сегодня и как это попробовать. Режим эксперта бесплатный и по умолчанию выключен: Настройки, Режим эксперта."
+toc: "На этой странице"
+planned: "в планах"
+
+support:
+  title: "Что работает сегодня"
+  rows:
+    - name: "WalletConnect v2"
+      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Для подключения вставьте URI или отсканируйте QR-код."
+    - name: "Читаемая проверка"
+      body: "Calldata переводов, <code>approve</code>, Permit2, permit по EIP-2612, <code>setApprovalForAll</code> и ERC-721/1155 декодируется. Известные типы EIP-712 (Permit, Permit2, DAI permit, EIP-3009) показываются по полям; неизвестные помечаются как нечитаемые."
+    - name: "Проверки на сервере"
+      body: "Каждый запрос, из приложения или через WalletConnect, разбирает соподписант. Неограниченные approve для fungible-токенов (2^128 и больше или максимальное значение) отклоняются; задайте лимит в окне проверки. Отмеченные адреса (GoPlus) отклоняются. Действуют ваш дневной лимит и список доверенных адресов."
+    - name: "Тестовые сети"
+      body: "Ethereum Sepolia, Base Sepolia, Solana devnet и testnet, TRON Nile и Shasta, testnet Bitcoin и Litecoin, testnet XRP, Stellar, TON и Algorand, Cardano PreProd. Включаются в настройках (сейчас через режим эксперта)."
+    - name: "Режим эксперта"
+      body: "Переопределение nonce, gas limit и комиссии в EVM; ставка комиссии и ручной выбор UTXO в BTC, LTC и BCH; RBF и ускорение в BTC и LTC; подпись произвольного сообщения; только подпись и отдельная страница отправки (broadcast); полный calldata в запросах WalletConnect; редактор собственных правил политики."
+    - name: "Ваш собственный RPC"
+      body: "Замените RPC и URL эксплорера любой сети из списка (с проверкой работоспособности) или отредактируйте всю конфигурацию сети как JSON и экспортируйте её. Добавление совершенно новой сети пока не поддерживается."
+    - name: "Пользовательские токены"
+      body: "Добавляйте токен по адресу контракта в сетях EVM, Solana, Stellar, TRON, Algorand и TON (Настройка отображения, Добавить свой токен)."
+    - name: "Выход без сервера"
+      body: "Режим восстановления загружает ваш файл ключа и файл ключа сервера и выполняет обе стороны MPC в браузере, без обращений к серверу kexify. Файл сервера запрашивается в режиме эксперта и разблокируется после периода ожидания для безопасности."
+    - name: "CLI"
+      body: "<code>frontend/cli.ts</code> в открытом репозитории, программа на Bun. <code>recover</code> восстанавливает приватный ключ (hex или WIF для Bitcoin) из двух файлов ключей и выводит адреса. <code>connect</code> отвечает на запросы WalletConnect локальной подписью двух сторон."
+    - name: "Открытый код"
+      body: 'Веб-приложение и CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT). MPC-библиотека: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>, форк <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT). Сервер API, MPC-сервер и приложение для iPhone пока не открыты.'
+
+mpc:
+  title: "Заметки о MPC"
+  items:
+    - "Две стороны: ваше устройство и MPC-сервер kexify. Двусторонний ECDSA на secp256k1 (EVM, семейство Bitcoin, TRON, XRP) и двусторонний EdDSA на Ed25519 (Solana, Stellar, TON, Algorand, Cardano)."
+    - "Ключи создаются распределённой генерацией ключей. Полный приватный ключ никогда не существует, пока вы сами не восстановите его из двух файлов ключей."
+    - "Подписи — обычные подписи ECDSA или Ed25519. Любая стандартная библиотека их проверяет; в сети ничто не указывает на использование MPC."
+    - "Протокол версионируется: каждый клиент указывает свой MPC-протокол (<code>mpc=2p:1</code>) в заголовке <code>X-Kexify-Client</code>, а сервер отклоняет клиентов, которых больше не может обслуживать, с HTTP 426."
+    - "В браузере cb-mpc работает как WebAssembly. Ваша доля шифруется вашим passkey (WebAuthn PRF) или парольной фразой; доля сервера шифруется отдельным ключом для каждого пользователя."
+
+quick:
+  title: "Быстрый старт"
+  items:
+    - title: "Подключить dApp"
+      steps:
+        - "Откройте my.kexify.app и создайте или разблокируйте кошелёк."
+        - "В dApp выберите WalletConnect и скопируйте URI для подключения (или покажите QR-код)."
+        - "В kexify откройте WalletConnect, вставьте URI или отсканируйте код, выберите аккаунты и подтвердите."
+        - "Каждый запрос открывает окно проверки. Проверьте его, подтвердите (passkey или парольная фраза), и устройство вместе с сервером подпишут."
+    - title: "Использовать тестовые сети"
+      steps:
+        - "В настройках включите режим эксперта, затем включите тестовые сети."
+        - "Тестовые сети появятся в кошельке. В сетях EVM ваш тестовый адрес совпадает с адресом в mainnet."
+        - "Получите тестовые монеты из faucet этой сети, затем отправьте их или подключите dApp, работающий в testnet."
+    - title: "Проверить подпись"
+      intro: "Подпишите сообщение через <code>personal_sign</code> из dApp по WalletConnect, затем проверьте его любой библиотекой. На примере viem:"
+      code: |
+        import { verifyMessage } from "viem";
+
+        const ok = await verifyMessage({
+          address: "0xYourKexifyAddress",
+          message: "hello kexify",
+          signature: "0x...", // returned by personal_sign
+        });
+        console.log(ok); // true
+      after: "Она проверяется так же, как подпись любого другого кошелька, потому что это стандартная подпись secp256k1 хеша сообщения по EIP-191."
+
+roadmap:
+  title: "В планах"
+  items:
+    - "Приложение для iPhone, затем iPhone как устройство подтверждения и офлайн-подпись через QR"
+    - "Предпросмотр изменения баланса перед подписью (бесплатно) и более глубокая симуляция со сканированием рисков (Premium)"
+    - "Тестовые сети как обычная настройка, без режима эксперта"
