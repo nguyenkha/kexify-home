@@ -12,8 +12,8 @@ en:
     title: "About kexify — who builds it and why"
     description: "kexify is a free personal project by Kha Do: a simple, safe MPC wallet built on Coinbase cb-mpc. Read why it exists, how it is built, and where the code lives."
   developers:
-    title: "kexify for developers — WalletConnect, testnets, CLI, MPC notes"
-    description: "What kexify supports for developers today: WalletConnect v2 methods, test networks, Expert mode tools, custom RPC, recovery without the server, the CLI and cb-mpc."
+    title: "kexify for developers — WalletConnect, testnets, CLI, cb-mpc"
+    description: "Build and test with kexify: connect dApps with WalletConnect, use testnets and Expert mode tools, recover without the server using the open-source CLI. Built on cb-mpc. Developer API coming soon."
 vi:
   og_locale: vi_VN
   home:
@@ -26,8 +26,8 @@ vi:
     title: "Giới thiệu kexify — ai làm và vì sao"
     description: "kexify là dự án cá nhân miễn phí của Kha Do: ví MPC đơn giản, an toàn, xây trên Coinbase cb-mpc. Đọc lý do ra đời, cách xây dựng và nơi đặt mã nguồn."
   developers:
-    title: "kexify cho nhà phát triển — WalletConnect, testnet, CLI, ghi chú về MPC"
-    description: "Những gì kexify hỗ trợ cho nhà phát triển hiện nay: các method WalletConnect v2, mạng thử nghiệm, công cụ Expert Mode, RPC tuỳ chỉnh, khôi phục không cần server, CLI và cb-mpc."
+    title: "kexify cho nhà phát triển — WalletConnect, testnet, CLI, cb-mpc"
+    description: "Xây và thử với kexify: kết nối dApp qua WalletConnect, dùng testnet và công cụ Chế độ chuyên gia, khôi phục không cần server bằng CLI mã nguồn mở. Xây trên cb-mpc. API cho nhà phát triển sắp ra mắt."
 zh-Hans:
   og_locale: zh_CN
   home:
@@ -40,8 +40,8 @@ zh-Hans:
     title: "关于 kexify — 谁在做，为什么做"
     description: "kexify 是 Kha Do 的免费个人项目：一个基于 Coinbase cb-mpc、简单安全的 MPC 钱包。了解它的由来、构建方式和源代码所在。"
   developers:
-    title: "面向开发者的 kexify — WalletConnect、测试网、CLI、MPC 说明"
-    description: "kexify 目前为开发者提供的功能：WalletConnect v2 方法、测试网络、专家模式工具、自定义 RPC、无需服务器的恢复、CLI 与 cb-mpc。"
+    title: "面向开发者的 kexify — WalletConnect、测试网、命令行、cb-mpc"
+    description: "用 kexify 构建和测试：通过 WalletConnect 连接 dApp，使用测试网和专家模式工具，用开源命令行工具在无需服务器的情况下恢复。基于 cb-mpc。开发者 API 即将推出。"
 es:
   og_locale: es_ES
   home:
@@ -54,8 +54,8 @@ es:
     title: "Acerca de kexify — quién lo hace y por qué"
     description: "kexify es un proyecto personal y gratuito de Kha Do: una billetera MPC simple y segura basada en Coinbase cb-mpc. Por qué existe, cómo se hizo y dónde está el código."
   developers:
-    title: "kexify para desarrolladores — WalletConnect, redes de prueba, CLI, notas de MPC"
-    description: "Qué admite kexify hoy para desarrolladores: métodos de WalletConnect v2, redes de prueba, herramientas del modo experto, RPC personalizado, recuperación sin el servidor, la CLI y cb-mpc."
+    title: "kexify para desarrolladores — WalletConnect, redes de prueba, CLI, cb-mpc"
+    description: "Construye y prueba con kexify: conecta dApps con WalletConnect, usa redes de prueba y el modo experto, y recupera sin el servidor con la CLI de código abierto. Basado en cb-mpc. API para desarrolladores próximamente."
 pt-BR:
   og_locale: pt_BR
   home:
@@ -68,8 +68,8 @@ pt-BR:
     title: "Sobre o kexify — quem faz e por quê"
     description: "O kexify é um projeto pessoal e gratuito de Kha Do: uma carteira MPC simples e segura feita com Coinbase cb-mpc. Saiba por que existe, como foi feito e onde está o código."
   developers:
-    title: "kexify para desenvolvedores — WalletConnect, redes de teste, CLI, notas sobre MPC"
-    description: "O que a kexify suporta hoje para desenvolvedores: métodos do WalletConnect v2, redes de teste, ferramentas do modo especialista, RPC personalizado, recuperação sem o servidor, a CLI e o cb-mpc."
+    title: "kexify para desenvolvedores — WalletConnect, redes de teste, CLI, cb-mpc"
+    description: "Construa e teste com o kexify: conecte dApps com WalletConnect, use redes de teste e o modo especialista, e recupere sem o servidor com a CLI de código aberto. Feito sobre o cb-mpc. API para desenvolvedores em breve."
 id:
   og_locale: id_ID
   home:
@@ -82,8 +82,8 @@ id:
     title: "Tentang kexify — siapa pembuatnya dan mengapa"
     description: "kexify adalah proyek pribadi gratis dari Kha Do: dompet MPC yang sederhana dan aman berbasis Coinbase cb-mpc. Baca alasan, cara pembuatan, dan lokasi kode sumbernya."
   developers:
-    title: "kexify untuk developer — WalletConnect, jaringan uji, CLI, catatan MPC"
-    description: "Apa yang didukung kexify untuk developer saat ini: metode WalletConnect v2, jaringan uji, alat Mode Ahli, RPC kustom, pemulihan tanpa server, CLI, dan cb-mpc."
+    title: "kexify untuk developer — WalletConnect, testnet, CLI, cb-mpc"
+    description: "Bangun dan uji dengan kexify: hubungkan dApp lewat WalletConnect, pakai testnet dan alat Mode Ahli, pulihkan tanpa server dengan CLI open source. Dibangun di atas cb-mpc. API Developer segera hadir."
 th:
   og_locale: th_TH
   home:
@@ -96,8 +96,8 @@ th:
     title: "เกี่ยวกับ kexify — ใครทำ และทำไม"
     description: "kexify เป็นโปรเจกต์ส่วนตัวที่ใช้ฟรีของ Kha Do: กระเป๋า MPC ที่เรียบง่ายและปลอดภัย สร้างบน Coinbase cb-mpc อ่านที่มา วิธีสร้าง และที่อยู่ของซอร์สโค้ด"
   developers:
-    title: "kexify สำหรับนักพัฒนา — WalletConnect, testnet, CLI, หมายเหตุเรื่อง MPC"
-    description: "สิ่งที่ kexify รองรับสำหรับนักพัฒนาในตอนนี้: เมธอด WalletConnect v2, เครือข่ายทดสอบ, เครื่องมือโหมดผู้เชี่ยวชาญ, RPC ที่กำหนดเอง, การกู้คืนโดยไม่พึ่งเซิร์ฟเวอร์, CLI และ cb-mpc"
+    title: "kexify สำหรับนักพัฒนา — WalletConnect, เทสต์เน็ต, CLI, cb-mpc"
+    description: "สร้างและทดสอบกับ kexify: เชื่อมต่อ dApp ด้วย WalletConnect ใช้เทสต์เน็ตและเครื่องมือโหมดผู้เชี่ยวชาญ กู้คืนโดยไม่ต้องใช้เซิร์ฟเวอร์ด้วย CLI โอเพนซอร์ส สร้างบน cb-mpc และ API สำหรับนักพัฒนาจะมาเร็ว ๆ นี้"
 ko:
   og_locale: ko_KR
   home:
@@ -110,8 +110,8 @@ ko:
     title: "kexify 소개 — 누가, 왜 만드는가"
     description: "kexify는 Kha Do의 무료 개인 프로젝트로, Coinbase cb-mpc 기반의 간단하고 안전한 MPC 지갑입니다. 만든 이유와 방식, 소스 코드 위치를 확인하세요."
   developers:
-    title: "개발자를 위한 kexify — WalletConnect, 테스트넷, CLI, MPC 참고 사항"
-    description: "kexify가 현재 개발자에게 제공하는 기능: WalletConnect v2 메서드, 테스트 네트워크, 전문가 모드 도구, 사용자 정의 RPC, 서버 없는 복구, CLI, cb-mpc."
+    title: "개발자를 위한 kexify — WalletConnect, 테스트넷, CLI, cb-mpc"
+    description: "kexify로 만들고 테스트하세요: WalletConnect로 dApp 연결, 테스트넷과 전문가 모드 도구, 오픈소스 CLI로 서버 없이 복구. cb-mpc 기반. 개발자 API는 곧 출시됩니다."
 ja:
   og_locale: ja_JP
   home:
@@ -124,8 +124,8 @@ ja:
     title: "kexify について — 誰が、なぜ作っているか"
     description: "kexify は Kha Do による無料の個人プロジェクトです。Coinbase cb-mpc をベースにした、シンプルで安全な MPC ウォレット。生まれた理由、作り方、ソースコードの場所を紹介します。"
   developers:
-    title: "開発者向け kexify — WalletConnect、テストネット、CLI、MPC の補足"
-    description: "kexify が現在開発者向けに提供している機能：WalletConnect v2 のメソッド、テストネットワーク、エキスパートモードのツール、カスタム RPC、サーバーなしのリカバリー、CLI、cb-mpc。"
+    title: "開発者向け kexify — WalletConnect、テストネット、CLI、cb-mpc"
+    description: "kexify で作って試す：WalletConnect で dApp に接続、テストネットとエキスパートモードのツール、オープンソースの CLI でサーバーなしの復旧。cb-mpc ベース。開発者 API は近日公開。"
 hi:
   og_locale: hi_IN
   home:
@@ -138,8 +138,8 @@ hi:
     title: "kexify का परिचय — कौन बनाता है और क्यों"
     description: "kexify, Kha Do का मुफ़्त निजी प्रोजेक्ट है: Coinbase cb-mpc पर बना एक सरल और सुरक्षित MPC वॉलेट। जानें यह क्यों बना, कैसे बना और इसका सोर्स कोड कहाँ है।"
   developers:
-    title: "डेवलपर्स के लिए kexify — WalletConnect, टेस्ट नेटवर्क, CLI, MPC नोट्स"
-    description: "डेवलपर्स के लिए kexify आज क्या सपोर्ट करता है: WalletConnect v2 मेथड, टेस्ट नेटवर्क, एक्सपर्ट मोड टूल, कस्टम RPC, सर्वर के बिना रिकवरी, CLI और cb-mpc।"
+    title: "डेवलपर्स के लिए kexify — WalletConnect, टेस्टनेट, CLI, cb-mpc"
+    description: "kexify के साथ बनाएँ और टेस्ट करें: WalletConnect से dApp जोड़ें, टेस्टनेट और एक्सपर्ट मोड टूल इस्तेमाल करें, ओपन-सोर्स CLI से सर्वर के बिना रिकवर करें। cb-mpc पर बना। डेवलपर API जल्द आ रहा है।"
 ru:
   og_locale: ru_RU
   home:
@@ -152,5 +152,5 @@ ru:
     title: "О kexify — кто делает и зачем"
     description: "kexify — бесплатный личный проект Kha Do: простой и безопасный MPC-кошелёк на базе Coinbase cb-mpc. Почему он появился, как устроен и где лежит исходный код."
   developers:
-    title: "kexify для разработчиков — WalletConnect, тестовые сети, CLI, заметки о MPC"
-    description: "Что kexify поддерживает для разработчиков сегодня: методы WalletConnect v2, тестовые сети, инструменты режима эксперта, свой RPC, восстановление без сервера, CLI и cb-mpc."
+    title: "kexify для разработчиков — WalletConnect, тестовые сети, CLI, cb-mpc"
+    description: "Собирайте и тестируйте с kexify: подключайте dApp через WalletConnect, используйте тестовые сети и режим эксперта, восстанавливайте доступ без сервера с открытым CLI. На базе cb-mpc. API для разработчиков скоро."

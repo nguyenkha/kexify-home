@@ -142,11 +142,16 @@
   <div class="max-w-5xl mx-auto fade-in fade-in-delay-2">
     <h2 class="{{ h2 }} mb-2">{{ t.dev.title }}</h2>
     <p class="text-sm dark:text-gray-400 text-gray-500 text-center max-w-2xl mx-auto mb-8 leading-relaxed">{{ t.dev.intro }}</p>
+    {% comment %} Same card as "Safe by default": icon, title, body. Icons follow the item order. {% endcomment %}
+    {% assign dev_icons = "link,beaker,sliders,server,terminal,code" | split: "," %}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {% for it in t.dev.items %}
-      <div class="{{ card }}">
-        <h3 class="{{ h3 }} font-mono">{{ it.title }}</h3>
-        <p class="mt-1 {{ body }}">{{ it.body }}</p>
+      <div class="{{ card }} flex gap-3">
+        {% assign dev_icon = dev_icons[forloop.index0] %}{% include dev-icon.html name=dev_icon %}
+        <div class="min-w-0">
+          <h3 class="{{ h3 }}">{{ it.title }}</h3>
+          <p class="mt-1 {{ body }}">{{ it.body }}</p>
+        </div>
       </div>
       {% endfor %}
     </div>

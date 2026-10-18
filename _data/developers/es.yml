@@ -1,80 +1,37 @@
-# Texto de la página para desarrolladores (es). Mismas claves que en.yml.
+# Developers page copy. One file per language (same keys); _includes/developers.html renders it.
+# Keep it short: one-line intro, at most 2 sentences per item. Only shipped features; planned items say so.
+# item.link: faq, cli, cbmpc, pricing (resolved in the include) or a full URL.
 title: "kexify para desarrolladores"
-intro: "Qué admite hoy la app web en my.kexify.app y cómo probarla. El modo experto es gratuito y está desactivado por defecto: Ajustes, Modo experto."
-toc: "En esta página"
-planned: "planificado"
+intro: "Lo que puedes construir y probar con kexify hoy. Casi todo está en el modo experto: gratis, desactivado por defecto, en Ajustes."
+more: "Detalles"
 
-support:
-  title: "Qué funciona hoy"
-  rows:
-    - name: "WalletConnect v2"
-      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Para vincular, pega el URI o escanea el código QR."
-    - name: "Revisión legible"
-      body: "Se decodifica el calldata de transferencias, <code>approve</code>, Permit2, permits EIP-2612, <code>setApprovalForAll</code> y ERC-721/1155. Los tipos EIP-712 conocidos (Permit, Permit2, DAI permit, EIP-3009) se muestran campo por campo; los desconocidos se marcan como ilegibles."
-    - name: "Comprobaciones del servidor"
-      body: "El cofirmante analiza cada solicitud, venga de la app o de WalletConnect. Se rechazan las aprobaciones ilimitadas de tokens fungibles (2^128 o más, o el valor máximo); define un tope en la revisión. Se rechazan las direcciones marcadas (GoPlus). Se aplican tu límite diario y tu lista de confianza."
-    - name: "Redes de prueba"
-      body: "Ethereum Sepolia, Base Sepolia, Solana devnet y testnet, TRON Nile y Shasta, testnet de Bitcoin y Litecoin, testnets de XRP, Stellar, TON y Algorand, Cardano PreProd. Actívalas en Ajustes (por ahora, con el modo experto)."
-    - name: "Modo experto"
-      body: "Nonce, gas limit y ajuste manual de comisiones en EVM; tasa de comisión y selección manual de UTXO en BTC, LTC y BCH; RBF y aceleración en BTC y LTC; firma de mensajes sin procesar; solo firmar y una página de transmisión (broadcast) aparte; calldata completo en las aprobaciones de WalletConnect; un editor de reglas de política personalizadas."
-    - name: "Tu propio RPC"
-      body: "Reemplaza el RPC y la URL del explorador de cualquier cadena de la lista (con comprobación de estado), o edita toda la configuración de red como JSON y expórtala. Añadir una red completamente nueva aún no se admite."
-    - name: "Tokens personalizados"
-      body: "Añade un token por la dirección de su contrato en cadenas EVM, Solana, Stellar, TRON, Algorand y TON (Administrar visualización, Agregar token personalizado)."
-    - name: "Salir sin el servidor"
-      body: "El modo de recuperación carga tu archivo de clave y el del servidor, y ejecuta ambas partes MPC en el navegador, sin llamadas al servidor de kexify. El archivo del servidor se solicita en el modo experto y se desbloquea tras una espera de seguridad."
-    - name: "CLI"
-      body: "<code>frontend/cli.ts</code> en el repositorio de código abierto, un programa de Bun. <code>recover</code> reconstruye la clave privada (hex, o WIF para Bitcoin) a partir de los dos archivos de clave e imprime las direcciones. <code>connect</code> responde a las solicitudes de WalletConnect con firma local de 2 partes."
-    - name: "Código abierto"
-      body: 'App web y CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT). Biblioteca MPC: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>, un fork de <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT). El servidor de la API, el servidor MPC y la app para iPhone todavía no son de código abierto.'
-
-mpc:
-  title: "Notas sobre MPC"
-  items:
-    - "Dos partes: tu dispositivo y el servidor MPC de kexify. ECDSA de 2 partes sobre secp256k1 (EVM, familia Bitcoin, TRON, XRP) y EdDSA de 2 partes sobre Ed25519 (Solana, Stellar, TON, Algorand, Cardano)."
-    - "Las claves se crean mediante generación distribuida de claves. La clave privada completa nunca existe, salvo que tú mismo la reconstruyas a partir de los dos archivos de clave."
-    - "Las firmas son firmas ECDSA o Ed25519 normales. Cualquier biblioteca estándar las verifica; nada en la cadena muestra que se usó MPC."
-    - "El protocolo tiene versiones: cada cliente indica su protocolo MPC (<code>mpc=2p:1</code>) en la cabecera <code>X-Kexify-Client</code> y el servidor rechaza con HTTP 426 a los clientes que ya no puede atender."
-    - "En el navegador, cb-mpc se ejecuta como WebAssembly. Tu fragmento se cifra con tu passkey (WebAuthn PRF) o una frase de contraseña; el fragmento del servidor se cifra con una clave por usuario."
+items:
+  - icon: link
+    title: "Conecta dApps con WalletConnect"
+    body: "Empareja una dApp pegando su URI de WalletConnect o escaneando el código QR. Funciona con cadenas EVM, Solana y TRON, y cada solicitud abre una revisión fácil de leer."
+    link: faq
+  - icon: beaker
+    title: "Redes de prueba"
+    body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile, Bitcoin testnet y más. Activa el modo experto y luego las redes de prueba en Ajustes."
+    link: faq
+  - icon: sliders
+    title: "Herramientas del modo experto"
+    body: "Nonce y comisiones a mano, selección de UTXO, aceleración RBF, firma de mensajes en bruto y firmar sin enviar con difusión aparte. También puedes usar tu propio RPC en cualquier cadena."
+    link: faq
+  - icon: terminal
+    title: "Recuperación sin el servidor, y la CLI"
+    body: "Con tu archivo de clave y el del servidor, el modo de recuperación firma en tu navegador sin ningún servidor de kexify. La CLI de código abierto puede reconstruir la clave privada o responder solicitudes de WalletConnect en local."
+    link: cli
+  - icon: code
+    title: "MPC de código abierto (cb-mpc)"
+    body: "La firma usa ECDSA y EdDSA de 2 partes de Coinbase cb-mpc, a través de nuestro fork MIT. La app web y la CLI también son MIT."
+    link: cbmpc
+  - icon: api
+    title: "API para desarrolladores (próximamente)"
+    body: "Todavía no está disponible. Previsto: una API de solo lectura gratis para tus propias billeteras, y un SDK de firma y webhooks en Premium."
+    link: pricing
+    more: "Ver planes"
 
 quick:
-  title: "Guías rápidas"
-  items:
-    - title: "Conectar una dApp"
-      steps:
-        - "Abre my.kexify.app y crea o desbloquea tu billetera."
-        - "En la dApp, elige WalletConnect y copia el URI de vinculación (o muestra el código QR)."
-        - "En kexify, abre WalletConnect, pega el URI o escanea el código, elige las cuentas y aprueba."
-        - "Cada solicitud abre una revisión. Compruébala, confirma (passkey o frase de contraseña), y el dispositivo y el servidor firman juntos."
-    - title: "Usar redes de prueba"
-      steps:
-        - "En Ajustes, activa el modo experto y luego activa las redes de prueba."
-        - "Las redes de prueba ya aparecen en tu billetera. En las cadenas EVM, tu dirección de prueba es la misma que la de mainnet."
-        - "Consigue monedas de prueba en un faucet de esa red y luego envía, o conecta una dApp que funcione en la testnet."
-    - title: "Verificar una firma"
-      intro: "Firma un mensaje con <code>personal_sign</code> desde una dApp mediante WalletConnect y luego compruébalo con cualquier biblioteca. Con viem:"
-      code: |
-        import { verifyMessage } from "viem";
-
-        const ok = await verifyMessage({
-          address: "0xYourKexifyAddress",
-          message: "hello kexify",
-          signature: "0x...", // returned by personal_sign
-        });
-        console.log(ok); // true
-      after: "Se verifica como la firma de cualquier otra billetera porque es una firma secp256k1 estándar sobre el hash del mensaje EIP-191."
-
-api:
-  title: "API para desarrolladores (próximamente)"
-  intro: "Todavía no disponible. Esto es lo que está previsto:"
-  items:
-    - "API de solo lectura para tus propias billeteras: gratis."
-    - "SDK de firma para una billetera de automatización: Premium."
-    - "Webhooks: Premium."
-
-roadmap:
-  title: "Planificado"
-  items:
-    - "App para iPhone, y después el iPhone como dispositivo de aprobación y la firma offline por QR"
-    - "Vista previa del cambio de saldo antes de firmar"
-    - "Las redes de prueba como un ajuste normal, sin modo experto"
+  title: "Inicio rápido: reconstruye tu clave con la CLI"
+  note: "Necesitas Node.js y los dos archivos de clave. No se envía nada a ningún servidor."
