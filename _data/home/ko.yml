@@ -70,7 +70,7 @@ dev:
     - title: "오픈 소스"
       body: 'MIT 웹 앱과 CLI, MPC는 <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>.'
     - title: "개발자 API"
-      body: "곧 출시: 읽기 전용 API, 서명 SDK, 웹훅."
+      body: "곧 출시: 읽기 전용 API, iPhone에서 승인하는 API 제안, 웹훅."
 
 chains:
   title: "지원하는 체인"
@@ -86,15 +86,17 @@ plans:
   free_items:
     - "일일 한도, 신뢰하는 주소, 안전 점검"
     - "복구 키트, 복구 모드, CLI"
+    - "지갑을 언제든 새 기기로 옮길 수 있습니다 (지갑당 서명 기기 1대)"
     - "WalletConnect, 전문가 모드, 테스트넷"
     - "암호화된 주소록 동기화"
   premium_title: "프리미엄"
   premium_price: "곧 출시"
   premium_items:
-    - "iPhone을 승인 기기로 사용, 에어갭 서명"
+    - "iPhone을 승인 기기로 사용"
+    - "콜드 볼트: 오프라인 iPhone에서 서명하는 두 번째 지갑"
     - "즉시 알림과 자동 수수료 인상"
     - "비트코인 프라이버시 주소, 더 많은 하위 계정"
-    - "개발자용 서명 SDK와 웹훅"
+    - "개발자용: iPhone에서 승인하는 API 제안과 웹훅"
 
 cta:
   title: "먼저 소액으로 써 보세요"

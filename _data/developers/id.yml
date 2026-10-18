@@ -28,7 +28,7 @@ items:
     link: cbmpc
   - icon: api
     title: "API Developer (segera hadir)"
-    body: "Belum tersedia. Rencananya: API baca-saja gratis untuk dompet Anda sendiri, serta SDK penandatanganan dan webhook di Premium."
+    body: "Belum tersedia. Rencananya: API baca-saja gratis untuk dompet Anda sendiri. Di Premium: proposal API yang Anda setujui di iPhone, dan webhook. Penandatanganan otomatis menyusul nanti, untuk tim."
     link: pricing
     more: "Lihat paket"
 

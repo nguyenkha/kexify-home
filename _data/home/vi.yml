@@ -71,7 +71,7 @@ dev:
     - title: "Mã nguồn mở"
       body: 'Ứng dụng web và CLI dùng giấy phép MIT, MPC từ <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>.'
     - title: "API cho nhà phát triển"
-      body: "Sắp ra mắt: API chỉ đọc, SDK ký và webhook."
+      body: "Sắp ra mắt: API chỉ đọc, đề xuất qua API mà bạn phê duyệt trên iPhone và webhook."
 
 chains:
   title: "Các chain được hỗ trợ"
@@ -87,15 +87,17 @@ plans:
   free_items:
     - "Giới hạn hằng ngày, địa chỉ tin cậy và kiểm tra an toàn"
     - "Bộ khôi phục, chế độ khôi phục và CLI"
+    - "Chuyển ví sang thiết bị mới bất cứ lúc nào (mỗi ví có một thiết bị ký)"
     - "WalletConnect, Expert mode và mạng thử nghiệm"
     - "Đồng bộ sổ địa chỉ mã hoá"
   premium_title: "Premium"
   premium_price: "Sắp ra mắt"
   premium_items:
-    - "iPhone làm thiết bị phê duyệt, ký air-gapped"
+    - "iPhone làm thiết bị phê duyệt"
+    - "Cold vault: một ví thứ hai ký trên iPhone ngoại tuyến"
     - "Cảnh báo tức thì và tự động tăng phí"
     - "Địa chỉ riêng tư cho Bitcoin, thêm tài khoản con"
-    - "SDK ký và webhook cho nhà phát triển"
+    - "Cho nhà phát triển: đề xuất qua API mà bạn phê duyệt trên iPhone, và webhook"
 
 cta:
   title: "Hãy thử với một khoản nhỏ trước"

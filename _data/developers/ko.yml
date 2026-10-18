@@ -28,7 +28,7 @@ items:
     link: cbmpc
   - icon: api
     title: "개발자 API (곧 출시)"
-    body: "아직 사용할 수 없습니다. 내 지갑용 무료 읽기 전용 API와 Premium의 서명 SDK, 웹훅을 계획하고 있습니다."
+    body: "아직 사용할 수 없습니다. 내 지갑용 무료 읽기 전용 API를 계획하고 있습니다. Premium에서는 iPhone에서 승인하는 API 제안과 웹훅을 제공할 예정입니다. 자동 서명은 나중에 팀용으로 제공됩니다."
     link: pricing
     more: "요금제 보기"
 

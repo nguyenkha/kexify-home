@@ -71,7 +71,7 @@ dev:
     - title: "Open source"
       body: 'MIT web app and CLI, MPC from <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>.'
     - title: "Developer API"
-      body: "Coming soon: read-only API, signing SDK and webhooks."
+      body: "Coming soon: read-only API, API proposals you approve on your iPhone, and webhooks."
 
 chains:
   title: "Supported chains"
@@ -87,15 +87,17 @@ plans:
   free_items:
     - "Daily limit, trusted addresses and safety checks"
     - "Recovery kit, recovery mode and the CLI"
+    - "Move your wallet to a new device any time (one signing device per wallet)"
     - "WalletConnect, Expert mode and testnets"
     - "Encrypted address book sync"
   premium_title: "Premium"
   premium_price: "Coming soon"
   premium_items:
-    - "iPhone as an approval device, air-gapped signing"
+    - "iPhone as an approval device"
+    - "A cold vault: a second wallet that signs on an offline iPhone"
     - "Instant alerts and automatic fee bump"
     - "Bitcoin privacy addresses, more sub-accounts"
-    - "Signing SDK and webhooks for developers"
+    - "For developers: API proposals you approve on your iPhone, and webhooks"
 
 cta:
   title: "Try it with a small amount first"

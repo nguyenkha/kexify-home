@@ -28,7 +28,7 @@ items:
     link: cbmpc
   - icon: api
     title: "API para desarrolladores (próximamente)"
-    body: "Todavía no está disponible. Previsto: una API de solo lectura gratis para tus propias billeteras, y un SDK de firma y webhooks en Premium."
+    body: "Todavía no está disponible. Previsto: una API de solo lectura gratis para tus propias billeteras. En Premium: propuestas por API que apruebas en tu iPhone, y webhooks. La firma automática llegará más adelante, para equipos."
     link: pricing
     more: "Ver planes"
 

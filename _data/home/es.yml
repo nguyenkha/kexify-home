@@ -71,7 +71,7 @@ dev:
     - title: "Código abierto"
       body: 'App web y CLI con licencia MIT, MPC de <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>.'
     - title: "API para desarrolladores"
-      body: "Próximamente: API de solo lectura, SDK de firma y webhooks."
+      body: "Próximamente: API de solo lectura, propuestas por API que apruebas en tu iPhone y webhooks."
 
 chains:
   title: "Cadenas compatibles"
@@ -87,15 +87,17 @@ plans:
   free_items:
     - "Límite diario, direcciones de confianza y comprobaciones de seguridad"
     - "Kit de recuperación, modo de recuperación y CLI"
+    - "Mueve tu billetera a un dispositivo nuevo cuando quieras (un dispositivo de firma por billetera)"
     - "WalletConnect, modo experto y redes de prueba"
     - "Sincronización cifrada de la libreta de direcciones"
   premium_title: "Premium"
   premium_price: "Próximamente"
   premium_items:
-    - "iPhone como dispositivo de aprobación, firma air-gapped"
+    - "iPhone como dispositivo de aprobación"
+    - "Una bóveda fría: una segunda billetera que firma en un iPhone sin conexión"
     - "Alertas instantáneas y aumento automático de comisión"
     - "Direcciones de privacidad para Bitcoin, más subcuentas"
-    - "SDK de firma y webhooks para desarrolladores"
+    - "Para desarrolladores: propuestas por API que apruebas en tu iPhone, y webhooks"
 
 cta:
   title: "Pruébalo primero con una cantidad pequeña"

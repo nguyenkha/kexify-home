@@ -28,7 +28,7 @@ items:
     link: cbmpc
   - icon: api
     title: "API para desenvolvedores (em breve)"
-    body: "Ainda não disponível. Previsto: uma API somente leitura gratuita para suas carteiras, e um SDK de assinatura e webhooks no Premium."
+    body: "Ainda não disponível. Previsto: uma API somente leitura gratuita para suas carteiras. No Premium: propostas via API que você aprova no iPhone, e webhooks. A assinatura automática vem depois, para equipes."
     link: pricing
     more: "Ver planos"
 

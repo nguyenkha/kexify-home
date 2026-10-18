@@ -71,7 +71,7 @@ dev:
     - title: "Open source"
       body: 'Aplikasi web dan CLI berlisensi MIT, MPC dari <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>.'
     - title: "API developer"
-      body: "Segera hadir: API hanya-baca, SDK penandatanganan, dan webhook."
+      body: "Segera hadir: API hanya-baca, proposal API yang Anda setujui di iPhone, dan webhook."
 
 chains:
   title: "Chain yang didukung"
@@ -87,15 +87,17 @@ plans:
   free_items:
     - "Batas harian, alamat tepercaya, dan pemeriksaan keamanan"
     - "Kit pemulihan, mode pemulihan, dan CLI"
+    - "Pindahkan dompet Anda ke perangkat baru kapan saja (satu perangkat penandatangan per dompet)"
     - "WalletConnect, Mode Ahli, dan jaringan uji"
     - "Sinkronisasi buku alamat terenkripsi"
   premium_title: "Premium"
   premium_price: "Segera hadir"
   premium_items:
-    - "iPhone sebagai perangkat persetujuan, penandatanganan air-gapped"
+    - "iPhone sebagai perangkat persetujuan"
+    - "Cold vault: dompet kedua yang menandatangani di iPhone offline"
     - "Peringatan instan dan kenaikan biaya otomatis"
     - "Alamat privasi Bitcoin, lebih banyak sub-akun"
-    - "SDK penandatanganan dan webhook untuk developer"
+    - "Untuk developer: proposal API yang Anda setujui di iPhone, dan webhook"
 
 cta:
   title: "Coba dulu dengan jumlah kecil"

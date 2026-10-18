@@ -28,7 +28,7 @@ items:
     link: cbmpc
   - icon: api
     title: "开发者 API（即将推出）"
-    body: "暂未提供。计划包括：免费的只读 API 用于你自己的钱包，以及 Premium 中的签名 SDK 和 webhook。"
+    body: "暂未提供。计划包括：免费的只读 API 用于你自己的钱包。Premium 中提供在 iPhone 上批准的 API 提案和 webhook。自动签名稍后推出，面向团队。"
     link: pricing
     more: "查看方案"
 
