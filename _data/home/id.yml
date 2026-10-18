@@ -12,6 +12,7 @@ hero:
   move_title: "kexify pindah dari kexify.co ke kexify.app"
   move_body: 'Buat dompet baru di <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Dompet di <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> tetap berfungsi di sana, tetapi tidak bisa dipindahkan otomatis (passkey terikat pada domain), jadi buat dompet baru lalu kirim dana Anda ke sana.'
   move_warning: "kexify tidak akan pernah meminta file kunci atau frasa sandi Anda lewat email, chat, atau dukungan."
+  move_close: "Tutup pemberitahuan"
 
 safety:
   title: "Aman sejak awal"
@@ -76,8 +77,9 @@ dev:
 chains:
   title: "Chain yang didukung"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "Lainnya"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Gratis dan Premium"
@@ -90,6 +92,7 @@ plans:
     - "Pindahkan dompet Anda ke perangkat baru kapan saja (satu perangkat penandatangan per dompet)"
     - "WalletConnect, Mode Ahli, dan jaringan uji"
     - "Sinkronisasi buku alamat terenkripsi"
+    - "Aplikasi iPhone (segera hadir)"
   premium_title: "Premium"
   premium_price: "Segera hadir"
   premium_items:

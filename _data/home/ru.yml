@@ -9,6 +9,7 @@ hero:
   move_title: "kexify переехал с kexify.co на kexify.app"
   move_body: 'Новые кошельки создавайте на <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Кошельки на <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> продолжают работать там, но автоматически перенести их нельзя (passkey привязаны к домену), поэтому создайте новый кошелёк и переведите туда средства.'
   move_warning: "kexify никогда не попросит ваш файл ключа или парольную фразу по почте, в чате или через поддержку."
+  move_close: "Закрыть уведомление"
 
 safety:
   title: "Безопасно по умолчанию"
@@ -73,8 +74,9 @@ dev:
 chains:
   title: "Поддерживаемые сети"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "Ещё"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Бесплатно и Premium"
@@ -87,6 +89,7 @@ plans:
     - "Переносите кошелёк на новое устройство в любое время (одно устройство подписи на кошелёк)"
     - "WalletConnect, режим эксперта и тестовые сети"
     - "Синхронизация зашифрованной адресной книги"
+    - "Приложение для iPhone (скоро)"
   premium_title: "Premium"
   premium_price: "Скоро"
   premium_items:

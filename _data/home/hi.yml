@@ -9,6 +9,7 @@ hero:
   move_title: "kexify kexify.co से kexify.app पर आ गया है"
   move_body: 'नए वॉलेट <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a> पर बनाएँ। <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> के वॉलेट वहाँ चलते रहेंगे, लेकिन अपने आप यहाँ नहीं आ सकते (पासकी डोमेन से जुड़ी होती हैं), इसलिए नया वॉलेट बनाएँ और अपना फ़ंड वहाँ भेज दें।'
   move_warning: "kexify आपकी कुंजी फ़ाइल या पासफ़्रेज़ कभी ईमेल, चैट या सपोर्ट पर नहीं माँगेगा।"
+  move_close: "सूचना बंद करें"
 
 safety:
   title: "शुरू से सुरक्षित"
@@ -73,8 +74,9 @@ dev:
 chains:
   title: "सपोर्टेड चेन"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "अन्य"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "फ़्री और प्रीमियम"
@@ -87,6 +89,7 @@ plans:
     - "अपना वॉलेट कभी भी नए डिवाइस पर ले जाएँ (हर वॉलेट के लिए एक साइनिंग डिवाइस)"
     - "WalletConnect, एक्सपर्ट मोड और टेस्टनेट"
     - "एन्क्रिप्टेड एड्रेस बुक सिंक"
+    - "iPhone ऐप (जल्द आ रहा है)"
   premium_title: "प्रीमियम"
   premium_price: "जल्द आ रहा है"
   premium_items:

@@ -12,6 +12,7 @@ hero:
   move_title: "kexify se ha mudado de kexify.co a kexify.app"
   move_body: 'Crea las billeteras nuevas en <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Las billeteras de <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> siguen funcionando allí, pero no se pueden mover de forma automática (las llaves de acceso están ligadas al dominio), así que crea una billetera nueva y envía tus fondos.'
   move_warning: "kexify nunca te pedirá tu archivo de clave ni tu frase de contraseña por correo, chat o soporte."
+  move_close: "Cerrar aviso"
 
 safety:
   title: "Seguro por defecto"
@@ -76,8 +77,9 @@ dev:
 chains:
   title: "Cadenas compatibles"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "Más"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Gratis y Premium"
@@ -90,6 +92,7 @@ plans:
     - "Mueve tu billetera a un dispositivo nuevo cuando quieras (un dispositivo de firma por billetera)"
     - "WalletConnect, modo experto y redes de prueba"
     - "Sincronización cifrada de la libreta de direcciones"
+    - "App para iPhone (próximamente)"
   premium_title: "Premium"
   premium_price: "Próximamente"
   premium_items:

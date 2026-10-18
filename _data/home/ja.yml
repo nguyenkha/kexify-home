@@ -11,6 +11,7 @@ hero:
   move_title: "kexifyはkexify.coからkexify.appに移りました"
   move_body: '新しいウォレットは <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a> で作成します。<a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> のウォレットはそちらでそのまま使えますが、自動での移行はできません（パスキーはドメインに結び付いているためです）。新しいウォレットを作り、資金を送ってください。'
   move_warning: "kexifyが、メール、チャット、サポートで鍵ファイルやパスフレーズをお尋ねすることはありません。"
+  move_close: "お知らせを閉じる"
 
 safety:
   title: "最初から安全"
@@ -75,8 +76,9 @@ dev:
 chains:
   title: "対応チェーン"
   evm_sub: "Ethereum、Base、Arbitrum、Polygon..."
+  btc_sub: "Bitcoin Cash、Litecoin、Dogecoin"
   more: "その他"
-  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH、DOGE"
+  more_sub: "TON、Algorand、Cardano、Stellar"
 
 plans:
   title: "無料とPremium"
@@ -89,6 +91,7 @@ plans:
     - "ウォレットはいつでも新しいデバイスに移せます（1ウォレットにつき署名デバイスは1台）"
     - "WalletConnect、エキスパートモード、テストネット"
     - "暗号化されたアドレス帳の同期"
+    - "iPhoneアプリ（近日公開）"
   premium_title: "Premium"
   premium_price: "近日公開"
   premium_items:

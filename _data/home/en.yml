@@ -12,6 +12,7 @@ hero:
   move_title: "kexify has moved from kexify.co to kexify.app"
   move_body: 'Create new wallets at <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Wallets at <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> keep working there but cannot move over automatically (passkeys are tied to the domain), so create a new wallet and send your funds across.'
   move_warning: "kexify will never ask for your key file or passphrase by email, chat or support."
+  move_close: "Dismiss notice"
 
 safety:
   title: "Safe by default"
@@ -76,8 +77,9 @@ dev:
 chains:
   title: "Supported chains"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "More"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Free and Premium"
@@ -90,6 +92,7 @@ plans:
     - "Move your wallet to a new device any time (one signing device per wallet)"
     - "WalletConnect, Expert mode and testnets"
     - "Encrypted address book sync"
+    - "iPhone app (coming soon)"
   premium_title: "Premium"
   premium_price: "Coming soon"
   premium_items:

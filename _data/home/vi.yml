@@ -12,6 +12,7 @@ hero:
   move_title: "kexify đã chuyển từ kexify.co sang kexify.app"
   move_body: 'Hãy tạo ví mới tại <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Ví tại <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> vẫn hoạt động ở đó nhưng không thể chuyển sang tự động (passkey gắn với tên miền), nên hãy tạo ví mới rồi gửi tiền sang.'
   move_warning: "kexify sẽ không bao giờ hỏi file khoá hay passphrase của bạn qua email, chat hay hỗ trợ."
+  move_close: "Đóng thông báo"
 
 safety:
   title: "An toàn ngay từ đầu"
@@ -76,8 +77,9 @@ dev:
 chains:
   title: "Các chain được hỗ trợ"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  btc_sub: "Bitcoin Cash, Litecoin, Dogecoin"
   more: "Khác"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
+  more_sub: "TON, Algorand, Cardano, Stellar"
 
 plans:
   title: "Miễn phí và Premium"
@@ -90,6 +92,7 @@ plans:
     - "Chuyển ví sang thiết bị mới bất cứ lúc nào (mỗi ví có một thiết bị ký)"
     - "WalletConnect, Expert mode và mạng thử nghiệm"
     - "Đồng bộ sổ địa chỉ mã hoá"
+    - "Ứng dụng iPhone (sắp ra mắt)"
   premium_title: "Premium"
   premium_price: "Sắp ra mắt"
   premium_items:
