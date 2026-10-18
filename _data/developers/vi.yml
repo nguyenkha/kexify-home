@@ -1,80 +1,37 @@
-# Nội dung trang dành cho nhà phát triển (tiếng Việt). Cùng key với en.yml.
+# Developers page copy. One file per language (same keys); _includes/developers.html renders it.
+# Keep it short: one-line intro, at most 2 sentences per item. Only shipped features; planned items say so.
+# item.link: faq, cli, cbmpc, pricing (resolved in the include) or a full URL.
 title: "kexify cho nhà phát triển"
-intro: "Những gì ứng dụng web tại my.kexify.app hỗ trợ hiện nay và cách thử. Chế độ chuyên gia miễn phí và mặc định tắt: Cài đặt, Chế độ chuyên gia."
-toc: "Trong trang này"
-planned: "dự kiến"
+intro: "Những gì bạn có thể xây và thử với kexify ngay hôm nay. Phần lớn công cụ nằm trong Chế độ chuyên gia: miễn phí, mặc định tắt, bật trong Cài đặt."
+more: "Chi tiết"
 
-support:
-  title: "Hiện đã hoạt động"
-  rows:
-    - name: "WalletConnect v2"
-      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Ghép nối bằng cách dán URI hoặc quét mã QR."
-    - name: "Màn hình xem lại dễ đọc"
-      body: "Calldata của chuyển khoản, <code>approve</code>, Permit2, EIP-2612 permit, <code>setApprovalForAll</code> và ERC-721/1155 được giải mã. Các kiểu EIP-712 đã biết (Permit, Permit2, DAI permit, EIP-3009) được hiển thị từng trường; kiểu chưa biết được đánh dấu là không đọc được."
-    - name: "Kiểm tra phía server"
-      body: "Mọi yêu cầu, từ ứng dụng hay từ WalletConnect, đều được bên đồng ký phân tích. Quyền approve token fungible không giới hạn (từ 2^128 trở lên, hoặc giá trị tối đa) bị từ chối; hãy đặt mức trần ngay trong màn hình xem lại. Địa chỉ bị gắn cờ (GoPlus) bị từ chối. Hạn mức theo ngày và danh sách tin cậy của bạn vẫn được áp dụng."
-    - name: "Mạng thử nghiệm"
-      body: "Ethereum Sepolia, Base Sepolia, Solana devnet và testnet, TRON Nile và Shasta, testnet của Bitcoin và Litecoin, testnet của XRP, Stellar, TON và Algorand, Cardano PreProd. Bật trong Cài đặt (hiện cần Chế độ chuyên gia)."
-    - name: "Chế độ chuyên gia"
-      body: "Ghi đè nonce, gas limit và phí trên EVM; fee rate và chọn UTXO thủ công trên BTC, LTC và BCH; RBF và tăng tốc giao dịch trên BTC và LTC; ký thông điệp thô; chỉ ký và một trang broadcast riêng; hiển thị đầy đủ calldata trong phê duyệt WalletConnect; trình soạn quy tắc chính sách tuỳ chỉnh."
-    - name: "RPC của riêng bạn"
-      body: "Thay RPC và URL explorer của bất kỳ chain nào trong danh sách (có kiểm tra tình trạng), hoặc chỉnh toàn bộ cấu hình mạng dưới dạng JSON và xuất ra. Chưa hỗ trợ thêm một mạng hoàn toàn mới."
-    - name: "Token tuỳ chỉnh"
-      body: "Thêm token theo địa chỉ contract trên các chain EVM, Solana, Stellar, TRON, Algorand và TON (Quản lý hiển thị, Thêm token tùy chỉnh)."
-    - name: "Rời đi mà không cần server"
-      body: "Chế độ khôi phục nạp file khoá của bạn và file khoá của server rồi chạy cả hai bên MPC ngay trong trình duyệt, không gọi tới server kexify. File của server được yêu cầu trong Chế độ chuyên gia và mở khoá sau một khoảng chờ an toàn."
-    - name: "CLI"
-      body: "<code>frontend/cli.ts</code> trong repo mã nguồn mở, một chương trình Bun. <code>recover</code> dựng lại khoá riêng tư (hex, hoặc WIF cho Bitcoin) từ hai file khoá và in ra các địa chỉ. <code>connect</code> trả lời các yêu cầu WalletConnect bằng ký 2 bên cục bộ."
-    - name: "Mã nguồn mở"
-      body: 'Ứng dụng web và CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT). Thư viện MPC: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>, bản fork của <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT). API server, MPC server và ứng dụng iPhone chưa phải mã nguồn mở.'
-
-mpc:
-  title: "Ghi chú về MPC"
-  items:
-    - "Hai bên: thiết bị của bạn và MPC server của kexify. ECDSA 2 bên trên secp256k1 (EVM, họ Bitcoin, TRON, XRP) và EdDSA 2 bên trên Ed25519 (Solana, Stellar, TON, Algorand, Cardano)."
-    - "Khoá được tạo bằng distributed key generation. Khoá riêng tư đầy đủ không bao giờ tồn tại, trừ khi chính bạn dựng lại từ hai file khoá."
-    - "Chữ ký là chữ ký ECDSA hoặc Ed25519 thông thường. Thư viện chuẩn nào cũng xác minh được; không có gì trên chain cho thấy MPC đã được dùng."
-    - "Giao thức có đánh phiên bản: mỗi client nêu giao thức MPC của mình (<code>mpc=2p:1</code>) trong header <code>X-Kexify-Client</code>, và server từ chối với HTTP 426 những client mà nó không còn phục vụ được."
-    - "Trong trình duyệt, cb-mpc chạy dưới dạng WebAssembly. Phần khoá của bạn được mã hoá bằng passkey (WebAuthn PRF) hoặc passphrase; phần khoá của server được mã hoá bằng khoá riêng cho từng người dùng."
+items:
+  - icon: link
+    title: "Kết nối dApp qua WalletConnect"
+    body: "Ghép nối dApp bằng cách dán URI WalletConnect hoặc quét mã QR. Hỗ trợ các chain EVM, Solana và TRON, và mỗi yêu cầu đều mở màn hình xem lại dễ đọc."
+    link: faq
+  - icon: beaker
+    title: "Testnet"
+    body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile, Bitcoin testnet và nhiều mạng khác. Bật Chế độ chuyên gia, rồi bật mạng thử nghiệm trong Cài đặt."
+    link: faq
+  - icon: sliders
+    title: "Công cụ Chế độ chuyên gia"
+    body: "Tự đặt nonce và phí, chọn UTXO, tăng tốc RBF, ký thông điệp thô và chỉ ký rồi broadcast riêng. Bạn cũng có thể trỏ bất kỳ chain nào sang RPC của riêng mình."
+    link: faq
+  - icon: terminal
+    title: "Khôi phục không cần server, và CLI"
+    body: "Có file khoá của bạn và file khoá của server, chế độ khôi phục ký ngay trong trình duyệt mà không cần server kexify. CLI mã nguồn mở có thể dựng lại khoá riêng tư hoặc trả lời yêu cầu WalletConnect ngay trên máy."
+    link: cli
+  - icon: code
+    title: "MPC mã nguồn mở (cb-mpc)"
+    body: "Việc ký dùng ECDSA và EdDSA 2 bên từ Coinbase cb-mpc, qua bản fork MIT của chúng tôi. Ứng dụng web và CLI cũng là MIT."
+    link: cbmpc
+  - icon: api
+    title: "API cho nhà phát triển (sắp ra mắt)"
+    body: "Chưa có. Dự kiến: API chỉ đọc miễn phí cho ví của bạn, cùng SDK ký và webhook trong gói Premium."
+    link: pricing
+    more: "Xem các gói"
 
 quick:
-  title: "Bắt đầu nhanh"
-  items:
-    - title: "Kết nối một dApp"
-      steps:
-        - "Mở my.kexify.app rồi tạo hoặc mở khoá ví."
-        - "Trong dApp, chọn WalletConnect và sao chép URI ghép nối (hoặc hiện mã QR)."
-        - "Trong kexify, mở WalletConnect, dán URI hoặc quét mã, chọn tài khoản rồi phê duyệt."
-        - "Mỗi yêu cầu mở ra một màn hình xem lại. Kiểm tra, xác nhận (passkey hoặc passphrase), rồi thiết bị và server cùng ký."
-    - title: "Dùng mạng thử nghiệm"
-      steps:
-        - "Vào Cài đặt, bật Chế độ chuyên gia, rồi bật mạng thử nghiệm."
-        - "Các mạng thử nghiệm sẽ hiện trong ví. Trên các chain EVM, địa chỉ testnet của bạn trùng với địa chỉ mainnet."
-        - "Lấy coin thử nghiệm từ faucet của mạng đó, rồi gửi, hoặc kết nối một dApp chạy trên testnet."
-    - title: "Xác minh chữ ký"
-      intro: "Ký một thông điệp bằng <code>personal_sign</code> từ dApp qua WalletConnect, rồi kiểm tra bằng bất kỳ thư viện nào. Với viem:"
-      code: |
-        import { verifyMessage } from "viem";
-
-        const ok = await verifyMessage({
-          address: "0xYourKexifyAddress",
-          message: "hello kexify",
-          signature: "0x...", // returned by personal_sign
-        });
-        console.log(ok); // true
-      after: "Chữ ký này được xác minh giống như chữ ký của mọi ví khác, vì đó là chữ ký secp256k1 chuẩn trên hash thông điệp EIP-191."
-
-api:
-  title: "API cho nhà phát triển (sắp ra mắt)"
-  intro: "Chưa có. Những gì đang dự kiến:"
-  items:
-    - "API chỉ đọc cho ví của chính bạn: miễn phí."
-    - "SDK ký cho một ví tự động hoá: Premium."
-    - "Webhook: Premium."
-
-roadmap:
-  title: "Dự kiến"
-  items:
-    - "Ứng dụng iPhone, sau đó là iPhone làm thiết bị phê duyệt và ký offline qua QR"
-    - "Xem trước thay đổi số dư trước khi ký"
-    - "Mạng thử nghiệm thành một cài đặt thông thường, không cần Chế độ chuyên gia"
+  title: "Bắt đầu nhanh: dựng lại khoá bằng CLI"
+  note: "Cần Node.js và cả hai file khoá. Không gửi gì lên server nào."

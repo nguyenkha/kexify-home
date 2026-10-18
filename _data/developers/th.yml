@@ -1,80 +1,37 @@
-# ข้อความหน้านักพัฒนา (ภาษาไทย) คีย์เหมือน en.yml
+# Developers page copy. One file per language (same keys); _includes/developers.html renders it.
+# Keep it short: one-line intro, at most 2 sentences per item. Only shipped features; planned items say so.
+# item.link: faq, cli, cbmpc, pricing (resolved in the include) or a full URL.
 title: "kexify สำหรับนักพัฒนา"
-intro: "สิ่งที่เว็บแอปที่ my.kexify.app รองรับในตอนนี้ และวิธีลองใช้ โหมดผู้เชี่ยวชาญใช้ได้ฟรีและปิดไว้เป็นค่าเริ่มต้น: การตั้งค่า, โหมดผู้เชี่ยวชาญ"
-toc: "ในหน้านี้"
-planned: "วางแผนไว้"
+intro: "สิ่งที่คุณสร้างและทดสอบกับ kexify ได้วันนี้ เครื่องมือส่วนใหญ่อยู่ในโหมดผู้เชี่ยวชาญ ใช้ฟรี ปิดไว้เป็นค่าเริ่มต้น เปิดได้ในการตั้งค่า"
+more: "รายละเอียด"
 
-support:
-  title: "สิ่งที่ใช้งานได้ตอนนี้"
-  rows:
-    - name: "WalletConnect v2"
-      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code> · Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code> · TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code> จับคู่ได้โดยวาง URI หรือสแกน QR code"
-    - name: "หน้าตรวจสอบที่อ่านง่าย"
-      body: "ถอดรหัส calldata ของการโอน, <code>approve</code>, Permit2, EIP-2612 permit, <code>setApprovalForAll</code> และ ERC-721/1155 ให้อ่านได้ ชนิด EIP-712 ที่รู้จัก (Permit, Permit2, DAI permit, EIP-3009) จะแสดงทีละฟิลด์ ส่วนชนิดที่ไม่รู้จักจะถูกระบุว่าอ่านไม่ได้"
-    - name: "การตรวจสอบฝั่งเซิร์ฟเวอร์"
-      body: "ทุกคำขอ ไม่ว่ามาจากแอปหรือ WalletConnect จะถูกฝั่งผู้ร่วมลงนามแยกวิเคราะห์ การอนุมัติโทเคน fungible แบบไม่จำกัด (2^128 ขึ้นไป หรือค่าสูงสุด) จะถูกปฏิเสธ ให้ตั้งเพดานในหน้าตรวจสอบ ที่อยู่ที่ถูกติดธง (GoPlus) จะถูกปฏิเสธ วงเงินรายวันและรายชื่อที่เชื่อถือของคุณยังมีผลตามปกติ"
-    - name: "เครือข่ายทดสอบ"
-      body: "Ethereum Sepolia, Base Sepolia, Solana devnet และ testnet, TRON Nile และ Shasta, testnet ของ Bitcoin และ Litecoin, testnet ของ XRP, Stellar, TON และ Algorand, Cardano PreProd เปิดได้ในการตั้งค่า (ตอนนี้ต้องใช้โหมดผู้เชี่ยวชาญ)"
-    - name: "โหมดผู้เชี่ยวชาญ"
-      body: "กำหนด nonce, gas limit และค่าธรรมเนียมเองบน EVM; กำหนด fee rate และเลือก UTXO เองบน BTC, LTC และ BCH; RBF และเร่งธุรกรรมบน BTC และ LTC; ลงนามข้อความดิบ; ลงนามอย่างเดียวและหน้า broadcast แยกต่างหาก; แสดง calldata เต็มในการอนุมัติของ WalletConnect; ตัวแก้ไขกฎนโยบายแบบกำหนดเอง"
-    - name: "RPC ของคุณเอง"
-      body: "เปลี่ยน RPC และ URL ของ explorer ของเชนใดก็ได้ในรายการ (มีการตรวจสถานะให้) หรือแก้ไขค่าเครือข่ายทั้งหมดเป็น JSON แล้วส่งออกได้ ยังไม่รองรับการเพิ่มเครือข่ายใหม่ทั้งหมด"
-    - name: "โทเคนที่กำหนดเอง"
-      body: "เพิ่มโทเคนด้วยที่อยู่ contract บนเชน EVM, Solana, Stellar, TRON, Algorand และ TON (จัดการการแสดงผล, เพิ่มโทเคนกำหนดเอง)"
-    - name: "ย้ายออกได้โดยไม่พึ่งเซิร์ฟเวอร์"
-      body: "โหมดกู้คืนจะโหลดไฟล์กุญแจของคุณและไฟล์กุญแจของเซิร์ฟเวอร์ แล้วรันทั้งสองฝ่ายของ MPC ในเบราว์เซอร์ โดยไม่เรียกเซิร์ฟเวอร์ kexify เลย ไฟล์ของเซิร์ฟเวอร์ต้องขอในโหมดผู้เชี่ยวชาญ และจะปลดล็อกหลังช่วงรอเพื่อความปลอดภัย"
-    - name: "CLI"
-      body: "<code>frontend/cli.ts</code> ในรีโพโอเพนซอร์ส เป็นโปรแกรม Bun คำสั่ง <code>recover</code> สร้างคีย์ส่วนตัวขึ้นใหม่ (hex หรือ WIF สำหรับ Bitcoin) จากไฟล์กุญแจสองไฟล์และพิมพ์ที่อยู่ออกมา คำสั่ง <code>connect</code> ตอบคำขอ WalletConnect ด้วยการลงนามสองฝ่ายในเครื่อง"
-    - name: "โอเพนซอร์ส"
-      body: 'เว็บแอปและ CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT) ไลบรารี MPC: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a> ซึ่งเป็น fork ของ <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT) เซิร์ฟเวอร์ API, เซิร์ฟเวอร์ MPC และแอป iPhone ยังไม่เป็นโอเพนซอร์ส'
-
-mpc:
-  title: "หมายเหตุเรื่อง MPC"
-  items:
-    - "มีสองฝ่าย: อุปกรณ์ของคุณและเซิร์ฟเวอร์ MPC ของ kexify ใช้ ECDSA สองฝ่ายบน secp256k1 (EVM, ตระกูล Bitcoin, TRON, XRP) และ EdDSA สองฝ่ายบน Ed25519 (Solana, Stellar, TON, Algorand, Cardano)"
-    - "กุญแจสร้างจากการสร้างกุญแจแบบกระจาย (distributed key generation) คีย์ส่วนตัวฉบับเต็มจะไม่มีอยู่จริง นอกจากคุณจะสร้างขึ้นใหม่เองจากไฟล์กุญแจทั้งสองไฟล์"
-    - "ลายเซ็นเป็น ECDSA หรือ Ed25519 ธรรมดา ไลบรารีมาตรฐานทุกตัวตรวจสอบได้ และบนเชนไม่มีอะไรบอกว่าใช้ MPC"
-    - "โปรโตคอลมีเวอร์ชัน: ไคลเอนต์ทุกตัวระบุโปรโตคอล MPC ของตน (<code>mpc=2p:1</code>) ในเฮดเดอร์ <code>X-Kexify-Client</code> และเซิร์ฟเวอร์จะปฏิเสธไคลเอนต์ที่ไม่สามารถให้บริการได้อีกต่อไปด้วย HTTP 426"
-    - "ในเบราว์เซอร์ cb-mpc ทำงานเป็น WebAssembly · ส่วนแบ่งคีย์ของคุณถูกเข้ารหัสด้วย passkey (WebAuthn PRF) หรือ passphrase ส่วนของเซิร์ฟเวอร์ถูกเข้ารหัสด้วยกุญแจเฉพาะผู้ใช้แต่ละคน"
+items:
+  - icon: link
+    title: "เชื่อมต่อ dApp ด้วย WalletConnect"
+    body: "จับคู่ dApp โดยวาง URI ของ WalletConnect หรือสแกน QR code ใช้ได้กับเชน EVM, Solana และ TRON และทุกคำขอจะเปิดหน้าตรวจสอบที่อ่านเข้าใจง่าย"
+    link: faq
+  - icon: beaker
+    title: "เทสต์เน็ต"
+    body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile, Bitcoin testnet และอื่น ๆ เปิดโหมดผู้เชี่ยวชาญ แล้วเปิดเครือข่ายทดสอบในการตั้งค่า"
+    link: faq
+  - icon: sliders
+    title: "เครื่องมือในโหมดผู้เชี่ยวชาญ"
+    body: "กำหนด nonce และค่าธรรมเนียมเอง เลือก UTXO เร่งธุรกรรมด้วย RBF ลงนามข้อความดิบ และลงนามอย่างเดียวแล้วส่งแยก คุณยังตั้ง RPC ของตัวเองให้เชนใดก็ได้"
+    link: faq
+  - icon: terminal
+    title: "กู้คืนโดยไม่ต้องใช้เซิร์ฟเวอร์ และ CLI"
+    body: "เมื่อมีไฟล์คีย์ของคุณและไฟล์คีย์ของเซิร์ฟเวอร์ โหมดกู้คืนจะลงนามในเบราว์เซอร์โดยไม่ต้องใช้เซิร์ฟเวอร์ kexify เลย CLI โอเพนซอร์สสร้างคีย์ส่วนตัวขึ้นใหม่ หรือตอบคำขอ WalletConnect บนเครื่องของคุณได้"
+    link: cli
+  - icon: code
+    title: "MPC โอเพนซอร์ส (cb-mpc)"
+    body: "การลงนามใช้ ECDSA และ EdDSA แบบ 2 ฝ่ายจาก Coinbase cb-mpc ผ่าน fork ของเราที่เป็น MIT เว็บแอปและ CLI ก็เป็น MIT เช่นกัน"
+    link: cbmpc
+  - icon: api
+    title: "API สำหรับนักพัฒนา (เร็ว ๆ นี้)"
+    body: "ยังไม่เปิดให้ใช้ ที่วางแผนไว้คือ API แบบอ่านอย่างเดียวฟรีสำหรับวอลเล็ตของคุณ และ SDK สำหรับลงนามกับ webhook ในแพ็กเกจ Premium"
+    link: pricing
+    more: "ดูแพ็กเกจ"
 
 quick:
-  title: "เริ่มต้นอย่างรวดเร็ว"
-  items:
-    - title: "เชื่อมต่อ dApp"
-      steps:
-        - "เปิด my.kexify.app แล้วสร้างหรือปลดล็อกกระเป๋าของคุณ"
-        - "ใน dApp เลือก WalletConnect แล้วคัดลอก URI สำหรับจับคู่ (หรือแสดง QR code)"
-        - "ใน kexify เปิด WalletConnect วาง URI หรือสแกนโค้ด เลือกบัญชี แล้วอนุมัติ"
-        - "ทุกคำขอจะเปิดหน้าตรวจสอบ ตรวจดู ยืนยัน (passkey หรือ passphrase) แล้วอุปกรณ์กับเซิร์ฟเวอร์จะลงนามร่วมกัน"
-    - title: "ใช้เครือข่ายทดสอบ"
-      steps:
-        - "ไปที่การตั้งค่า เปิดโหมดผู้เชี่ยวชาญ แล้วเปิดเครือข่ายทดสอบ"
-        - "เครือข่ายทดสอบจะแสดงในกระเป๋าของคุณ บนเชน EVM ที่อยู่สำหรับทดสอบเป็นที่อยู่เดียวกับ mainnet"
-        - "รับเหรียญทดสอบจาก faucet ของเครือข่ายนั้น แล้วส่ง หรือเชื่อมต่อ dApp ที่ทำงานบน testnet"
-    - title: "ตรวจสอบลายเซ็น"
-      intro: "ลงนามข้อความด้วย <code>personal_sign</code> จาก dApp ผ่าน WalletConnect แล้วตรวจสอบด้วยไลบรารีใดก็ได้ ตัวอย่างด้วย viem:"
-      code: |
-        import { verifyMessage } from "viem";
-
-        const ok = await verifyMessage({
-          address: "0xYourKexifyAddress",
-          message: "hello kexify",
-          signature: "0x...", // returned by personal_sign
-        });
-        console.log(ok); // true
-      after: "ตรวจสอบได้เหมือนลายเซ็นของกระเป๋าอื่นทุกประการ เพราะเป็นลายเซ็น secp256k1 มาตรฐานบนแฮชข้อความ EIP-191"
-
-api:
-  title: "API สำหรับนักพัฒนา (เร็ว ๆ นี้)"
-  intro: "ยังไม่เปิดให้ใช้ สิ่งที่วางแผนไว้:"
-  items:
-    - "API แบบอ่านอย่างเดียวสำหรับกระเป๋าของคุณเอง: ฟรี"
-    - "SDK สำหรับลงนามของกระเป๋าอัตโนมัติหนึ่งใบ: Premium"
-    - "Webhook: Premium"
-
-roadmap:
-  title: "วางแผนไว้"
-  items:
-    - "แอป iPhone จากนั้นใช้ iPhone เป็นอุปกรณ์อนุมัติ และลงนามผ่าน QR แบบออฟไลน์"
-    - "ดูตัวอย่างยอดคงเหลือที่เปลี่ยนก่อนลงนาม"
-    - "เครือข่ายทดสอบเป็นการตั้งค่าปกติ โดยไม่ต้องใช้โหมดผู้เชี่ยวชาญ"
+  title: "เริ่มต้นเร็ว: สร้างคีย์ขึ้นใหม่ด้วย CLI"
+  note: "ต้องมี Node.js และไฟล์คีย์ทั้งสองไฟล์ ไม่มีข้อมูลใดถูกส่งไปยังเซิร์ฟเวอร์"
