@@ -1,0 +1,73 @@
+# Developers page copy. One file per language (same keys); _includes/developers.html renders it.
+# Only shipped features; planned items say so. Values may hold inline HTML and <code>.
+title: "kexify for developers"
+intro: "What the web app at my.kexify.app supports today, and how to try it. Expert mode is free and off by default: Settings, Expert mode."
+toc: "On this page"
+planned: "planned"
+
+support:
+  title: "What works today"
+  rows:
+    - name: "WalletConnect v2"
+      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Pair by pasting the URI or scanning the QR code."
+    - name: "Readable review"
+      body: "Calldata for transfers, <code>approve</code>, Permit2, EIP-2612 permits, <code>setApprovalForAll</code> and ERC-721/1155 is decoded. Known EIP-712 types (Permit, Permit2, DAI permit, EIP-3009) are shown field by field; unknown ones are marked as unreadable."
+    - name: "Server checks"
+      body: "Every request, from the app or WalletConnect, is parsed by the co-signer. Unlimited fungible approvals (2^128 or more, or the max value) are refused; set a cap in the review. Flagged addresses (GoPlus) are refused. Your daily limit and trusted list apply."
+    - name: "Test networks"
+      body: "Ethereum Sepolia, Base Sepolia, Solana devnet and testnet, TRON Nile and Shasta, Bitcoin and Litecoin testnet, XRP, Stellar, TON and Algorand testnets, Cardano PreProd. Turn them on in Settings (Expert mode today)."
+    - name: "Expert mode"
+      body: "Nonce, gas limit and fee overrides on EVM; fee rate and manual UTXO selection on BTC, LTC and BCH; RBF and speed-up on BTC and LTC; raw message signing; sign-only and a separate broadcast page; full calldata in WalletConnect approvals; a custom policy rule editor."
+    - name: "Your own RPC"
+      body: "Replace the RPC and explorer URL of any listed chain (health check included), or edit the whole network config as JSON and export it. Adding a brand-new network is not supported yet."
+    - name: "Custom tokens"
+      body: "Add a token by contract address on EVM chains, Solana, Stellar, TRON, Algorand and TON (Manage display, Add custom token)."
+    - name: "Leave without the server"
+      body: "Recovery mode loads your key file and the server's key file and runs both MPC parties in the browser, with no kexify server calls. The server's file is requested in Expert mode and unlocks after a safety wait."
+    - name: "CLI"
+      body: "<code>frontend/cli.ts</code> in the open-source repo, a Bun program. <code>recover</code> rebuilds the private key (hex, or WIF for Bitcoin) from the two key files and prints addresses. <code>connect</code> answers WalletConnect requests with local 2-party signing."
+    - name: "Open source"
+      body: 'Web app and CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT). MPC library: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>, a fork of <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT). The API server, the MPC server and the iPhone app are not open source yet.'
+
+mpc:
+  title: "MPC notes"
+  items:
+    - "Two parties: your device and the kexify MPC server. 2-party ECDSA on secp256k1 (EVM, Bitcoin family, TRON, XRP) and 2-party EdDSA on Ed25519 (Solana, Stellar, TON, Algorand, Cardano)."
+    - "Keys are created by distributed key generation. The full private key never exists unless you rebuild it yourself from both key files."
+    - "Signatures are ordinary ECDSA or Ed25519 signatures. Any standard library verifies them; nothing on chain shows that MPC was used."
+    - "The protocol is versioned: every client names its MPC protocol (<code>mpc=2p:1</code>) in the <code>X-Kexify-Client</code> header and the server refuses clients it can no longer serve with HTTP 426."
+    - "In the browser, cb-mpc runs as WebAssembly. Your share is encrypted with your passkey (WebAuthn PRF) or a passphrase; the server share is encrypted with a per-user key."
+
+quick:
+  title: "Quick starts"
+  items:
+    - title: "Connect a dApp"
+      steps:
+        - "Open my.kexify.app and create or unlock your wallet."
+        - "In the dApp, choose WalletConnect and copy the pairing URI (or show the QR code)."
+        - "In kexify, open WalletConnect, paste the URI or scan the code, pick the accounts and approve."
+        - "Each request opens a review. Check it, confirm (passkey or passphrase), and the device and the server sign together."
+    - title: "Use test networks"
+      steps:
+        - "Settings, turn on Expert mode, then turn on test networks."
+        - "Test networks now show in your wallet. On EVM chains your test address is the same as your mainnet address."
+        - "Get test coins from a faucet for that network, then send, or connect a dApp that runs on the testnet."
+    - title: "Verify a signature"
+      intro: "Sign a message with <code>personal_sign</code> from a dApp over WalletConnect, then check it with any library. With viem:"
+      code: |
+        import { verifyMessage } from "viem";
+
+        const ok = await verifyMessage({
+          address: "0xYourKexifyAddress",
+          message: "hello kexify",
+          signature: "0x...", // returned by personal_sign
+        });
+        console.log(ok); // true
+      after: "It verifies like any other wallet's signature because it is a standard secp256k1 signature over the EIP-191 message hash."
+
+roadmap:
+  title: "Planned"
+  items:
+    - "iPhone app, then iPhone as an approval device and offline QR signing"
+    - "Balance-change preview before you sign (free), and a deeper simulation with a risk scan (Premium)"
+    - "Test networks as a plain setting, without Expert mode"

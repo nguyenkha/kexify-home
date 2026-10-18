@@ -11,6 +11,9 @@ en:
   about:
     title: "About kexify — who builds it and why"
     description: "kexify is a free personal project by Kha Do: a simple, safe MPC wallet built on Coinbase cb-mpc. Read why it exists, how it is built, and where the code lives."
+  developers:
+    title: "kexify for developers — WalletConnect, testnets, CLI, MPC notes"
+    description: "What kexify supports for developers today: WalletConnect v2 methods, test networks, Expert mode tools, custom RPC, recovery without the server, the CLI and cb-mpc."
 vi:
   og_locale: vi_VN
   home:

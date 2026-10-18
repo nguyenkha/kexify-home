@@ -8,6 +8,7 @@
 {% assign home_path = prefix | append: '/' %}
 {% assign faq_path = prefix | append: '/faq/' %}
 {% assign about_path = prefix | append: '/about/' %}
+{% assign dev_path = prefix | append: '/developers/' %}
 
 <nav class="border-b border-border-primary">
   <div class="max-w-5xl mx-auto px-4 md:px-8">
@@ -26,6 +27,7 @@
           {{ L.home }}
         </a>
         <a href="{{ faq_path | relative_url }}" class="text-sm transition-colors {% if page_slug == '/faq/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">{{ L.faq }}</a>
+        <a href="{{ dev_path | relative_url }}" class="text-sm transition-colors {% if page_slug == '/developers/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">{{ L.developers }}</a>
         <a href="{{ about_path | relative_url }}" class="text-sm transition-colors {% if page_slug == '/about/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
           {{ L.about }}
         </a>
@@ -82,6 +84,7 @@
         {{ L.home }}
       </a>
       <a href="{{ faq_path | relative_url }}" class="block text-sm py-2 {% if page_slug == '/faq/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">{{ L.faq }}</a>
+      <a href="{{ dev_path | relative_url }}" class="block text-sm py-2 {% if page_slug == '/developers/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">{{ L.developers }}</a>
       <a href="{{ about_path | relative_url }}" class="block text-sm py-2 {% if page_slug == '/about/' %}text-white font-medium{% else %}text-gray-400 hover:text-white{% endif %}">
         {{ L.about }}
       </a>

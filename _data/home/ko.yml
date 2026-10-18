@@ -60,6 +60,7 @@ exit:
 dev:
   title: "개발자용"
   intro: "전문가 모드는 무료이고 기본으로 꺼져 있습니다. 세부 설정이 필요할 때 설정에서 켜세요."
+  more: "개발자 가이드 보기"
   items:
     - title: "WalletConnect v2"
       body: "Ethereum과 EVM L2 (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana, TRON을 지원합니다."

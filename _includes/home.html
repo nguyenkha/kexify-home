@@ -150,6 +150,8 @@
       </div>
       {% endfor %}
     </div>
+    {% assign dev_prefix = site.data.languages | where: "code", hl | map: "prefix" | first %}
+    <p class="mt-6 text-center"><a href="{{ dev_prefix | append: '/developers/' | relative_url }}" class="text-sm text-blue-400 hover:text-blue-300">{{ t.dev.more }} →</a></p>
   </div>
 </section>
 

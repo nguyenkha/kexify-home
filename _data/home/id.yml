@@ -60,6 +60,7 @@ exit:
 dev:
   title: "Untuk developer"
   intro: "Mode Ahli gratis dan nonaktif secara default. Aktifkan di Pengaturan saat Anda ingin kontrol lebih."
+  more: "Baca panduan developer"
   items:
     - title: "WalletConnect v2"
       body: "Ethereum dan L2 EVM (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana, dan TRON."

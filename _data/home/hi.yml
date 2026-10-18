@@ -60,6 +60,7 @@ exit:
 dev:
   title: "डेवलपर के लिए"
   intro: "एक्सपर्ट मोड मुफ़्त है और डिफ़ॉल्ट रूप से बंद रहता है। ज़्यादा कंट्रोल चाहिए तो सेटिंग में चालू करें।"
+  more: "डेवलपर गाइड पढ़ें"
   items:
     - title: "WalletConnect v2"
       body: "Ethereum और EVM L2 (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana और TRON।"

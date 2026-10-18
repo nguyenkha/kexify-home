@@ -62,6 +62,7 @@ exit:
 dev:
   title: "For developers"
   intro: "Expert mode is free and off by default. Turn it on in Settings when you want the knobs."
+  more: "Read the developer guide"
   items:
     - title: "WalletConnect v2"
       body: "Ethereum and EVM L2s (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana and TRON."

@@ -60,6 +60,7 @@ exit:
 dev:
   title: "Para desarrolladores"
   intro: "El modo experto es gratuito y viene desactivado. Actívalo en Ajustes cuando quieras los controles avanzados."
+  more: "Leer la guía para desarrolladores"
   items:
     - title: "WalletConnect v2"
       body: "Ethereum y L2 EVM (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana y TRON."

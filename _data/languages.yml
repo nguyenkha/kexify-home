@@ -5,6 +5,7 @@
   prefix: ""
   home: Home
   faq: FAQ
+  developers: Developers
   about: About
   open_app: Open App
   language: Language
@@ -13,6 +14,7 @@
   prefix: /vi
   home: Trang chủ
   faq: FAQ
+  developers: Nhà phát triển
   about: Giới thiệu
   open_app: Mở ứng dụng
   language: Ngôn ngữ
@@ -21,6 +23,7 @@
   prefix: /zh
   home: 首页
   faq: 常见问题
+  developers: 开发者
   about: 关于
   open_app: 打开应用
   language: 语言
@@ -29,6 +32,7 @@
   prefix: /es
   home: Inicio
   faq: FAQ
+  developers: Desarrolladores
   about: Acerca de
   open_app: Abrir app
   language: Idioma
@@ -37,6 +41,7 @@
   prefix: /pt-BR
   home: Início
   faq: FAQ
+  developers: Desenvolvedores
   about: Sobre
   open_app: Abrir app
   language: Idioma
@@ -45,6 +50,7 @@
   prefix: /id
   home: Beranda
   faq: FAQ
+  developers: Developer
   about: Tentang
   open_app: Buka aplikasi
   language: Bahasa
@@ -53,6 +59,7 @@
   prefix: /th
   home: หน้าแรก
   faq: คำถามที่พบบ่อย
+  developers: นักพัฒนา
   about: เกี่ยวกับ
   open_app: เปิดแอป
   language: ภาษา
@@ -61,6 +68,7 @@
   prefix: /ko
   home: 홈
   faq: FAQ
+  developers: 개발자
   about: 소개
   open_app: 앱 열기
   language: 언어
@@ -69,6 +77,7 @@
   prefix: /ja
   home: ホーム
   faq: FAQ
+  developers: 開発者
   about: 概要
   open_app: アプリを開く
   language: 言語
@@ -77,6 +86,7 @@
   prefix: /hi
   home: होम
   faq: सवाल-जवाब
+  developers: डेवलपर
   about: परिचय
   open_app: ऐप खोलें
   language: भाषा
@@ -85,6 +95,7 @@
   prefix: /ru
   home: Главная
   faq: Вопросы
+  developers: Разработчикам
   about: О проекте
   open_app: Открыть приложение
   language: Язык

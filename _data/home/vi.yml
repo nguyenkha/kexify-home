@@ -60,6 +60,7 @@ exit:
 dev:
   title: "Dành cho nhà phát triển"
   intro: "Expert mode miễn phí và tắt mặc định. Bật trong Cài đặt khi bạn cần các tuỳ chỉnh nâng cao."
+  more: "Đọc hướng dẫn cho nhà phát triển"
   items:
     - title: "WalletConnect v2"
       body: "Ethereum và các EVM L2 (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana và TRON."
