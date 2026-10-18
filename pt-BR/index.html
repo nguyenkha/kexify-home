@@ -8,6 +8,7 @@ permalink: /pt-BR/
 <!-- Hero -->
 <section class="px-4 md:px-8 pt-16 pb-12 md:pt-24 md:pb-16">
   <div class="max-w-5xl mx-auto text-center fade-in">
+    {% assign h1_lang = page.lang | default: "en" %}<h1 class="sr-only">{{ site.data.seo[h1_lang].home.title }}</h1>
     <!-- K lettermark icon with parallax -->
     <div class="mx-auto mb-6 w-20 h-20 md:w-24 md:h-24 parallax-logo" id="hero-logo">
       <svg viewBox="0 0 512 512" fill="none" class="w-full h-full">
