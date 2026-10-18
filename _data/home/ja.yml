@@ -91,7 +91,7 @@ plans:
   premium_title: "Premium"
   premium_price: "近日公開"
   premium_items:
-    - "iPhoneを承認用デバイスに、オフラインのQR署名"
+    - "iPhoneを承認用デバイスに、エアギャップ署名"
     - "即時アラートと手数料の自動引き上げ"
     - "Bitcoinのプライバシー用アドレス、より多くのサブアカウント"
     - "開発者向けの署名SDKとWebhook"

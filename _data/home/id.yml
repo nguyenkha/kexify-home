@@ -92,7 +92,7 @@ plans:
   premium_title: "Premium"
   premium_price: "Segera hadir"
   premium_items:
-    - "iPhone sebagai perangkat persetujuan, penandatanganan QR offline"
+    - "iPhone sebagai perangkat persetujuan, penandatanganan air-gapped"
     - "Peringatan instan dan kenaikan biaya otomatis"
     - "Alamat privasi Bitcoin, lebih banyak sub-akun"
     - "SDK penandatanganan dan webhook untuk developer"

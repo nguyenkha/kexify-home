@@ -9,6 +9,8 @@
   about: About
   open_app: Open App
   language: Language
+  credit: "MPC signing built on %s, the open-source threshold cryptography library by Coinbase. Thank you, Coinbase."
+  hosted: "Hosted on GitHub Pages with"
 - code: vi
   name: Tiếng Việt
   prefix: /vi
@@ -18,6 +20,8 @@
   about: Giới thiệu
   open_app: Mở ứng dụng
   language: Ngôn ngữ
+  credit: "Ký MPC xây dựng trên %s, thư viện mật mã ngưỡng mã nguồn mở của Coinbase. Cảm ơn Coinbase."
+  hosted: "Lưu trữ trên GitHub Pages với"
 - code: zh-Hans
   name: 简体中文
   prefix: /zh
@@ -27,6 +31,8 @@
   about: 关于
   open_app: 打开应用
   language: 语言
+  credit: "MPC 签名基于 %s 构建，这是 Coinbase 开源的门限密码学库。感谢 Coinbase。"
+  hosted: "托管于 GitHub Pages，用"
 - code: es
   name: Español
   prefix: /es
@@ -36,6 +42,8 @@
   about: Acerca de
   open_app: Abrir app
   language: Idioma
+  credit: "La firma MPC se basa en %s, la biblioteca de criptografía de umbral de código abierto de Coinbase. Gracias, Coinbase."
+  hosted: "Alojado en GitHub Pages con"
 - code: pt-BR
   name: Português (Brasil)
   prefix: /pt-BR
@@ -45,6 +53,8 @@
   about: Sobre
   open_app: Abrir app
   language: Idioma
+  credit: "A assinatura MPC é construída sobre o %s, a biblioteca de criptografia de limiar de código aberto da Coinbase. Obrigado, Coinbase."
+  hosted: "Hospedado no GitHub Pages com"
 - code: id
   name: Bahasa Indonesia
   prefix: /id
@@ -54,6 +64,8 @@
   about: Tentang
   open_app: Buka aplikasi
   language: Bahasa
+  credit: "Penandatanganan MPC dibangun di atas %s, pustaka kriptografi ambang sumber terbuka dari Coinbase. Terima kasih, Coinbase."
+  hosted: "Di-host di GitHub Pages dengan"
 - code: th
   name: ไทย
   prefix: /th
@@ -63,6 +75,8 @@
   about: เกี่ยวกับ
   open_app: เปิดแอป
   language: ภาษา
+  credit: "การลงนาม MPC สร้างบน %s ไลบรารีการเข้ารหัสแบบเกณฑ์โอเพนซอร์สของ Coinbase ขอบคุณ Coinbase"
+  hosted: "โฮสต์บน GitHub Pages ด้วย"
 - code: ko
   name: 한국어
   prefix: /ko
@@ -72,6 +86,8 @@
   about: 소개
   open_app: 앱 열기
   language: 언어
+  credit: "MPC 서명은 Coinbase의 오픈소스 임계값 암호 라이브러리인 %s 위에 구축되었습니다. Coinbase에 감사드립니다."
+  hosted: "GitHub Pages에서 호스팅,"
 - code: ja
   name: 日本語
   prefix: /ja
@@ -81,6 +97,8 @@
   about: 概要
   open_app: アプリを開く
   language: 言語
+  credit: "MPC署名は、Coinbaseのオープンソースしきい値暗号ライブラリ %s の上に構築されています。Coinbaseに感謝します。"
+  hosted: "GitHub Pagesでホスト"
 - code: hi
   name: हिन्दी
   prefix: /hi
@@ -90,6 +108,8 @@
   about: परिचय
   open_app: ऐप खोलें
   language: भाषा
+  credit: "MPC साइनिंग %s पर बनी है, जो Coinbase की ओपन-सोर्स थ्रेशोल्ड क्रिप्टोग्राफ़ी लाइब्रेरी है। धन्यवाद, Coinbase।"
+  hosted: "GitHub Pages पर होस्ट किया गया"
 - code: ru
   name: Русский
   prefix: /ru
@@ -99,3 +119,5 @@
   about: О проекте
   open_app: Открыть приложение
   language: Язык
+  credit: "MPC-подпись построена на %s — открытой библиотеке пороговой криптографии от Coinbase. Спасибо, Coinbase."
+  hosted: "Размещено на GitHub Pages с"

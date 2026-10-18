@@ -92,7 +92,7 @@ plans:
   premium_title: "Premium"
   premium_price: "即将推出"
   premium_items:
-    - "把 iPhone 用作批准设备，离线二维码签名"
+    - "把 iPhone 用作批准设备，气隙签名"
     - "即时提醒和自动提高手续费"
     - "比特币隐私地址，更多子账户"
     - "面向开发者的签名 SDK 和 webhook"
