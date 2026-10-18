@@ -1,50 +1,51 @@
 # Home page copy. One file per language (same keys); _includes/home.html renders it.
+# Keep it short: each section is a headline, one sentence, then cards with one line each.
 # Values may hold inline HTML (links, <code>). Every claim must be true in the shipped web app;
-# anything not built is labelled "planned".
+# anything not built is labelled "coming soon".
 hero:
   tagline: "A crypto wallet with a safety net."
-  sub: "No seed phrase. Your key is split between your device and the kexify server, and the server checks your own rules before it co-signs."
+  sub: "No seed phrase. Your key is split between your device and the kexify server, which checks your rules before it co-signs."
   stats: ["20+ networks", "2-of-2 MPC", "0 seed phrases"]
   cta_app: "Open the web app"
   cta_dev: "For developers"
   ios_note: "Free to use. iPhone app in testing; the web app works today."
   move_title: "kexify has moved from kexify.co to kexify.app"
-  move_body: 'New wallets are created at <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Already have a wallet at <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>? It keeps working there, but it cannot be moved over automatically: passkeys are tied to the domain they were created on. To move, create a new wallet at my.kexify.app and send your funds across. Sign in at app.kexify.co for the details.'
+  move_body: 'Create new wallets at <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Wallets at <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> keep working there but cannot move over automatically (passkeys are tied to the domain), so create a new wallet and send your funds across.'
   move_warning: "kexify will never ask for your key file or passphrase by email, chat or support."
 
 safety:
   title: "Safe by default"
-  intro: "Built for people who are new to crypto. The usual beginner mistakes are blocked or slowed down, and the server enforces your rules, so a stolen laptop or a bad link cannot skip them."
+  intro: "The server enforces your rules, so a stolen laptop or a bad link cannot skip them."
   items:
     - icon: key
       title: "No seed phrase to lose"
-      body: "Two key shares, one on your device and one on the server. Neither can sign alone. A backup kit with a passphrase check keeps your share safe."
+      body: "One key share on your device, one on the server; neither signs alone."
     - icon: limit
       title: "A daily limit you control"
-      body: "Set a daily USD limit and allow sends to trusted addresses only. Above the limit, the send is blocked or waits 1 or 24 hours."
+      body: "Above your USD limit, a send is blocked or waits 1 or 24 hours."
     - icon: clock
       title: "Rule changes wait 24 hours"
-      body: "Tighter rules apply at once. Looser rules wait 24 hours, so someone who gets in cannot just turn them off. Freeze your wallet in one click."
+      body: "Tighter rules apply at once; looser ones wait, and you can freeze in one click."
     - icon: shield
       title: "Unlimited approvals blocked"
-      body: "dApps often ask to spend all of a token forever. kexify refuses to co-sign that; you set a cap instead."
-    - icon: alert
-      title: "Risky address check"
-      body: "Before signing, the recipient is checked against GoPlus Security's list of scam and phishing addresses. A new recipient gets a warning too."
+      body: "kexify will not co-sign an unlimited token approval; you set a cap."
     - icon: eye
       title: "See what you sign"
-      body: "Transfers, token approvals, permits and typed data are shown in plain words, with the full address and the amount, before you confirm."
+      body: "Plain-language review, plus a check against known scam addresses."
+    - icon: exit
+      title: "Leave anytime"
+      body: "With both key files you can sign in your browser or the CLI, no server needed."
 
 how:
   title: "How it works"
+  intro: "Your device and the server each hold a key share and sign together; the full key never exists."
   steps:
     - title: "Create"
-      body: "Two independent key shares are created together. No single private key ever exists."
+      body: "Two key shares are made together. No single private key exists."
     - title: "Store"
-      body: "One share stays on your device, one on the server. Both are encrypted."
+      body: "One share on your device, one on the server, both encrypted."
     - title: "Sign"
-      body: "Your device and the server sign together. The server checks your rules first and cannot sign alone."
-  mpc_title: "MPC signing"
+      body: "The server checks your rules, then both sides sign together."
   browser: "Your device"
   server: "Server"
   share_a: "Key share A"
@@ -53,29 +54,24 @@ how:
   tip_b: "Encrypted on the server (AES-256-GCM + HKDF)"
   channel: "encrypted messages, not keys"
   signature: "Signature"
-  never: 'The full key <span class="text-blue-400">never exists</span>: not on your device, not on the server, not in transit.'
-
-exit:
-  title: "Leave anytime, no server needed"
-  body: "Keep your own key file, and in Expert mode request the server's key file too (it unlocks after a safety wait). With both files, recovery mode signs in your browser with no kexify server at all. The open-source CLI can do the same, or turn the two files back into a normal private key."
 
 dev:
   title: "For developers"
-  intro: "Expert mode is free and off by default. Turn it on in Settings when you want the knobs."
+  intro: "Expert mode is free and off by default; turn it on in Settings."
   more: "Read the developer guide"
   items:
     - title: "WalletConnect v2"
-      body: "Ethereum and EVM L2s (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana and TRON."
+      body: "Connect dApps on EVM chains, Solana and TRON."
     - title: "Testnets"
-      body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile and Shasta, Bitcoin testnet, Cardano PreProd and more, one toggle in Expert mode."
+      body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile and more."
     - title: "Expert mode"
-      body: "Nonce and fee overrides, UTXO selection, RBF speed-up for BTC and LTC, raw message signing, sign-only with separate broadcast."
-    - title: "Your own RPC"
-      body: "Swap the RPC and explorer of any chain for your Alchemy, Infura or QuickNode endpoint, with a live health check. Edit the whole config as JSON."
-    - title: "CLI and recovery"
-      body: "A Bun CLI rebuilds keys from the two key files (<code>recover</code>) or signs WalletConnect requests locally (<code>connect</code>)."
+      body: "Nonce and fee overrides, UTXO selection, your own RPC."
+    - title: "Recovery and CLI"
+      body: "Rebuild keys or sign locally from the two key files."
     - title: "Open source"
-      body: 'The web app is MIT on <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a>. MPC runs on <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a> through <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">our fork</a>.'
+      body: 'MIT web app and CLI, MPC from <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a>.'
+    - title: "Developer API"
+      body: "Coming soon: read-only API, signing SDK and webhooks."
 
 chains:
   title: "Supported chains"
@@ -85,44 +81,24 @@ chains:
 
 plans:
   title: "Free and Premium"
+  intro: "Basic safety is free and will never move behind a paywall."
   free_title: "Free"
   free_price: "$0, forever"
   free_items:
-    - "Wallet with a simple policy: daily limit, trusted addresses, wait above the limit"
-    - "Safety checks: unlimited-approval block and risky address check"
-    - "Manual speed-up where available (Bitcoin, Litecoin)"
+    - "Daily limit, trusted addresses and safety checks"
     - "Recovery kit, recovery mode and the CLI"
-    - "End-to-end encrypted address book sync"
-    - "WalletConnect"
-    - "Expert mode tools and test networks"
-  free_soon_title: "Coming soon on Free"
-  free_soon: "iPhone app, balance-change preview before you sign, read-only API"
+    - "WalletConnect, Expert mode and testnets"
+    - "Encrypted address book sync"
   premium_title: "Premium"
   premium_price: "Coming soon"
-  premium_note: "Not built yet. Basic safety will never move behind a paywall."
   premium_items:
-    - "iPhone as an approval device"
-    - "Offline QR signing"
-    - "Instant alerts for incoming funds"
-    - "Automatic fee bump for stuck transactions"
-    - "Fresh receive and change addresses for Bitcoin and Litecoin (privacy)"
-    - "More sub-accounts"
-    - "Priority support"
-    - "For developers: a signing SDK for one automation wallet, and webhooks"
-  soon: "coming soon"
-
-why:
-  title: "Why kexify"
-  items:
-    - title: "vs. seed-phrase wallets"
-      body: "One secret on one device. If it leaks, everything is gone. With kexify, a leaked device share alone cannot move funds."
-    - title: "vs. custodial apps"
-      body: "Not your keys, not your crypto. With kexify you can take both key files and sign without us."
-    - title: "vs. other MPC wallets"
-      body: "Your rules are enforced by the co-signer, and your exit does not depend on our server."
+    - "iPhone as an approval device, offline QR signing"
+    - "Instant alerts and automatic fee bump"
+    - "Bitcoin privacy addresses, more sub-accounts"
+    - "Signing SDK and webhooks for developers"
 
 cta:
   title: "Try it with a small amount first"
-  body: "kexify is a personal project by one engineer, provided as is. Start small, read the FAQ, and grow from there."
+  body: "kexify is a personal project by one engineer, provided as is."
   app: "Open the web app"
   github: "View on GitHub"

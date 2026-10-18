@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "プランを見る"
 
+guides:
+  title: "ショートガイド"
+  items:
+    - slug: remix
+      title: "kexify で Remix からデプロイ"
+    - slug: foundry
+      title: "kexify で Foundry と Hardhat を使う"
+    - slug: safe
+      title: "kexify を Safe のオーナーにする"
+
 quick:
   title: "クイックスタート：CLI で鍵を復元"
   note: "Node.js と 2 つの鍵ファイルが必要です。どのサーバーにもデータは送信されません。"

@@ -1,0 +1,35 @@
+# Short developer guides at /developers/<guide>/. One file per language (same keys); _includes/guide.html renders it.
+back: "Nhà phát triển"
+
+remix:
+  title: "Deploy từ Remix với kexify"
+  intro: "Remix kết nối với kexify qua WalletConnect, nên bạn có thể deploy và gọi hợp đồng mà không cần tiện ích trình duyệt."
+  steps:
+    - 'Mở <a href="https://remix.ethereum.org">Remix</a>, viết hoặc mở hợp đồng của bạn rồi biên dịch.'
+    - "Trong Deploy &amp; run transactions, đặt Environment thành WalletConnect và sao chép URI ghép nối (hoặc hiện mã QR)."
+    - "Trong kexify, mở WalletConnect, dán URI hoặc quét mã, rồi chấp thuận tài khoản EVM của bạn."
+    - "Chọn mạng trong Remix (bắt đầu với Sepolia), rồi bấm Deploy hoặc gọi một hàm."
+    - "kexify mở màn hình xem lại. Xác nhận bằng passkey hoặc passphrase; thiết bị của bạn và server cùng ký, và Remix hiện biên nhận."
+  note: "Mạng thử nghiệm chỉ hiện trong ví khi bạn đã bật Chế độ chuyên gia và mạng thử nghiệm trong Cài đặt. Hạn mức theo ngày áp dụng cho mọi giá trị bạn gửi."
+
+foundry:
+  title: "Foundry và Hardhat với kexify"
+  intro: "Foundry và Hardhat không có trình ký WalletConnect, nên hãy build và test trên máy, rồi deploy qua Remix với thư mục dự án của bạn."
+  steps:
+    - "Build và test như bình thường: <code>forge build</code> và <code>forge test</code> (hoặc <code>npx hardhat compile</code> và <code>npx hardhat test</code>)."
+    - "Chia sẻ thư mục dự án với Remix: <code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "Trong Remix, chọn workspace localhost (Connect to localhost) và mở hợp đồng của bạn."
+    - 'Biên dịch trong Remix, rồi deploy với môi trường WalletConnect, như trong <a href="../remix/">hướng dẫn Remix</a>.'
+    - "Dùng <code>cast</code> hoặc script Hardhat cho các lệnh gọi chỉ đọc; gửi giao dịch từ Remix để kexify ký."
+  note: "kexify không dùng được làm trình ký cho Foundry hay Hardhat (ví dụ <code>--account</code> hoặc khoá riêng tư), và không bao giờ đưa bạn khoá riêng tư thô trừ khi bạn tự dựng lại từ cả hai file khoá."
+
+safe:
+  title: "Dùng kexify làm chủ sở hữu Safe"
+  intro: "Safe kết nối với kexify qua WalletConnect. Hiện đã tạo được Safe và thực thi giao dịch; ký phê duyệt off-chain thì chưa."
+  steps:
+    - 'Mở <a href="https://app.safe.global">app.safe.global</a>, chọn WalletConnect và ghép nối với kexify (thử Sepolia trước).'
+    - "Tạo một Safe với địa chỉ kexify của bạn là chủ sở hữu. Đây là một giao dịch bình thường, bạn xem lại và xác nhận trong kexify."
+    - "Tạo một giao dịch trong Safe, ví dụ chuyển token từ Safe."
+    - "Chọn Execute. Khi phê duyệt của bạn là cái cuối cùng cần có, Safe gửi nó như một giao dịch bình thường và kexify ký."
+    - "Xác nhận trong kexify và chờ giao dịch Safe hiện là đã thực thi."
+  note: "Theo quy tắc mặc định hiện nay, kexify từ chối chữ ký Safe off-chain (nút Sign, EIP-712 SafeTx), nên Safe mà các chủ sở hữu khác phải thực thi sau bạn thì chưa được hỗ trợ. Safe 1-of-1, hoặc khi bạn là người thực thi cuối cùng, vẫn dùng được."

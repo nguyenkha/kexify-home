@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "查看方案"
 
+guides:
+  title: "简短指南"
+  items:
+    - slug: remix
+      title: "用 kexify 从 Remix 部署"
+    - slug: foundry
+      title: "在 kexify 中使用 Foundry 和 Hardhat"
+    - slug: safe
+      title: "把 kexify 用作 Safe 所有者"
+
 quick:
   title: "快速上手：用命令行重建密钥"
   note: "需要 Node.js 和两个密钥文件。不会向任何服务器发送数据。"

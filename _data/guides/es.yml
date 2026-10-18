@@ -1,0 +1,35 @@
+# Guías cortas para desarrolladores en /developers/<guide>/. Un archivo por idioma (mismas claves); _includes/guide.html lo muestra.
+back: "Desarrolladores"
+
+remix:
+  title: "Despliega desde Remix con kexify"
+  intro: "Remix se conecta a kexify por WalletConnect, así que puedes desplegar y llamar contratos sin extensión del navegador."
+  steps:
+    - 'Abre <a href="https://remix.ethereum.org">Remix</a>, escribe o abre tu contrato y compílalo.'
+    - "En Deploy &amp; run transactions, pon Environment en WalletConnect y copia el URI de emparejamiento (o muestra el código QR)."
+    - "En kexify, abre WalletConnect, pega el URI o escanea el código y aprueba tu cuenta EVM."
+    - "Elige la red en Remix (empieza con Sepolia) y haz clic en Deploy o llama a una función."
+    - "kexify abre una revisión. Confirma con tu passkey o tu frase de contraseña; tu dispositivo y el servidor firman juntos y Remix muestra el recibo."
+  note: "Las redes de prueba aparecen en tu billetera cuando el modo experto y las redes de prueba están activados en Ajustes. Tu límite diario se aplica a cualquier valor que envíes."
+
+foundry:
+  title: "Foundry y Hardhat con kexify"
+  intro: "Foundry y Hardhat no tienen firmante WalletConnect, así que compila y prueba en local y luego despliega con Remix usando la carpeta de tu proyecto."
+  steps:
+    - "Compila y prueba como siempre: <code>forge build</code> y <code>forge test</code> (o <code>npx hardhat compile</code> y <code>npx hardhat test</code>)."
+    - "Comparte la carpeta del proyecto con Remix: <code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "En Remix, elige el workspace localhost (Connect to localhost) y abre tu contrato."
+    - 'Compílalo en Remix y despliega con el entorno WalletConnect, como en la <a href="../remix/">guía de Remix</a>.'
+    - "Usa <code>cast</code> o scripts de Hardhat para llamadas de solo lectura; envía las transacciones desde Remix para que kexify las firme."
+  note: "kexify no funciona como firmante de Foundry o Hardhat (por ejemplo con <code>--account</code> o una clave privada), y nunca te da una clave privada en bruto salvo que la reconstruyas tú con ambos archivos de clave."
+
+safe:
+  title: "Usa kexify como propietario de una Safe"
+  intro: "Safe se conecta a kexify por WalletConnect. Crear una Safe y ejecutar transacciones funciona hoy; firmar aprobaciones fuera de la cadena todavía no."
+  steps:
+    - 'Abre <a href="https://app.safe.global">app.safe.global</a>, elige WalletConnect y empareja con kexify (prueba primero en Sepolia).'
+    - "Crea una Safe con tu dirección de kexify como propietaria. Es una transacción normal que revisas y confirmas en kexify."
+    - "Crea una transacción en Safe, por ejemplo una transferencia de tokens desde la Safe."
+    - "Elige Execute. Cuando tu aprobación es la última que falta, Safe la envía como una transacción normal que kexify firma."
+    - "Confirma en kexify y espera a que la transacción de Safe aparezca como ejecutada."
+  note: "Con sus reglas por defecto, kexify rechaza hoy las firmas de Safe fuera de la cadena (el botón Sign, EIP-712 SafeTx), así que una Safe en la que otros propietarios deben ejecutar después de ti aún no es compatible. Una Safe 1 de 1, o ser el último propietario en ejecutar, funciona."

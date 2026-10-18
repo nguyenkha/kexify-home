@@ -1,0 +1,35 @@
+# Short developer guides at /developers/<guide>/. One file per language (same keys); _includes/guide.html renders it.
+back: "开发者"
+
+remix:
+  title: "用 kexify 从 Remix 部署"
+  intro: "Remix 通过 WalletConnect 连接 kexify，因此无需浏览器扩展就能部署和调用合约。"
+  steps:
+    - '打开 <a href="https://remix.ethereum.org">Remix</a>，编写或打开你的合约并编译。'
+    - "在 Deploy &amp; run transactions 中，将 Environment 设为 WalletConnect，并复制配对 URI（或显示二维码）。"
+    - "在 kexify 中打开 WalletConnect，粘贴 URI 或扫描二维码，并批准你的 EVM 账户。"
+    - "在 Remix 中选择网络（先用 Sepolia），然后点击 Deploy 或调用函数。"
+    - "kexify 会打开确认页面。用 passkey 或口令确认；你的设备和服务器共同签名，Remix 会显示交易回执。"
+  note: "在设置中开启专家模式和测试网络后，测试网络才会显示在钱包里。每日限额适用于你发送的任何金额。"
+
+foundry:
+  title: "在 kexify 中使用 Foundry 和 Hardhat"
+  intro: "Foundry 和 Hardhat 没有 WalletConnect 签名器，所以先在本地构建和测试，再通过 Remix 加载项目文件夹来部署。"
+  steps:
+    - "照常构建和测试：<code>forge build</code> 和 <code>forge test</code>（或 <code>npx hardhat compile</code> 和 <code>npx hardhat test</code>）。"
+    - "与 Remix 共享项目文件夹：<code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "在 Remix 中选择 localhost 工作区（Connect to localhost），并打开你的合约。"
+    - '在 Remix 中编译，然后用 WalletConnect 环境部署，方法同 <a href="../remix/">Remix 指南</a>。'
+    - "只读调用可使用 <code>cast</code> 或 Hardhat 脚本；交易请从 Remix 发送，由 kexify 签名。"
+  note: "kexify 不能用作 Foundry 或 Hardhat 的签名器（例如 <code>--account</code> 或私钥），也绝不会给你原始私钥，除非你自己用两份密钥文件重建。"
+
+safe:
+  title: "把 kexify 用作 Safe 所有者"
+  intro: "Safe 通过 WalletConnect 连接 kexify。目前可以创建 Safe 并执行交易；链下签名批准暂不支持。"
+  steps:
+    - '打开 <a href="https://app.safe.global">app.safe.global</a>，选择 WalletConnect 并与 kexify 配对（先试 Sepolia）。'
+    - "创建 Safe，并把你的 kexify 地址设为所有者。这是一笔普通交易，需要你在 kexify 中查看并确认。"
+    - "在 Safe 中创建一笔交易，例如从 Safe 转出代币。"
+    - "选择 Execute。当你的批准是最后一个所需批准时，Safe 会把它作为普通交易发送，由 kexify 签名。"
+    - "在 kexify 中确认，并等待 Safe 交易显示为已执行。"
+  note: "按目前的默认规则，kexify 会拒绝链下 Safe 签名（Sign 按钮、EIP-712 SafeTx），所以需要其他所有者在你之后执行的 Safe 暂不支持。1-of-1 的 Safe，或你是最后一个执行的所有者，则可以使用。"
