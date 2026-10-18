@@ -1,0 +1,35 @@
+# Short developer guides at /developers/<guide>/. One file per language (same keys); _includes/guide.html renders it.
+back: "นักพัฒนา"
+
+remix:
+  title: "Deploy จาก Remix ด้วย kexify"
+  intro: "Remix เชื่อมต่อกับ kexify ผ่าน WalletConnect คุณจึง deploy และเรียกสัญญาได้โดยไม่ต้องใช้ส่วนขยายเบราว์เซอร์"
+  steps:
+    - 'เปิด <a href="https://remix.ethereum.org">Remix</a> เขียนหรือเปิดสัญญาของคุณ แล้วคอมไพล์'
+    - "ใน Deploy &amp; run transactions ตั้ง Environment เป็น WalletConnect แล้วคัดลอก pairing URI (หรือแสดงคิวอาร์โค้ด)"
+    - "ใน kexify เปิด WalletConnect วาง URI หรือสแกนโค้ด แล้วอนุมัติบัญชี EVM ของคุณ"
+    - "เลือกเครือข่ายใน Remix (เริ่มที่ Sepolia) แล้วกด Deploy หรือเรียกฟังก์ชัน"
+    - "kexify จะเปิดหน้าตรวจสอบ ยืนยันด้วย passkey หรือวลีรหัสผ่านของคุณ อุปกรณ์ของคุณและเซิร์ฟเวอร์ลงนามร่วมกัน แล้ว Remix จะแสดงใบเสร็จธุรกรรม"
+  note: "เครือข่ายทดสอบจะแสดงในกระเป๋าเมื่อเปิดโหมดผู้เชี่ยวชาญและเครือข่ายทดสอบในการตั้งค่า ขีดจำกัดรายวันของคุณใช้กับมูลค่าที่ส่งทุกครั้ง"
+
+foundry:
+  title: "Foundry และ Hardhat กับ kexify"
+  intro: "Foundry และ Hardhat ไม่มีตัวลงนามผ่าน WalletConnect ดังนั้นให้ build และทดสอบในเครื่อง แล้ว deploy ผ่าน Remix โดยใช้โฟลเดอร์โปรเจกต์ของคุณ"
+  steps:
+    - "build และทดสอบตามปกติ: <code>forge build</code> และ <code>forge test</code> (หรือ <code>npx hardhat compile</code> และ <code>npx hardhat test</code>)"
+    - "แชร์โฟลเดอร์โปรเจกต์ให้ Remix: <code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "ใน Remix เลือก workspace แบบ localhost (Connect to localhost) แล้วเปิดสัญญาของคุณ"
+    - 'คอมไพล์ใน Remix แล้ว deploy ด้วย environment แบบ WalletConnect เหมือนใน<a href="../remix/">คู่มือ Remix</a>'
+    - "ใช้ <code>cast</code> หรือสคริปต์ Hardhat สำหรับการเรียกแบบอ่านอย่างเดียว ส่งธุรกรรมจาก Remix เพื่อให้ kexify เป็นผู้ลงนาม"
+  note: "kexify ใช้เป็นตัวลงนามของ Foundry หรือ Hardhat ไม่ได้ (เช่น <code>--account</code> หรือ private key) และไม่เคยให้ private key ดิบแก่คุณ เว้นแต่คุณสร้างขึ้นใหม่เองจากไฟล์คีย์ทั้งสองไฟล์"
+
+safe:
+  title: "ใช้ kexify เป็นเจ้าของ Safe"
+  intro: "Safe เชื่อมต่อกับ kexify ผ่าน WalletConnect การสร้าง Safe และการ execute ธุรกรรมใช้ได้แล้ว แต่การลงนามอนุมัติแบบ off-chain ยังไม่ได้"
+  steps:
+    - 'เปิด <a href="https://app.safe.global">app.safe.global</a> เลือก WalletConnect แล้วจับคู่กับ kexify (ลอง Sepolia ก่อน)'
+    - "สร้าง Safe โดยใช้ที่อยู่ kexify ของคุณเป็นเจ้าของ นี่เป็นธุรกรรมปกติที่คุณตรวจสอบและยืนยันใน kexify"
+    - "สร้างธุรกรรมใน Safe เช่น โอนโทเคนจาก Safe"
+    - "เลือก Execute เมื่อการอนุมัติของคุณเป็นครั้งสุดท้ายที่ต้องใช้ Safe จะส่งเป็นธุรกรรมปกติที่ kexify ลงนาม"
+    - "ยืนยันใน kexify แล้วรอจนธุรกรรม Safe แสดงว่า execute แล้ว"
+  note: "ตอนนี้ kexify ปฏิเสธลายเซ็น Safe แบบ off-chain (ปุ่ม Sign, EIP-712 SafeTx) ภายใต้กฎเริ่มต้น จึงยังไม่รองรับ Safe ที่เจ้าของคนอื่นต้อง execute ต่อจากคุณ Safe แบบ 1-of-1 หรือการเป็นเจ้าของคนสุดท้ายที่ execute ใช้ได้"

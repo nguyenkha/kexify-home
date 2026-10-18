@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "Тарифы"
 
+guides:
+  title: "Короткие руководства"
+  items:
+    - slug: remix
+      title: "Деплой из Remix с kexify"
+    - slug: foundry
+      title: "Foundry и Hardhat с kexify"
+    - slug: safe
+      title: "kexify как владелец Safe"
+
 quick:
   title: "Быстрый старт: восстановите ключ через CLI"
   note: "Нужны Node.js и оба файла ключа. Ничего не отправляется ни на какой сервер."

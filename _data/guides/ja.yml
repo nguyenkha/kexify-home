@@ -1,0 +1,36 @@
+# Short developer guides at /developers/<guide>/. One file per language (same keys); _includes/guide.html renders it.
+# About 5 steps each, no long prose. Only flows checked against the kexify code; limits are said plainly.
+back: "開発者"
+
+remix:
+  title: "kexify で Remix からデプロイ"
+  intro: "Remix は WalletConnect で kexify に接続するので、ブラウザー拡張なしでコントラクトのデプロイと呼び出しができます。"
+  steps:
+    - '<a href="https://remix.ethereum.org">Remix</a> を開き、コントラクトを書くか開いてコンパイルします。'
+    - "Deploy &amp; run transactions で Environment を WalletConnect にし、ペアリング URI をコピーします（または QR コードを表示します）。"
+    - "kexify で WalletConnect を開き、URI を貼り付けるかコードを読み取って、EVM アカウントを承認します。"
+    - "Remix でネットワークを選びます（最初は Sepolia）。そのあと Deploy をクリックするか、関数を呼び出します。"
+    - "kexify で確認画面が開きます。passkey またはパスフレーズで承認すると、端末とサーバーが一緒に署名し、Remix にレシートが表示されます。"
+  note: "設定でエキスパートモードとテストネットワークを有効にすると、ウォレットにテストネットワークが表示されます。送金額には 1 日の上限が適用されます。"
+
+foundry:
+  title: "kexify で Foundry と Hardhat を使う"
+  intro: "Foundry と Hardhat には WalletConnect の署名機能がないので、ローカルでビルドとテストをしてから、プロジェクトフォルダーを Remix と共有して Remix でデプロイします。"
+  steps:
+    - "いつも通りビルドとテストをします。<code>forge build</code> と <code>forge test</code>（または <code>npx hardhat compile</code> と <code>npx hardhat test</code>）。"
+    - "プロジェクトフォルダーを Remix と共有します。<code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "Remix で localhost のワークスペースを選び（Connect to localhost）、コントラクトを開きます。"
+    - '<a href="../remix/">Remix のガイド</a>と同じように、Remix でコンパイルし、WalletConnect の環境でデプロイします。'
+    - "読み取り専用の呼び出しには <code>cast</code> や Hardhat のスクリプトを使い、トランザクションは Remix から送って kexify に署名させます。"
+  note: "kexify は Foundry や Hardhat の署名者（たとえば <code>--account</code> や秘密鍵）としては使えません。また、2 つの鍵ファイルから自分で復元しない限り、生の秘密鍵が渡されることはありません。"
+
+safe:
+  title: "kexify を Safe のオーナーにする"
+  intro: "Safe は WalletConnect で kexify に接続します。Safe の作成とトランザクションの実行は今できますが、オフチェーンの承認署名はまだ対応していません。"
+  steps:
+    - '<a href="https://app.safe.global">app.safe.global</a> を開き、WalletConnect を選んで kexify とペアリングします（まず Sepolia で試してください）。'
+    - "kexify のアドレスをオーナーにして Safe を作成します。kexify で確認して承認する、通常のトランザクションです。"
+    - "Safe でトランザクションを作成します。たとえば Safe からのトークン送金です。"
+    - "Execute を選びます。自分の承認が最後に必要な承認なら、Safe が kexify の署名する通常のトランザクションとして送信します。"
+    - "kexify で承認し、Safe のトランザクションが実行済みと表示されるまで待ちます。"
+  note: "kexify は初期ルールでは、オフチェーンの Safe 署名（Sign ボタン、EIP-712 SafeTx）を拒否します。そのため、自分のあとに他のオーナーが実行する必要がある Safe にはまだ対応していません。1-of-1 の Safe や、自分が最後に実行するオーナーの場合は動作します。"

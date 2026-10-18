@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "Ver planes"
 
+guides:
+  title: "Guías cortas"
+  items:
+    - slug: remix
+      title: "Despliega desde Remix con kexify"
+    - slug: foundry
+      title: "Foundry y Hardhat con kexify"
+    - slug: safe
+      title: "Usa kexify como propietario de una Safe"
+
 quick:
   title: "Inicio rápido: reconstruye tu clave con la CLI"
   note: "Necesitas Node.js y los dos archivos de clave. No se envía nada a ningún servidor."

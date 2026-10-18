@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "Xem các gói"
 
+guides:
+  title: "Hướng dẫn ngắn"
+  items:
+    - slug: remix
+      title: "Deploy từ Remix với kexify"
+    - slug: foundry
+      title: "Foundry và Hardhat với kexify"
+    - slug: safe
+      title: "Dùng kexify làm chủ sở hữu Safe"
+
 quick:
   title: "Bắt đầu nhanh: dựng lại khoá bằng CLI"
   note: "Cần Node.js và cả hai file khoá. Không gửi gì lên server nào."

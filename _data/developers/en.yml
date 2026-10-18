@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "See plans"
 
+guides:
+  title: "Short guides"
+  items:
+    - slug: remix
+      title: "Deploy from Remix with kexify"
+    - slug: foundry
+      title: "Foundry and Hardhat with kexify"
+    - slug: safe
+      title: "Use kexify as a Safe owner"
+
 quick:
   title: "Quick start: rebuild your key with the CLI"
   note: "Needs Node.js and both key files. Nothing is sent to any server."

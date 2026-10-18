@@ -32,6 +32,16 @@ items:
     link: pricing
     more: "प्लान देखें"
 
+guides:
+  title: "छोटी गाइड"
+  items:
+    - slug: remix
+      title: "kexify के साथ Remix से डिप्लॉय करें"
+    - slug: foundry
+      title: "kexify के साथ Foundry और Hardhat"
+    - slug: safe
+      title: "kexify को Safe के ओनर के रूप में इस्तेमाल करें"
+
 quick:
   title: "क्विक स्टार्ट: CLI से अपनी की दोबारा बनाएँ"
   note: "Node.js और दोनों की फ़ाइलें चाहिए। किसी सर्वर पर कुछ नहीं भेजा जाता।"

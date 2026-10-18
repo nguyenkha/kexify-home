@@ -1,0 +1,35 @@
+# Short developer guides at /developers/<guide>/. One file per language (same keys); _includes/guide.html renders it.
+back: "Developer"
+
+remix:
+  title: "Deploy dari Remix dengan kexify"
+  intro: "Remix terhubung ke kexify lewat WalletConnect, jadi Anda bisa deploy dan memanggil kontrak tanpa ekstensi browser."
+  steps:
+    - 'Buka <a href="https://remix.ethereum.org">Remix</a>, tulis atau buka kontrak Anda, lalu kompilasi.'
+    - "Di Deploy &amp; run transactions, atur Environment ke WalletConnect dan salin URI pairing (atau tampilkan kode QR)."
+    - "Di kexify, buka WalletConnect, tempel URI atau pindai kodenya, lalu setujui akun EVM Anda."
+    - "Pilih jaringan di Remix (mulai dengan Sepolia), lalu klik Deploy atau panggil sebuah fungsi."
+    - "kexify membuka tinjauan. Konfirmasi dengan passkey atau frasa sandi Anda; perangkat Anda dan server menandatangani bersama, lalu Remix menampilkan bukti transaksi."
+  note: "Jaringan uji muncul di dompet Anda setelah Mode Ahli dan jaringan uji diaktifkan di Pengaturan. Batas harian Anda berlaku untuk setiap nilai yang dikirim."
+
+foundry:
+  title: "Foundry dan Hardhat dengan kexify"
+  intro: "Foundry dan Hardhat tidak punya penanda tangan WalletConnect, jadi build dan uji secara lokal, lalu deploy lewat Remix dengan folder proyek Anda."
+  steps:
+    - "Build dan uji seperti biasa: <code>forge build</code> dan <code>forge test</code> (atau <code>npx hardhat compile</code> dan <code>npx hardhat test</code>)."
+    - "Bagikan folder proyek ke Remix: <code>npx @remix-project/remixd -s . --remix-ide https://remix.ethereum.org</code>"
+    - "Di Remix, pilih workspace localhost (Connect to localhost) dan buka kontrak Anda."
+    - 'Kompilasi di Remix, lalu deploy dengan environment WalletConnect, seperti di <a href="../remix/">panduan Remix</a>.'
+    - "Pakai <code>cast</code> atau skrip Hardhat untuk panggilan baca-saja; kirim transaksi dari Remix agar kexify yang menandatangani."
+  note: "kexify tidak bisa dipakai sebagai penanda tangan Foundry atau Hardhat (misalnya <code>--account</code> atau private key), dan tidak pernah memberi Anda private key mentah kecuali Anda membangunnya ulang sendiri dari kedua file kunci."
+
+safe:
+  title: "Pakai kexify sebagai pemilik Safe"
+  intro: "Safe terhubung ke kexify lewat WalletConnect. Membuat Safe dan mengeksekusi transaksi sudah bisa; menandatangani persetujuan off-chain belum."
+  steps:
+    - 'Buka <a href="https://app.safe.global">app.safe.global</a>, pilih WalletConnect dan pasangkan dengan kexify (coba Sepolia dulu).'
+    - "Buat Safe dengan alamat kexify Anda sebagai pemilik. Ini transaksi biasa yang Anda tinjau dan konfirmasi di kexify."
+    - "Buat transaksi di Safe, misalnya transfer token dari Safe."
+    - "Pilih Execute. Saat persetujuan Anda adalah yang terakhir dibutuhkan, Safe mengirimnya sebagai transaksi biasa yang ditandatangani kexify."
+    - "Konfirmasi di kexify dan tunggu sampai transaksi Safe tampil sebagai sudah dieksekusi."
+  note: "Saat ini kexify menolak tanda tangan Safe off-chain (tombol Sign, EIP-712 SafeTx) di bawah aturan default, jadi Safe yang mengharuskan pemilik lain mengeksekusi setelah Anda belum didukung. Safe 1-dari-1, atau menjadi pemilik terakhir yang mengeksekusi, bisa dipakai."

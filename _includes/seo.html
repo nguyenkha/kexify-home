@@ -1,6 +1,6 @@
 {% comment %}
   SEO head tags: title, description, canonical, hreflang alternates, Open Graph, Twitter card
-  and JSON-LD. Text comes from _data/seo.yml by language and page (home, faq, about, developers).
+  and JSON-LD. Text comes from _data/seo.yml by language and page (home, faq, about, developers, guide_*).
 {% endcomment %}
 {% assign seo_lang = page.lang | default: "en" %}
 {% assign seo_prefix = site.data.languages | where: "code", seo_lang | map: "prefix" | first %}
@@ -12,6 +12,9 @@
   {% when "/faq/" %}{% assign seo_key = "faq" %}
   {% when "/about/" %}{% assign seo_key = "about" %}
   {% when "/developers/" %}{% assign seo_key = "developers" %}
+  {% when "/developers/remix/" %}{% assign seo_key = "guide_remix" %}
+  {% when "/developers/foundry/" %}{% assign seo_key = "guide_foundry" %}
+  {% when "/developers/safe/" %}{% assign seo_key = "guide_safe" %}
   {% else %}{% assign seo_key = nil %}
 {% endcase %}
 {% assign seo = site.data.seo[seo_lang] %}
