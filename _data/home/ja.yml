@@ -11,6 +11,7 @@ hero:
   move_title: "kexifyはkexify.coからkexify.appに移りました"
   move_body: '新しいウォレットは <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a> で作成します。<a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> のウォレットはそちらでそのまま使えますが、自動での移行はできません（パスキーはドメインに結び付いているためです）。新しいウォレットを作り、資金を送ってください。'
   move_warning: "kexifyが、メール、チャット、サポートで鍵ファイルやパスフレーズをお尋ねすることはありません。"
+  move_close: "お知らせを閉じる"
 
 safety:
   title: "最初から安全"

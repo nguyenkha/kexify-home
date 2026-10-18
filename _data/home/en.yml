@@ -12,6 +12,7 @@ hero:
   move_title: "kexify has moved from kexify.co to kexify.app"
   move_body: 'Create new wallets at <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Wallets at <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> keep working there but cannot move over automatically (passkeys are tied to the domain), so create a new wallet and send your funds across.'
   move_warning: "kexify will never ask for your key file or passphrase by email, chat or support."
+  move_close: "Dismiss notice"
 
 safety:
   title: "Safe by default"

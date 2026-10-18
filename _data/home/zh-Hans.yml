@@ -12,6 +12,7 @@ hero:
   move_title: "kexify 已从 kexify.co 迁移到 kexify.app"
   move_body: '新钱包请在 <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a> 创建。<a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> 上的钱包仍可在那里继续使用，但无法自动迁移（通行密钥绑定在域名上），所以请创建新钱包，再把资金转过去。'
   move_warning: "kexify 绝不会通过邮件、聊天或客服向你索要密钥文件或口令。"
+  move_close: "关闭通知"
 
 safety:
   title: "默认就安全"

@@ -34,11 +34,23 @@
     </div>
     <p class="mt-3 text-xs dark:text-gray-500 text-gray-500">{{ t.hero.ios_note }}</p>
 
-    <div class="mt-8 max-w-xl mx-auto text-left rounded-lg border border-blue-500/20 bg-blue-500/10 px-4 py-3 text-xs leading-relaxed">
+    <div id="domain-notice" class="relative mt-8 max-w-xl mx-auto text-left rounded-lg border border-blue-500/20 bg-blue-500/10 px-4 py-3 pr-10 text-xs leading-relaxed">
+      <button type="button" id="domain-notice-close" aria-label="{{ t.hero.move_close }}" class="absolute top-2 right-2 p-1 text-base leading-none dark:text-gray-400 text-gray-600 hover:text-blue-400"><span aria-hidden="true">&times;</span></button>
       <p class="text-blue-400 font-medium">{{ t.hero.move_title }}</p>
       <p class="mt-1 dark:text-gray-400 text-gray-600">{{ t.hero.move_body }}</p>
       <p class="mt-1 text-gray-500">{{ t.hero.move_warning }}</p>
     </div>
+    <script>
+      (function () {
+        var KEY = 'kexify.home.domainNotice.dismissed.v1';
+        var el = document.getElementById('domain-notice');
+        try { if (window.localStorage.getItem(KEY) === '1') el.hidden = true; } catch (e) {}
+        document.getElementById('domain-notice-close').addEventListener('click', function () {
+          el.hidden = true;
+          try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+        });
+      })();
+    </script>
   </div>
 </section>
 

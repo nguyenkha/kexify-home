@@ -12,6 +12,7 @@ hero:
   move_title: "O kexify mudou de kexify.co para kexify.app"
   move_body: 'Crie carteiras novas em <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. As carteiras de <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> continuam funcionando lá, mas não dá para migrar automaticamente (as passkeys são ligadas ao domínio), então crie uma carteira nova e envie seus fundos.'
   move_warning: "O kexify nunca vai pedir seu arquivo de chave nem sua frase-senha por e-mail, chat ou suporte."
+  move_close: "Fechar aviso"
 
 safety:
   title: "Seguro por padrão"

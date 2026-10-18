@@ -11,6 +11,7 @@ hero:
   move_title: "kexify가 kexify.co에서 kexify.app으로 옮겼습니다"
   move_body: '새 지갑은 <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>에서 만듭니다. <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>의 지갑은 그곳에서 계속 쓸 수 있지만 자동으로 옮길 수는 없습니다(패스키가 도메인에 묶여 있기 때문입니다). 새 지갑을 만들고 자금을 보내세요.'
   move_warning: "kexify는 이메일, 채팅, 고객 지원으로 키 파일이나 암호 문구를 절대 요구하지 않습니다."
+  move_close: "알림 닫기"
 
 safety:
   title: "기본부터 안전하게"
