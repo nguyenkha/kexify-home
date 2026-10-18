@@ -20,7 +20,7 @@ items:
     link: faq
   - icon: terminal
     title: "Recovery without the server, and the CLI"
-    body: "With your key file and the server's key file, recovery mode signs in your browser with no kexify server. The open-source CLI can rebuild the private key or answer WalletConnect requests locally."
+    body: "With your key file and the server's key file, recovery mode signs and sends from your browser on every supported chain, with no kexify server. The open-source CLI prints your addresses, exports your keys (WIF for Bitcoin, Litecoin and Dogecoin) and answers WalletConnect requests locally."
     link: cli
   - icon: code
     title: "Open-source MPC (cb-mpc)"
@@ -44,4 +44,4 @@ guides:
 
 quick:
   title: "Quick start: rebuild your key with the CLI"
-  note: "Needs Node.js and both key files. Nothing is sent to any server."
+  note: "Needs Bun and both key files. Nothing is sent to any server."

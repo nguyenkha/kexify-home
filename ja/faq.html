@@ -166,7 +166,11 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">コマンドラインツールはありますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。<a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>リポジトリにあるBun製のCLIです。2つの鍵ファイルを読み込みます。<code>recover</code>は秘密鍵（16進数、Bitcoinの場合はWIF）を復元し、アドレスを表示します。<code>connect</code>は両方のキーシェアでWalletConnectのリクエストをローカルで署名し、kexifyのサーバーは使いません。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。<a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>リポジトリにあるBun製のCLIです。2つの鍵ファイルを読み込み、kexifyのサーバーは一切呼び出しません。<code>recover</code>は全チェーンのアドレスを表示し、鍵をエクスポートします（16進数、Bitcoin・Litecoin・DogecoinはWIF）。Ed25519のエクスポート（Solana、Stellar、TON、Algorand、Cardano）はシードではなく生の鍵なので、他のウォレットでは別のアドレスになります。その資金はWebアプリの復旧モードで移してください。<code>connect</code>はEVMとSolanaのdAppからのWalletConnectリクエストをローカルで署名します。CLI単体では送金できません。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexifyのサーバーには何が見えますか？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">残高と履歴は、まずお使いの端末から公開ネットワークで読み取ります。公開ソースが失敗したときだけ、アプリがkexifyのサーバーに問い合わせます。サーバーはご自身のウォレットアドレスについてのみ答え、自社のプロバイダーから読み取るため、プロバイダーにはアドレスは見えますが端末は見えません。アドレス帳は、ご自身のキーシェアから得た鍵でエンドツーエンド暗号化して同期され、サーバーには暗号文だけが保存されます。トランザクションのシミュレーションは端末から公開ノードに対して実行され、EVMチェーンとSolanaで動作します。あくまで見積もりで、送信を止めることはありません。復旧モードはこれらをどれも使わず、サーバーがなくなっても動作します。</p>
       </details>
     </div>
 
@@ -175,7 +179,7 @@ permalink: /ja/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">どんな暗号を使っていますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM/BitcoinチェーンにはECDSA（secp256k1）、Solana/StellarにはEdDSA（Ed25519）を使います。ブラウザ上で直接動くCoinbaseのcb-mpc WASMライブラリが基盤です。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVMチェーン、Bitcoin、Litecoin、Bitcoin Cash、Dogecoin、XRP、TRONにはECDSA（secp256k1）、Solana、Stellar、TON、Algorand、CardanoにはEdDSA（Ed25519）を使います。ブラウザ上で直接動くCoinbaseのcb-mpc WASMライブラリが基盤です。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">cb-mpcとは何ですか？</summary>

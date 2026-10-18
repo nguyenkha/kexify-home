@@ -166,7 +166,11 @@ permalink: /id/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Apakah ada alat baris perintah?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Ya, CLI Bun di repo <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Alat ini memakai kedua file kunci Anda. <code>recover</code> membangun kembali kunci privat (hex, atau WIF untuk Bitcoin) dan menampilkan alamat Anda. <code>connect</code> menandatangani permintaan WalletConnect secara lokal dengan kedua bagian kunci, tanpa server kexify.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Ya, CLI Bun di repo <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. Alat ini memakai kedua file kunci Anda dan tidak pernah memanggil server kexify. <code>recover</code> menampilkan alamat Anda di setiap chain dan mengekspor kunci Anda: hex, atau WIF untuk Bitcoin, Litecoin, dan Dogecoin. Ekspor Ed25519 (Solana, Stellar, TON, Algorand, Cardano) adalah kunci mentah, bukan seed, sehingga dompet lain menampilkan alamat yang berbeda: pindahkan dana itu dengan mode pemulihan di aplikasi web. <code>connect</code> menandatangani permintaan WalletConnect dari dApp EVM dan Solana secara lokal. CLI tidak bisa mengirim sendiri.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Apa yang dilihat server kexify?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Saldo dan riwayat dibaca dari jaringan publik terlebih dahulu, dari perangkat Anda. Hanya saat sumber publik gagal, aplikasi bertanya ke server kexify, yang hanya menjawab untuk alamat dompet Anda sendiri dan membacanya dari penyedianya, jadi penyedia itu melihat alamat tetapi tidak melihat perangkat Anda. Buku alamat Anda disinkronkan dengan enkripsi end-to-end memakai kunci yang berasal dari key share Anda sendiri: server hanya menyimpan ciphertext. Simulasi transaksi berjalan dari perangkat Anda ke node publik, di chain EVM dan Solana; ini hanya perkiraan dan tidak pernah memblokir pengiriman. Mode pemulihan tidak memakai satu pun dari ini dan tetap bekerja walau server sudah tiada.</p>
       </details>
     </div>
     <!-- Technical -->
@@ -174,7 +178,7 @@ permalink: /id/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Kriptografi apa yang dipakai?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) untuk chain EVM/Bitcoin, EdDSA (Ed25519) untuk Solana/Stellar. Ditenagai pustaka WASM cb-mpc milik Coinbase yang berjalan langsung di browser Anda.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">ECDSA (secp256k1) untuk chain EVM, Bitcoin, Litecoin, Bitcoin Cash, Dogecoin, XRP, dan TRON; EdDSA (Ed25519) untuk Solana, Stellar, TON, Algorand, dan Cardano. Ditenagai pustaka WASM cb-mpc milik Coinbase yang berjalan langsung di browser Anda.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Apa itu cb-mpc?</summary>

@@ -20,7 +20,7 @@ items:
     link: faq
   - icon: terminal
     title: "Recuperación sin el servidor, y la CLI"
-    body: "Con tu archivo de clave y el del servidor, el modo de recuperación firma en tu navegador sin ningún servidor de kexify. La CLI de código abierto puede reconstruir la clave privada o responder solicitudes de WalletConnect en local."
+    body: "Con tu archivo de clave y el del servidor, el modo de recuperación firma y envía desde tu navegador en todas las cadenas compatibles, sin ningún servidor de kexify. La CLI de código abierto muestra tus direcciones, exporta tus claves (WIF para Bitcoin, Litecoin y Dogecoin) y responde solicitudes de WalletConnect en local."
     link: cli
   - icon: code
     title: "MPC de código abierto (cb-mpc)"
@@ -44,4 +44,4 @@ guides:
 
 quick:
   title: "Inicio rápido: reconstruye tu clave con la CLI"
-  note: "Necesitas Node.js y los dos archivos de clave. No se envía nada a ningún servidor."
+  note: "Necesitas Bun y los dos archivos de clave. No se envía nada a ningún servidor."

@@ -20,7 +20,7 @@ items:
     link: faq
   - icon: terminal
     title: "Khôi phục không cần server, và CLI"
-    body: "Có file khoá của bạn và file khoá của server, chế độ khôi phục ký ngay trong trình duyệt mà không cần server kexify. CLI mã nguồn mở có thể dựng lại khoá riêng tư hoặc trả lời yêu cầu WalletConnect ngay trên máy."
+    body: "Có file khoá của bạn và file khoá của server, chế độ khôi phục ký và gửi giao dịch ngay trong trình duyệt trên mọi chuỗi được hỗ trợ, không cần server kexify. CLI mã nguồn mở in ra địa chỉ của bạn, xuất khoá (WIF cho Bitcoin, Litecoin và Dogecoin) và trả lời yêu cầu WalletConnect ngay trên máy."
     link: cli
   - icon: code
     title: "MPC mã nguồn mở (cb-mpc)"
@@ -44,4 +44,4 @@ guides:
 
 quick:
   title: "Bắt đầu nhanh: dựng lại khoá bằng CLI"
-  note: "Cần Node.js và cả hai file khoá. Không gửi gì lên server nào."
+  note: "Cần Bun và cả hai file khoá. Không gửi gì lên server nào."

@@ -20,7 +20,7 @@ items:
     link: faq
   - icon: terminal
     title: "Pemulihan tanpa server, dan CLI"
-    body: "Dengan file kunci Anda dan file kunci server, mode pemulihan menandatangani di browser tanpa server kexify sama sekali. CLI open source bisa membangun ulang private key atau menjawab permintaan WalletConnect secara lokal."
+    body: "Dengan file kunci Anda dan file kunci server, mode pemulihan menandatangani dan mengirim dari browser di setiap chain yang didukung, tanpa server kexify. CLI open source menampilkan alamat Anda, mengekspor kunci Anda (WIF untuk Bitcoin, Litecoin, dan Dogecoin) dan menjawab permintaan WalletConnect secara lokal."
     link: cli
   - icon: code
     title: "MPC open source (cb-mpc)"
@@ -44,4 +44,4 @@ guides:
 
 quick:
   title: "Mulai cepat: bangun ulang kunci dengan CLI"
-  note: "Perlu Node.js dan kedua file kunci. Tidak ada yang dikirim ke server mana pun."
+  note: "Perlu Bun dan kedua file kunci. Tidak ada yang dikirim ke server mana pun."

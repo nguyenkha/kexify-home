@@ -166,7 +166,11 @@ permalink: /zh/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">有命令行工具吗？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">有，是 <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> 仓库里的 Bun 命令行工具。它读取你的两个密钥文件。<code>recover</code> 会重建私钥（十六进制，Bitcoin 为 WIF）并打印你的地址。<code>connect</code> 用两份密钥分片在本地签署 WalletConnect 请求，不需要 kexify 服务器。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">有，是 <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> 仓库里的 Bun 命令行工具。它读取你的两个密钥文件，从不调用 kexify 服务器。<code>recover</code> 会打印你在每条链上的地址并导出你的密钥：十六进制，Bitcoin、Litecoin 和 Dogecoin 为 WIF。Ed25519 导出（Solana、Stellar、TON、Algorand、Cardano）是原始密钥，不是种子，所以其他钱包会显示不同的地址：请用网页应用中的恢复模式转移这些资金。<code>connect</code> 在本地签署来自 EVM 和 Solana dApp 的 WalletConnect 请求。命令行工具本身不能发送交易。</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">kexify 服务器能看到什么？</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">余额和历史记录首先由你的设备从公共网络读取。只有公共来源失败时，应用才会询问 kexify 服务器；服务器只回答你自己的钱包地址，并从它的服务商读取，所以这些服务商能看到地址，但看不到你的设备。你的地址簿以端到端加密方式同步，密钥来自你自己的密钥分片：服务器只保存密文。交易模拟在你的设备上针对公共节点运行，支持 EVM 链和 Solana；它只是估算，绝不会阻止发送。恢复模式不使用以上任何一项，服务器消失后也能正常使用。</p>
       </details>
     </div>
 
@@ -175,7 +179,7 @@ permalink: /zh/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">使用了什么密码学？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM/Bitcoin 链使用 ECDSA (secp256k1)，Solana/Stellar 使用 EdDSA (Ed25519)。由 Coinbase 的 cb-mpc WASM 库驱动，直接在你的浏览器中运行。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">EVM 链、Bitcoin、Litecoin、Bitcoin Cash、Dogecoin、XRP 和 TRON 使用 ECDSA (secp256k1)；Solana、Stellar、TON、Algorand 和 Cardano 使用 EdDSA (Ed25519)。由 Coinbase 的 cb-mpc WASM 库驱动，直接在你的浏览器中运行。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">什么是 cb-mpc？</summary>
