@@ -79,7 +79,7 @@ chains:
   title: "支持的区块链"
   evm_sub: "Ethereum、Base、Arbitrum、Polygon..."
   more: "更多"
-  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH"
+  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH、DOGE"
 
 plans:
   title: "免费版和 Premium"

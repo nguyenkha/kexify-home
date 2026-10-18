@@ -79,7 +79,7 @@ chains:
   title: "지원하는 체인"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "그 밖에"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "무료와 프리미엄"

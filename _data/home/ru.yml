@@ -79,7 +79,7 @@ chains:
   title: "Поддерживаемые сети"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "Ещё"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "Бесплатно и Premium"

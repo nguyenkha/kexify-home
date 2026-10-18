@@ -79,7 +79,7 @@ chains:
   title: "เชนที่รองรับ"
   evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
   more: "เพิ่มเติม"
-  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH, DOGE"
 
 plans:
   title: "ฟรีและพรีเมียม"
