@@ -108,3 +108,18 @@ plans:
     - "Soporte prioritario"
     - "Para desarrolladores: un SDK de firma para una billetera de automatización y webhooks"
   soon: "próximamente"
+why:
+  title: "Por qué kexify"
+  items:
+    - title: "frente a las billeteras con frase semilla"
+      body: "Un solo secreto en un solo dispositivo. Si se filtra, se pierde todo. Con kexify, un fragmento filtrado del dispositivo no basta para mover fondos."
+    - title: "frente a las apps custodiales"
+      body: "Si no son tus claves, no son tus criptomonedas. Con kexify puedes llevarte los dos archivos de clave y firmar sin nosotros."
+    - title: "frente a otras billeteras MPC"
+      body: "Tus reglas las aplica el cofirmante, y tu salida no depende de nuestro servidor."
+
+cta:
+  title: "Pruébalo primero con una cantidad pequeña"
+  body: "kexify es un proyecto personal de un solo ingeniero, que se ofrece tal cual. Empieza con poco, lee las preguntas frecuentes y crece desde ahí."
+  app: "Abrir la app web"
+  github: "Ver en GitHub"

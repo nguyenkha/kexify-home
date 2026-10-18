@@ -8,7 +8,7 @@ hero:
   ios_note: "Uso grátis. App para iPhone em testes; o app web funciona hoje."
   move_title: "O kexify mudou de kexify.co para kexify.app"
   move_body: 'Carteiras novas são criadas em <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Já tem uma carteira em <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>? Ela continua funcionando lá, mas não dá para migrar automaticamente: as passkeys são ligadas ao domínio em que foram criadas. Para migrar, crie uma carteira nova em my.kexify.app e envie seus fundos para ela. Entre em app.kexify.co para ver os detalhes.'
-  move_warning: "O kexify nunca vai pedir seu arquivo de chave nem sua frase secreta por e-mail, chat ou suporte."
+  move_warning: "O kexify nunca vai pedir seu arquivo de chave nem sua frase-senha por e-mail, chat ou suporte."
 
 safety:
   title: "Seguro por padrão"
@@ -16,7 +16,7 @@ safety:
   items:
     - icon: key
       title: "Sem frase-semente para perder"
-      body: "Duas partes da chave: uma no seu dispositivo e outra no servidor. Nenhuma assina sozinha. Um kit de backup com verificação da frase secreta protege a sua parte."
+      body: "Duas partes da chave: uma no seu dispositivo e outra no servidor. Nenhuma assina sozinha. Um kit de backup com verificação da frase-senha protege a sua parte."
     - icon: limit
       title: "Um limite diário que você controla"
       body: "Defina um limite diário em USD e permita envios apenas para endereços confiáveis. Acima do limite, o envio é bloqueado ou espera 1 ou 24 horas."
@@ -108,3 +108,18 @@ plans:
     - "Suporte prioritário"
     - "Para desenvolvedores: um SDK de assinatura para uma carteira de automação e webhooks"
   soon: "em breve"
+why:
+  title: "Por que o kexify"
+  items:
+    - title: "versus carteiras com frase-semente"
+      body: "Um único segredo em um único dispositivo. Se vazar, tudo se perde. Com o kexify, uma parte vazada do dispositivo, sozinha, não consegue mover fundos."
+    - title: "versus apps custodiais"
+      body: "Se as chaves não são suas, as criptomoedas também não são. Com o kexify você pode levar os dois arquivos de chave e assinar sem a gente."
+    - title: "versus outras carteiras MPC"
+      body: "Suas regras são aplicadas pelo co-assinante, e a sua saída não depende do nosso servidor."
+
+cta:
+  title: "Experimente primeiro com um valor pequeno"
+  body: "O kexify é um projeto pessoal de um único engenheiro, oferecido como está. Comece pequeno, leia o FAQ e vá crescendo a partir daí."
+  app: "Abrir o app web"
+  github: "Ver no GitHub"

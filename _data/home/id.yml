@@ -67,7 +67,7 @@ dev:
     - title: "Jaringan uji"
       body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile dan Shasta, testnet Bitcoin, Cardano PreProd, dan lainnya, cukup satu tombol di Mode Ahli."
     - title: "Mode Ahli"
-      body: "Nonce dan biaya kustom, pemilihan UTXO, percepatan RBF untuk BTC dan LTC, penandatanganan pesan mentah, hanya tandatangani dengan penyiaran terpisah."
+      body: "Nonce dan biaya kustom, pemilihan UTXO, percepatan RBF untuk BTC dan LTC, penandatanganan pesan mentah, penandatanganan saja dengan penyiaran terpisah."
     - title: "RPC milik Anda sendiri"
       body: "Ganti RPC dan explorer chain mana pun dengan endpoint Alchemy, Infura, atau QuickNode Anda, lengkap dengan pemeriksaan kesehatan langsung. Edit seluruh konfigurasi sebagai JSON."
     - title: "CLI dan pemulihan"
@@ -108,3 +108,18 @@ plans:
     - "Dukungan prioritas"
     - "Untuk developer: SDK penandatanganan untuk satu dompet otomatisasi, dan webhook"
   soon: "segera hadir"
+why:
+  title: "Mengapa kexify"
+  items:
+    - title: "dibanding dompet frasa seed"
+      body: "Satu rahasia di satu perangkat. Jika bocor, semuanya hilang. Dengan kexify, bagian kunci perangkat yang bocor saja tidak bisa memindahkan dana."
+    - title: "dibanding aplikasi kustodian"
+      body: "Bukan kunci Anda, bukan kripto Anda. Dengan kexify, Anda bisa membawa kedua file kunci dan menandatangani tanpa kami."
+    - title: "dibanding dompet MPC lain"
+      body: "Aturan Anda ditegakkan oleh penandatangan bersama, dan jalan keluar Anda tidak bergantung pada server kami."
+
+cta:
+  title: "Coba dulu dengan jumlah kecil"
+  body: "kexify adalah proyek pribadi seorang engineer, disediakan apa adanya. Mulai dari yang kecil, baca FAQ, lalu berkembang dari sana."
+  app: "Buka aplikasi web"
+  github: "Lihat di GitHub"

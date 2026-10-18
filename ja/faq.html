@@ -46,11 +46,11 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">kexifyは誰のためのものですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">2種類の人のためのものです。1つは、暗号資産が初めてで、よくある失敗を防いでくれるウォレットがほしい人です。シードフレーズがなく、1日の上限があり、サーバーが危険な署名を拒否します。もう1つは、WalletConnect、テストネット、独自のRPC、そして私たちのサーバーに頼らない出口がほしい開発者です。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">2種類の人のためのものです。1つは、暗号資産が初めてで、よくある失敗を防いでくれるウォレットがほしい人です。シードフレーズがなく、1日の上限があり、サーバーが危険な署名を拒否します。もう1つは、WalletConnect、テストネット、独自のRPC、そして私たちのサーバーに頼らない脱出手段がほしい開発者です。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">iPhoneアプリはありますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">テスト中で、まだApp Storeにはありません。my.kexify.appのWebアプリは、iPhoneのSafariを含む最近のブラウザで、今日から使えます。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">テスト中で、まだApp Storeにはありません。my.kexify.appのWebアプリは、iPhoneのSafariを含むモダンブラウザで、今すぐ使えます。</p>
       </details>
     </div>
 
@@ -63,7 +63,7 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">サーバーが停止したらどうなりますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">リカバリーモードを使います。事前にサーバーのキーシェアをエクスポートしておけば（エキスパートモードで）、両方のシェアを使ってブラウザ内でローカルに署名できます。フロントエンドはオープンソースで、両方のシェアを合わせて完全な鍵にするCLIツールもあります。サーバーは不要です。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">リカバリーモードを使います。事前に（エキスパートモードで）サーバーのキーシェアをエクスポートしておけば、両方のシェアを使ってブラウザ内でローカルに署名できます。フロントエンドはオープンソースで、両方のシェアを合わせて完全な鍵にするCLIツールもあります。サーバーは不要です。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">サーバーに資金を盗まれることはありますか？</summary>
@@ -79,7 +79,7 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">ZenGoなどの他のMPCウォレットとの違いは何ですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">どちらもMPCを使います。kexifyでは、両方のキーシェアをエクスポートして、私たちのサーバーなしで署名できます。共同署名者は、あなた自身が設定したルール（1日の上限、信頼するアドレス、上限を超えたときの待機）を適用します。そして、Webアプリはオープンソースです。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">どちらもMPCを使います。kexifyでは、両方のキーシェアをエクスポートして、私たちのサーバーなしで署名できます。共同署名サーバーは、あなた自身が設定したルール（1日の上限、信頼するアドレス、上限を超えたときの待機）を適用します。そして、Webアプリはオープンソースです。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">MPCとポリシーエンジンはどう連携しますか？</summary>
@@ -112,7 +112,7 @@ permalink: /ja/faq/
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">24時間のクーリング期間があるのはなぜですか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">攻撃者がルールを緩め、すぐに悪用するのを防ぐためです。上限を上げるなど、ルールを緩める変更は24時間待ちます。ルールを厳しくする変更はすぐに反映されます。身に覚えのない変更だった場合は、その間にアカウントを凍結できます。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">攻撃者がルールを緩め、すぐに悪用するのを防ぐためです。上限を上げるなど、ルールを緩める変更は反映されるまで24時間かかります。ルールを厳しくする変更はすぐに反映されます。身に覚えのない変更だった場合は、その間にアカウントを凍結できます。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">アカウントを凍結できますか？</summary>
@@ -158,7 +158,7 @@ permalink: /ja/faq/
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">テストネットは使えますか？</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。エキスパートモードをオンにして、設定でテストネットをオンにしてください。使えるのは、Ethereum Sepolia、Base Sepolia、Solana devnetとtestnet、TRON NileとShasta、BitcoinとLitecoinのtestnet、XRP、Stellar、TON、Algorandのテストネット、Cardano PreProdです。</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">はい。エキスパートモードをオンにして、設定でテストネットをオンにしてください。使えるのは、Ethereum Sepolia、Base Sepolia、Solana devnetとtestnet、TRON NileとShasta、BitcoinとLitecoinのテストネット、XRP、Stellar、TON、Algorandのテストネット、Cardano PreProdです。</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">どのWalletConnectメソッドに対応していますか？</summary>

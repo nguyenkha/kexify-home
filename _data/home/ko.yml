@@ -5,7 +5,7 @@ hero:
   stats: ["20개 이상 네트워크", "2-of-2 MPC", "시드 문구 0개"]
   cta_app: "웹 앱 열기"
   cta_dev: "개발자용"
-  ios_note: "무료로 쓸 수 있어요. iPhone 앱은 테스트 중이고, 웹 앱은 지금 바로 쓸 수 있습니다."
+  ios_note: "무료로 쓸 수 있습니다. iPhone 앱은 테스트 중이고, 웹 앱은 지금 바로 쓸 수 있습니다."
   move_title: "kexify가 kexify.co에서 kexify.app으로 옮겼습니다"
   move_body: '새 지갑은 <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>에서 만듭니다. 이미 <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>에 지갑이 있나요? 그곳에서 계속 쓸 수 있지만 자동으로 옮길 수는 없습니다. 패스키가 만든 도메인에 묶여 있기 때문입니다. 옮기려면 my.kexify.app에서 새 지갑을 만들고 자금을 보내세요. 자세한 내용은 app.kexify.co에 로그인해서 확인하세요.'
   move_warning: "kexify는 이메일, 채팅, 고객 지원으로 키 파일이나 암호 문구를 절대 요구하지 않습니다."
@@ -108,3 +108,18 @@ plans:
     - "우선 지원"
     - "개발자용: 자동화 지갑 하나를 위한 서명 SDK와 웹훅"
   soon: "곧 출시"
+why:
+  title: "kexify를 쓰는 이유"
+  items:
+    - title: "시드 문구 지갑과 비교하면"
+      body: "한 기기에 비밀 하나뿐이라 유출되면 모든 것을 잃습니다. kexify에서는 기기의 키 조각만 유출돼도 자금을 옮길 수 없습니다."
+    - title: "수탁형 앱과 비교하면"
+      body: "키가 내 것이 아니면 내 코인이 아닙니다. kexify에서는 두 키 파일을 직접 가져가 우리 없이도 서명할 수 있습니다."
+    - title: "다른 MPC 지갑과 비교하면"
+      body: "내 규칙은 공동 서명자가 적용하고, 떠나는 길은 우리 서버에 달려 있지 않습니다."
+
+cta:
+  title: "먼저 소액으로 써 보세요"
+  body: "kexify는 엔지니어 한 명이 만든 개인 프로젝트이며 현재 상태 그대로 제공됩니다. 소액으로 시작해서 자주 묻는 질문을 읽고, 조금씩 늘려 가세요."
+  app: "웹 앱 열기"
+  github: "GitHub에서 보기"

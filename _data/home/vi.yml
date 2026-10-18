@@ -97,7 +97,7 @@ plans:
   free_soon: "Ứng dụng iPhone, xem trước số dư thay đổi trước khi ký, API chỉ đọc"
   premium_title: "Premium"
   premium_price: "Sắp ra mắt"
-  premium_note: "Chưa xây dựng. Các tính năng an toàn cơ bản sẽ không bao giờ bị đưa vào sau tường phí."
+  premium_note: "Chưa xây dựng. Các tính năng an toàn cơ bản sẽ luôn miễn phí, không bao giờ chuyển sang gói trả phí."
   premium_items:
     - "iPhone làm thiết bị phê duyệt"
     - "Ký offline bằng mã QR"
@@ -108,3 +108,18 @@ plans:
     - "Hỗ trợ ưu tiên"
     - "Cho nhà phát triển: SDK ký cho một ví tự động hoá, và webhook"
   soon: "sắp ra mắt"
+why:
+  title: "Vì sao chọn kexify"
+  items:
+    - title: "So với ví dùng seed phrase"
+      body: "Một bí mật trên một thiết bị. Lộ ra là mất hết. Với kexify, chỉ lộ phần khoá trên thiết bị thì không thể chuyển tiền đi."
+    - title: "So với ứng dụng lưu ký"
+      body: "Không giữ khoá thì không thực sự sở hữu. Với kexify, bạn có thể lấy cả hai file khoá và ký mà không cần chúng tôi."
+    - title: "So với các ví MPC khác"
+      body: "Quy tắc của bạn do bên đồng ký thực thi, và đường rút lui không phụ thuộc vào máy chủ của chúng tôi."
+
+cta:
+  title: "Hãy thử với một khoản nhỏ trước"
+  body: "kexify là dự án cá nhân của một kỹ sư, cung cấp nguyên trạng. Hãy bắt đầu nhỏ, đọc phần câu hỏi thường gặp, rồi tăng dần."
+  app: "Mở ứng dụng web"
+  github: "Xem trên GitHub"
