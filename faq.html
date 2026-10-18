@@ -24,11 +24,11 @@ title: FAQ — kexify
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Is kexify open source?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Built on Coinbase's <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> library (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">our fork</a>). Frontend: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Built on Coinbase's <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">cb-mpc</a> library (<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">our fork</a>). The web app is open source under the MIT license: <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a>. The server and the iPhone app are not open source yet.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Is kexify really free?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes — free forever, no subscription, no ads. kexify was built by its creator for personal use. There's no business model because it's not a business. It's a tool that needed to exist.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">The free plan is free forever, with no ads, and it includes all the basic safety: the daily limit, trusted addresses, the unlimited-approval block, the risky address check, freeze, backup and recovery mode. A Premium plan is planned for features that cost money to run, such as an iPhone approval device, offline QR signing and instant alerts. It is coming soon and its price is not set yet. Basic safety will never move behind a paywall.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Why doesn't kexify have swaps, staking, or DeFi features?</summary>
@@ -40,11 +40,15 @@ title: FAQ — kexify
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Is there any warranty or guarantee?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">No. kexify is a personal project provided as-is, with no warranty. You are responsible for your own keys and funds. That said, the code is open source — you can verify everything yourself.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">No. kexify is a personal project provided as-is, with no warranty. You are responsible for your own keys and funds. That said, the web app's code is open source, so you can check how it works.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Who is kexify for?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Anyone who wants MPC security without the complexity. Built by an engineer, for engineers — but designed so anyone can use it.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Two groups. People who are new to crypto and want a wallet that stops the usual mistakes: no seed phrase, a daily limit, and a server that refuses risky signatures. And developers who want WalletConnect, testnets, their own RPC and a way out that does not depend on our server.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Is there an iPhone app?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">It is in testing and not on the App Store yet. The web app at my.kexify.app works today on any modern browser, including Safari on iPhone.</p>
       </details>
     </div>
 
@@ -57,7 +61,7 @@ title: FAQ — kexify
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What if the server goes down?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Use Recovery Mode. Export your server key share beforehand, then sign locally in your browser with both shares. The frontend is open source, and there's also a CLI tool to combine both shares into a full key. No server needed.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Use Recovery Mode. Export your server key share beforehand (in Expert mode), then sign locally in your browser with both shares. The frontend is open source, and there's also a CLI tool to combine both shares into a full key. No server needed.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Can the server steal my funds?</summary>
@@ -69,11 +73,11 @@ title: FAQ — kexify
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is GoPlus fraud check?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Before signing, kexify automatically checks the recipient address and token contract against GoPlus Security's database for known scams, phishing addresses, and malicious contracts. If a risk is detected, you'll see a warning before confirming. Enabled by default — no setup needed.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Before co-signing, the server checks the recipient (or the spender of a token approval) against GoPlus Security's database of scam, phishing and sanctioned addresses. If the address is flagged, the server refuses to sign. It is on for every wallet with no setup. If GoPlus does not answer in time, the send is not blocked, so treat it as an extra net, not a guarantee.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">How is kexify different from other MPC wallets like ZenGo?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Both use MPC, but kexify is open source and fully self-custodial — you can export both key shares and sign offline anytime. ZenGo controls the recovery share and requires their servers. kexify also adds a Policy Engine (spending limits, address whitelists) that ZenGo doesn't have. And kexify is free — no swap fees, no premium tiers.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Both use MPC. With kexify you can export both key shares and sign without our server, the co-signer enforces rules you set yourself (daily limit, trusted addresses, a wait above the limit), and the web app is open source.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">How do MPC and the Policy Engine work together?</summary>
@@ -94,7 +98,7 @@ title: FAQ — kexify
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">How do I sign transactions?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Initiate from the app or connect via WalletConnect. Both key shares participate in multiple MPC rounds (~6 seconds) to produce a valid signature.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Initiate from the app or connect via WalletConnect. Both key shares take part in a few MPC rounds, usually a few seconds, to produce a valid signature.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is the Policy Engine?</summary>
@@ -102,19 +106,19 @@ title: FAQ — kexify
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What types of policies can I set?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Spending limits</strong> — cap the USD value per transaction. <strong class="dark:text-gray-300 text-gray-700">Address whitelists</strong> — only allow transfers to pre-approved addresses. Both are enforced server-side before the server agrees to co-sign.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed"><strong class="dark:text-gray-300 text-gray-700">Daily limit</strong>: a USD amount per rolling 24 hours. <strong class="dark:text-gray-300 text-gray-700">Send to</strong>: anywhere, or trusted addresses only. <strong class="dark:text-gray-300 text-gray-700">Above the limit</strong>: block the send, or let it go through after a 1 or 24 hour wait. All are enforced by the server before it co-signs. On top of your rules, unlimited token approvals and flagged addresses are always refused. Expert mode also has a full custom rule editor.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Why is there a 24-hour cooling period?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">To prevent an attacker from changing your policies and immediately exploiting them. When you create or modify a policy, it takes 24 hours to activate. If you didn't make the change, you have time to freeze your account.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">To stop an attacker from loosening your rules and using them right away. A change that makes your rules looser, like a higher limit, waits 24 hours. A change that makes them stricter applies at once. If you did not make the change, you have time to freeze your account.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Can I freeze my account?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Freeze via email link. All signing is blocked for a mandatory 24 hours. This gives you time to secure your account if you suspect unauthorized access.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes, with one click on the freeze link in kexify's security emails. It takes effect at once and blocks all signing. Unfreezing needs your passkey (or a proof from your wallet) and then a 24-hour wait, so someone who stole your login cannot undo it quickly.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">What is Expert Mode?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">A set of advanced controls for power users: UTXO selection, Replace-By-Fee (RBF), custom nonce, sign-only mode (sign without broadcasting), separate broadcast, raw message signing, custom RPC endpoints per chain, and full key share backup. Hidden by default — toggle it on in settings when you need granular control.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">A free set of advanced controls: test networks, UTXO selection, Replace-By-Fee speed-up for Bitcoin and Litecoin, custom nonce and fees, sign-only mode with separate broadcast, raw message signing, custom RPC and explorer per chain, a JSON config editor, custom policy rules and full key share backup. It is off by default; turn it on in Settings.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Can I use kexify without providing an email?</summary>
@@ -126,27 +130,43 @@ title: FAQ — kexify
     <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Limitations</h2>
     <div class="space-y-2">
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">Why is there a limit of 3 accounts?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify runs entirely on free infrastructure. Each account stores encrypted key shares on the server, so a cap of 3 accounts per user keeps storage and compute costs sustainable without charging anyone.</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Why can I create only one wallet?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Each wallet keeps an encrypted key share on the server and uses server time to sign, so the free plan has one wallet per account. Wallets created before this limit keep working. More sub-accounts are coming with Premium.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
-        <summary class="text-sm font-medium dark:text-white text-gray-900">Why is there a limit of 10 signatures per transaction (UTXO)?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Each MPC signature requires multiple rounds of computation between your browser and the server. On UTXO chains (Bitcoin, Litecoin, etc.), every input needs a separate signature. Capping at 10 keeps signing time reasonable and prevents free-tier server resources from being overwhelmed. For most transactions, 10 inputs is more than enough.</p>
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Why is there a limit of 50 inputs per transaction (UTXO)?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Each MPC signature requires multiple rounds of computation between your browser and the server. On UTXO chains (Bitcoin, Litecoin, etc.), every input needs a separate signature. Capping at 50 keeps signing time reasonable and protects the server. For most transactions, 50 inputs is more than enough.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Why are RPC connections sometimes slow or unstable?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify uses free public RPC endpoints by default. These can be rate-limited, congested, or occasionally down. For better reliability and speed, go to Settings and replace the default RPC with your own endpoint (from Alchemy, Infura, QuickNode, etc.) — most offer generous free tiers with an API key.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">kexify uses free public RPC endpoints by default for most chains. These can be rate-limited, congested, or occasionally down. For better reliability and speed, turn on Expert mode, go to Settings and replace the default RPC with your own endpoint (from Alchemy, Infura, QuickNode, etc.) — most offer generous free tiers with an API key.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Are there limits on emails and signing requests?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Magic link emails, API requests, and signing operations are all rate-limited to prevent abuse of the free infrastructure. If you hit a limit, wait a short while and try again. These limits are generous enough for normal use — they only kick in under unusual activity patterns.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Magic link emails, API requests, and signing operations are all rate-limited to prevent abuse. If you hit a limit, wait a short while and try again. These limits are generous enough for normal use — they only kick in under unusual activity patterns.</p>
       </details>
       <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
         <summary class="text-sm font-medium dark:text-white text-gray-900">Why does kexify use Cloudflare Turnstile?</summary>
-        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile is a privacy-friendly CAPTCHA alternative that runs invisibly in the background. It protects the free infrastructure from bots and automated abuse — without annoying puzzles or tracking. You should rarely notice it.</p>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Turnstile is a privacy-friendly CAPTCHA alternative that runs invisibly in the background. It protects the service from bots and automated abuse — without annoying puzzles or tracking. You should rarely notice it.</p>
       </details>
     </div>
 
+    <!-- Developers -->
+    <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Developers</h2>
+    <div class="space-y-2">
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Can I use test networks?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes. Turn on Expert mode, then turn on test networks in Settings. Available: Ethereum Sepolia, Base Sepolia, Solana devnet and testnet, TRON Nile and Shasta, Bitcoin and Litecoin testnet, XRP, Stellar, TON and Algorand testnets, and Cardano PreProd.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Which WalletConnect methods are supported?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">WalletConnect v2. EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Every request goes through the same review and server checks as a normal send.</p>
+      </details>
+      <details class="bg-surface-secondary border border-border-primary rounded-lg px-5 py-3 group">
+        <summary class="text-sm font-medium dark:text-white text-gray-900">Is there a command-line tool?</summary>
+        <p class="mt-2 text-sm dark:text-gray-400 text-gray-500 leading-relaxed">Yes, a Bun CLI in the <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">kexify-web</a> repo. It takes your two key files. <code>recover</code> rebuilds the private key (hex, or WIF for Bitcoin) and prints your addresses. <code>connect</code> signs WalletConnect requests locally with both key shares, with no kexify server.</p>
+      </details>
+    </div>
     <!-- Technical -->
     <h2 class="text-sm font-semibold text-blue-400 uppercase tracking-wide mt-10 mb-4">Technical</h2>
     <div class="space-y-2">

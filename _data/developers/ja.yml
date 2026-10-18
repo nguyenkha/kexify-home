@@ -1,0 +1,80 @@
+# 開発者向けページの文言（日本語）。キーは en.yml と同じです。
+title: "開発者向け kexify"
+intro: "my.kexify.app のウェブアプリが現在サポートしている機能と、その試し方です。エキスパートモードは無料で、初期設定ではオフです。設定、エキスパートモードの順に開きます。"
+toc: "このページの内容"
+planned: "予定"
+
+support:
+  title: "現在使える機能"
+  rows:
+    - name: "WalletConnect v2"
+      body: "EVM: <code>eth_sendTransaction</code>、<code>personal_sign</code>、<code>eth_sign</code>、<code>eth_signTypedData_v4</code>。Solana: <code>solana_signTransaction</code>、<code>solana_signAndSendTransaction</code>、<code>solana_signMessage</code>。TRON: <code>tron_signTransaction</code>、<code>tron_signMessage</code>。URI を貼り付けるか QR コードをスキャンしてペアリングします。"
+    - name: "読みやすい確認画面"
+      body: "送金、<code>approve</code>、Permit2、EIP-2612 permit、<code>setApprovalForAll</code>、ERC-721/1155 の calldata をデコードして表示します。既知の EIP-712 タイプ（Permit、Permit2、DAI permit、EIP-3009）はフィールドごとに表示され、未知のものは判読不能として表示されます。"
+    - name: "サーバー側のチェック"
+      body: "アプリからのリクエストも WalletConnect からのリクエストも、すべて共同署名側で解析されます。無制限の fungible トークン承認（2^128 以上、または最大値）は拒否されるため、確認画面で上限を設定してください。フラグが付いたアドレス（GoPlus）は拒否されます。1 日の上限額と信頼済みリストも適用されます。"
+    - name: "テストネット"
+      body: "Ethereum Sepolia、Base Sepolia、Solana devnet と testnet、TRON Nile と Shasta、Bitcoin と Litecoin の testnet、XRP、Stellar、TON、Algorand のテストネット、Cardano PreProd。設定でオンにします（現在はエキスパートモードが必要です）。"
+    - name: "エキスパートモード"
+      body: "EVM では nonce、gas limit、手数料の上書き。BTC、LTC、BCH では手数料率の指定と UTXO の手動選択。BTC と LTC では RBF とスピードアップ。生メッセージの署名。署名のみの実行と、独立したブロードキャストページ。WalletConnect の承認画面での calldata 全文表示。カスタムポリシールールのエディタ。"
+    - name: "独自の RPC"
+      body: "一覧にあるチェーンの RPC とエクスプローラー URL を置き換えられます（ヘルスチェック付き）。ネットワーク設定全体を JSON として編集・エクスポートすることもできます。まったく新しいネットワークの追加にはまだ対応していません。"
+    - name: "カスタムトークン"
+      body: "EVM チェーン、Solana、Stellar、TRON、Algorand、TON で、コントラクトアドレスを指定してトークンを追加できます（表示を管理、カスタムトークンを追加）。"
+    - name: "サーバーなしで移行する"
+      body: "リカバリーモードは、あなたの鍵ファイルとサーバーの鍵ファイルを読み込み、MPC の両当事者をブラウザー内で実行します。kexify サーバーへの通信は一切ありません。サーバーのファイルはエキスパートモードで請求し、安全のための待機期間の後に利用できるようになります。"
+    - name: "CLI"
+      body: "オープンソースのリポジトリにある <code>frontend/cli.ts</code>（Bun のプログラム）です。<code>recover</code> は 2 つの鍵ファイルから秘密鍵（16 進数、Bitcoin は WIF）を復元し、アドレスを表示します。<code>connect</code> はローカルの 2 者署名で WalletConnect のリクエストに応答します。"
+    - name: "オープンソース"
+      body: 'ウェブアプリと CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a>（MIT）。MPC ライブラリ: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>（<a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> のフォーク、MIT）。API サーバー、MPC サーバー、iPhone アプリはまだオープンソースではありません。'
+
+mpc:
+  title: "MPC に関する補足"
+  items:
+    - "当事者は 2 つ、あなたのデバイスと kexify の MPC サーバーです。secp256k1 上の 2 者 ECDSA（EVM、Bitcoin 系、TRON、XRP）と、Ed25519 上の 2 者 EdDSA（Solana、Stellar、TON、Algorand、Cardano）を使います。"
+    - "鍵は分散鍵生成で作成されます。2 つの鍵ファイルからご自身で復元しない限り、完全な秘密鍵は存在しません。"
+    - "署名は通常の ECDSA または Ed25519 署名です。標準的なライブラリで検証でき、MPC が使われたことがオンチェーンから分かることはありません。"
+    - "プロトコルにはバージョンがあります。各クライアントは <code>X-Kexify-Client</code> ヘッダーで自身の MPC プロトコル（<code>mpc=2p:1</code>）を申告し、サーバーは対応できなくなったクライアントを HTTP 426 で拒否します。"
+    - "ブラウザー内では cb-mpc が WebAssembly として動作します。あなたのシェアはパスキー（WebAuthn PRF）またはパスフレーズで暗号化され、サーバーのシェアはユーザーごとの鍵で暗号化されます。"
+
+quick:
+  title: "クイックスタート"
+  items:
+    - title: "dApp に接続する"
+      steps:
+        - "my.kexify.app を開き、ウォレットを作成またはロック解除します。"
+        - "dApp で WalletConnect を選び、ペアリング URI をコピーします（または QR コードを表示します）。"
+        - "kexify で WalletConnect を開き、URI を貼り付けるかコードをスキャンして、アカウントを選んで承認します。"
+        - "リクエストごとに確認画面が開きます。内容を確認し、パスキーまたはパスフレーズで承認すると、デバイスとサーバーが共同で署名します。"
+    - title: "テストネットを使う"
+      steps:
+        - "設定を開き、エキスパートモードをオンにしてから、テストネットをオンにします。"
+        - "ウォレットにテストネットが表示されます。EVM チェーンでは、テスト用のアドレスはメインネットのアドレスと同じです。"
+        - "そのネットワークの faucet からテスト用コインを入手して送金するか、テストネットで動く dApp に接続します。"
+    - title: "署名を検証する"
+      intro: "dApp から WalletConnect 経由で <code>personal_sign</code> を使ってメッセージに署名し、任意のライブラリで検証します。viem の例です。"
+      code: |
+        import { verifyMessage } from "viem";
+
+        const ok = await verifyMessage({
+          address: "0xYourKexifyAddress",
+          message: "hello kexify",
+          signature: "0x...", // returned by personal_sign
+        });
+        console.log(ok); // true
+      after: "EIP-191 メッセージハッシュに対する標準的な secp256k1 署名なので、他のウォレットの署名とまったく同じように検証できます。"
+
+api:
+  title: "開発者API（近日公開）"
+  intro: "まだ利用できません。予定していること："
+  items:
+    - "自分のウォレット用の読み取り専用API：無料"
+    - "自動化ウォレット1つ用の署名SDK：Premium"
+    - "Webhook：Premium"
+
+roadmap:
+  title: "予定"
+  items:
+    - "iPhone アプリ。続いて、iPhone を承認用デバイスとして使う機能と、オフラインの QR 署名"
+    - "署名前の残高変動プレビュー"
+    - "テストネットをエキスパートモードなしの通常の設定にする"

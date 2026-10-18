@@ -1,0 +1,80 @@
+# 开发者页面文案（简体中文）。键与 en.yml 相同。
+title: "面向开发者的 kexify"
+intro: "my.kexify.app 上的网页应用目前支持的功能，以及如何试用。专家模式免费，默认关闭：设置，专家模式。"
+toc: "本页内容"
+planned: "计划中"
+
+support:
+  title: "目前可用"
+  rows:
+    - name: "WalletConnect v2"
+      body: "EVM：<code>eth_sendTransaction</code>、<code>personal_sign</code>、<code>eth_sign</code>、<code>eth_signTypedData_v4</code>。Solana：<code>solana_signTransaction</code>、<code>solana_signAndSendTransaction</code>、<code>solana_signMessage</code>。TRON：<code>tron_signTransaction</code>、<code>tron_signMessage</code>。粘贴 URI 或扫描二维码即可配对。"
+    - name: "可读的审核界面"
+      body: "转账、<code>approve</code>、Permit2、EIP-2612 permit、<code>setApprovalForAll</code> 以及 ERC-721/1155 的 calldata 都会被解码。已知的 EIP-712 类型（Permit、Permit2、DAI permit、EIP-3009）逐字段显示；未知类型会标记为无法解读。"
+    - name: "服务器检查"
+      body: "每个请求，无论来自应用还是 WalletConnect，都会由共同签名方解析。无限额度的同质化代币授权（2^128 及以上，或最大值）会被拒绝；请在审核界面中设置上限。被标记的地址（GoPlus）会被拒绝。你的每日限额和信任名单同样生效。"
+    - name: "测试网"
+      body: "Ethereum Sepolia、Base Sepolia、Solana devnet 和 testnet、TRON Nile 和 Shasta、Bitcoin 和 Litecoin testnet、XRP、Stellar、TON 和 Algorand 的测试网、Cardano PreProd。在设置中开启（目前需要专家模式）。"
+    - name: "专家模式"
+      body: "EVM 上可覆盖 nonce、gas limit 和手续费；BTC、LTC、BCH 上可设置费率并手动选择 UTXO；BTC 和 LTC 上支持 RBF 与加速；原始消息签名；仅签名，以及独立的广播页面；WalletConnect 授权中显示完整 calldata；自定义策略规则编辑器。"
+    - name: "使用你自己的 RPC"
+      body: "可以替换任意已列出链的 RPC 和区块浏览器 URL（含健康检查），也可以把整个网络配置当作 JSON 编辑并导出。暂不支持添加全新的网络。"
+    - name: "自定义代币"
+      body: "在 EVM 链、Solana、Stellar、TRON、Algorand 和 TON 上按合约地址添加代币（管理显示，添加自定义代币）。"
+    - name: "无需服务器即可退出"
+      body: "恢复模式会加载你的密钥文件和服务器的密钥文件，并在浏览器中运行 MPC 的双方，全程不调用 kexify 服务器。服务器的文件需要在专家模式中申请，经过安全等待期后解锁。"
+    - name: "CLI"
+      body: "开源仓库中的 <code>frontend/cli.ts</code>，一个 Bun 程序。<code>recover</code> 用两个密钥文件重建私钥（十六进制，Bitcoin 为 WIF）并输出地址。<code>connect</code> 通过本地双方签名来响应 WalletConnect 请求。"
+    - name: "开源"
+      body: '网页应用和 CLI：<a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a>（MIT）。MPC 库：<a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>，是 <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> 的 fork（MIT）。API 服务器、MPC 服务器和 iPhone 应用目前尚未开源。'
+
+mpc:
+  title: "MPC 说明"
+  items:
+    - "双方：你的设备和 kexify MPC 服务器。secp256k1 上的双方 ECDSA（EVM、Bitcoin 系、TRON、XRP）以及 Ed25519 上的双方 EdDSA（Solana、Stellar、TON、Algorand、Cardano）。"
+    - "密钥通过分布式密钥生成（DKG）创建。完整的私钥从不存在，除非你自己用两个密钥文件重建它。"
+    - "签名就是普通的 ECDSA 或 Ed25519 签名。任何标准库都能验证；链上没有任何迹象表明用过 MPC。"
+    - "协议带有版本号：每个客户端都会在 <code>X-Kexify-Client</code> 请求头中声明自己的 MPC 协议（<code>mpc=2p:1</code>），服务器会以 HTTP 426 拒绝它无法再支持的客户端。"
+    - "在浏览器中，cb-mpc 以 WebAssembly 运行。你的密钥份额用通行密钥（WebAuthn PRF）或口令加密；服务器的份额用每个用户独立的密钥加密。"
+
+quick:
+  title: "快速上手"
+  items:
+    - title: "连接 dApp"
+      steps:
+        - "打开 my.kexify.app，创建或解锁你的钱包。"
+        - "在 dApp 中选择 WalletConnect，复制配对 URI（或显示二维码）。"
+        - "在 kexify 中打开 WalletConnect，粘贴 URI 或扫描二维码，选择账户并批准。"
+        - "每个请求都会打开审核界面。检查后确认（通行密钥或口令），设备和服务器随即共同签名。"
+    - title: "使用测试网"
+      steps:
+        - "进入设置，开启专家模式，再开启测试网。"
+        - "测试网会显示在你的钱包中。在 EVM 链上，测试地址与主网地址相同。"
+        - "从该网络的 faucet 领取测试币，然后发送，或连接运行在测试网上的 dApp。"
+    - title: "验证签名"
+      intro: "通过 WalletConnect 在 dApp 中用 <code>personal_sign</code> 签名一条消息，再用任意库验证。以 viem 为例："
+      code: |
+        import { verifyMessage } from "viem";
+
+        const ok = await verifyMessage({
+          address: "0xYourKexifyAddress",
+          message: "hello kexify",
+          signature: "0x...", // returned by personal_sign
+        });
+        console.log(ok); // true
+      after: "它的验证方式与其他钱包的签名完全一样，因为这是对 EIP-191 消息哈希生成的标准 secp256k1 签名。"
+
+api:
+  title: "开发者 API（即将推出）"
+  intro: "暂未提供。计划如下："
+  items:
+    - "自己钱包的只读 API：免费。"
+    - "单个自动化钱包的签名 SDK：Premium。"
+    - "Webhook：Premium。"
+
+roadmap:
+  title: "计划中"
+  items:
+    - "iPhone 应用，之后是把 iPhone 用作审批设备以及离线二维码签名"
+    - "签名前的余额变动预览"
+    - "测试网成为普通设置，不再需要专家模式"

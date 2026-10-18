@@ -1,0 +1,125 @@
+# Trang chủ tiếng Việt. Cùng khoá với en.yml; _includes/home.html hiển thị.
+hero:
+  tagline: "Ví tiền mã hoá có lưới an toàn."
+  sub: "Không có seed phrase. Khoá của bạn được chia giữa thiết bị và máy chủ kexify, và máy chủ kiểm tra quy tắc do chính bạn đặt trước khi đồng ký."
+  stats: ["20+ mạng", "2-of-2 MPC", "0 seed phrase"]
+  cta_app: "Mở ứng dụng web"
+  cta_dev: "Dành cho nhà phát triển"
+  ios_note: "Dùng miễn phí. Ứng dụng iPhone đang thử nghiệm; ứng dụng web dùng được ngay hôm nay."
+  move_title: "kexify đã chuyển từ kexify.co sang kexify.app"
+  move_body: 'Ví mới được tạo tại <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Đã có ví tại <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>? Ví vẫn hoạt động ở đó, nhưng không thể chuyển sang tự động: passkey gắn với tên miền nơi nó được tạo. Để chuyển, hãy tạo ví mới tại my.kexify.app rồi gửi tiền sang. Đăng nhập app.kexify.co để xem chi tiết.'
+  move_warning: "kexify sẽ không bao giờ hỏi file khoá hay passphrase của bạn qua email, chat hay hỗ trợ."
+
+safety:
+  title: "An toàn ngay từ đầu"
+  intro: "Dành cho người mới với crypto. Những lỗi quen thuộc của người mới bị chặn hoặc làm chậm lại, và máy chủ thực thi quy tắc của bạn, nên laptop bị đánh cắp hay một đường link xấu cũng không thể bỏ qua chúng."
+  items:
+    - icon: key
+      title: "Không lo mất seed phrase"
+      body: "Hai phần khoá, một trên thiết bị, một trên máy chủ. Không bên nào ký được một mình. Bộ sao lưu có kiểm tra passphrase giúp giữ an toàn phần khoá của bạn."
+    - icon: limit
+      title: "Giới hạn hằng ngày do bạn đặt"
+      body: "Đặt giới hạn USD mỗi ngày và chỉ cho phép gửi tới địa chỉ tin cậy. Vượt giới hạn, giao dịch bị chặn hoặc phải chờ 1 hoặc 24 giờ."
+    - icon: clock
+      title: "Đổi quy tắc phải chờ 24 giờ"
+      body: "Quy tắc chặt hơn có hiệu lực ngay. Quy tắc lỏng hơn phải chờ 24 giờ, nên kẻ xâm nhập không thể tắt chúng ngay. Đóng băng ví chỉ với một cú nhấp."
+    - icon: shield
+      title: "Chặn quyền chi tiêu không giới hạn"
+      body: "dApp thường xin quyền chi toàn bộ một token mãi mãi. kexify từ chối đồng ký; bạn đặt một mức tối đa thay vào đó."
+    - icon: alert
+      title: "Kiểm tra địa chỉ rủi ro"
+      body: "Trước khi ký, người nhận được đối chiếu với danh sách địa chỉ lừa đảo và phishing của GoPlus Security. Người nhận mới cũng có cảnh báo."
+    - icon: eye
+      title: "Thấy rõ mình đang ký gì"
+      body: "Chuyển tiền, phê duyệt token, permit và dữ liệu có cấu trúc được hiển thị bằng lời dễ hiểu, kèm địa chỉ đầy đủ và số tiền, trước khi bạn xác nhận."
+
+how:
+  title: "Cách hoạt động"
+  steps:
+    - title: "Tạo"
+      body: "Hai phần khoá độc lập được tạo cùng lúc. Không bao giờ tồn tại một khoá riêng đơn lẻ."
+    - title: "Lưu"
+      body: "Một phần ở trên thiết bị của bạn, một phần ở trên máy chủ. Cả hai đều được mã hoá."
+    - title: "Ký"
+      body: "Thiết bị của bạn và máy chủ cùng ký. Máy chủ kiểm tra quy tắc của bạn trước và không thể ký một mình."
+  mpc_title: "Ký bằng MPC"
+  browser: "Thiết bị của bạn"
+  server: "Máy chủ"
+  share_a: "Phần khoá A"
+  share_b: "Phần khoá B"
+  tip_a: "Mã hoá trên thiết bị của bạn (AES-GCM)"
+  tip_b: "Mã hoá trên máy chủ (AES-256-GCM + HKDF)"
+  channel: "tin nhắn mã hoá, không phải khoá"
+  signature: "Chữ ký"
+  never: 'Khoá đầy đủ <span class="text-blue-400">không bao giờ tồn tại</span>: không trên thiết bị của bạn, không trên máy chủ, không trên đường truyền.'
+
+exit:
+  title: "Rời đi bất cứ lúc nào, không cần máy chủ"
+  body: "Giữ file khoá của bạn, và trong Expert mode hãy yêu cầu cả file khoá của máy chủ (file này mở sau một thời gian chờ an toàn). Có đủ hai file, chế độ khôi phục ký ngay trong trình duyệt mà không cần máy chủ kexify. CLI mã nguồn mở làm được điều tương tự, hoặc biến hai file thành một khoá riêng thông thường."
+
+dev:
+  title: "Dành cho nhà phát triển"
+  intro: "Expert mode miễn phí và tắt mặc định. Bật trong Cài đặt khi bạn cần các tuỳ chỉnh nâng cao."
+  more: "Đọc hướng dẫn cho nhà phát triển"
+  items:
+    - title: "WalletConnect v2"
+      body: "Ethereum và các EVM L2 (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana và TRON."
+    - title: "Testnet"
+      body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile và Shasta, Bitcoin testnet, Cardano PreProd và nhiều mạng khác, bật bằng một công tắc trong Expert mode."
+    - title: "Expert mode"
+      body: "Ghi đè nonce và phí, chọn UTXO, tăng tốc RBF cho BTC và LTC, ký thông điệp thô, chỉ ký và broadcast riêng."
+    - title: "RPC riêng của bạn"
+      body: "Đổi RPC và explorer của bất kỳ chain nào sang endpoint Alchemy, Infura hoặc QuickNode của bạn, có kiểm tra trạng thái trực tiếp. Sửa toàn bộ cấu hình dưới dạng JSON."
+    - title: "CLI và khôi phục"
+      body: "CLI viết bằng Bun dựng lại khoá từ hai file khoá (<code>recover</code>) hoặc ký yêu cầu WalletConnect ngay trên máy (<code>connect</code>)."
+    - title: "Mã nguồn mở"
+      body: 'Ứng dụng web dùng giấy phép MIT trên <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a>. MPC chạy trên <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a> qua <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">bản fork của chúng tôi</a>.'
+
+chains:
+  title: "Các chain được hỗ trợ"
+  evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  more: "Khác"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+
+plans:
+  title: "Miễn phí và Premium"
+  free_title: "Miễn phí"
+  free_price: "$0, mãi mãi"
+  free_items:
+    - "Ví với chính sách đơn giản: giới hạn hằng ngày, địa chỉ tin cậy, chờ khi vượt giới hạn"
+    - "Kiểm tra an toàn: chặn phê duyệt token không giới hạn và kiểm tra địa chỉ rủi ro"
+    - "Tăng phí thủ công ở nơi hỗ trợ (Bitcoin, Litecoin)"
+    - "Bộ khôi phục, chế độ khôi phục và CLI"
+    - "Đồng bộ sổ địa chỉ mã hoá đầu cuối"
+    - "WalletConnect"
+    - "Công cụ Expert mode và mạng thử nghiệm"
+  free_soon_title: "Sắp ra mắt ở gói miễn phí"
+  free_soon: "Ứng dụng iPhone, xem trước số dư thay đổi trước khi ký, API chỉ đọc"
+  premium_title: "Premium"
+  premium_price: "Sắp ra mắt"
+  premium_note: "Chưa xây dựng. Các tính năng an toàn cơ bản sẽ luôn miễn phí, không bao giờ chuyển sang gói trả phí."
+  premium_items:
+    - "iPhone làm thiết bị phê duyệt"
+    - "Ký offline bằng mã QR"
+    - "Cảnh báo tức thì khi nhận tiền"
+    - "Tự động tăng phí cho giao dịch bị kẹt"
+    - "Địa chỉ nhận và địa chỉ tiền thừa (change) mới cho Bitcoin và Litecoin (riêng tư)"
+    - "Thêm tài khoản con"
+    - "Hỗ trợ ưu tiên"
+    - "Cho nhà phát triển: SDK ký cho một ví tự động hoá, và webhook"
+  soon: "sắp ra mắt"
+why:
+  title: "Vì sao chọn kexify"
+  items:
+    - title: "So với ví dùng seed phrase"
+      body: "Một bí mật trên một thiết bị. Lộ ra là mất hết. Với kexify, chỉ lộ phần khoá trên thiết bị thì không thể chuyển tiền đi."
+    - title: "So với ứng dụng lưu ký"
+      body: "Không giữ khoá thì không thực sự sở hữu. Với kexify, bạn có thể lấy cả hai file khoá và ký mà không cần chúng tôi."
+    - title: "So với các ví MPC khác"
+      body: "Quy tắc của bạn do bên đồng ký thực thi, và đường rút lui không phụ thuộc vào máy chủ của chúng tôi."
+
+cta:
+  title: "Hãy thử với một khoản nhỏ trước"
+  body: "kexify là dự án cá nhân của một kỹ sư, cung cấp nguyên trạng. Hãy bắt đầu nhỏ, đọc phần câu hỏi thường gặp, rồi tăng dần."
+  app: "Mở ứng dụng web"
+  github: "Xem trên GitHub"

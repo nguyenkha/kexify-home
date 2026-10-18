@@ -1,0 +1,125 @@
+# 日本語のホームページ文言。キーは en.yml と同じ。_includes/home.html が表示します。
+hero:
+  tagline: "セーフティネット付きの暗号資産ウォレット。"
+  sub: "シードフレーズは不要です。鍵はあなたの端末とkexifyサーバーに分けて持たれ、サーバーは共同署名の前にあなた自身のルールを確認します。"
+  stats: ["20以上のネットワーク", "2-of-2 MPC", "シードフレーズ0個"]
+  cta_app: "Webアプリを開く"
+  cta_dev: "開発者向け"
+  ios_note: "無料で使えます。iPhoneアプリはテスト中です。Webアプリは今日から使えます。"
+  move_title: "kexifyはkexify.coからkexify.appに移りました"
+  move_body: '新しいウォレットは <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a> で作成します。すでに <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a> にウォレットがある場合、そちらでそのまま使えますが、自動での移行はできません。パスキーは作成したドメインに結び付いているためです。移行するには、my.kexify.app で新しいウォレットを作り、資金を送ってください。詳しくは app.kexify.co にログインして確認してください。'
+  move_warning: "kexifyが、メール、チャット、サポートで鍵ファイルやパスフレーズをお尋ねすることはありません。"
+
+safety:
+  title: "最初から安全"
+  intro: "暗号資産が初めての人のために作りました。初心者がよくやる失敗はブロックされるか、実行前に待機時間が入ります。ルールはサーバーが適用するので、ノートPCが盗まれたり、怪しいリンクを開いたりしても、回避できません。"
+  items:
+    - icon: key
+      title: "なくすシードフレーズがない"
+      body: "キーシェアは2つ、1つは端末に、1つはサーバーにあります。どちらも単独では署名できません。パスフレーズ確認付きのバックアップキットで、あなたのシェアを守ります。"
+    - icon: limit
+      title: "自分で決める1日の上限"
+      body: "1日のUSD上限を設定し、信頼するアドレスだけに送金を許可できます。上限を超える送金は、ブロックされるか、1時間または24時間待つことになります。"
+    - icon: clock
+      title: "ルール変更は24時間待ち"
+      body: "厳しくする変更はすぐに反映されます。緩める変更は24時間待つので、侵入した人がすぐにルールを切ることはできません。ウォレットはワンクリックで凍結できます。"
+    - icon: shield
+      title: "無制限の承認をブロック"
+      body: "dAppは、トークンの全額を無期限に使う権限を求めることがよくあります。kexifyはその共同署名を拒否し、代わりに上限を設定してもらいます。"
+    - icon: alert
+      title: "危険なアドレスのチェック"
+      body: "署名の前に、送金先をGoPlus Securityの詐欺・フィッシングアドレスのリストと照合します。初めての送金先にも警告が出ます。"
+    - icon: eye
+      title: "署名する内容が見える"
+      body: "送金、トークンの承認、permit、型付きデータは、確認する前にわかりやすい言葉で、完全なアドレスと金額とともに表示されます。"
+
+how:
+  title: "しくみ"
+  steps:
+    - title: "作成"
+      body: "2つの独立したキーシェアを一緒に作ります。単一の秘密鍵は存在しません。"
+    - title: "保管"
+      body: "1つは端末に、1つはサーバーに置きます。どちらも暗号化されています。"
+    - title: "署名"
+      body: "端末とサーバーが一緒に署名します。サーバーが先にルールを確認し、単独では署名できません。"
+  mpc_title: "MPC署名"
+  browser: "あなたの端末"
+  server: "サーバー"
+  share_a: "キーシェアA"
+  share_b: "キーシェアB"
+  tip_a: "端末上で暗号化（AES-GCM）"
+  tip_b: "サーバー上で暗号化（AES-256-GCM + HKDF）"
+  channel: "やり取りするのは暗号化されたメッセージで、鍵ではありません"
+  signature: "署名"
+  never: '完全な鍵は<span class="text-blue-400">どこにも存在しません</span>。端末にも、サーバーにも、通信の途中にもありません。'
+
+exit:
+  title: "サーバーなしで、いつでも離れられる"
+  body: "ご自身の鍵ファイルを保管し、エキスパートモードでサーバー側の鍵ファイルも請求できます（安全のための待機時間のあとに解除されます）。2つのファイルがあれば、リカバリーモードでブラウザ内で署名でき、kexifyのサーバーはまったく不要です。オープンソースのCLIでも同じことができ、2つのファイルを通常の秘密鍵に戻すこともできます。"
+
+dev:
+  title: "開発者向け"
+  intro: "エキスパートモードは無料で、デフォルトではオフです。細かく設定したいときに、設定でオンにしてください。"
+  more: "開発者ガイドを読む"
+  items:
+    - title: "WalletConnect v2"
+      body: "EthereumとEVM L2（<code>eth_sendTransaction</code>、<code>personal_sign</code>、<code>eth_signTypedData_v4</code>）、SolanaとTRONに対応しています。"
+    - title: "テストネット"
+      body: "Sepolia、Base Sepolia、Solana devnet、TRON NileとShasta、Bitcoin testnet、Cardano PreProdなど。エキスパートモードでワンタップで切り替えられます。"
+    - title: "エキスパートモード"
+      body: "ノンスと手数料の上書き、UTXO選択、BTCとLTCのRBFによる加速、生メッセージへの署名、署名のみとブロードキャストの分離。"
+    - title: "独自のRPC"
+      body: "どのチェーンでも、RPCとエクスプローラーをお持ちのAlchemy、Infura、QuickNodeのエンドポイントに置き換えられ、稼働状況もその場で確認できます。設定全体をJSONで編集することもできます。"
+    - title: "CLIとリカバリー"
+      body: "Bun製のCLIで、2つの鍵ファイルから鍵を復元（<code>recover</code>）したり、WalletConnectのリクエストをローカルで署名（<code>connect</code>）したりできます。"
+    - title: "オープンソース"
+      body: 'Webアプリは <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a> でMITライセンスで公開しています。MPCは<a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">私たちのフォーク</a>を通じて、<a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a> 上で動いています。'
+
+chains:
+  title: "対応チェーン"
+  evm_sub: "Ethereum、Base、Arbitrum、Polygon..."
+  more: "その他"
+  more_sub: "TRON、Algorand、Cardano、Stellar、LTC、BCH"
+
+plans:
+  title: "無料とPremium"
+  free_title: "無料"
+  free_price: "$0、ずっと"
+  free_items:
+    - "シンプルなポリシー付きのウォレット：1日の上限、信頼するアドレス、上限を超えたときの待機"
+    - "安全チェック：無制限の承認のブロックと危険なアドレスのチェック"
+    - "対応チェーンでの手動の手数料引き上げ（Bitcoin、Litecoin）"
+    - "リカバリーキット、リカバリーモード、CLI"
+    - "エンドツーエンド暗号化のアドレス帳の同期"
+    - "WalletConnect"
+    - "エキスパートモードのツールとテストネット"
+  free_soon_title: "無料プランに近日追加"
+  free_soon: "iPhoneアプリ、署名前の残高変化プレビュー、読み取り専用API"
+  premium_title: "Premium"
+  premium_price: "近日公開"
+  premium_note: "まだ作っていません。基本的な安全機能が有料になることはありません。"
+  premium_items:
+    - "iPhoneを承認用デバイスとして使う"
+    - "オフラインのQR署名"
+    - "入金の即時アラート"
+    - "止まった取引の手数料の自動引き上げ"
+    - "BitcoinとLitecoinの新しい受取アドレスとおつりアドレス（プライバシー）"
+    - "より多くのサブアカウント"
+    - "優先サポート"
+    - "開発者向け：自動化ウォレット1つ用の署名SDKとWebhook"
+  soon: "近日公開"
+why:
+  title: "kexifyを選ぶ理由"
+  items:
+    - title: "シードフレーズ型ウォレットとの違い"
+      body: "1つの端末に1つの秘密があるだけで、漏れたらすべて失います。kexifyでは、端末のシェアだけが漏れても、資金は動かせません。"
+    - title: "カストディ型アプリとの違い"
+      body: "鍵を持っていなければ、あなたの資産とは言えません。kexifyでは、2つの鍵ファイルを手元に置き、私たちなしで署名できます。"
+    - title: "他のMPCウォレットとの違い"
+      body: "ルールは共同署名者が適用し、離れる手段は私たちのサーバーに依存しません。"
+
+cta:
+  title: "まずは少額から試してください"
+  body: "kexifyは1人のエンジニアによる個人プロジェクトで、現状のまま提供しています。少額から始めて、よくある質問を読み、少しずつ増やしてください。"
+  app: "Webアプリを開く"
+  github: "GitHubで見る"

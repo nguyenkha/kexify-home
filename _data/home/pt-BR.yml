@@ -1,0 +1,125 @@
+# Home page copy (pt-BR). Same keys as en.yml; _includes/home.html renders it.
+hero:
+  tagline: "Uma carteira cripto com rede de proteção."
+  sub: "Sem frase-semente. Sua chave é dividida entre o seu dispositivo e o servidor do kexify, e o servidor confere as suas próprias regras antes de co-assinar."
+  stats: ["Mais de 20 redes", "MPC 2-of-2", "0 frases-semente"]
+  cta_app: "Abrir o app web"
+  cta_dev: "Para desenvolvedores"
+  ios_note: "Uso grátis. App para iPhone em testes; o app web funciona hoje."
+  move_title: "O kexify mudou de kexify.co para kexify.app"
+  move_body: 'Carteiras novas são criadas em <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Já tem uma carteira em <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>? Ela continua funcionando lá, mas não dá para migrar automaticamente: as passkeys são ligadas ao domínio em que foram criadas. Para migrar, crie uma carteira nova em my.kexify.app e envie seus fundos para ela. Entre em app.kexify.co para ver os detalhes.'
+  move_warning: "O kexify nunca vai pedir seu arquivo de chave nem sua frase-senha por e-mail, chat ou suporte."
+
+safety:
+  title: "Seguro por padrão"
+  intro: "Feito para quem está começando em cripto. Os erros típicos de iniciante são bloqueados ou atrasados, e o servidor aplica as suas regras, então um notebook roubado ou um link malicioso não conseguem pular essas regras."
+  items:
+    - icon: key
+      title: "Sem frase-semente para perder"
+      body: "Duas partes da chave: uma no seu dispositivo e outra no servidor. Nenhuma assina sozinha. Um kit de backup com verificação da frase-senha protege a sua parte."
+    - icon: limit
+      title: "Um limite diário que você controla"
+      body: "Defina um limite diário em USD e permita envios apenas para endereços confiáveis. Acima do limite, o envio é bloqueado ou espera 1 ou 24 horas."
+    - icon: clock
+      title: "Mudanças de regra esperam 24 horas"
+      body: "Regras mais rígidas valem na hora. Regras mais frouxas esperam 24 horas, então quem conseguir entrar não pode simplesmente desligá-las. Congele sua carteira com um clique."
+    - icon: shield
+      title: "Aprovações ilimitadas bloqueadas"
+      body: "Os dApps costumam pedir permissão para gastar todo um token para sempre. O kexify se recusa a co-assinar isso; você define um teto."
+    - icon: alert
+      title: "Verificação de endereço de risco"
+      body: "Antes de assinar, o destinatário é conferido na lista de endereços de golpe e phishing da GoPlus Security. Um destinatário novo também gera um aviso."
+    - icon: eye
+      title: "Veja o que você assina"
+      body: "Transferências, aprovações de token, permits e dados tipados aparecem em linguagem simples, com o endereço completo e o valor, antes de você confirmar."
+
+how:
+  title: "Como funciona"
+  steps:
+    - title: "Criar"
+      body: "Duas partes de chave independentes são criadas juntas. Nunca existe uma única chave privada."
+    - title: "Guardar"
+      body: "Uma parte fica no seu dispositivo e outra no servidor. As duas são criptografadas."
+    - title: "Assinar"
+      body: "Seu dispositivo e o servidor assinam juntos. O servidor confere suas regras primeiro e não assina sozinho."
+  mpc_title: "Assinatura MPC"
+  browser: "Seu dispositivo"
+  server: "Servidor"
+  share_a: "Parte da chave A"
+  share_b: "Parte da chave B"
+  tip_a: "Criptografada no seu dispositivo (AES-GCM)"
+  tip_b: "Criptografada no servidor (AES-256-GCM + HKDF)"
+  channel: "mensagens criptografadas, não chaves"
+  signature: "Assinatura"
+  never: 'A chave completa <span class="text-blue-400">nunca existe</span>: nem no seu dispositivo, nem no servidor, nem em trânsito.'
+
+exit:
+  title: "Saia quando quiser, sem precisar do servidor"
+  body: "Guarde o seu próprio arquivo de chave e, no modo especialista, peça também o arquivo de chave do servidor (ele é liberado depois de uma espera de segurança). Com os dois arquivos, o modo de recuperação assina no seu navegador sem nenhum servidor do kexify. A CLI de código aberto faz o mesmo, ou transforma os dois arquivos em uma chave privada comum."
+
+dev:
+  title: "Para desenvolvedores"
+  intro: "O modo especialista é grátis e vem desligado. Ative nos Ajustes quando quiser os controles avançados."
+  more: "Ler o guia para desenvolvedores"
+  items:
+    - title: "WalletConnect v2"
+      body: "Ethereum e L2s EVM (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana e TRON."
+    - title: "Redes de teste"
+      body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile e Shasta, testnet do Bitcoin, Cardano PreProd e mais, com um só botão no modo especialista."
+    - title: "Modo especialista"
+      body: "Nonce e taxas personalizados, seleção de UTXO, aceleração com RBF para BTC e LTC, assinatura de mensagens brutas, só assinar com transmissão separada."
+    - title: "Seu próprio RPC"
+      body: "Troque o RPC e o explorador de qualquer rede pelo seu endpoint da Alchemy, Infura ou QuickNode, com verificação de status ao vivo. Edite toda a configuração como JSON."
+    - title: "CLI e recuperação"
+      body: "Uma CLI em Bun reconstrói as chaves a partir dos dois arquivos de chave (<code>recover</code>) ou assina requisições do WalletConnect localmente (<code>connect</code>)."
+    - title: "Código aberto"
+      body: 'O app web é MIT no <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a>. O MPC roda sobre o <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a> por meio do <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">nosso fork</a>.'
+
+chains:
+  title: "Redes compatíveis"
+  evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  more: "Mais"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+
+plans:
+  title: "Grátis e Premium"
+  free_title: "Grátis"
+  free_price: "$0, para sempre"
+  free_items:
+    - "Carteira com uma política simples: limite diário, endereços confiáveis, espera acima do limite"
+    - "Verificações de segurança: bloqueio de aprovações ilimitadas e verificação de endereços de risco"
+    - "Aceleração manual onde disponível (Bitcoin, Litecoin)"
+    - "Kit de recuperação, modo de recuperação e CLI"
+    - "Sincronização da agenda de endereços com criptografia de ponta a ponta"
+    - "WalletConnect"
+    - "Ferramentas do modo especialista e redes de teste"
+  free_soon_title: "Em breve no Grátis"
+  free_soon: "App para iPhone, prévia das mudanças de saldo antes de assinar, API somente leitura"
+  premium_title: "Premium"
+  premium_price: "Em breve"
+  premium_note: "Ainda não construído. A segurança básica nunca vai passar para um plano pago."
+  premium_items:
+    - "iPhone como dispositivo de aprovação"
+    - "Assinatura offline por QR"
+    - "Alertas instantâneos de fundos recebidos"
+    - "Aumento automático de taxa para transações travadas"
+    - "Novos endereços de recebimento e de troco para Bitcoin e Litecoin (privacidade)"
+    - "Mais subcontas"
+    - "Suporte prioritário"
+    - "Para desenvolvedores: um SDK de assinatura para uma carteira de automação e webhooks"
+  soon: "em breve"
+why:
+  title: "Por que o kexify"
+  items:
+    - title: "versus carteiras com frase-semente"
+      body: "Um único segredo em um único dispositivo. Se vazar, tudo se perde. Com o kexify, uma parte vazada do dispositivo, sozinha, não consegue mover fundos."
+    - title: "versus apps custodiais"
+      body: "Se as chaves não são suas, as criptomoedas também não são. Com o kexify você pode levar os dois arquivos de chave e assinar sem a gente."
+    - title: "versus outras carteiras MPC"
+      body: "Suas regras são aplicadas pelo co-assinante, e a sua saída não depende do nosso servidor."
+
+cta:
+  title: "Experimente primeiro com um valor pequeno"
+  body: "O kexify é um projeto pessoal de um único engenheiro, oferecido como está. Comece pequeno, leia o FAQ e vá crescendo a partir daí."
+  app: "Abrir o app web"
+  github: "Ver no GitHub"

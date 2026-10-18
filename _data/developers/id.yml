@@ -1,0 +1,80 @@
+# Teks halaman untuk developer (id). Kunci sama dengan en.yml.
+title: "kexify untuk developer"
+intro: "Apa yang didukung aplikasi web di my.kexify.app saat ini, dan cara mencobanya. Mode Ahli gratis dan nonaktif secara default: Pengaturan, Mode Ahli."
+toc: "Di halaman ini"
+planned: "direncanakan"
+
+support:
+  title: "Yang sudah berfungsi saat ini"
+  rows:
+    - name: "WalletConnect v2"
+      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Untuk memasangkan, tempel URI atau pindai kode QR."
+    - name: "Tinjauan yang mudah dibaca"
+      body: "Calldata untuk transfer, <code>approve</code>, Permit2, permit EIP-2612, <code>setApprovalForAll</code>, dan ERC-721/1155 didekode. Tipe EIP-712 yang dikenal (Permit, Permit2, DAI permit, EIP-3009) ditampilkan per field; yang tidak dikenal ditandai sebagai tidak terbaca."
+    - name: "Pemeriksaan server"
+      body: "Setiap permintaan, baik dari aplikasi maupun WalletConnect, di-parse oleh co-signer. Approval token fungible tanpa batas (2^128 atau lebih, atau nilai maksimum) ditolak; tetapkan batas di tinjauan. Alamat yang ditandai (GoPlus) ditolak. Batas harian dan daftar tepercaya Anda tetap berlaku."
+    - name: "Jaringan uji"
+      body: "Ethereum Sepolia, Base Sepolia, Solana devnet dan testnet, TRON Nile dan Shasta, testnet Bitcoin dan Litecoin, testnet XRP, Stellar, TON, dan Algorand, Cardano PreProd. Aktifkan di Pengaturan (saat ini lewat Mode Ahli)."
+    - name: "Mode Ahli"
+      body: "Override nonce, gas limit, dan biaya di EVM; fee rate dan pemilihan UTXO manual di BTC, LTC, dan BCH; RBF dan speed-up di BTC dan LTC; penandatanganan pesan mentah; sign-only dan halaman broadcast terpisah; calldata lengkap di persetujuan WalletConnect; editor aturan kebijakan kustom."
+    - name: "RPC Anda sendiri"
+      body: "Ganti RPC dan URL explorer dari chain mana pun dalam daftar (termasuk health check), atau edit seluruh konfigurasi jaringan sebagai JSON dan ekspor. Menambahkan jaringan yang benar-benar baru belum didukung."
+    - name: "Token kustom"
+      body: "Tambahkan token berdasarkan alamat kontrak di chain EVM, Solana, Stellar, TRON, Algorand, dan TON (Atur tampilan, Tambah token kustom)."
+    - name: "Keluar tanpa server"
+      body: "Mode pemulihan memuat file kunci Anda dan file kunci server, lalu menjalankan kedua pihak MPC di browser, tanpa panggilan ke server kexify. File server diminta di Mode Ahli dan terbuka setelah masa tunggu keamanan."
+    - name: "CLI"
+      body: "<code>frontend/cli.ts</code> di repositori open source, program Bun. <code>recover</code> membangun ulang private key (hex, atau WIF untuk Bitcoin) dari dua file kunci dan mencetak alamat. <code>connect</code> menjawab permintaan WalletConnect dengan penandatanganan lokal 2 pihak."
+    - name: "Open source"
+      body: 'Aplikasi web dan CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT). Library MPC: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>, fork dari <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT). Server API, server MPC, dan aplikasi iPhone belum open source.'
+
+mpc:
+  title: "Catatan MPC"
+  items:
+    - "Dua pihak: perangkat Anda dan server MPC kexify. ECDSA 2 pihak pada secp256k1 (EVM, keluarga Bitcoin, TRON, XRP) dan EdDSA 2 pihak pada Ed25519 (Solana, Stellar, TON, Algorand, Cardano)."
+    - "Kunci dibuat lewat distributed key generation. Private key lengkap tidak pernah ada, kecuali Anda sendiri membangunnya ulang dari kedua file kunci."
+    - "Tanda tangannya adalah tanda tangan ECDSA atau Ed25519 biasa. Library standar mana pun dapat memverifikasinya; tidak ada apa pun on-chain yang menunjukkan bahwa MPC digunakan."
+    - "Protokolnya berversi: setiap klien menyebutkan protokol MPC-nya (<code>mpc=2p:1</code>) di header <code>X-Kexify-Client</code>, dan server menolak klien yang tidak lagi dapat dilayani dengan HTTP 426."
+    - "Di browser, cb-mpc berjalan sebagai WebAssembly. Share Anda dienkripsi dengan passkey (WebAuthn PRF) atau passphrase; share server dienkripsi dengan kunci per pengguna."
+
+quick:
+  title: "Panduan singkat"
+  items:
+    - title: "Menghubungkan dApp"
+      steps:
+        - "Buka my.kexify.app, lalu buat atau buka kunci dompet Anda."
+        - "Di dApp, pilih WalletConnect dan salin URI pairing (atau tampilkan kode QR)."
+        - "Di kexify, buka WalletConnect, tempel URI atau pindai kodenya, pilih akun, lalu setujui."
+        - "Setiap permintaan membuka tinjauan. Periksa, konfirmasi (passkey atau passphrase), lalu perangkat dan server menandatangani bersama."
+    - title: "Menggunakan jaringan uji"
+      steps:
+        - "Di Pengaturan, aktifkan Mode Ahli, lalu aktifkan jaringan uji."
+        - "Jaringan uji kini tampil di dompet Anda. Di chain EVM, alamat uji Anda sama dengan alamat mainnet."
+        - "Ambil koin uji dari faucet jaringan itu, lalu kirim, atau hubungkan dApp yang berjalan di testnet."
+    - title: "Memverifikasi tanda tangan"
+      intro: "Tandatangani pesan dengan <code>personal_sign</code> dari dApp lewat WalletConnect, lalu periksa dengan library apa pun. Dengan viem:"
+      code: |
+        import { verifyMessage } from "viem";
+
+        const ok = await verifyMessage({
+          address: "0xYourKexifyAddress",
+          message: "hello kexify",
+          signature: "0x...", // returned by personal_sign
+        });
+        console.log(ok); // true
+      after: "Tanda tangan ini terverifikasi seperti tanda tangan dompet lain karena merupakan tanda tangan secp256k1 standar atas hash pesan EIP-191."
+
+api:
+  title: "API Developer (segera hadir)"
+  intro: "Belum tersedia. Yang direncanakan:"
+  items:
+    - "API hanya-baca untuk dompet Anda sendiri: gratis."
+    - "SDK penandatanganan untuk satu dompet otomatisasi: Premium."
+    - "Webhook: Premium."
+
+roadmap:
+  title: "Direncanakan"
+  items:
+    - "Aplikasi iPhone, lalu iPhone sebagai perangkat persetujuan dan penandatanganan QR offline"
+    - "Pratinjau perubahan saldo sebelum Anda menandatangani"
+    - "Jaringan uji sebagai pengaturan biasa, tanpa Mode Ahli"

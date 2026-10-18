@@ -1,0 +1,125 @@
+# 한국어 홈페이지 문구. 키는 en.yml과 같고, _includes/home.html이 표시합니다.
+hero:
+  tagline: "안전망이 있는 암호화폐 지갑."
+  sub: "시드 문구가 없습니다. 키는 내 기기와 kexify 서버에 나뉘어 있고, 서버는 공동 서명 전에 내가 정한 규칙을 확인합니다."
+  stats: ["20개 이상 네트워크", "2-of-2 MPC", "시드 문구 0개"]
+  cta_app: "웹 앱 열기"
+  cta_dev: "개발자용"
+  ios_note: "무료로 쓸 수 있습니다. iPhone 앱은 테스트 중이고, 웹 앱은 지금 바로 쓸 수 있습니다."
+  move_title: "kexify가 kexify.co에서 kexify.app으로 옮겼습니다"
+  move_body: '새 지갑은 <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>에서 만듭니다. 이미 <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>에 지갑이 있나요? 그곳에서 계속 쓸 수 있지만 자동으로 옮길 수는 없습니다. 패스키가 만든 도메인에 묶여 있기 때문입니다. 옮기려면 my.kexify.app에서 새 지갑을 만들고 자금을 보내세요. 자세한 내용은 app.kexify.co에 로그인해서 확인하세요.'
+  move_warning: "kexify는 이메일, 채팅, 고객 지원으로 키 파일이나 암호 문구를 절대 요구하지 않습니다."
+
+safety:
+  title: "기본부터 안전하게"
+  intro: "암호화폐가 처음인 사람을 위해 만들었습니다. 초보자가 흔히 하는 실수는 막거나 늦춰 주고, 규칙은 서버가 적용하기 때문에 노트북을 도난당하거나 나쁜 링크를 눌러도 건너뛸 수 없습니다."
+  items:
+    - icon: key
+      title: "잃어버릴 시드 문구가 없습니다"
+      body: "키 조각은 두 개입니다. 하나는 내 기기에, 하나는 서버에 있습니다. 어느 쪽도 혼자서는 서명할 수 없습니다. 암호 문구 확인이 있는 백업 키트가 내 조각을 안전하게 지켜 줍니다."
+    - icon: limit
+      title: "내가 정하는 일일 한도"
+      body: "하루 USD 한도를 정하고, 신뢰하는 주소로만 보내도록 할 수 있습니다. 한도를 넘는 전송은 차단되거나 1시간 또는 24시간을 기다려야 합니다."
+    - icon: clock
+      title: "규칙 변경은 24시간 대기"
+      body: "더 엄격한 규칙은 바로 적용됩니다. 느슨한 규칙은 24시간 기다려야 하므로, 침입한 사람이 규칙을 바로 끌 수 없습니다. 지갑은 한 번 클릭으로 동결할 수 있습니다."
+    - icon: shield
+      title: "무제한 승인 차단"
+      body: "dApp은 토큰 전체를 영원히 쓸 수 있는 권한을 요청하는 경우가 많습니다. kexify는 이런 요청에 공동 서명하지 않고, 대신 한도를 정하게 합니다."
+    - icon: alert
+      title: "위험한 주소 검사"
+      body: "서명하기 전에 받는 주소를 GoPlus Security의 사기 및 피싱 주소 목록과 대조합니다. 처음 보내는 주소에도 경고가 표시됩니다."
+    - icon: eye
+      title: "서명하는 내용이 보입니다"
+      body: "전송, 토큰 승인, permit, 구조화된 데이터를 확인하기 전에 쉬운 말로, 전체 주소와 금액과 함께 보여 줍니다."
+
+how:
+  title: "작동 방식"
+  steps:
+    - title: "생성"
+      body: "독립된 키 조각 두 개를 함께 만듭니다. 하나의 개인 키는 존재하지 않습니다."
+    - title: "보관"
+      body: "한 조각은 내 기기에, 한 조각은 서버에 있습니다. 둘 다 암호화됩니다."
+    - title: "서명"
+      body: "내 기기와 서버가 함께 서명합니다. 서버가 먼저 내 규칙을 확인하며, 혼자서는 서명할 수 없습니다."
+  mpc_title: "MPC 서명"
+  browser: "내 기기"
+  server: "서버"
+  share_a: "키 조각 A"
+  share_b: "키 조각 B"
+  tip_a: "내 기기에서 암호화 (AES-GCM)"
+  tip_b: "서버에서 암호화 (AES-256-GCM + HKDF)"
+  channel: "오가는 것은 암호화된 메시지이며 키가 아닙니다"
+  signature: "서명"
+  never: '전체 키는 <span class="text-blue-400">어디에도 존재하지 않습니다</span>. 내 기기에도, 서버에도, 전송 중에도 없습니다.'
+
+exit:
+  title: "서버 없이 언제든 떠날 수 있습니다"
+  body: "내 키 파일을 보관하고, 전문가 모드에서 서버의 키 파일도 요청하세요 (안전 대기 시간이 지나면 열립니다). 두 파일이 있으면 복구 모드가 브라우저에서 서명하므로 kexify 서버가 전혀 필요 없습니다. 오픈 소스 CLI로도 같은 일을 할 수 있고, 두 파일을 일반 개인 키로 되돌릴 수도 있습니다."
+
+dev:
+  title: "개발자용"
+  intro: "전문가 모드는 무료이고 기본으로 꺼져 있습니다. 세부 설정이 필요할 때 설정에서 켜세요."
+  more: "개발자 가이드 보기"
+  items:
+    - title: "WalletConnect v2"
+      body: "Ethereum과 EVM L2 (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana, TRON을 지원합니다."
+    - title: "테스트넷"
+      body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile과 Shasta, Bitcoin testnet, Cardano PreProd 등을 전문가 모드에서 스위치 하나로 켤 수 있습니다."
+    - title: "전문가 모드"
+      body: "nonce와 수수료 직접 지정, UTXO 선택, BTC와 LTC의 RBF 가속, 원시 메시지 서명, 서명 전용과 별도 전송."
+    - title: "나만의 RPC"
+      body: "모든 체인의 RPC와 익스플로러를 내 Alchemy, Infura, QuickNode 엔드포인트로 바꿀 수 있고, 실시간 상태 확인도 됩니다. 전체 설정을 JSON으로 편집할 수도 있습니다."
+    - title: "CLI와 복구"
+      body: "Bun으로 만든 CLI가 두 키 파일로 키를 복원하거나 (<code>recover</code>), WalletConnect 요청을 로컬에서 서명합니다 (<code>connect</code>)."
+    - title: "오픈 소스"
+      body: '웹 앱은 <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a>에서 MIT 라이선스로 공개되어 있습니다. MPC는 <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">우리 포크</a>를 통해 <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a> 위에서 실행됩니다.'
+
+chains:
+  title: "지원하는 체인"
+  evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  more: "그 밖에"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+
+plans:
+  title: "무료와 프리미엄"
+  free_title: "무료"
+  free_price: "$0, 영원히"
+  free_items:
+    - "간단한 정책이 있는 지갑: 일일 한도, 신뢰하는 주소, 한도 초과 시 대기"
+    - "안전 점검: 무제한 승인 차단과 위험한 주소 검사"
+    - "지원되는 곳에서 수동 거래 가속 (비트코인, 라이트코인)"
+    - "복구 키트, 복구 모드, CLI"
+    - "종단 간 암호화 주소록 동기화"
+    - "WalletConnect"
+    - "전문가 모드 도구와 테스트 네트워크"
+  free_soon_title: "무료 플랜에 곧 추가"
+  free_soon: "iPhone 앱, 서명 전 잔액 변화 미리보기, 읽기 전용 API"
+  premium_title: "프리미엄"
+  premium_price: "곧 출시"
+  premium_note: "아직 만들지 않았습니다. 기본 보안 기능이 유료로 바뀌는 일은 없습니다."
+  premium_items:
+    - "iPhone을 승인 기기로 사용"
+    - "오프라인 QR 서명"
+    - "입금 즉시 알림"
+    - "멈춘 거래의 자동 수수료 인상"
+    - "비트코인과 라이트코인의 새 수신 주소와 거스름돈 주소 (프라이버시)"
+    - "더 많은 하위 계정"
+    - "우선 지원"
+    - "개발자용: 자동화 지갑 하나를 위한 서명 SDK와 웹훅"
+  soon: "곧 출시"
+why:
+  title: "kexify를 쓰는 이유"
+  items:
+    - title: "시드 문구 지갑과 비교하면"
+      body: "한 기기에 비밀 하나뿐이라 유출되면 모든 것을 잃습니다. kexify에서는 기기의 키 조각만 유출돼도 자금을 옮길 수 없습니다."
+    - title: "수탁형 앱과 비교하면"
+      body: "키가 내 것이 아니면 내 코인이 아닙니다. kexify에서는 두 키 파일을 직접 가져가 우리 없이도 서명할 수 있습니다."
+    - title: "다른 MPC 지갑과 비교하면"
+      body: "내 규칙은 공동 서명자가 적용하고, 떠나는 길은 우리 서버에 달려 있지 않습니다."
+
+cta:
+  title: "먼저 소액으로 써 보세요"
+  body: "kexify는 엔지니어 한 명이 만든 개인 프로젝트이며 현재 상태 그대로 제공됩니다. 소액으로 시작해서 자주 묻는 질문을 읽고, 조금씩 늘려 가세요."
+  app: "웹 앱 열기"
+  github: "GitHub에서 보기"

@@ -1,0 +1,67 @@
+{% comment %}
+  Developers page body. Copy comes from _data/developers/<lang>.yml (page.lang, default en).
+{% endcomment %}
+{% assign dl = page.lang | default: "en" %}
+{% assign d = site.data.developers[dl] %}
+{% assign card = "bg-surface-secondary border border-border-primary rounded-lg" %}
+{% assign h2 = "text-lg font-semibold dark:text-white text-gray-900 mt-12 mb-4 scroll-mt-4" %}
+{% assign txt = "text-sm dark:text-gray-400 text-gray-500 leading-relaxed" %}
+
+<section class="px-4 md:px-8 py-12 md:py-16">
+  <div class="max-w-3xl mx-auto fade-in dev-doc">
+    <h1 class="text-2xl font-bold tracking-tight dark:text-white text-gray-900">{{ d.title }}</h1>
+    <p class="mt-3 {{ txt }}">{{ d.intro }}</p>
+
+    <nav class="mt-6 text-xs dark:text-gray-400 text-gray-500" aria-label="{{ d.toc }}">
+      <span class="font-medium">{{ d.toc }}:</span>
+      <a href="#support" class="text-blue-400 hover:underline">{{ d.support.title }}</a> ·
+      <a href="#quick" class="text-blue-400 hover:underline">{{ d.quick.title }}</a> ·
+      <a href="#mpc" class="text-blue-400 hover:underline">{{ d.mpc.title }}</a> ·
+      <a href="#api" class="text-blue-400 hover:underline">{{ d.api.title }}</a> ·
+      <a href="#planned" class="text-blue-400 hover:underline">{{ d.roadmap.title }}</a>
+    </nav>
+
+    <h2 id="support" class="{{ h2 }}">{{ d.support.title }}</h2>
+    <div class="{{ card }} divide-y divide-border-primary">
+      {% for r in d.support.rows %}
+      <div class="p-4 md:grid md:grid-cols-[10rem_1fr] md:gap-4">
+        <h3 class="text-sm font-medium dark:text-white text-gray-900">{{ r.name }}</h3>
+        <p class="mt-1 md:mt-0 {{ txt }}">{{ r.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h2 id="quick" class="{{ h2 }}">{{ d.quick.title }}</h2>
+    <div class="space-y-4">
+      {% for q in d.quick.items %}
+      <div class="{{ card }} p-5">
+        <h3 class="text-sm font-semibold dark:text-white text-gray-900">{{ q.title }}</h3>
+        {% if q.intro %}<p class="mt-2 {{ txt }}">{{ q.intro }}</p>{% endif %}
+        {% if q.steps %}
+        <ol class="mt-2 list-decimal pl-5 space-y-1 {{ txt }}">
+          {% for s in q.steps %}<li>{{ s }}</li>{% endfor %}
+        </ol>
+        {% endif %}
+        {% if q.code %}<pre class="mt-3 bg-surface-tertiary rounded-lg p-3 overflow-x-auto text-xs font-mono dark:text-gray-200 text-gray-800"><code>{{ q.code | escape }}</code></pre>{% endif %}
+        {% if q.after %}<p class="mt-2 {{ txt }}">{{ q.after }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <h2 id="mpc" class="{{ h2 }}">{{ d.mpc.title }}</h2>
+    <ul class="list-disc pl-5 space-y-2 {{ txt }}">
+      {% for m in d.mpc.items %}<li>{{ m }}</li>{% endfor %}
+    </ul>
+
+    <h2 id="api" class="{{ h2 }}">{{ d.api.title }}</h2>
+    <p class="{{ txt }}">{{ d.api.intro }}</p>
+    <ul class="mt-2 list-disc pl-5 space-y-1 {{ txt }}">
+      {% for m in d.api.items %}<li>{{ m }}</li>{% endfor %}
+    </ul>
+
+    <h2 id="planned" class="{{ h2 }}">{{ d.roadmap.title }}</h2>
+    <ul class="space-y-2 {{ txt }}">
+      {% for m in d.roadmap.items %}<li class="flex gap-2 items-baseline"><span class="px-1.5 py-0.5 rounded bg-surface-tertiary text-[10px] text-gray-500 flex-shrink-0">{{ d.planned }}</span><span>{{ m }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>

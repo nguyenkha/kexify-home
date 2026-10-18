@@ -73,6 +73,13 @@
     .fade-in-delay-2 { animation-delay: 0.2s; }
     .fade-in-delay-3 { animation-delay: 0.3s; }
 
+    /* Links inside developer guide copy */
+    .dev-doc p a, .dev-doc li a { color: #3b82f6; }
+    .dev-doc p a:hover, .dev-doc li a:hover { text-decoration: underline; }
+
+    /* Inline code in copy (method names, CLI commands) */
+    p code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85em; color: #3b82f6; overflow-wrap: anywhere; }
+
     /* FAQ details styling */
     details summary { cursor: pointer; list-style: none; }
     details summary::-webkit-details-marker { display: none; }
@@ -143,16 +150,6 @@
     /* Why kexify hover — red border on competitors */
     .compare-card { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
     .compare-card:hover { border-color: #f87171; box-shadow: 0 0 8px rgba(248,113,113,0.15); }
-
-    /* Typing cursor */
-    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
-    .typing-cursor::after { content: '|'; animation: blink 0.8s step-end infinite; color: #3b82f6; }
-
-    /* Counter number */
-    .counter { display: inline-block; min-width: 1.5ch; text-align: right; }
-
-    /* Parallax K logo */
-    .parallax-logo { transition: transform 0.1s ease-out; }
 
     /* Back to top */
     #back-to-top {

@@ -1,0 +1,80 @@
+# Texto da página para desenvolvedores (pt-BR). Mesmas chaves do en.yml.
+title: "kexify para desenvolvedores"
+intro: "O que o app web em my.kexify.app suporta hoje e como testá-lo. O modo especialista é gratuito e vem desativado por padrão: Ajustes, Modo especialista."
+toc: "Nesta página"
+planned: "planejado"
+
+support:
+  title: "O que funciona hoje"
+  rows:
+    - name: "WalletConnect v2"
+      body: "EVM: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_sign</code>, <code>eth_signTypedData_v4</code>. Solana: <code>solana_signTransaction</code>, <code>solana_signAndSendTransaction</code>, <code>solana_signMessage</code>. TRON: <code>tron_signTransaction</code>, <code>tron_signMessage</code>. Para parear, cole o URI ou escaneie o QR code."
+    - name: "Revisão legível"
+      body: "O calldata de transferências, <code>approve</code>, Permit2, permits EIP-2612, <code>setApprovalForAll</code> e ERC-721/1155 é decodificado. Os tipos EIP-712 conhecidos (Permit, Permit2, DAI permit, EIP-3009) são exibidos campo a campo; os desconhecidos são marcados como ilegíveis."
+    - name: "Verificações do servidor"
+      body: "Toda requisição, seja do app ou do WalletConnect, é analisada pelo cossignatário. Aprovações ilimitadas de tokens fungíveis (2^128 ou mais, ou o valor máximo) são recusadas; defina um teto na revisão. Endereços sinalizados (GoPlus) são recusados. Seu limite diário e sua lista de confiança se aplicam."
+    - name: "Redes de teste"
+      body: "Ethereum Sepolia, Base Sepolia, Solana devnet e testnet, TRON Nile e Shasta, testnet de Bitcoin e Litecoin, testnets de XRP, Stellar, TON e Algorand, Cardano PreProd. Ative em Ajustes (por enquanto, no modo especialista)."
+    - name: "Modo especialista"
+      body: "Nonce, gas limit e ajuste manual de taxas no EVM; taxa e seleção manual de UTXO em BTC, LTC e BCH; RBF e aceleração em BTC e LTC; assinatura de mensagem bruta; somente assinar e uma página de broadcast separada; calldata completo nas aprovações do WalletConnect; um editor de regras de política personalizadas."
+    - name: "Seu próprio RPC"
+      body: "Troque o RPC e a URL do explorador de qualquer rede da lista (com verificação de saúde), ou edite toda a configuração da rede como JSON e exporte. Adicionar uma rede totalmente nova ainda não é suportado."
+    - name: "Tokens personalizados"
+      body: "Adicione um token pelo endereço do contrato em redes EVM, Solana, Stellar, TRON, Algorand e TON (Gerenciar exibição, Adicionar token personalizado)."
+    - name: "Sair sem o servidor"
+      body: "O modo de recuperação carrega seu arquivo de chave e o do servidor e executa as duas partes do MPC no navegador, sem nenhuma chamada ao servidor da kexify. O arquivo do servidor é solicitado no modo especialista e é liberado após uma espera de segurança."
+    - name: "CLI"
+      body: "<code>frontend/cli.ts</code> no repositório de código aberto, um programa em Bun. <code>recover</code> reconstrói a chave privada (hex, ou WIF para Bitcoin) a partir dos dois arquivos de chave e imprime os endereços. <code>connect</code> responde às requisições do WalletConnect com assinatura local de 2 partes."
+    - name: "Código aberto"
+      body: 'App web e CLI: <a href="https://github.com/nguyenkha/kexify-web">nguyenkha/kexify-web</a> (MIT). Biblioteca MPC: <a href="https://github.com/nguyenkha/cb-mpc">nguyenkha/cb-mpc</a>, um fork do <a href="https://github.com/coinbase/cb-mpc">Coinbase cb-mpc</a> (MIT). O servidor da API, o servidor MPC e o app para iPhone ainda não são de código aberto.'
+
+mpc:
+  title: "Notas sobre MPC"
+  items:
+    - "Duas partes: seu dispositivo e o servidor MPC da kexify. ECDSA de 2 partes em secp256k1 (EVM, família Bitcoin, TRON, XRP) e EdDSA de 2 partes em Ed25519 (Solana, Stellar, TON, Algorand, Cardano)."
+    - "As chaves são criadas por geração distribuída de chaves. A chave privada completa nunca existe, a menos que você mesmo a reconstrua a partir dos dois arquivos de chave."
+    - "As assinaturas são assinaturas ECDSA ou Ed25519 comuns. Qualquer biblioteca padrão as verifica; nada on-chain mostra que MPC foi usado."
+    - "O protocolo tem versões: todo cliente informa seu protocolo MPC (<code>mpc=2p:1</code>) no cabeçalho <code>X-Kexify-Client</code>, e o servidor recusa com HTTP 426 os clientes que não consegue mais atender."
+    - "No navegador, o cb-mpc roda como WebAssembly. Sua parte é criptografada com sua passkey (WebAuthn PRF) ou uma frase secreta; a parte do servidor é criptografada com uma chave por usuário."
+
+quick:
+  title: "Primeiros passos"
+  items:
+    - title: "Conectar um dApp"
+      steps:
+        - "Abra my.kexify.app e crie ou desbloqueie sua carteira."
+        - "No dApp, escolha WalletConnect e copie o URI de pareamento (ou mostre o QR code)."
+        - "Na kexify, abra WalletConnect, cole o URI ou escaneie o código, escolha as contas e aprove."
+        - "Cada requisição abre uma revisão. Confira, confirme (passkey ou frase secreta), e o dispositivo e o servidor assinam juntos."
+    - title: "Usar redes de teste"
+      steps:
+        - "Em Ajustes, ative o modo especialista e depois as redes de teste."
+        - "As redes de teste agora aparecem na sua carteira. Em redes EVM, seu endereço de teste é o mesmo da mainnet."
+        - "Pegue moedas de teste em um faucet dessa rede e envie, ou conecte um dApp que rode na testnet."
+    - title: "Verificar uma assinatura"
+      intro: "Assine uma mensagem com <code>personal_sign</code> a partir de um dApp via WalletConnect e depois confira com qualquer biblioteca. Com viem:"
+      code: |
+        import { verifyMessage } from "viem";
+
+        const ok = await verifyMessage({
+          address: "0xYourKexifyAddress",
+          message: "hello kexify",
+          signature: "0x...", // returned by personal_sign
+        });
+        console.log(ok); // true
+      after: "Ela é verificada como a assinatura de qualquer outra carteira, porque é uma assinatura secp256k1 padrão sobre o hash da mensagem EIP-191."
+
+api:
+  title: "API para desenvolvedores (em breve)"
+  intro: "Ainda não disponível. O que está previsto:"
+  items:
+    - "API somente leitura para as suas próprias carteiras: grátis."
+    - "SDK de assinatura para uma carteira de automação: Premium."
+    - "Webhooks: Premium."
+
+roadmap:
+  title: "Planejado"
+  items:
+    - "App para iPhone e, depois, o iPhone como dispositivo de aprovação e assinatura offline por QR"
+    - "Prévia da mudança de saldo antes de assinar"
+    - "Redes de teste como uma configuração comum, sem modo especialista"

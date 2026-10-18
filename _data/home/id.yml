@@ -1,0 +1,125 @@
+# Home page copy (id). Same keys as en.yml; _includes/home.html renders it.
+hero:
+  tagline: "Dompet kripto dengan jaring pengaman."
+  sub: "Tanpa frasa seed. Kunci Anda dibagi antara perangkat Anda dan server kexify, dan server memeriksa aturan Anda sendiri sebelum ikut menandatangani."
+  stats: ["20+ jaringan", "MPC 2-of-2", "0 frasa seed"]
+  cta_app: "Buka aplikasi web"
+  cta_dev: "Untuk developer"
+  ios_note: "Gratis dipakai. Aplikasi iPhone sedang diuji; aplikasi web sudah berfungsi sekarang."
+  move_title: "kexify pindah dari kexify.co ke kexify.app"
+  move_body: 'Dompet baru dibuat di <a href="https://my.kexify.app/" class="text-blue-400 hover:underline">my.kexify.app</a>. Sudah punya dompet di <a href="https://app.kexify.co/" class="text-blue-400 hover:underline">app.kexify.co</a>? Dompet itu tetap berfungsi di sana, tetapi tidak bisa dipindahkan otomatis: passkey terikat pada domain tempat passkey itu dibuat. Untuk pindah, buat dompet baru di my.kexify.app lalu kirim dana Anda ke sana. Masuk ke app.kexify.co untuk melihat detailnya.'
+  move_warning: "kexify tidak akan pernah meminta file kunci atau frasa sandi Anda lewat email, chat, atau dukungan."
+
+safety:
+  title: "Aman sejak awal"
+  intro: "Dibuat untuk orang yang baru mengenal kripto. Kesalahan pemula yang umum diblokir atau diperlambat, dan server menegakkan aturan Anda, jadi laptop yang dicuri atau tautan berbahaya tidak bisa melewatinya."
+  items:
+    - icon: key
+      title: "Tidak ada frasa seed yang bisa hilang"
+      body: "Dua bagian kunci, satu di perangkat Anda dan satu di server. Tidak ada yang bisa menandatangani sendirian. Kit cadangan dengan pemeriksaan frasa sandi menjaga bagian kunci Anda tetap aman."
+    - icon: limit
+      title: "Batas harian yang Anda kendalikan"
+      body: "Atur batas harian dalam USD dan izinkan pengiriman hanya ke alamat tepercaya. Di atas batas, pengiriman diblokir atau menunggu 1 atau 24 jam."
+    - icon: clock
+      title: "Perubahan aturan menunggu 24 jam"
+      body: "Aturan yang lebih ketat berlaku seketika. Aturan yang lebih longgar menunggu 24 jam, jadi orang yang berhasil masuk tidak bisa langsung mematikannya. Bekukan dompet Anda dengan satu klik."
+    - icon: shield
+      title: "Persetujuan tak terbatas diblokir"
+      body: "dApp sering meminta izin untuk membelanjakan seluruh token selamanya. kexify menolak ikut menandatangani itu; Anda menetapkan batas sebagai gantinya."
+    - icon: alert
+      title: "Pemeriksaan alamat berisiko"
+      body: "Sebelum menandatangani, penerima dicocokkan dengan daftar alamat penipuan dan phishing dari GoPlus Security. Penerima baru juga memunculkan peringatan."
+    - icon: eye
+      title: "Lihat apa yang Anda tandatangani"
+      body: "Transfer, persetujuan token, permit, dan data bertipe ditampilkan dengan kata-kata sederhana, lengkap dengan alamat penuh dan jumlahnya, sebelum Anda mengonfirmasi."
+
+how:
+  title: "Cara kerjanya"
+  steps:
+    - title: "Buat"
+      body: "Dua bagian kunci yang independen dibuat bersamaan. Satu kunci privat utuh tidak pernah ada."
+    - title: "Simpan"
+      body: "Satu bagian tetap di perangkat Anda, satu di server. Keduanya terenkripsi."
+    - title: "Tandatangani"
+      body: "Perangkat Anda dan server menandatangani bersama. Server memeriksa aturan Anda lebih dulu dan tidak bisa menandatangani sendirian."
+  mpc_title: "Penandatanganan MPC"
+  browser: "Perangkat Anda"
+  server: "Server"
+  share_a: "Bagian kunci A"
+  share_b: "Bagian kunci B"
+  tip_a: "Terenkripsi di perangkat Anda (AES-GCM)"
+  tip_b: "Terenkripsi di server (AES-256-GCM + HKDF)"
+  channel: "pesan terenkripsi, bukan kunci"
+  signature: "Tanda tangan"
+  never: 'Kunci utuh <span class="text-blue-400">tidak pernah ada</span>: tidak di perangkat Anda, tidak di server, tidak dalam pengiriman.'
+
+exit:
+  title: "Keluar kapan saja, tanpa perlu server"
+  body: "Simpan file kunci Anda sendiri, dan di Mode Ahli minta juga file kunci server (terbuka setelah masa tunggu keamanan). Dengan kedua file, mode pemulihan menandatangani di browser Anda tanpa server kexify sama sekali. CLI open source bisa melakukan hal yang sama, atau mengubah kedua file menjadi kunci privat biasa."
+
+dev:
+  title: "Untuk developer"
+  intro: "Mode Ahli gratis dan nonaktif secara default. Aktifkan di Pengaturan saat Anda ingin kontrol lebih."
+  more: "Baca panduan developer"
+  items:
+    - title: "WalletConnect v2"
+      body: "Ethereum dan L2 EVM (<code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v4</code>), Solana, dan TRON."
+    - title: "Jaringan uji"
+      body: "Sepolia, Base Sepolia, Solana devnet, TRON Nile dan Shasta, testnet Bitcoin, Cardano PreProd, dan lainnya, cukup satu tombol di Mode Ahli."
+    - title: "Mode Ahli"
+      body: "Nonce dan biaya kustom, pemilihan UTXO, percepatan RBF untuk BTC dan LTC, penandatanganan pesan mentah, penandatanganan saja dengan penyiaran terpisah."
+    - title: "RPC milik Anda sendiri"
+      body: "Ganti RPC dan explorer chain mana pun dengan endpoint Alchemy, Infura, atau QuickNode Anda, lengkap dengan pemeriksaan kesehatan langsung. Edit seluruh konfigurasi sebagai JSON."
+    - title: "CLI dan pemulihan"
+      body: "CLI Bun membangun kembali kunci dari kedua file kunci (<code>recover</code>) atau menandatangani permintaan WalletConnect secara lokal (<code>connect</code>)."
+    - title: "Open source"
+      body: 'Aplikasi web berlisensi MIT di <a href="https://github.com/nguyenkha/kexify-web" class="text-blue-400 hover:text-blue-300">GitHub</a>. MPC berjalan di atas <a href="https://github.com/coinbase/cb-mpc" class="text-blue-400 hover:text-blue-300">Coinbase cb-mpc</a> lewat <a href="https://github.com/nguyenkha/cb-mpc" class="text-blue-400 hover:text-blue-300">fork kami</a>.'
+
+chains:
+  title: "Chain yang didukung"
+  evm_sub: "Ethereum, Base, Arbitrum, Polygon..."
+  more: "Lainnya"
+  more_sub: "TRON, Algorand, Cardano, Stellar, LTC, BCH"
+
+plans:
+  title: "Gratis dan Premium"
+  free_title: "Gratis"
+  free_price: "$0, selamanya"
+  free_items:
+    - "Dompet dengan kebijakan sederhana: batas harian, alamat tepercaya, masa tunggu di atas batas"
+    - "Pemeriksaan keamanan: blokir persetujuan tak terbatas dan pemeriksaan alamat berisiko"
+    - "Percepatan manual jika tersedia (Bitcoin, Litecoin)"
+    - "Kit pemulihan, mode pemulihan, dan CLI"
+    - "Sinkronisasi buku alamat terenkripsi ujung ke ujung"
+    - "WalletConnect"
+    - "Alat Mode Ahli dan jaringan uji"
+  free_soon_title: "Segera hadir di paket Gratis"
+  free_soon: "Aplikasi iPhone, pratinjau perubahan saldo sebelum menandatangani, API hanya-baca"
+  premium_title: "Premium"
+  premium_price: "Segera hadir"
+  premium_note: "Belum dibuat. Keamanan dasar tidak akan pernah dipindah ke balik paywall."
+  premium_items:
+    - "iPhone sebagai perangkat persetujuan"
+    - "Penandatanganan QR offline"
+    - "Peringatan instan untuk dana masuk"
+    - "Kenaikan biaya otomatis untuk transaksi yang tersangkut"
+    - "Alamat terima dan alamat kembalian baru untuk Bitcoin dan Litecoin (privasi)"
+    - "Lebih banyak sub-akun"
+    - "Dukungan prioritas"
+    - "Untuk developer: SDK penandatanganan untuk satu dompet otomatisasi, dan webhook"
+  soon: "segera hadir"
+why:
+  title: "Mengapa kexify"
+  items:
+    - title: "dibanding dompet frasa seed"
+      body: "Satu rahasia di satu perangkat. Jika bocor, semuanya hilang. Dengan kexify, bagian kunci perangkat yang bocor saja tidak bisa memindahkan dana."
+    - title: "dibanding aplikasi kustodian"
+      body: "Bukan kunci Anda, bukan kripto Anda. Dengan kexify, Anda bisa membawa kedua file kunci dan menandatangani tanpa kami."
+    - title: "dibanding dompet MPC lain"
+      body: "Aturan Anda ditegakkan oleh penandatangan bersama, dan jalan keluar Anda tidak bergantung pada server kami."
+
+cta:
+  title: "Coba dulu dengan jumlah kecil"
+  body: "kexify adalah proyek pribadi seorang engineer, disediakan apa adanya. Mulai dari yang kecil, baca FAQ, lalu berkembang dari sana."
+  app: "Buka aplikasi web"
+  github: "Lihat di GitHub"
