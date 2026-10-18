@@ -91,7 +91,7 @@ plans:
   premium_title: "프리미엄"
   premium_price: "곧 출시"
   premium_items:
-    - "iPhone을 승인 기기로 사용, 오프라인 QR 서명"
+    - "iPhone을 승인 기기로 사용, 에어갭 서명"
     - "즉시 알림과 자동 수수료 인상"
     - "비트코인 프라이버시 주소, 더 많은 하위 계정"
     - "개발자용 서명 SDK와 웹훅"

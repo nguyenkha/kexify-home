@@ -92,7 +92,7 @@ plans:
   premium_title: "Premium"
   premium_price: "Sắp ra mắt"
   premium_items:
-    - "iPhone làm thiết bị phê duyệt, ký offline bằng mã QR"
+    - "iPhone làm thiết bị phê duyệt, ký air-gapped"
     - "Cảnh báo tức thì và tự động tăng phí"
     - "Địa chỉ riêng tư cho Bitcoin, thêm tài khoản con"
     - "SDK ký và webhook cho nhà phát triển"

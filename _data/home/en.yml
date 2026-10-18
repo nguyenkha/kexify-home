@@ -92,7 +92,7 @@ plans:
   premium_title: "Premium"
   premium_price: "Coming soon"
   premium_items:
-    - "iPhone as an approval device, offline QR signing"
+    - "iPhone as an approval device, air-gapped signing"
     - "Instant alerts and automatic fee bump"
     - "Bitcoin privacy addresses, more sub-accounts"
     - "Signing SDK and webhooks for developers"

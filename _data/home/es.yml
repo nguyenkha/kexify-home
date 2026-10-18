@@ -92,7 +92,7 @@ plans:
   premium_title: "Premium"
   premium_price: "Próximamente"
   premium_items:
-    - "iPhone como dispositivo de aprobación, firma por QR sin conexión"
+    - "iPhone como dispositivo de aprobación, firma air-gapped"
     - "Alertas instantáneas y aumento automático de comisión"
     - "Direcciones de privacidad para Bitcoin, más subcuentas"
     - "SDK de firma y webhooks para desarrolladores"
