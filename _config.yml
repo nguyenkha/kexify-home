@@ -5,6 +5,10 @@ baseurl: ""
 permalink: pretty
 markdown: kramdown
 
+# Apple app-site-association (passkeys of the iOS app for the RP kexify.app): Jekyll skips dot dirs by default.
+include:
+  - .well-known
+
 
 exclude:
   - Gemfile
